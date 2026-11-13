@@ -1,0 +1,27 @@
+NÔNG SẢN 360 | V8.7 | TÀI LIỆU THAM KHẢO | 14-11-2026
+
+Tiếp tục trực tiếp từ bản V8.6 trong dự án Hàng hóa phái sinh.
+
+THAY ĐỔI GIAO DIỆN
+- Ba thẻ Cà phê, Ngô, Lúa mì trên trang chủ:
+  * Nhãn: TÀI LIỆU THAM KHẢO
+  * Nút: Xem tài liệu → (đi đúng trang thư viện của từng sản phẩm)
+- Tiêu đề khu vực: Tài liệu theo từng thị trường hàng hóa.
+- Tiêu đề trang thư viện tổng hợp: Thư viện tài liệu tham khảo.
+- Sửa các lời dẫn "Khám phá" không phù hợp thành "Xem thư viện", "Tra cứu thư viện" hoặc "Thị trường".
+- Thêm aria-label mô tả đích đến cho ba liên kết tài liệu.
+
+GIỮ NGUYÊN
+- Mục tin tức: trang chủ hiển thị 1 tin mới nhất; bấm xem danh sách theo ngày và mở nội dung chi tiết từng bài.
+- Bộ lọc tin theo mặt hàng, tìm kiếm và cập nhật tin-tuc.json qua HTTPS.
+- 21 tập PDF gốc, nội dung giáo trình, cấu trúc hash route và đường dẫn tài liệu.
+- Minh họa cà phê/ngô/lúa mì, màu sắc và bố cục website.
+
+CÁCH XEM
+- Giải nén ZIP, mở index.html để xem offline. Ở chế độ offline, tin dùng nội dung dự phòng đóng gói trong HTML.
+- Khi triển khai lên HTTPS, đặt index.html và tin-tuc.json cùng thư mục, và giữ thư mục pdf/.
+- Đừng mở ZIP trực tiếp như một website; phải giải nén trước.
+
+LƯU Ý
+- Đây là file web tĩnh đã cập nhật trong Drive, không phải website đã deploy lên tên miền.
+- Bản V8.6 vẫn được giữ nguyên để đối chiếu.

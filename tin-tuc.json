@@ -1,0 +1,118 @@
+{
+  "title": "Tin tức thị trường Nông Sản 360",
+  "lastEditorialUpdate": "2026-11-14",
+  "description": "Tin tức được sắp xếp tự động theo ngày phát hành. Mỗi tin có trang chi tiết và đường dẫn nguồn chính thức.",
+  "items": [
+    {
+      "id": "ico-coffee-2026-10",
+      "commodity": "Cà phê",
+      "source": "ICO",
+      "sourceName": "Tổ chức Cà phê Quốc tế",
+      "published": "2026-11-12",
+      "dataPeriod": "10/2026",
+      "title": "ICO: Giá cà phê tổng hợp tháng 10 giảm nhẹ",
+      "summary": "Chỉ số giá tổng hợp ICO đạt bình quân 261,26 US cent/lb, giảm 0,3% so với tháng 9. Arabica và Robusta diễn biến khác nhau.",
+      "url": "https://ico.org/documents/cy2026-27/cmr-1026-e.pdf",
+      "lead": "Báo cáo Coffee Market Report tháng 10/2026 của Tổ chức Cà phê Quốc tế (ICO) cho thấy chỉ số giá tổng hợp I-CIP giảm nhẹ so với tháng trước, nhưng diễn biến của các nhóm cà phê không đồng nhất.",
+      "body": [
+        {
+          "heading": "Diễn biến nổi bật",
+          "paragraphs": [
+            "Theo ICO, chỉ số giá tổng hợp I-CIP đạt bình quân 261,26 US cent/lb trong tháng 10/2026, giảm 0,3% so với tháng 9. Đây là mức bình quân của tháng, không phải giá chốt của một phiên giao dịch.",
+            "Bên trong mức thay đổi nhỏ của chỉ số tổng hợp, giá bình quân các nhóm Arabica tăng trong khi nhóm Robusta giảm. Vì vậy, chỉ nhìn mức biến động chung của I-CIP có thể bỏ qua sự khác biệt quan trọng giữa từng nhóm sản phẩm."
+          ]
+        },
+        {
+          "heading": "Điều thị trường cần phân biệt",
+          "paragraphs": [
+            "Chỉ số ICO phản ánh giá tham chiếu quốc tế theo phương pháp của tổ chức này. Nó không đồng nghĩa giá thu mua cà phê tại địa phương, giá hợp đồng giao dịch trên sở hay giá bán theo từng chất lượng và điều kiện giao hàng.",
+            "Khi đối chiếu với thị trường Việt Nam, cần kiểm tra đúng chủng loại, thời điểm giá, tỷ giá, chất lượng hàng và mức chênh lệch của thị trường hàng thực."
+          ]
+        },
+        {
+          "heading": "Tiếp tục theo dõi gì?",
+          "paragraphs": [
+            "Các báo cáo ICO tiếp theo sẽ giúp quan sát sự dịch chuyển của giá theo nhóm và diễn biến xuất khẩu. Những thay đổi này cần được đặt trong bối cảnh cung cầu mùa vụ, thay vì rút ra kết luận tăng hay giảm giá chỉ từ một chỉ số."
+          ]
+        }
+      ],
+      "key_takeaway": "I-CIP giảm 0,3% trong tháng 10/2026 nhưng không đại diện cho mọi nhóm cà phê hoặc giá thu mua tại Việt Nam.",
+      "status": "published",
+      "editorialNote": "Tóm lược từ báo cáo công bố, không phải khuyến nghị giao dịch."
+    },
+    {
+      "id": "usda-corn-2026-11",
+      "commodity": "Ngô",
+      "source": "USDA",
+      "sourceName": "Bộ Nông nghiệp Hoa Kỳ",
+      "published": "2026-11-10",
+      "dataPeriod": "WASDE 11/2026",
+      "title": "USDA hạ dự báo tồn kho ngô Mỹ niên vụ 2026/27",
+      "summary": "WASDE tháng 11 dự báo tồn kho cuối kỳ khoảng 1,758 tỷ giạ, giảm so với mức 1,849 tỷ giạ trong báo cáo tháng 10.",
+      "url": "https://esmis.nal.usda.gov/sites/default/release-files/796142/wasde1126.pdf",
+      "lead": "Báo cáo Cung cầu Nông sản Thế giới (WASDE) tháng 11/2026 của USDA điều chỉnh giảm dự báo tồn kho ngô cuối niên vụ 2026/27 tại Hoa Kỳ so với kỳ báo cáo trước.",
+      "body": [
+        {
+          "heading": "Số liệu chính",
+          "paragraphs": [
+            "Dự báo tồn kho ngô Mỹ cuối niên vụ 2026/27 được hạ từ 1,849 tỷ giạ trong kỳ tháng 10 xuống khoảng 1,758 tỷ giạ ở kỳ tháng 11, tức giảm 91 triệu giạ.",
+            "Đây là dự báo trong báo cáo cung cầu, không phải số tồn kho đã kiểm đếm cuối niên vụ. Số liệu có thể tiếp tục điều chỉnh trong những lần công bố sau."
+          ]
+        },
+        {
+          "heading": "Cách đọc thay đổi tồn kho",
+          "paragraphs": [
+            "Tồn kho cuối kỳ là kết quả của cung đầu kỳ, sản lượng, nhập khẩu và các hạng mục sử dụng. Vì vậy, không nên quy toàn bộ thay đổi tồn kho cho duy nhất một yếu tố nếu chưa đối chiếu đồng thời các chỉ tiêu trên bảng cân đối.",
+            "Tồn kho thấp hơn có thể làm thay đổi đánh giá về độ dư cung, nhưng biến động giá giao dịch còn phụ thuộc kỳ vọng trước công bố, nhu cầu thực tế, nguồn cung từ các quốc gia khác và diễn biến thời tiết."
+          ]
+        },
+        {
+          "heading": "Điều cần theo dõi tiếp",
+          "paragraphs": [
+            "Theo dõi bảng cân đối ngô Mỹ ở kỳ WASDE kế tiếp, đặc biệt sản lượng, năng suất, xuất khẩu, thức ăn chăn nuôi và tỷ lệ tồn kho so với sử dụng. Khi so sánh số liệu phải giữ cùng niên vụ và đơn vị giạ."
+          ]
+        }
+      ],
+      "key_takeaway": "Tồn kho dự báo ngô Mỹ giảm 91 triệu giạ so với dự báo tháng trước; đây không phải bằng chứng giá sẽ tăng chắc chắn.",
+      "status": "published",
+      "editorialNote": "Tóm lược từ báo cáo công bố, không phải khuyến nghị giao dịch."
+    },
+    {
+      "id": "usda-wheat-2026-11",
+      "commodity": "Lúa mì",
+      "source": "USDA",
+      "sourceName": "Bộ Nông nghiệp Hoa Kỳ",
+      "published": "2026-11-10",
+      "dataPeriod": "WASDE 11/2026",
+      "title": "USDA nâng dự báo tồn kho lúa mì thế giới",
+      "summary": "Báo cáo tháng 11 ước tính tồn kho cuối kỳ toàn cầu khoảng 280,82 triệu tấn, tăng so với dự báo tháng 10.",
+      "url": "https://esmis.nal.usda.gov/sites/default/release-files/796142/wasde1126.pdf",
+      "lead": "WASDE tháng 11/2026 của USDA nâng dự báo tồn kho lúa mì cuối kỳ toàn cầu cho niên vụ 2026/27. Điều chỉnh này cần được đọc cùng sản lượng và mức sử dụng thế giới.",
+      "body": [
+        {
+          "heading": "Điểm thay đổi trong báo cáo",
+          "paragraphs": [
+            "USDA ước tính tồn kho cuối kỳ lúa mì thế giới ở mức khoảng 280,82 triệu tấn trong báo cáo tháng 11/2026, so với 276,04 triệu tấn ở kỳ tháng 10 — tăng 4,78 triệu tấn.",
+            "Cùng kỳ, USDA nâng dự báo sản lượng lúa mì toàn cầu từ 822,39 lên khoảng 827,51 triệu tấn. Các con số là dự báo cho niên vụ, không phải kết quả thu hoạch cuối cùng."
+          ]
+        },
+        {
+          "heading": "Vì sao phải nhìn theo khu vực?",
+          "paragraphs": [
+            "Chênh lệch cung cầu giữa các nước xuất khẩu và nhập khẩu có thể quan trọng hơn một con số tồn kho toàn cầu đối với giá một chủng loại hoặc điểm giao hàng cụ thể.",
+            "Cần phân biệt lúa mì mềm, lúa mì cứng, chất lượng protein và từng kỳ hạn hợp đồng. Không nên dùng một chỉ số tồn kho thế giới để suy ra trực tiếp giá của mọi loại lúa mì."
+          ]
+        },
+        {
+          "heading": "Theo dõi tiếp",
+          "paragraphs": [
+            "Cần quan sát sản lượng tại các nước xuất khẩu chủ lực, nhu cầu nhập khẩu, vận tải và các điều chỉnh trong các kỳ WASDE sau. Khi đánh giá giá cần ghi rõ loại lúa mì và kỳ hạn."
+          ]
+        }
+      ],
+      "key_takeaway": "Tồn kho dự báo lúa mì thế giới tăng 4,78 triệu tấn so với kỳ trước; tác động giá phụ thuộc từng thị trường và kỳ hạn.",
+      "status": "published",
+      "editorialNote": "Tóm lược từ báo cáo công bố, không phải khuyến nghị giao dịch."
+    }
+  ]
+}

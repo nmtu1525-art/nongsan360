@@ -1,0 +1,8 @@
+NONG SAN 360 - VAN HANH TIN TUC THI TRUONG V8.5
+1. Trang chu chi hien THONG TIN CO NGAY CONG BO MOI NHAT (1 tin). Bấm tieu de hoac "Doc tin day du" de mo trang bai viet ngay tren website.
+2. Muc Tin tuc thi truong (#/tin-tuc/index.html) liet ke tat ca theo ngay, moi nhat truoc, co loc Ca phe/Ngo/Lua mi va tim kiem.
+3. Moi tin co trang chi tiet (#/tin-tuc/<id>.html), noi dung tom luoc, thong tin ngay/nguon, nut doc bao cao goc; chi nut bao cao goc moi mo website ben ngoai.
+4. CAP NHAT TIN MOI: Chinh sua tin-tuc.json, them item co id duy nhat, published ISO yyyy-mm-dd, title, summary, commodity, source, sourceName, dataPeriod, url, lead, body [{heading, paragraphs:[...] }], key_takeaway, status='published'. Host website qua HTTPS; index.html tu doc tin-tuc.json va cap nhat trang chu/danh sach theo ngay, khong can sua giao dien. Tin chua duoc xac nhan: status='draft' khong hien thi.
+5. Khi mo truc tiep index.html offline, giao dien dung 3 ban tin gan nhat dong goi trong HTML, vi trinh duyet chan fetch JSON bang file://. De thay tin moi ngay ca trong offline ZIP, can tai xuat HTML fallback.
+6. Ban V8.4, V7 va 21 giao trinh goc duoc giu nguyen, PDF van trong thu muc pdf/.
+7. Can duyet noi dung, nguon va ngay dang moi tin truoc khi chuyen status sang published. Khong co gia realtime.
