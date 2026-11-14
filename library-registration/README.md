@@ -41,7 +41,7 @@ Trình duyệt chỉ gửi GPS khi người dùng cấp quyền. BigDataCloud c�
 ## 3. Thành phần cần triển khai
 
 - `library-gate.js` trên GitHub Pages: xử lý quyền GPS ở top-level, gọi BigDataCloud theo tọa độ *thiết bị hiện tại có quyền*, lọc về tên địa danh và gửi phản hồi nonce cho Form.
-- `index.html` trên GitHub: đã đổi `library-gate.js?v=20261114-v5-optional-gps-1` để tránh cache.
+- `index.html` trên GitHub: đã đổi `library-gate.js?v=20261114-v5-optional-gps-2` để tránh cache.
 - `library-registration/Form.html` phiên V5: gửi yêu cầu vị trí từ iframe, timeout hợp lý; nếu không có GPS thì gọi GeoJS → ipwho.is, gửi `requestId` tiền tố `v5-`, `ward` và `locationSource` sang Apps Script backend.
 - `library-registration/Code.gs` V5: kiểm cấu trúc 14 header, ghi đủ 14 cột, giữ RequestID tại I và trạng thái tại J. L tạo Google Maps bằng tên phường/xã + thành phố/tỉnh (nếu có) chứ không bằng lat/lon.
 - `chinh-sach-du-lieu.html`: mô tả quyền GPS tùy chọn, dịch vụ BigDataCloud, nguồn IP dự phòng và các thông tin được lưu.
