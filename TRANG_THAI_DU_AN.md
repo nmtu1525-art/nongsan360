@@ -55,3 +55,13 @@
 - Đã ghi checkpoint đầu việc tại commit `666d4e7fd21ec5dc91aa326c45c8e945c795efe5`. Mốc kiểm thử **tự đọc khi chuyển chat đã thành công**; mốc kiểm thử **tác vụ 07:00 ngày 15/11 chưa xảy ra/chưa có kết quả thực tế**.
 - Lưu ý: V9.3 ở Drive có bản ZIP kỹ thuật cũ, không tự khôi phục bot API đã tắt; GitHub main hiện tại là mã chuẩn.
 - Bước tiếp theo: kiểm tra chi tiết bản Weekly Export Sales mới nhất và nguồn ICO/USDA mới công bố; nếu đủ điều kiện, biên tập, soát hai vòng rồi bổ sung tin không trùng. Sau 07:00 ngày 15/11 xác minh tác vụ ChatGPT có chạy và tạo commit được hay không. Cập nhật checkpoint thường xuyên.
+
+## 8. Sắp xếp Google Drive và Facebook (14/11/2026)
+- Đã phân loại thư mục Drive gốc `1e7PwORibeFRjdLieHlc-2nshZyUHMK9a` thành 4 khu vực: quản lý dự án, website, giáo trình/thư viện và Facebook.
+- Tất cả 14 thư mục các phiên bản website đã nằm ở `01_WEBSITE/01_LUU_TRU_PHIEN_BAN`; 11 tài sản nguồn cũ ở `01_WEBSITE/02_MAU_NGUON_CU`. File GitHub `index.html` vẫn là mã nguồn chuẩn.
+- Các thư viện, trung tâm 21 giáo trình, hồ sơ kiểm duyệt nằm ở `02_GIAO_TRINH_VA_THU_VIEN`; không thay đổi nội dung hoặc file ID của chúng.
+- Thư mục Facebook: https://drive.google.com/drive/folders/19aUO-V0SCy5NJ1JUPW0wmZGWbbIi6MeA có sáu thư mục con `01_NHAN_DIEN_THUONG_HIEU`, `02_BAI_VIET`, `03_HINH_ANH_BAI_DANG`, `04_VIDEO_REELS`, `05_KE_HOACH_LICH_DANG`, `06_BAO_CAO`.
+- Hai ảnh logo/cover đã được người dùng phê duyệt và xác minh ở `Facebook/01_NHAN_DIEN_THUONG_HIEU`, ID file giữ nguyên: logo `17f1PdxJMK5slfABFvDgeZFxkuRpvbB7h`, bìa `1pGGtE8cpY0CHbaG1KBF19cpybhpyXlRm`.
+- Đã kiểm tra lại `list_folder`: Drive gốc chỉ còn đúng 4 thư mục; Facebook còn 6 thư mục; thư mục nhận diện có đúng 2 file PNG.
+- Quy ước đặt tên bài và ảnh Facebook: dùng chung mã `FB-YYYYMMDD-XX` để dễ đối chiếu; các nhóm sau này lưu đúng folder tương ứng.
+- Commit checkpoint xác nhận: `63c5ed53de6058c8b575661f5ce1f3cc195aa48b`. Fanpage Facebook thật vẫn chưa được tạo; không có quyền Facebook trực tiếp. Tiếp theo là biên soạn nội dung khai trương và thiết lập Fanpage bằng tài khoản chủ sở hữu.
