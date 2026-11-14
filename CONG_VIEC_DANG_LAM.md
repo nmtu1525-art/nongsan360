@@ -410,3 +410,10 @@
 ### W.2. Chủ dự án chọn quay lại dùng 6 ảnh cũ (14/11/2026)
 - Người dùng nói rõ: `thoi dùng 6 ảnh cũ đi` — **chọn lại bộ 6 ảnh minh họa đầu tiên** (ID cũ trong mục V.2), không dùng bộ 6 đồ họa V2 cho bài đăng.
 - Đang đổi 6 tham chiếu ảnh trong Google Docs + GitHub draft và lịch tháng 11 về file ảnh cũ, giữ nguyên cả hai bộ trên Drive, không ghi đè/xóa. Các bài vẫn chưa được đặt lịch Metricool/đăng khi chưa kiểm duyệt nội dung.
+
+### W.3. ĐÃ KHÔI PHỤC 6 ẢNH CŨ VÀ XÁC MINH (14/11/2026)
+- Theo quyết định mới nhất của người dùng **`thoi dùng 6 ảnh cũ đi`**, 6 ảnh bản đầu là bản **được chọn sử dụng** cho FB-202611[17,24,25,26,27,30]-01. Không sử dụng bộ V2 làm ảnh đăng. **Cả hai bộ ảnh vẫn nằm trên Drive, không xóa/ghi đè**.
+- Đã chỉnh 6 Google Docs ở `Facebook/02_BAI_VIET`: link ảnh trở về ID cũ: 17 `1FDKGapP1o5psdDKKdCRqDjMTyvY09LOc`; 24 `1CDdMMmD2UiM77eN0_T1Jvh1YNfHNE5fF`; 25 `1vaqObq_4DpLcttDlGLNB0Nem2me5PVBP`; 26 `1__v5VotGrr4EJVgEbuCq4IJ2vdGfqDWY`; 27 `10C4CTLml6qX3P6J6F6Cze3-o4dseWR7S`; 30 `1jbyc_ej_Mq3m47ewEbn-ayzV8g9tff3S`.
+- Đã đồng bộ 6 file GitHub `facebook-drafts/2026-11/FB-202611[17,24,25,26,27,30]-01.md`, thay toàn bộ tham chiếu ảnh V2 bằng ảnh cũ, trạng thái `ANH ĐÃ CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG`; không thay câu chữ caption đã soát SEO. Lịch `FACEBOOK_KE_HOACH_THANG_11_2026.md` GitHub và Google Doc Drive ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` đã cập nhật.
+- **Đã READBACK cả 6 Docs và 6 draft GitHub**: mỗi bài có ID ảnh cũ, không còn ID ảnh V2, vẫn có trạng thái `CHƯA ĐĂNG`. Bộ V2 chỉ để lưu trữ khi cần.
+- Lưu ý: Chủ dự án chọn ảnh cũ **không có nghĩa đã đồng ý mọi caption tự đăng**. Chưa được xác minh đã có lịch Metricool mới; giữ quy tắc phê duyệt bài trước khi phát hành. Không cam kết Facebook không hiển thị nhãn AI cho ảnh cũ.
