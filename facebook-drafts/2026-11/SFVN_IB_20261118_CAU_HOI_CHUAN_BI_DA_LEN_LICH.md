@@ -20,7 +20,10 @@ Nên làm rõ phạm vi giới thiệu khách hàng, quy trình phối hợp và
 📅 **Tập huấn SFVN: 09:00–12:00, thứ Sáu 20/11/2026**
 📍 **Học viện SFVN – Tầng 2, Tòa nhà Mekong, 92A–94 Bạch Đằng, phường Tân Sơn Hòa, TP.HCM.**
 
-📩 Xác nhận điều kiện, cách thức tham dự với SFVN Academy: https://sfvn-academy.com.vn/contact
+👉 Để được hỗ trợ xác nhận cách thức và điều kiện tham dự, vui lòng nhắn tin Fanpage Nông Sản 360 tại đây:
+https://m.me/1388965107640064
+
+*Fanpage hỗ trợ thông tin; việc xác nhận đăng ký và suất tham dự thực hiện theo hướng dẫn của SFVN.*
 
 *Ba câu hỏi là gợi ý chuẩn bị từ Nông Sản 360, không phải nội dung tập huấn chính thức. Giấy chứng nhận phụ thuộc điều kiện hoàn thành; hỗ trợ đối tác nếu có phụ thuộc chính sách và xét duyệt của SFVN.*
 
