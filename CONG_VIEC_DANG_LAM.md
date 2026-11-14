@@ -504,3 +504,16 @@
 - Anh xác nhận đã bấm link kiểm thử bằng cửa sổ ẩn danh nhưng không thấy form. Chưa có v2 row xác nhận ghi dữ liệu, **giữ LIVE_ENABLED=false**.
 - Đã đối chiếu nguồn GitHub: regex URL /exec và route CF-01 đều hợp lệ, index.html có chỗ gọi gate, nhưng không truy cập được trang/asset thực qua web tool; không thể khẳng định nguyên nhân thực tế.
 - Cần làm test route độc lập chỉ dùng URL hash #/thu-vien/kiem-tra-dang-ky (không phụ thuộc query có thể bị bỏ), cưỡng bức hiển thị form khi thử kể cả có localStorage trước đó, chuyển đến CF-01 sau khi lưu thành công; thêm cache-bust JS và đọc lại tài liệu. Nếu browser vẫn không thấy màn hình, kiểm tra việc GitHub Pages phục vụ JS / Apps Script iframe trực tiếp. Không bật rộng trước test.
+
+### Y.8. Đã sửa test form không hiện trong ẩn danh (14/11/2026)
+- Người dùng báo **mở ẩn danh bằng link cũ vẫn không thấy form**. Không có quyền browser trực tiếp, web.run open các URL live đều không truy cập được, không khẳng định đã test browser sản xuất.
+- **Đã sửa `library-gate.js`** commit `c2412126c6e964bc6a4ca113e073f60265bac123`:
+  - Tạo route kiểm thử độc lập `#/thu-vien/kiem-tra-dang-ky` không phụ thuộc query `?ns360_signup_test=1` (link query cũ vẫn hỗ trợ).
+  - Ở chế độ kiểm thử, bỏ qua localStorage đăng ký cũ; chỉ cho qua sau khi chính biểu mẫu trong lần test này gửi thành công (`accessThisSession=true`).
+  - Sau khi nhận message thành công đúng nonce từ Google Apps Script, chuyển sang `#/giao-trinh/cf-01.html`; không còn tình trạng kẹt ở route kiểm thử.
+  - Bổ sung link `Kiểm tra trang Google Apps Script` dưới iframe nếu embed trống.
+  - `LIVE_ENABLED=false` được giữ, **không bật form công khai**.
+- **`index.html`** commit `78e0059593948cce4993e5fba637830c00b2b2c3`: thêm query cache-bust `library-gate.js?v=20261114-test-route-1`. **`library-gate.css`** commit `1483aff9a57454c0dba5165974a3cd07e99a9691`: style link chẩn đoán fallback.
+- **Readback toàn bộ GitHub**: gate route + skip storage + nonce + endpoint hợp lệ, index gọi gate, 31 templates, 42 link PDF (2 mỗi giáo trình), tin-tuc.json, Form v2 không checkbox còn nguyên, CSS fallback có mặt. Không động 21 PDF, tin tức, Metricool, Drive dữ liệu.
+- **Link test mới cho người dùng:** `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky`. Mong đợi: hiện màn đăng ký (không tick), bấm ghi thành công thì mở CF-01; nếu iframe trống thì dùng link Apps Script trực tiếp dưới khung để phân biệt lỗi Apps Script/iframe với lỗi GitHub Pages. Nếu vẫn vào thẳng CF-01 hay 404 thì cần kiểm tra GitHub Pages file triển khai thực tế, không được kết luận rằng đã hoạt động.
+- **Chưa có xác minh cuối-cùng form ghi Google Sheet** nên vẫn phải test một lượt thật và chỉ bật `LIVE_ENABLED=true` khi có bản ghi `v2-` với `DongYXuLyDuLieu=TRUE` và `DongYNhanTin=FALSE`. Không yêu cầu khách gửi PII qua chat.
