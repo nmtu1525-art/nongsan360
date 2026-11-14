@@ -202,3 +202,10 @@
 - Tài liệu hướng dẫn đã cập nhật commit `d99c38750b50b8f4dc309fe7937855891f0cde76`. Đã đọc lại Sheet `Leads!I1:L4` thấy header đúng và chưa có bản ghi `v4-` để xác minh K/L.
 - **Chưa hoạt động chính thức**: bản V4 mới trên GitHub, Drive `Form.html` hiện vẫn là V3 và Apps Script /exec độc lập chưa được triển khai V4. Chưa kiểm thử API geo-IP trong browser. Cần owner cập nhật cả `Code.gs` và `Form.html` cùng một deployment version, thực hiện đăng ký thử rồi đối chiếu K:L trước khi xác nhận.
 - Bảo toàn website/21 PDF, tin tức, Facebook và dữ liệu đăng ký.
+
+
+## 31. Sửa lấy thành phố V4.1 khi hai lượt đăng ký V4 K/L trống (14/11/2026)
+- Người dùng gửi ảnh chụp 2 dòng V4 ACTIVE nhưng không có `ThanhPhoUocTinh`/Google Maps. Google Sheet readback `I1:L25` xác minh đúng trạng thái (một V3, hai V4, K/L trống). Không có IP lịch sử được lưu, không suy đoán địa điểm các đăng ký đã có.
+- Đã cập nhật `library-registration/Form.html` sang V4.1 với lookup GeoJS HTTPS/CORS trước, ipwho.is làm dự phòng; khi lỗi vẫn ghi lead, không cần quyền GPS, không có dòng thông báo riêng trên form. `Code.gs` V4 và 12 cột Sheet không thay đổi. Form commit `b7045c0a80ba5b9adbe49ad37ffffc0f598d0722` (trước đó triển khai logic `583f75731b7e44cc2d5313f2a2453d0aa58f684e`).
+- Chính sách dữ liệu nêu hai dịch vụ, commit `43f6dfd7579cc1fdd696c841beb72c571b08319f`. README mới commit `ef4e1cfc493bcad9b2c435e85650ea8f9f9507e5`. Đã chạy mock Node kiểm tra 4 kịch bản lookup PASS; chưa test thật trên Google Apps Script client.
+- **Chờ chủ dự án thay Form.html bằng phiên bản GitHub V4.1 và Deploy New version cùng /exec hiện hữu**, thử đăng ký một dòng mới có K/L không trống (khi mạng hỗ trợ). Drive bản Form cũ chưa đồng bộ. Không tác động dữ liệu khách, 21 PDF, tin tức hay lịch Facebook.
