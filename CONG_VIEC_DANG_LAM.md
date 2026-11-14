@@ -612,3 +612,11 @@
 - Chủ dự án yêu cầu "không cần thông báo khi đăng ký đâu" sau chặng bổ sung geo-IP. Diễn giải: **không hiển thị một lời nhắc riêng về định vị**, không ghi trạng thái "đang xác định khu vực" trong form; giữ biểu mẫu gọn và phản hồi thành công/lỗi cơ bản.
 - Vẫn phải duy trì liên kết `Chính sách dữ liệu cá nhân` trên form, trong chính sách mô tả dùng IP để suy ra thành phố qua dịch vụ bên thứ ba, không thu GPS hay lưu IP. Không âm thầm ẩn thông tin xử lý dữ liệu trong chính sách.
 - Mã V4 `library-registration/Form.html` trên GitHub đã được soạn nhưng **chưa redeploy Apps Script**; bản Drive cũ vẫn V3 lúc đọc. Giữ K:L trên Sheet, không sửa dữ liệu cũ hoặc thay đổi gate live. Cần sửa Form và tài liệu hướng dẫn, kiểm chứng readback rồi đồng bộ Drive nếu có đường upload hợp lệ. Không tuyên bố việc định vị chạy thật nếu chưa test phiên V4.
+
+
+### Y.21. Đã bỏ thông báo riêng về định vị khỏi form V4 (14/11/2026)
+- Theo yêu cầu "không cần thông báo khi đăng ký đâu", đã sửa GitHub `library-registration/Form.html` commit `0e057a029851dd7809b63ce903ed21dafd5cb851`: xóa đoạn nhỏ riêng giải thích GeoIP và không còn dòng trạng thái `Đang xác định khu vực gần đúng...`. Form chỉ giữ liên kết `Chính sách dữ liệu cá nhân` với lời giải thích chung, trạng thái `Đang ghi nhận đăng ký...`, thành công/lỗi vẫn hiển thị.
+- **Không bỏ công khai thông tin quan trọng trong chính sách**: `chinh-sach-du-lieu.html` vẫn giải thích dịch vụ ipwho.is nhận IP khi truy cập, trang lưu khu vực ước tính và Maps URL chứ không lưu IP/GPS.
+- Đã cập nhật README commit `d99c38750b50b8f4dc309fe7937855891f0cde76` tương ứng. Readback form cho thấy vẫn có request `v4-`, tra cứu `ipwho.is`, liên kết chính sách và không có thông báo địa điểm riêng.
+- Google Sheet `Leads!I1:L4` đã có cột `ThanhPhoUocTinh` (K), `GoogleMapsUocTinh` (L); không sửa dữ liệu khách. Hiện đọc thấy một bản ghi v3 còn lại, không có bản ghi v4. Bản Form trên Drive ID `1yzk8DZC3hjffAvwDn2TT25eQ6FtXfig5` vẫn v3 cũ — **chưa đồng bộ bản V4 lên Drive**, không khẳng định đã làm.
+- **Apps Script Web App hiện chưa được redeploy sang V4**; muốn dùng tính năng khu vực phải copy cả Code.gs V4 và Form.html V4 từ GitHub vào dự án Apps Script, Save và Deploy New version, thử một đăng ký `v4-` rồi kiểm K:L. Giữ website gate live, 21 PDF, tin tức, lịch Facebook nguyên trạng.
