@@ -134,3 +134,7 @@
   - 30/11 10:00 — ID `427793267`
 - Đã cập nhật cả 6 Google Docs + 6 GitHub draft, lịch tháng 11 Drive/GitHub; automation tháng 11 đã cập nhật prompt chống trùng. **Chưa coi là published**, cần đối chiếu sau giờ đăng.
 - Bài chào mừng 14/11 PUBLISHED; 5 slot SFVN còn thiếu poster/thông báo chính thức nên CHƯA schedule. Giữ an toàn website, `tin-tuc.json`, 21 giáo trình, automation website.
+
+## 21. Dọn sạch bộ ảnh V2 bị từ chối (14/11/2026)
+- Theo ảnh chụp phản hồi của người dùng, đã xóa **nốt file PowerPoint `NS360_6_ARTWORK_VECTOR_EDITORIAL_V2_EDITABLE.pptx` (ID `17kK1z7JMDociLH_g2-dCMSJz5SEa8MHY`)** khỏi Drive, API trả `success=true`.
+- Readback thư mục ảnh xác minh chỉ còn **7 PNG: 6 ảnh bản đầu đã chọn + ảnh chào mừng**. Toàn bộ 6 PNG V2 và file PPTX V2 đã xóa khỏi Drive. Không sửa 6 post Metricool đã lên lịch và không chạm giáo trình, website hoặc tin tức.
