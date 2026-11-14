@@ -1027,3 +1027,8 @@
 - Đã cung cấp thao tác thủ công `Meta Business Suite → Inbox → Automations → Instant reply`, lời chào dễ đọc và saved reply SFVN_06 có link form `?src=messenger`.
 - **CHƯA kích hoạt được Meta**: kết nối công cụ hiện có không có quyền thao tác Inbox/Automations Fanpage; cần chủ trang mở giao diện, thao tác và xác minh bằng tin nhắn tài khoản khác. Chưa khẳng định bật thành công.
 - Giữ nguyên lịch Metricool 10 PENDING theo checkpoint gần nhất; không gọi update post, không thay 21 PDF/Leads/site.
+
+### Y.62. Biên soạn lại Messenger + SOP V2 (14/11/2026)
+- Chủ dự án phản hồi hai Docs V1 khó đọc và hỏi kịch bản có phải chatbot tự động không. Đã mở lại cả hai tài liệu native để rà đúng nguồn.
+- Mục tiêu V2: phân biệt Meta Instant Reply/Away (auto), keyword/FAQ nếu có trên Page (rule-based), Saved Replies (người trực bấm), bot AI tích hợp (chưa có); đơn giản hóa kịch bản và quy trình chăm sóc 7 bước.
+- Tạo bản Docs V2 mới trong `Facebook/07_CHAM_SOC_KHACH_HANG`, giữ bản V1 để đối chiếu, không thay lịch Metricool, không tự động kích hoạt bot chưa kiểm thử.
