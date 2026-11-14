@@ -209,3 +209,8 @@
 - Đã fetch lại GitHub kiểm tra route, template, links, 3 video placeholders và QR SVG. Web tool **không truy cập được URL GitHub Pages**, do đó chưa xác minh bản deploy trên trình duyệt thực tế. Không thay đổi 21 PDF, tin tức hoặc nguồn thư viện.
 - URL dự kiến: https://nmtu1525-art.github.io/nongsan360/#/mo-tai-khoan/index.html
 - Tiếp theo: người dùng đưa các video, kiểm tra hướng dẫn là chính xác và không tiết lộ tài khoản cá nhân; tải lên Drive/video hosting, nhúng vào 3 khung đã chuẩn bị rồi kiểm thử giao diện mobile.
+
+### NÚT TÌM HIỂU TÀI KHOẢN CÒN TRỎ SAI — ĐANG SỬA (14/11/2026)
+- Người dùng gửi 2 ảnh: khi nhấn CTA `Tìm hiểu tài khoản` từ phần giới thiệu trên trang chủ, trình duyệt cuộn tới cuối trang chủ (mục `lien-he`) thay vì vào trang riêng; ảnh còn hiển thị khu QR phiên bản cũ. Người dùng yêu cầu xóa câu `Liên kết dùng mã giới thiệu... Nông Sản 360 có thể được ghi nhận quyền lợi...` ở giao diện trang mới; không cần giới thiệu/quảng bá khoản đó.
+- Đã kiểm tra trực tiếp mã nguồn GitHub: link CTA này vẫn `href="#/@lien-he"` (đúng nguyên nhân scroll cuối trang). Route trang riêng `#/mo-tai-khoan/index.html` đã tồn tại; trong nguồn mới homepage không còn QR trực tiếp, do đó ảnh QR cũ có thể do deploy/cache/chụp trước lần cập nhật (chưa khẳng định nguyên nhân).
+- Cần thay chính xác link CTA `Tìm hiểu tài khoản` → `#/mo-tai-khoan/index.html`, xóa đoạn disclosure quảng bá khỏi giao diện (giữ `rel=sponsored` và URL đúng), sửa CSS dư thừa nếu an toàn; kiểm tra readback và phiên bản đã public khi có thể. Không thay giáo trình, tin tức.
