@@ -1,5 +1,5 @@
 /* Nông Sản 360 — one-time library reader registration.
- * IMPORTANT: This feature stays OFF until a tested Apps Script /exec URL is configured.
+ * Live V3 library reader registration enabled after a successful v3 ACTIVE sheet record.
  * No PII is stored in the browser; only a non-sensitive access marker.
  */
 (function(){
@@ -7,9 +7,8 @@
   const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwOanbih1xPmM07lBtMdfkll3_8JNYRRKzW0x7qFGuWsVqjHDuYf5YmA9JNonthV5EWyQ/exec'; // After Apps Script deployment: paste verified https://script.google.com/macros/s/.../exec URL.
   const STORAGE_KEY = 'ns360-library-reader-v1';
   const isConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/.test(WEB_APP_URL);
-  // Stage the live Google Apps Script connection for owner testing before public launch.
-  // Once one signup is verified in the private Google Sheet, change LIVE_ENABLED to true.
-  const LIVE_ENABLED = false;
+  // Enabled after a v3 ACTIVE registration was confirmed in the private Google Sheet.
+  const LIVE_ENABLED = true;
   const TEST_ROUTE = '/thu-vien/kiem-tra-dang-ky';
   // URL hash-based test route works even when query parameters are stripped by a browser or redirect.
   const ownerTestMode = () => new URLSearchParams(location.search).get('ns360_signup_test') === '1' || location.hash.split('@')[0] === '#'+TEST_ROUTE;
