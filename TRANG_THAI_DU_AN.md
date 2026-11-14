@@ -47,3 +47,11 @@
 - Xác minh lần chạy đầu tiên của tác vụ ChatGPT có quyền cập nhật GitHub (khi có tin thật), xem commit và kết quả Pages.
 - Kiểm tra trang tin và SEO hiển thị với bài mới, nâng chất lượng biên tập, rà soát kỹ nguồn.
 - Duy trì quy tắc cập nhật tài liệu bàn giao vào cuối mỗi phiên.
+
+## 7. Xác minh trong chat mới ngày 14/11/2026
+- Đã thành công truy cập qua kết nối trực tiếp: GitHub repo `nmtu1525-art/nongsan360` có quyền `push`, đọc được hai checkpoint, truy xuất được commit gần nhất và toàn bộ cây thư mục `main`. Truy cập được Drive gốc và thư mục V9.3.
+- Kết quả kiểm đếm: 21 giáo trình PDF ở GitHub (5 CF, 5 NG, 5 LM, 6 PS); `tin-tuc.json` có 3 bài hiện tại (ICO cà phê tháng 10/2026; WASDE tháng 11 về ngô và lúa mì). Không phát hiện thay đổi mã nguồn/tin mới trước khi phiên này bắt đầu; HEAD đầu phiên `1c6df29008b4408d1d2101fc0648dbaaf41c3761`.
+- Đã kiểm tra nguồn tin chính thức: báo cáo USDA WASDE ngày 10/11 và ICO Coffee Market Report 10/2026 đã được dùng cho 3 bài; trang USDA FAS liệt kê Weekly Export Sales ngày 13/11, tuy nhiên chưa đối chiếu được số liệu chi tiết của bản đó ở phiên này. **Không đăng tin mới** khi chưa có số liệu xác minh đầy đủ; bảo toàn `tin-tuc.json`.
+- Đã ghi checkpoint đầu việc tại commit `666d4e7fd21ec5dc91aa326c45c8e945c795efe5`. Mốc kiểm thử **tự đọc khi chuyển chat đã thành công**; mốc kiểm thử **tác vụ 07:00 ngày 15/11 chưa xảy ra/chưa có kết quả thực tế**.
+- Lưu ý: V9.3 ở Drive có bản ZIP kỹ thuật cũ, không tự khôi phục bot API đã tắt; GitHub main hiện tại là mã chuẩn.
+- Bước tiếp theo: kiểm tra chi tiết bản Weekly Export Sales mới nhất và nguồn ICO/USDA mới công bố; nếu đủ điều kiện, biên tập, soát hai vòng rồi bổ sung tin không trùng. Sau 07:00 ngày 15/11 xác minh tác vụ ChatGPT có chạy và tạo commit được hay không. Cập nhật checkpoint thường xuyên.
