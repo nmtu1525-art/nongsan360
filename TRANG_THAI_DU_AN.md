@@ -377,3 +377,12 @@
 - **18/11:** [Ba câu hỏi IB chuẩn bị](https://docs.google.com/document/d/1XGfq3Ip1CBd66VyOCt-C4NOruenwoGDdLnGDH5OZJg4/edit)
 - **19/11:** [Nhắc lịch tập huấn SFVN](https://docs.google.com/document/d/1GXw6Znrg1uvj5SK8o8UvfYl7kMJUSA6Fs-0pxP5X-dM/edit)
 - Đã kiểm tra nguyên văn từng caption khớp với bốn bài đang PENDING trên Metricool, có link ảnh final, Messenger và form; không can thiệp sáu bài evergreen và dữ liệu khác.
+
+
+## 50. Đã hoàn thành tài liệu vận hành Messenger và chăm sóc khách SFVN (14/11/2026)
+- Folder `Facebook/07_CHAM_SOC_KHACH_HANG` trên Drive ID `1jl9BvJZK4VVGCbhBJ-ej5kbp6a4G1kAC` chứa hai Google Docs native đã verify:
+  - [Kịch bản Messenger — 16 mẫu](https://docs.google.com/document/d/1DEW2xOaoZgzCASlN01likzE8y718k-hJEZ3HIme8u4U/edit).
+  - [SOP xử lý và chăm sóc khách SFVN](https://docs.google.com/document/d/1IFihEKfdrRH2-IzhdCmHeko9Tg7pxFvFeXWWVh6jf8k/edit).
+- Phân biệt khách chỉ nhắn hỏi với khách tự nguyện điền form, không mặc nhiên dùng consent tập huấn cho tiếp thị/affiliate. Tin về giấy chứng nhận và hỗ trợ SFVN luôn có điều kiện; không tự xác nhận giữ chỗ.
+- Chưa triển khai trực tiếp auto-replies trong Meta hoặc CRM tự động; đây là bộ tài liệu vận hành, cần chủ trang cấu hình và nghiệm thu trên thiết bị thật. Không đổi website, Sheets khách, 21 PDF.
+- Kiểm chứng Metricool 8097037 sau tác vụ: 1 PUBLISHED + 10 PENDING (6 evergreen + 4 SFVN), đúng toàn bộ UUID/ngày/giờ, 1 media mỗi bài, autoPublish=true; không tác động lịch.
