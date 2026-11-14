@@ -26,5 +26,5 @@
 2. Bản nháp được lưu ở Drive Facebook/02_BAI_VIET; bản dự phòng GitHub facebook-drafts/2026-11. **Đã có 6 ảnh nháp trong Facebook/03_HINH_ANH_BAI_DANG, chưa duyệt phong cách/kiểu chữ và chưa được sử dụng để đăng**. Cần duyệt văn bản và ảnh trước khi đưa Metricool.
 3. Không được đăng bài SFVN khi chưa xác minh chủ đề, thời gian, địa điểm, đối tượng và cách tham dự. Không tự ghi SFVN cùng Nông Sản 360 tổ chức nếu không có bằng chứng; Nông Sản 360 chỉ là kênh chia sẻ thông tin.
 4. Nếu không có thông báo đủ sớm để mời khách, không giả vờ có sự kiện; ưu tiên chuyển slot thành bài kiến thức khác sau khi báo người dùng.
-5. Sau khi được duyệt, xếp lịch Metricool brand 8097037, giờ dự kiến 10:00 Asia/Saigon, không đăng trùng; kiểm tra PUBLISHED/publicUrl sau giờ.
+5. Sau khi được duyệt, xếp lịch Metricool brand 8097037, giờ đăng dự kiến dựa trên khung giờ Metricool: thứ Hai, Ba, Năm, Sáu 10:00; thứ Tư 12:00 (riêng FB-20261125-01). Cuối tuần nếu có bài bổ sung: thứ Bảy 10:00, Chủ nhật 10:00 là thử nghiệm. Fanpage còn mới nên chưa xem đây là giờ hiệu quả đã được kiểm chứng; cần theo dõi kết quả thực tế, không đăng trùng; kiểm tra PUBLISHED/publicUrl sau giờ.
 6. Lịch `FACEBOOK_KE_HOACH_20_BAI_20261116_20261211.md` cũ được **bảo toàn như kế hoạch tham khảo**, nhưng **lịch mới này là ưu tiên cho tháng 11**. Không tự đăng theo cả hai lịch.
