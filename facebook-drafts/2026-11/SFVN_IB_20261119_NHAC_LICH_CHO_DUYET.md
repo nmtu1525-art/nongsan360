@@ -28,7 +28,10 @@ Nếu đang quan tâm đến thị trường hàng hóa phái sinh và cơ hội
 
 ℹ️ Giấy chứng nhận chỉ được cấp khi đáp ứng điều kiện hoàn thành tập huấn. Chính sách hỗ trợ đối tác, nếu áp dụng, phụ thuộc điều kiện và xét duyệt của SFVN; không phải quyền lợi tự động.
 
-👉 Xem đầu mối liên hệ và xác nhận thông tin chương trình với SFVN Academy tại: https://sfvn-academy.com.vn/contact
+👉 Để được hỗ trợ xác nhận cách thức và điều kiện tham dự, vui lòng nhắn tin Fanpage Nông Sản 360 tại đây:
+https://m.me/1388965107640064
+
+*Fanpage hỗ trợ thông tin; việc xác nhận đăng ký và suất tham dự thực hiện theo hướng dẫn của SFVN.*
 
 #NongSan360 #SFVN #HangHoaPhaiSinh #TapHuanIB
 
