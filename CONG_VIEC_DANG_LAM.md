@@ -973,3 +973,8 @@
   - 18/11 `NS360_SFVN_20261118_DA_DUYET_KHONG_CTA.png`, ID `1RmqlP9jQUtl2-7H41i8OAH56LWN_QYKF`
   - 19/11 `NS360_SFVN_20261119_DA_DUYET_KHONG_CTA.png`, ID `1Z3dWmoFzUEmvA169yvYBP1zfR47h3kjG`.
 - Giữ lại nguyên 7 ảnh Facebook kiến thức/chào mừng, 6 bài evergreen và bốn bài SFVN trên Metricool. Không thay caption, lịch, form, 21 PDF, tin tức hoặc Google Sheet khách.
+
+### Y.55. Bổ sung 4 bài viết SFVN vào Drive/02_BAI_VIET (14/11/2026)
+- Người dùng không thấy 4 bài viết trong Google Drive. Kiểm tra folder Facebook/02_BAI_VIET ID `1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ`: hiện mới có 6 Google Docs evergreen và 1 markdown chào mừng, chưa có 4 Docs SFVN. Đây là thiếu sót so với kỳ vọng, vì caption chỉ lưu ở GitHub và Metricool.
+- Đã đối chiếu 4 caption **đang PENDING trên Metricool** (post IDs 428100194, 428100359, 428100588, 428100803), đã duyệt, có 2 CTA Messenger/form, đã bỏ lưu ý dài; sẽ dùng **nguyên văn caption từ Metricool** làm nguồn để đưa lên Drive.
+- Tạo 4 Google Docs riêng trong `Facebook/02_BAI_VIET`, tiêu đề gắn FB-SFVN-20261116/17/18/19, ngày giờ ICT, trạng thái ĐÃ DUYỆT. Bảo đảm không sửa các bài lịch khác, không sao chép ảnh vào thư mục bài viết. Readback từng doc và vị trí trước khi thông báo, rồi cập nhật checkpoint.
