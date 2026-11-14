@@ -620,3 +620,11 @@
 - Đã cập nhật README commit `d99c38750b50b8f4dc309fe7937855891f0cde76` tương ứng. Readback form cho thấy vẫn có request `v4-`, tra cứu `ipwho.is`, liên kết chính sách và không có thông báo địa điểm riêng.
 - Google Sheet `Leads!I1:L4` đã có cột `ThanhPhoUocTinh` (K), `GoogleMapsUocTinh` (L); không sửa dữ liệu khách. Hiện đọc thấy một bản ghi v3 còn lại, không có bản ghi v4. Bản Form trên Drive ID `1yzk8DZC3hjffAvwDn2TT25eQ6FtXfig5` vẫn v3 cũ — **chưa đồng bộ bản V4 lên Drive**, không khẳng định đã làm.
 - **Apps Script Web App hiện chưa được redeploy sang V4**; muốn dùng tính năng khu vực phải copy cả Code.gs V4 và Form.html V4 từ GitHub vào dự án Apps Script, Save và Deploy New version, thử một đăng ký `v4-` rồi kiểm K:L. Giữ website gate live, 21 PDF, tin tức, lịch Facebook nguyên trạng.
+
+
+### Y.22. Chủ dự án xác nhận đã cập nhật Apps Script V4 (14/11/2026)
+- Người dùng xác nhận đã cập nhật Apps Script sau hướng dẫn bản V4 (thành phố ước tính và Google Maps, không thông báo định vị riêng).
+- Đã đọc lại Google Sheet riêng tư `1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw`, tab `Leads!I1:L60`. Header hiện vẫn `RequestID, TrangThai, ThanhPhoUocTinh, GoogleMapsUocTinh`. Hiện quan sát **1 bản ghi v3 ACTIVE**, **chưa có v4**; không đọc/chia sẻ họ tên, SĐT, email; các cột K:L của bản ghi cũ trống, đúng dự kiến.
+- Đã thử mở Web App /exec và GitHub Pages bằng công cụ web nhưng công cụ không truy cập được; chưa có khả năng đọc phiên bản thực tế từ /exec, nên không thể độc lập chứng nhận redeploy thành công chỉ từ xác nhận người dùng.
+- **Bước nghiệm thu**: trên một trình duyệt chưa lưu marker đăng ký, đi `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/index.html`, điền đăng ký thử bằng thông tin của chính chủ dự án; trang cần mở thư viện và bảng Leads thêm RequestID `v4-` cột I, trạng thái ACTIVE J. K có thể ghi tên thành phố; L là link Maps tìm thành phố. Nếu K/L trống mà v4 có ghi, kiểm tra GeoIP/CORS mà không ngăn khách đọc. Nếu vẫn v3 hoặc báo lỗi, xem lại Apps Script Deploy > Manage deployments > Edit > New version cho cả Code.gs và Form.html.
+- **Chưa chỉnh website/Apps Script/Sheet**, giữ nguyên lead cũ, PDF, tin tức, Metricool; chỉ cập nhật checkpoint. Không tuyên bố tính năng GeoIP đã chạy chính thức.
