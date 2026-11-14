@@ -81,3 +81,14 @@
 - Giáo trình: `01_KIEM_DUYET_GIAO_TRINH` = 1QSYlvOdwJkcsWpy9gh1QK6bEWf_boSw2.
 - Facebook: `01_NHAN_DIEN_THUONG_HIEU` = 1zwf2GnHuGfaNnhkTOGsgllpZRKIanvrp, `02_BAI_VIET` = 1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ, `03_HINH_ANH_BAI_DANG` = 1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx, `04_VIDEO_REELS` = 1t8_tjV044gu52-lVKCS2CUjDP_v5Hgi6, `05_KE_HOACH_LICH_DANG` = 1g4y9gEZ32iXb2YvoKLvjuzoI7U3R4gLg, `06_BAO_CAO` = 12EbsqDeTvPYzbks6rFzspynsOquPHKs_.
 - Thư mục được tạo thành công, **bước đang làm tiếp**: di chuyển tệp cũ an toàn theo từng cụm, xác minh đúng parent và nội dung sau mỗi chặng.
+
+### Giai đoạn 2 — hoàn tất sắp xếp và kiểm chứng
+- **ĐÃ XONG** chuyển hai ảnh đã duyệt vào `Facebook/01_NHAN_DIEN_THUONG_HIEU` (ID `1zwf2GnHuGfaNnhkTOGsgllpZRKIanvrp`), giữ nguyên ID ảnh: logo `17f1PdxJMK5slfABFvDgeZFxkuRpvbB7h`, ảnh bìa `1pGGtE8cpY0CHbaG1KBF19cpybhpyXlRm`; đã đọc lại metadata để xác nhận parent mới.
+- **ĐÃ XONG** tổ chức lại Drive gốc thành chính xác 4 thư mục: `00_QUAN_LY_DU_AN`, `01_WEBSITE`, `02_GIAO_TRINH_VA_THU_VIEN`, `Facebook`. Đã xác minh bằng `list_folder` sau di chuyển.
+- **ĐÃ XONG** thư mục `01_WEBSITE/01_LUU_TRU_PHIEN_BAN` có **14 thư mục phiên bản cũ**; `01_WEBSITE/02_MAU_NGUON_CU` có **11 tài sản cũ** (tệp và thư mục). Lưu ý: chính repo GitHub main mới là nguồn chuẩn website; chữ `Moi_Nhat` ở file HTML cũ chỉ là tên lịch sử, không mang nghĩa mới nhất thực tế.
+- **ĐÃ XONG** thư mục `02_GIAO_TRINH_VA_THU_VIEN` có 6 mục con (4 thư viện/trung tâm và 1 thư mục kiểm duyệt cùng các mục còn lại); `01_KIEM_DUYET_GIAO_TRINH` có 5 tài sản kiểm duyệt. Giữ nguyên nội dung 21 PDF.
+- **ĐÃ XONG** thư mục `00_QUAN_LY_DU_AN` có 2 file markdown bàn giao/trạng thái đã di chuyển. Gốc không còn file lẻ.
+- **ĐÃ XONG** thư mục `Facebook` có chính xác 6 thư mục con, trong đó `01_NHAN_DIEN_THUONG_HIEU` chứa 2 ảnh đã duyệt; 5 nhóm còn lại đang trống, sẵn sàng nhận bài, ảnh bài đăng, video, lịch đăng, báo cáo.
+- **Quy chuẩn lưu mới:** mỗi bài Facebook dùng cùng mã nội dung `FB-YYYYMMDD-XX` trong tên bản thảo và ảnh (ví dụ `FB-20261114-01_bai-viet.md`, `FB-20261114-01_anh.png`); ảnh thiết kế lưu `03_HINH_ANH_BAI_DANG`, caption/draft lưu `02_BAI_VIET`, không để file Facebook ở gốc.
+- **Bước kế tiếp:** chuẩn bị bài khai trương/chuyên đề Facebook trong `02_BAI_VIET` và ảnh tương ứng trong `03_HINH_ANH_BAI_DANG`; bước tạo Fanpage thật vẫn cần tài khoản Facebook của anh.
+- **Quy tắc an toàn:** chỉ thực hiện move parent, không xóa, không sửa nội dung, không đổi tên file cũ, không can thiệp website GitHub hoặc 21 PDF.
