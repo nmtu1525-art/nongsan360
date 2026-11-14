@@ -116,6 +116,13 @@ html{scroll-padding-top:90px}
 @media(max-width:760px){.v2-collections{grid-template-columns:1fr!important}.v2-detail-head{flex-direction:column;gap:10px}.v2-reader iframe{height:68vh;min-height:440px}.v2-book-card{padding:14px;gap:10px}.v2-book-title{font-size:14px}.v2-detail-actions .ns-btn{width:100%;text-align:center}.v2-drive-link{display:block;width:100%;text-align:center}}
 @media(prefers-reduced-motion:reduce){.v2-book-card{transition:none}}
 </style><style id="ns-news-v85-style">
+/* V9.2: truthful 404 state for removed news and invalid routes */
+.ns-news-not-found{max-width:760px;margin:25px auto;padding:50px clamp(22px,5vw,55px);background:#fff;border:1px solid var(--line);border-radius:20px;text-align:center}
+.ns-news-not-found h1{color:var(--navy);font-size:clamp(29px,4.5vw,46px);margin:13px 0}
+.ns-news-not-found p{max-width:530px;margin:0 auto 26px;line-height:1.75}
+.ns-news-not-found-actions{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px}
+.ns-news-not-found .ns-news-more{display:inline-flex;text-decoration:none}
+
 /* Nông Sản 360 news reading experience */
 .ns-news-home .section-heading{align-items:end}
 .ns-news-home .outline-link{white-space:nowrap}
@@ -246,7 +253,8 @@ html{scroll-padding-top:90px}
 <label class="v2-search-label" for="q-NG">Tìm theo chủ đề hoặc tên bài học</label><input aria-label="Tìm giáo trình" autocomplete="off" class="v2-search" id="q-NG" placeholder="Nhập từ khóa, ví dụ: mùa vụ, ký quỹ, WASDE…" type="search"/>
 <div class="v2-book-list" role="list"><a aria-label="Xem tài liệu NG-01: Tổng quan thị trường ngô Việt Nam và thế giới" class="v2-book-card" data-search="NG-01 Tổng quan thị trường ngô Việt Nam và thế giới" href="#/giao-trinh/ng-01.html"><span class="v2-code">NG-01</span><span class="v2-book-title">Tổng quan thị trường ngô Việt Nam và thế giới<small>Vai trò của ngô trong sản xuất, thương mại và thức ăn chăn nuôi.</small></span><span aria-hidden="true" class="v2-card-arrow">→</span></a><a aria-label="Xem tài liệu NG-02: Cung cầu, mùa vụ và yếu tố ảnh hưởng giá ngô" class="v2-book-card" data-search="NG-02 Cung cầu, mùa vụ và yếu tố ảnh hưởng giá ngô" href="#/giao-trinh/ng-02.html"><span class="v2-code">NG-02</span><span class="v2-book-title">Cung cầu, mùa vụ và yếu tố ảnh hưởng giá ngô<small>Cách thời tiết, mùa vụ và tồn kho tác động đến kỳ vọng giá.</small></span><span aria-hidden="true" class="v2-card-arrow">→</span></a><a aria-label="Xem tài liệu NG-03: Đọc và phân tích báo cáo USDA WASDE" class="v2-book-card" data-search="NG-03 Đọc và phân tích báo cáo USDA WASDE" href="#/giao-trinh/ng-03.html"><span class="v2-code">NG-03</span><span class="v2-book-title">Đọc và phân tích báo cáo USDA WASDE<small>Đọc cân đối cung cầu và các đợt điều chỉnh dự báo USDA.</small></span><span aria-hidden="true" class="v2-card-arrow">→</span></a><a aria-label="Xem tài liệu NG-04: Hợp đồng tương lai ngô và quản trị rủi ro" class="v2-book-card" data-search="NG-04 Hợp đồng tương lai ngô và quản trị rủi ro" href="#/giao-trinh/ng-04.html"><span class="v2-code">NG-04</span><span class="v2-book-title">Hợp đồng tương lai ngô và quản trị rủi ro<small>Cơ chế hợp đồng ngô và phương án kiểm soát rủi ro giá.</small></span><span aria-hidden="true" class="v2-card-arrow">→</span></a><a aria-label="Xem tài liệu NG-05: Thực hành phân tích thị trường ngô" class="v2-book-card" data-search="NG-05 Thực hành phân tích thị trường ngô" href="#/giao-trinh/ng-05.html"><span class="v2-code">NG-05</span><span class="v2-book-title">Thực hành phân tích thị trường ngô<small>Thực hành xây kịch bản và kiểm chứng luận điểm thị trường.</small></span><span aria-hidden="true" class="v2-card-arrow">→</span></a></div><p class="v2-no-results" hidden="">Không tìm thấy giáo trình phù hợp.</p>
 
-<a class="ns-btn secondary" href="#/thu-vien/index.html">← Trở lại tất cả thư viện</a></div></main></template><template id="ns-news-archive-template"><main class="ns-news-shell"><div class="container">
+<a class="ns-btn secondary" href="#/thu-vien/index.html">← Trở lại tất cả thư viện</a></div></main></template><template id="ns-page-not-found"><main class="ns-news-shell"><div class="container"><section class="ns-news-not-found" role="status"><span class="eyebrow">NÔNG SẢN 360</span><h1>Không tìm thấy trang</h1><p>Đường dẫn này không tồn tại hoặc bản tin đã được gỡ. Anh/chị có thể quay về trang tin tức hoặc trang chủ.</p><div class="ns-news-not-found-actions"><a class="ns-news-more" href="#/tin-tuc/index.html">Xem danh sách tin tức →</a><a class="ns-news-read" href="#/">Về trang chủ</a></div></section></div></main></template>
+<template id="ns-news-archive-template"><main class="ns-news-shell"><div class="container">
 <nav aria-label="Đường dẫn" class="ns-news-crumbs"><a href="#/">Trang chủ</a><span>›</span><span>Tin tức thị trường</span></nav>
 <header class="ns-news-heading"><span class="eyebrow">BẢN TIN NÔNG SẢN 360</span><h1>Tin tức thị trường</h1><p>Đọc các bản tin theo dòng thời gian, từ mới nhất đến cũ hơn. Mỗi bài đều ghi ngày công bố, nguồn báo cáo và diễn giải bối cảnh. Đây không phải bảng giá thời gian thực.</p></header><p class="ns-news-updated" id="ns-news-updated"></p>
 <div class="ns-news-filterbox"><div class="ns-news-filters" role="group" aria-label="Lọc theo thị trường"><button class="ns-news-filter" type="button" data-category="Tất cả" aria-pressed="true">Tất cả</button><button class="ns-news-filter" type="button" data-category="Cà phê" aria-pressed="false">Cà phê</button><button class="ns-news-filter" type="button" data-category="Ngô" aria-pressed="false">Ngô</button><button class="ns-news-filter" type="button" data-category="Lúa mì" aria-pressed="false">Lúa mì</button></div><div class="ns-news-toolbar"><label class="ns-news-month-label" for="ns-news-month">Tháng công bố <select id="ns-news-month" aria-label="Lọc tin theo tháng công bố"></select></label><button class="ns-news-reset" type="button" id="ns-news-reset">Xóa bộ lọc</button></div><label for="ns-news-query" style="font-size:12px;color:#706f6e;font-weight:750">Tìm kiếm tin tức</label><input class="ns-news-search" id="ns-news-query" type="search" placeholder="Tìm theo nội dung, nguồn hoặc thị trường" autocomplete="off" /></div>
@@ -269,8 +277,22 @@ html{scroll-padding-top:90px}
   let currentNewsQuery='';
   let currentNewsMonth='Tất cả';
   let newsVisibleLimit=10;
-  const newsSort = items => (items||[]).filter(x=>x && x.status==='published' && /^\d{4}-\d{2}-\d{2}$/.test(x.published||''))
-    .slice().sort((a,b)=>b.published.localeCompare(a.published) || (a.id||'').localeCompare(b.id||''));
+  // Reject malformed publication dates and IDs before adding a story to public routes.
+  const validNewsDate = value => {
+    if(typeof value!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(value))return false;
+    const [year,month,day]=value.split('-').map(Number);
+    const parsed=new Date(Date.UTC(year,month-1,day));
+    return parsed.getUTCFullYear()===year && parsed.getUTCMonth()+1===month && parsed.getUTCDate()===day;
+  };
+  const newsSort = items => {
+    const seen=new Set();
+    return (Array.isArray(items)?items:[]).filter(x=>{
+      if(!x||x.status!=='published'||typeof x.id!=='string'||!/^[a-z0-9-]+$/.test(x.id)||
+         typeof x.title!=='string'||!x.title.trim()||!validNewsDate(x.published)||seen.has(x.id))return false;
+      seen.add(x.id);
+      return true;
+    }).sort((a,b)=>b.published.localeCompare(a.published)||a.id.localeCompare(b.id));
+  };
   const esc = text => String(text ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const dstr = d => /^\d{4}-\d{2}-\d{2}$/.test(d||'') ? d.slice(8,10)+'/'+d.slice(5,7)+'/'+d.slice(0,4) : '';
   const newsUrl = x => '#/tin-tuc/'+encodeURIComponent(x.id)+'.html';
@@ -383,7 +405,11 @@ html{scroll-padding-top:90px}
       const target=newsItems().find(x=>x.id===newsSlug);
       if(target)info={tpl:'ns-news-detail-template',title:target.title};
     }
-    if(!info){if(!Object.prototype.hasOwnProperty.call(ROUTES,route))route='/';info=ROUTES[route];}
+    if(!info){
+      info=Object.prototype.hasOwnProperty.call(ROUTES,route)
+        ? ROUTES[route]
+        : {tpl:'ns-page-not-found',title:'Không tìm thấy trang'};
+    }
     const tpl=document.getElementById(info.tpl);
     if(!tpl){host.textContent='Không tìm thấy trang.';return;}
     host.replaceChildren(tpl.content.cloneNode(true));
