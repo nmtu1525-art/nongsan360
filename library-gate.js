@@ -74,7 +74,7 @@
             const res=await fetch(url.href,{method:'GET',mode:'cors',signal:controller.signal,referrerPolicy:'no-referrer',cache:'no-store'});
             if(!res.ok){finish(null);return;}
             const data=await res.json();
-            if(!data||typeof data!=='object'){finish(null);return;}
+            if(!data||typeof data!=='object'||/ip/i.test(String(data.lookupSource||''))){finish(null);return;}
             const clean=value=>typeof value==='string'?value.trim().slice(0,90):'';
             const city=clean(data.city)||clean(data.principalSubdivision);
             const region=clean(data.principalSubdivision);
@@ -82,7 +82,7 @@
             if(!city){finish(null);return;}
             const administrative=Array.isArray(data.localityInfo?.administrative)?data.localityInfo.administrative:[];
             const names=administrative.map(v=>clean(v&&v.name)).filter(Boolean);
-            const wardLike=name=>/^(phường|xã|thị trấn|ward|commune)\b/i.test(name);
+            const wardLike=name=>/^(phường|xã|thị trấn|ward|commune)(?:\s|$)/i.test(name);
             const wardCandidate=names.filter(wardLike).pop()||
               (clean(data.locality)!==city?clean(data.locality):'');
             // Poor positioning must not be labeled as a ward/commune.
