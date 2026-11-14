@@ -675,3 +675,11 @@
 - Đã kiểm lại Sheets `Leads!A1:N1`: header 14 cột đúng, 4 lượt lịch sử trong phạm vi đọc vẫn còn (v3 + 3 v4), hai cột M:N chưa có dữ liệu; `TrangThai` cột J vẫn giữ dropdown ở những hàng kiểm tra. Không tạo bản ghi giả.
 - Kết quả kiểm tra là **đối chiếu mã GitHub + cấu trúc Sheet**, chưa phải kiểm thử browser thực/live GPS và chưa xác nhận Apps Script V5 deploy. Thử tải file từ raw GitHub qua container không được (DNS/cache miss), nên chưa chạy node --check trực tiếp trên đúng source GitHub; không tự nhận đã chạy.
 - Đang chờ chủ dự án **copy cả Code.gs và Form.html V5 sang Apps Script /exec, Save và Deploy New version**; rồi thử cho phép GPS, từ chối GPS, và lỗi mạng. Nếu cần sửa thì tiếp tục từ đây. Không tự ý cập nhật dữ liệu lịch sử hay bật lại workflow API.
+
+
+### Y.28. Android hiển thị lỗi Google Drive trong iframe Apps Script (14/11/2026)
+- Người dùng gửi ảnh Android: khi vào đăng ký đọc thư viện trên điện thoại, trong khung có logo Google Drive và thông báo "Rất tiếc, không thể mở tệp tại thời điểm này. Vui lòng kiểm tra địa chỉ và thử lại", trong khi PC hiển thị Form.
+- Đã đối chiếu GitHub: website `library-gate.js` nhúng Google Apps Script Web App `/exec` vào `iframe#ns-libgate-frame`, direct fallback hiện đang nằm SAU iframe cao 700px trên điện thoại nên người dùng khó thấy. `library-gate.css` định nghĩa iframe cao 700px dưới 520px.
+- Google công bố các sự cố Apps Script trên Android khi ứng dụng Google Drive can thiệp vào URL/multiple logged-in accounts: Issue Tracker 520300212 (05/06/2026) và 574946511 (18/10/2026); tài liệu Apps Script Troubleshooting khuyên thử Chrome incognito chỉ một Google account. Screenshot phù hợp nhưng KHÔNG khẳng định chắc một nguyên nhân duy nhất.
+- Kế hoạch bản vá không phá form PC: đưa đường dẫn hỗ trợ lên TRƯỚC iframe và hiện hướng dẫn Android mở website bằng Chrome/Samsung Internet chế độ ẩn danh; bổ sung khả năng sao chép link test website nhanh, giữ direct Apps Script URL fallback; không tùy tiện sửa chế độ chia sẻ Google Drive, không thay backend/GPS/Sheets.
+- Cần kiểm tra sau commit trên Android thật. Không thể dùng kết quả truy cập web.open /exec/GitHub Pages trong công cụ để chứng minh chạy live vì bên công cụ vẫn không mở được hai URL này.
