@@ -1032,3 +1032,10 @@
 - Chủ dự án phản hồi hai Docs V1 khó đọc và hỏi kịch bản có phải chatbot tự động không. Đã mở lại cả hai tài liệu native để rà đúng nguồn.
 - Mục tiêu V2: phân biệt Meta Instant Reply/Away (auto), keyword/FAQ nếu có trên Page (rule-based), Saved Replies (người trực bấm), bot AI tích hợp (chưa có); đơn giản hóa kịch bản và quy trình chăm sóc 7 bước.
 - Tạo bản Docs V2 mới trong `Facebook/07_CHAM_SOC_KHACH_HANG`, giữ bản V1 để đối chiếu, không thay lịch Metricool, không tự động kích hoạt bot chưa kiểm thử.
+
+### Y.63. HOÀN THÀNH biên soạn Messenger/SOP V2 và lưu Drive (14/11/2026)
+- Tạo hai **Google Docs V2 mới**, giữ nguyên V1, đã readback đầy đủ nội dung và move thành công về đúng parent `Facebook/07_CHAM_SOC_KHACH_HANG` ID `1jl9BvJZK4VVGCbhBJ-ej5kbp6a4G1kAC`.
+- Kịch bản Messenger V2: https://docs.google.com/document/d/1PbueSWma1SldYTyDNFusXotl77wb1xFMe0398iYTK3w/edit ; 6.310 ký tự tác giả, chia rõ Instant Reply/Away/FAQ có điều kiện, Saved Replies thủ công, AI bot chưa có; 14 mẫu ngắn và checklist kiểm thử.
+- SOP V2: https://docs.google.com/document/d/19-TphBsO-0m8nzaBA6MFTSk9QHAIT-q8blvOjgR1vIk/edit ; 4.143 ký tự, quy trình 7 bước, 3 tình huống thực tế, 7 trạng thái CRM và quy tắc consent/PII.
+- **Tài liệu là kịch bản cấu hình, KHÔNG chứng minh bot đã tự chạy.** Chưa có quyền Meta Inbox để bật Instant Reply/FAQ, chưa thử điện thoại; không tự tuyên bố chatbot AI. Không chỉnh lịch Metricool, website, 21 PDF hay Leads.
+- Bước tiếp theo: người quản trị kiểm tra giao diện Automations Meta, cấu hình lời chào và thử bằng tài khoản Facebook khác; chỉ sau readback thực tế mới đánh dấu “đã bật”.
