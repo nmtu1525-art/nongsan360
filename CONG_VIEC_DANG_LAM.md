@@ -104,3 +104,11 @@
 - Ảnh kèm `FB-20261114-01_ANH_CHAO_MUNG_CHO_DUYET.png`, Drive file ID `1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf`, vị trí `Facebook/03_HINH_ANH_BAI_DANG`, URL: https://drive.google.com/file/d/1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf/view
 - Đã xác minh hai file bằng `list_folder` sau upload (bài 2406 bytes; ảnh 2460210 bytes). Bản thảo theo hướng thương hiệu tin tức/giáo dục, không có link affiliate hoặc CTA mở tài khoản; sử dụng URL GitHub Pages thực tế.
 - **TRẠNG THÁI:** CHỜ ANH DUYỆT bài và ảnh; không tự đăng. Tiếp theo sau duyệt: tạo Fanpage Facebook thật hoặc đăng bài chào mừng khi người dùng cấp quyền phù hợp; tiếp tục chuẩn bị 3 nội dung kiến thức đầu tiên. Giữ nguyên 21 PDF và website.
+
+### FB-20261114-01 — ĐÃ DUYỆT, ĐÃ LƯU FILE TRÊN DRIVE (14/11/2026)
+- Người dùng xác nhận `Duyệt, lưu lên file đi`. Đã tạo bản chính thức **ĐÃ DUYỆT** và đọc lại nội dung kiểm chứng.
+- File bài chính thức: `Facebook/02_BAI_VIET/FB-20261114-01_BAI_CHAO_MUNG_DA_DUYET.md`, ID **1siBa1EcWXcAQCmWNGdEcDPV2gmUTHZ2-**, https://drive.google.com/file/d/1siBa1EcWXcAQCmWNGdEcDPV2gmUTHZ2-/view. Nội dung ghi `ĐÃ DUYỆT — CHƯA ĐĂNG FACEBOOK`.
+- File ảnh chính thức: `Facebook/03_HINH_ANH_BAI_DANG/FB-20261114-01_ANH_CHAO_MUNG_DA_DUYET.png`, ID **1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf**, https://drive.google.com/file/d/1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf/view. Chỉ đổi tên, giữ nguyên bytes/ID.
+- Bản thảo lịch sử được bảo toàn riêng tại `Facebook/02_BAI_VIET/FB-20261114-01_BAI_CHAO_MUNG_BAN_THAO_LUU_TRU.md`, ID `1jhQueir0uAHO1Ib5LjRrnJuI9wXkHIHP`. Không nhầm bản thảo với bản đã duyệt.
+- Đã xác minh cả hai thư mục Drive bằng `list_folder`; bản bài đã duyệt bằng `fetch`. Do Drive không hỗ trợ overwrite trực tiếp qua Library, tạo bản đã duyệt riêng và bảo quản bản thảo cũ.
+- **Bước tiếp:** Khi Fanpage Facebook thật được tạo qua tài khoản của anh, đăng bài + ảnh đã duyệt; trước đó không khẳng định đã đăng. Tiếp tục xây bài kiến thức cà phê/ngô/lúa mì và lưu vào đúng Drive Facebook.
