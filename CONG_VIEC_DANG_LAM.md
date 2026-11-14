@@ -298,3 +298,10 @@
 - Mục `#/@lien-he` trang chủ có hai nút nổi bật (Facebook và gọi điện) trước 3 nút thư viện/học viện/tài khoản hiện có; phần footer bổ sung hai link liên hệ; phần cuối hướng dẫn mở tài khoản SFVN cũng có hai link liên hệ. Không mạo nhận là bộ phận hỗ trợ chính thức SFVN hoặc MXV.
 - **Đã đọc lại mã nguồn sau commit**: `Zalo` 0 lần, đúng 4 đường dẫn gọi điện, 3 đường dẫn Fanpage, contact buttons/fallback/footer/guide có đủ, 31 templates không đổi, video iOS/Android/QR/4 hướng dẫn còn nguyên.
 - Không sửa giáo trình, `tin-tuc.json` hoặc bất kỳ hình ảnh/video nào. Chưa có bằng chứng GitHub Pages đã triển khai bản mới (commit combined statuses rỗng), nên người dùng nên mở `https://nmtu1525-art.github.io/nongsan360/#/@lien-he` sau deploy và kiểm tra cả nút Facebook/gọi điện trên điện thoại.
+
+## S. Sửa liên kết Fanpage không mở được từ website (14/11/2026)
+- Người dùng gửi ảnh Facebook `Bạn hiện không xem được nội dung này` sau khi bấm liên kết Fanpage trên website.
+- **Phát hiện:** website đang dùng `https://www.facebook.com/122095198125555913`, được suy ra từ tiền tố link bài viết của Metricool. Dạng URL đó chưa được Facebook xác minh là đường dẫn công khai tới Page; ảnh user cho thấy không mở được.
+- Metricool brand `8097037` tên `Nông Sản 360` có `facebookData=1388965107640064`; các link bài đăng Metricool có dạng `https://facebook.com/122095198125555913/posts/<post-id>`, cho thấy Facebook có thể dùng **hai ID khác nhau** cho Page API và Page profile.
+- Web công khai không fetch được URL Facebook do chặn truy cập, nên chưa thể kết luận Page bị ẩn hay đường dẫn số bị lỗi. Đang sửa sang dạng URL Page profile chuẩn `https://www.facebook.com/profile.php?id=122095198125555913`, xem đây là **phương án cần user kiểm thử**, không khẳng định đã mở được. Nếu vẫn lỗi, cần người dùng dùng nút `Chia sẻ trang → Sao chép liên kết` trên Fanpage thật và gửi đúng URL để thay thế, đồng thời kiểm tra trạng thái Page đã công khai.
+- Giữ nguyên điện thoại `0985272776` và các mục khác. Sẽ kiểm tra readback và cập nhật checkpoint.
