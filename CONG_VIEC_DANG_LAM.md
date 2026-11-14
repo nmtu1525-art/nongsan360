@@ -1014,3 +1014,9 @@
 - Đã đọc lại hai checkpoint, HEAD GitHub và Drive gốc; xác nhận Y.58 đã hoàn thành hai tài liệu Messenger/SOP và lịch Metricool được giữ nguyên tại lần kiểm trước.
 - Chặng mới: tạo **mẫu CRM rỗng**, phân luồng khách hỏi tập huấn / kiến thức / chủ động hỏi hợp tác hoặc mở tài khoản, có trường ghi nhận consent, trạng thái, ngày hẹn và chủ phụ trách. Không sao chép PII, không chỉnh Sheet `Leads` hoặc lịch Metricool.
 - Trước khi ứng dụng thực tế cần người dùng duyệt mẫu; không tuyên bố đồng bộ tự động nếu chưa kiểm thử.
+
+### Y.60. Kết quả chặng mẫu CRM rỗng (14/11/2026)
+- Đã tạo local workbook `NS360_MAU_CRM_CHAM_SOC_KHACH_SFVN_20261114.xlsx` gồm 3 sheet: `CRM_Khach_quan_tam` (18 cột, nhập rỗng, data validation), `HUONG_DAN` (consent và bảo mật), `TONG_QUAN` (đếm trạng thái bằng công thức).
+- Đã mở lại workbook bằng openpyxl để xác minh đúng 3 sheet và không có hồ sơ khách thật.
+- **CHƯA upload Drive**: công cụ import Google Sheets trả schema mismatch `source_file` yêu cầu object trong khi đầu vào được công bố dạng string; không được tuyên bố đã tạo Google Sheet native. File local có thể tải trực tiếp qua chat hiện tại.
+- Không sửa Sheet Leads, lịch Metricool, website hay 21 PDF. Việc tiếp theo: đưa bản đã duyệt lên Drive bằng luồng import hỗ trợ object/file ref hợp lệ, kiểm thử trực tiếp Meta Messenger và form khách tự nguyện; không nhập giả PII.
