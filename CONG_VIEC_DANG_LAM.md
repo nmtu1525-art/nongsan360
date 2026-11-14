@@ -565,3 +565,12 @@
 - Sau khi bật `LIVE_ENABLED=true`, rà soát `index.html` cho thấy menu chính `Thư viện kiến thức` trỏ đến `#/thu-vien/index.html`. Gate phiên vừa bật chỉ chặn `/giao-trinh/...`, vì vậy khách nhấn menu Thư viện vẫn thấy danh sách chứ chưa hiện form; chưa giải quyết trọn vẹn hiện tượng người dùng mô tả.
 - **Quyết định:** mở rộng `protectedRoute` cho `/thu-vien/index.html` để người chưa đăng ký thấy form ngay khi bấm Thư viện; người đã đăng ký đi thẳng vào thư viện như cũ. Giữ các route giáo trình được bảo vệ. Đổi cache-bust thêm một phiên bản, kiểm GitHub readback.
 - Không sửa backend `Code.gs`, `Form.html`, dữ liệu khách, 21 PDF, tin tức hay Facebook. Kiểm thử live browser sau commit vẫn cần người dùng xác nhận.
+
+
+### Y.15. Hoàn thành bật form ngay từ nút Thư viện (14/11/2026)
+- Đã bật `LIVE_ENABLED=true` cho các khách chưa có marker đăng ký trong browser.
+- Sau phát hiện menu `Thư viện kiến thức` vào `#/thu-vien/index.html`, đã mở rộng `protectedRoute` chặn thêm `/thu-vien/index.html` (vẫn chặn các route giáo trình) cho người chưa đăng ký, commit `cba714ba60c0087a89d9d14fe40537864bb024e8`.
+- Đã cập nhật `index.html` script `library-gate.js?v=20261114-live-v3-library-2` để tải JS mới, commit `6d79034157e70ca240192f93ce7843392157b50a`.
+- Readback GitHub xác minh `gateLive=true`, `libraryIndexProtected=true`, route giáo trình còn bảo vệ, menu trỏ đúng library index, script mới chỉ xuất hiện đúng 1 lần, và router gọi `shouldBlock(route)`.
+- **Hướng dẫn thử**: ở tab ẩn danh mới, mở `https://nmtu1525-art.github.io/nongsan360/`, bấm **Thư viện kiến thức** → mong đợi thấy form V3. Nếu đã đăng ký trong cùng trình duyệt, dấu `localStorage` khiến form không hiện nữa đúng thiết kế. Cần xác nhận GitHub Pages live và submit → hiển thị thư viện trên thiết bị thật; công cụ web bên này không truy cập được URL live.
+- Đã kiểm `Leads!I1:J80` thấy 1 v2 ACTIVE và 1 v3 ACTIVE trước khi bật; không chỉnh dữ liệu, không yêu cầu thêm thông tin cá nhân trong chat. Không sửa tài liệu/tin tức/Metricool.
