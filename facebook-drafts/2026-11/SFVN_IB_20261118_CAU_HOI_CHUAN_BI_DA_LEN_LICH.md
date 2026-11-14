@@ -2,6 +2,8 @@
 
 **Trạng thái:** Bản nội dung cho lịch 18/11, ảnh 1080x1350 `NS360_SFVN_Bai3_18-11-2026.png`. Từ khóa: tập huấn hàng hóa phái sinh 20/11, SFVN Academy, đối tác IB, MXV, quản trị ký quỹ. Ba câu hỏi là nội dung do Nông Sản 360 gợi ý, không phải agenda chính thức.
 
+**Metricool (sau đổi CTA):** ID 428049677; bấm link Messenger https://m.me/1388965107640064.
+
 ## NỘI DUNG FACEBOOK
 
 🎓 **3 CÂU HỎI NÊN CHUẨN BỊ TRƯỚC BUỔI TẬP HUẤN HÀNG HÓA PHÁI SINH SFVN 20/11**
