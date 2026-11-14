@@ -167,3 +167,12 @@
 - `Code.gs` đã sửa đúng 10 cột và RequestID cột I; Form v3 / policy / README đã cập nhật GitHub. 4 file bản sao trong Drive đã được ghi đè nội dung đúng ID cũ và đọc lại khớp hoàn toàn GitHub; thư mục không có staging trùng.
 - **CHƯA LIVE**: Apps Script đang deploy chưa tự đồng bộ mã từ GitHub/Drive, chủ dự án phải thay cả `Code.gs`, `Form.html` rồi Deploy → Manage deployments → Edit → New version → Deploy. Lúc chưa redeploy, form test có thể lỗi do backend cũ vẫn mong 12 cột. `library-gate.js` vẫn `LIVE_ENABLED=false`. Sau khi user redeploy, thử v3 và đối chiếu Sheet mới; chỉ khi PASS mới bật gate public.
 - Node VM test v3 PASS về cú pháp và vị trí 10 cột. 21 PDF, website news và Metricool không thay đổi.
+
+
+## 27. Kiểm chứng chặng V3 sau khi tiếp tục từ checkpoint (14/11/2026)
+- Đã xác minh GitHub kết nối có quyền push và Drive đang sẵn sàng, không phải làm lại website/Facebook.
+- File `library-registration/Code.gs` trên GitHub đã đối chiếu **khớp byte với bản Drive** (đọc base64, do Drive để MIME octet-stream); `Form.html` khớp bản Drive 4434 ký tự. Không phát hiện bất đồng bộ giữa hai nguồn tệp.
+- Trên Sheet riêng tư tab `Leads`, có đúng 10 cột A:J, `I2:J40` hiện chỉ thấy 1 RequestID bắt đầu bằng `v2-` và trạng thái ACTIVE; **chưa có bản ghi v3-**. Không tiết lộ thông tin cá nhân.
+- `library-gate.js` vẫn `LIVE_ENABLED = false` và có route thử `#/thu-vien/kiem-tra-dang-ky`; không mở form bắt buộc cho người đọc. Không truy cập được trang Pages và Apps Script live qua công cụ web, do đó không xác nhận đã redeploy hoặc kiểm thử trình duyệt xong.
+- Checkpoint công việc đã ghi commit `9ce8dd33371c9ac0495529bc36c8fae86bbd3409`. Bước kế tiếp phụ thuộc vào chủ dự án cập nhật **cả Code.gs + Form.html** tại Apps Script và redeploy cùng URL /exec; sau đó đăng ký thử, kiểm Sheet có RequestID `v3-` trạng thái ACTIVE và xác minh điều hướng CF-01 trước khi cân nhắc bật LIVE.
+- Không chỉnh sửa các file PDF, dữ liệu tin tức, danh sách khách, bài Metricool, file website ngoài checkpoint; không dùng OpenAI API key.
