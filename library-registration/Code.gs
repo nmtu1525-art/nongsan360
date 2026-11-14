@@ -1,10 +1,11 @@
-/** Nông Sản 360 — Registration backend for free library, schema v3 (10 columns). */
+/** Nông Sản 360 — Registration backend for free library, schema v4 (12 columns, approximate city only). */
 const LIBRARY_CONFIG = Object.freeze({
   allowedParentOrigin: 'https://nmtu1525-art.github.io',
   sheetName: 'Leads',
   privacyVersion: '2026-11-14',
   maxNameLength: 80,
-  maxEmailLength: 160
+  maxEmailLength: 160,
+  maxCityLength: 70
 });
 
 function doGet(e) {
@@ -38,6 +39,13 @@ function registerLead(payload) {
   const topic = safeText(payload.topic, 25);
   const source = safeText(payload.source, 45);
   const requestId = safeText(payload.requestId, 80);
+  // City-level approximate IP geolocation only. No IP, GPS or precise coordinates are saved.
+  const city = safeText(payload.city, LIBRARY_CONFIG.maxCityLength);
+  const region = safeText(payload.region, LIBRARY_CONFIG.maxCityLength);
+  const country = safeText(payload.country, LIBRARY_CONFIG.maxCityLength);
+  const cityLabel = city ? [city, region !== city ? region : ''].filter(Boolean).join(', ') : '';
+  const mapQuery = city ? [city, region !== city ? region : '', country].filter(Boolean).join(', ') : '';
+  const mapsUrl = mapQuery ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(mapQuery) : '';
 
   if (name.length < 2 || name.length > LIBRARY_CONFIG.maxNameLength) throw new Error('Họ tên cần từ 2 đến 80 ký tự.');
   if (!/^(?:0[0-9]{9,10}|\+84[0-9]{9,10})$/.test(phone)) throw new Error('Vui lòng kiểm tra số điện thoại Việt Nam.');
@@ -50,8 +58,9 @@ function registerLead(payload) {
   const doc = SpreadsheetApp.openById(id);
   const sheet = doc.getSheetByName(LIBRARY_CONFIG.sheetName);
   if (!sheet) throw new Error('Không tìm thấy bảng dữ liệu đăng ký.');
-  const header = sheet.getRange(1, 1, 1, 10).getDisplayValues()[0];
-  if (header[0] !== 'ThoiGianDangKy' || header[2] !== 'SoDienThoai' || header[8] !== 'RequestID') {
+  const header = sheet.getRange(1, 1, 1, 12).getDisplayValues()[0];
+  if (header[0] !== 'ThoiGianDangKy' || header[2] !== 'SoDienThoai' || header[8] !== 'RequestID' ||
+      header[9] !== 'TrangThai' || header[10] !== 'ThanhPhoUocTinh' || header[11] !== 'GoogleMapsUocTinh') {
     throw new Error('Cấu trúc bảng dữ liệu không chính xác.');
   }
 
@@ -65,7 +74,8 @@ function registerLead(payload) {
     sheet.appendRow([
       stamp, safeSheetText(name, 80), safeSheetText(phone, 20), safeSheetText(email, 160),
       safeSheetText(topic, 25), safeSheetText(source, 45),
-      LIBRARY_CONFIG.privacyVersion, stamp, safeSheetText(requestId, 80), 'ACTIVE'
+      LIBRARY_CONFIG.privacyVersion, stamp, safeSheetText(requestId, 80), 'ACTIVE',
+      safeSheetText(cityLabel, 145), mapsUrl
     ]);
     SpreadsheetApp.flush();
     return { ok: true };
