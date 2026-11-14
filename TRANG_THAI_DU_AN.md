@@ -117,3 +117,7 @@
 - Đã thực hiện yêu cầu thay bộ ảnh kiểu AI bằng **6 ảnh PNG 4:5 (1080×1350) thiết kế bố cục vector/chữ trên PowerPoint**, không dùng image generator, không làm giả ảnh chụp hoặc dữ liệu. Không cam kết Meta không gắn nhãn AI.
 - Toàn bộ 6 ảnh V2 lưu Google Drive `Facebook/03_HINH_ANH_BAI_DANG` (ID `1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx`), tên `FB-YYYYMMDD-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`; bản nguồn PPTX editable ID `17kK1z7JMDociLH_g2-dCMSJz5SEa8MHY`. Đã xác minh qua metadata từng file.
 - Giữ nguyên 6 ảnh nháp cũ và bài chào mừng. Đã cập nhật liên kết V2 trong 6 Google Docs và 6 GitHub draft tương ứng; lịch tháng 11 đã đồng bộ GitHub và Drive, trạng thái ảnh V2 **chờ anh duyệt**. Không đặt lịch/đăng Facebook mới. Website, 21 giáo trình PDF và `tin-tuc.json` không bị sửa.
+
+## 19. Quyết định ảnh Facebook cuối cùng: quay lại 6 ảnh cũ (14/11/2026)
+- Người dùng quyết định **sử dụng bộ 6 ảnh minh họa bản đầu**, không dùng 6 đồ họa V2 cho lịch Fanpage tháng 11. Đã thay đúng ID ảnh cũ trong **6 Google Docs + 6 draft GitHub**, kiểm tra lại mỗi file có link cũ, không còn tham chiếu V2; lịch tháng 11 Google Docs và GitHub cũng đã chỉnh.
+- 6 ảnh V2 và file PPTX vẫn bảo toàn trên Drive như bản lưu trữ, không xóa/ghi đè. **Chưa đăng các bài mới**, ảnh được chọn nhưng caption vẫn cần phê duyệt trước khi xếp lịch Metricool. Facebook có thể quyết định gắn nhãn AI với ảnh minh họa cũ.
