@@ -220,3 +220,9 @@
 - Đã xóa câu quảng bá `Liên kết dùng mã giới thiệu... Nông Sản 360 có thể được ghi nhận quyền lợi giới thiệu...` khỏi giao diện theo yêu cầu chủ dự án; vẫn giữ QR và URL có mã `046C0000554`, rel=sponsored để đánh dấu liên kết thương mại với máy tìm kiếm. Ảnh QR alt đổi sang mô tả trung lập, bỏ CSS cũ dư thừa.
 - Readback GitHub: CTA đúng route, route template tồn tại, không còn QR ở trang chủ, có video placeholders, mẫu template cân bằng. Commit `24c0ad4da113c1d335c9221437ca417c72007751`.
 - GitHub Pages live không đọc được bằng web tool, vì vậy không thể xác thực triển khai/ảnh còn cache; nếu ảnh trang cũ, người dùng nên refresh mạnh hoặc mở tab ẩn danh sau khi Pages deploy. Chưa thay đổi nội dung tin tức hoặc giáo trình.
+
+## N. Bổ sung link tải ứng dụng SFVN vào mục Tìm hiểu & mở tài khoản (14/11/2026)
+- Yêu cầu hiện tại: bổ sung hai liên kết tải SFVN Trading cho iOS và Android ngay trong khu vực `#/mo-tai-khoan/index.html` trên website, để khách vào trang có thể tải app. Chỉnh sửa trên GitHub `nmtu1525-art/nongsan360`, không làm lại website.
+- Đã đối chiếu hai trang chính thức: App Store iOS `https://apps.apple.com/vn/app/sfvn-trading-%C4%91%E1%BA%A7u-t%C6%B0-h%C3%A0ng-h%C3%B3a/id6743525644` (publisher SFVN INVESTMENT CORPORATION); Google Play `https://play.google.com/store/apps/details?id=sfvn.com.maps.app` (cùng publisher).
+- Mã nguồn hiện tại trong `index.html` chứa template trang `Tìm hiểu & mở tài khoản`, khối đăng ký bằng QR, khối video hướng dẫn và cảnh báo. Sẽ thêm khu vực tải app trong đúng template này, không thay đổi QR, đăng ký, video, giáo trình, tin tức.
+- **Đang thực hiện**: kiểm tra CSS, đặt khối giao diện tải app gọn và rõ nền tảng, thêm chú thích đó là ứng dụng bên thứ ba của SFVN, xác minh HTML sau khi ghi và cập nhật checkpoint khi hoàn thành.
