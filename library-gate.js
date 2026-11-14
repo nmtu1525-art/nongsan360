@@ -7,7 +7,7 @@
   const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwOanbih1xPmM07lBtMdfkll3_8JNYRRKzW0x7qFGuWsVqjHDuYf5YmA9JNonthV5EWyQ/exec'; // After Apps Script deployment: paste verified https://script.google.com/macros/s/.../exec URL.
   const STORAGE_KEY = 'ns360-library-reader-v1';
   const isConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/.test(WEB_APP_URL);
-  // Enabled after a v3 ACTIVE registration was confirmed in the private Google Sheet.
+  // Live gate remains enabled for new readers; city-only lookup occurs inside Form V6.
   const LIVE_ENABLED = true;
   const TEST_ROUTE = '/thu-vien/kiem-tra-dang-ky';
   // URL hash-based test route works even when query parameters are stripped by a browser or redirect.
