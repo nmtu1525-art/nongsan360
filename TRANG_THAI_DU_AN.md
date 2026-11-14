@@ -70,3 +70,8 @@
 - Mục `Tìm hiểu & mở tài khoản` đã được bổ sung nút tải app SFVN Trading cho iOS (App Store) và Android (Google Play), bằng chỉnh sửa trực tiếp `index.html` trên GitHub, commit `559f7ae8d6c5590a3a857c9f68b6629f3e8d5917`.
 - Hai URL store được kiểm tra với trang ứng dụng chính thức và cùng nhà phát triển SFVN INVESTMENT CORPORATION. Bản ghi đọc lại GitHub sau cập nhật đã xác nhận đúng cả hai URL, đúng một khối app, giữ nguyên QR đăng ký và cảnh báo. Chưa xác minh GitHub Pages live vì kết nối web không truy cập được.
 - Bài Facebook chào mừng mã `FB-20261114-01` được đưa vào lịch Metricool lúc 11:15 ngày 14/11 (có checkpoint chi tiết trong `CONG_VIEC_DANG_LAM.md`), một tác vụ kiểm tra sau đăng được đặt 11:25 cùng ngày. Không tự suy đoán bài đã công khai nếu chưa có xác minh.
+
+## 10. Video hướng dẫn tài khoản SFVN (14/11/2026)
+- Đã nhận 2 video MP4 tại `01_WEBSITE/03_VIDEO_HUONG_DAN_TAI_KHOAN_SFVN`: mở tài khoản Drive ID `1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev` và nạp tiền ID `1dzdSfBeYAU1oYMF74Otvb7LSzv1Yq-eW`.
+- Đã sửa `index.html`, nhúng 2 video vào 2 ô hướng dẫn tương ứng (Drive iframe preview + liên kết dự phòng), commit `01324d9f38fd45690f129d2eda3db751d1524e78`, readback xác minh mã HTML và giữ nguyên tính năng cũ.
+- Drive video **nạp tiền đã mở quyền anyone:reader**, video **mở tài khoản còn private**: cần chủ sở hữu cấp `Bất kỳ ai có liên kết → Người xem` cho video 01. Chưa kiểm thử phát video trên trang Pages công khai. Không xác nhận đã xem nội dung bên trong chỉ qua metadata.
