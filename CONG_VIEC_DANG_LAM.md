@@ -591,3 +591,10 @@
 - Đã xác nhận ít nhất một trình duyệt thực tế tải giao diện form qua website theo phản hồi của chủ dự án. Chưa có chứng cứ để khẳng định mọi trình duyệt và bước submit/điều hướng sau đó đều hoạt động hoàn toàn.
 - **Không sửa mã thêm** vì đây là hành vi dự kiến cho khách đã đăng ký. Giữ `LIVE_ENABLED=true`, bảo toàn 21 giáo trình, dữ liệu Leads, tin tức và 6 bài Fanpage đã lên lịch.
 - Bước nghiệm thu còn lại: nếu cần, kiểm tra 1 phiên khách mới thực tế hoàn tất form V3 và vào thư viện, kiểm tra `RequestID v3-` trên Sheet mà không đưa thông tin cá nhân vào chat.
+
+
+### Y.18. Bắt đầu thêm tỉnh/thành phố và liên kết Google Maps cho lead mới (14/11/2026)
+- Yêu cầu: thêm cột thành phố cho đăng ký thư viện, có vị trí tương đối trên Google Maps càng tốt. Chỉ lưu **thành phố ước tính**, không lưu IP, tọa độ chính xác hay lịch sử di chuyển.
+- Trước khi chỉnh, đã xác minh `Leads` có 24 cột, 10 header A:J hiện có, dữ liệu khách cũ và `TrangThai` cột J; `Code.gs` hiện `appendRow` 10 trường. Sẽ **thêm K:L** ngoài schema hiện hữu, không chèn vào giữa để tránh phá bảng đang hoạt động.
+- Phương án: form có ô thành phố không bắt buộc và nút chủ động `Ước tính qua IP` (thông báo rằng truy vấn IP tới bên cung cấp dịch vụ chỉ khi khách nhấn nút), tự điền city nếu thành công; có thể nhập tay khi thất bại. Backend xác thực/sanitize tên thành phố, tạo Google Maps URL chỉ theo tên thành phố + quốc gia Việt Nam (không ghim tọa độ nhà); không lưu IP. Nếu trống vẫn đăng ký bình thường.
+- Sẽ giữ nguyên cơ chế gate, 21 PDF, tin tức, Facebook, dữ liệu cũ. Cần chủ dự án cập nhật Apps Script `Code.gs` + `Form.html` và redeploy phiên bản mới vì connector không chỉnh deployment Apps Script.
