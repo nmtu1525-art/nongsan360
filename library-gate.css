@@ -18,3 +18,20 @@
 
 .ns-libgate-mobile-alternative{display:none;padding:10px 12px;border-radius:10px;border:1px solid #d7e3da;background:#f5faf7;color:#395d48!important}
 @media(max-width:800px){.ns-libgate-mobile-alternative{display:block}}
+
+/* Staged first-party registration. Styles apply only when native preview is enabled. */
+.ns-native-card form{display:block}
+.ns-native-card label{display:block;margin:0 0 14px;font-size:13px;font-weight:700;color:#28334b}
+.ns-native-card label small{display:inline;font-weight:400;color:#596572;font-size:12px}
+.ns-native-card input,.ns-native-card select{display:block;width:100%;box-sizing:border-box;border:1px solid #d8ddd5;border-radius:10px;padding:12px;font:400 15px/1.5 Arial,sans-serif;color:#28334b;background:white;margin-top:6px}
+.ns-native-card input:focus-visible,.ns-native-card select:focus-visible,.ns-native-card button:focus-visible{outline:3px solid #65a47a;outline-offset:2px}
+.ns-native-card button{border:0;border-radius:10px;background:#246943;color:#fff;font-size:15px;font-weight:800;padding:14px 12px;width:100%;cursor:pointer}
+.ns-native-card button:disabled{opacity:.6;cursor:wait}
+.ns-native-card form>small{display:block;margin-top:12px;font-size:12px;color:#63736b;line-height:1.55}
+.ns-native-card form a{color:#246943;text-decoration:underline}
+.ns-native-card #ns-native-status{font-size:13px;line-height:1.5;min-height:18px;color:#66717b;margin:12px 0 0}
+.ns-native-card #ns-native-status.ns-native-success{color:#236c42}
+.ns-native-card #ns-native-status.ns-native-failure{color:#a03d23}
+.ns-native-card .ns-native-support{margin-top:14px;font-size:12px;line-height:1.6;color:#66717b}
+.ns-native-card .ns-native-honeypot{display:none!important}
+@media(max-width:520px){.ns-native-card{padding:18px 15px 16px!important}.ns-native-card label{margin-bottom:12px}}
