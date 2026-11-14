@@ -1,6 +1,6 @@
 # FB-SFVN-20261119-01 — Nhắc lịch trước buổi tập huấn (ĐÃ LÊN LỊCH)
 
-- **Đã lên Metricool:** Thứ Năm 19/11/2026, 10:00 (Asia/Saigon), ID 428072942, UUID -9108208944996138606, autoPublish=true, PENDING.
+- **Đã lên Metricool:** Thứ Năm 19/11/2026, 10:00 (Asia/Saigon), ID 428100803, UUID -9108208944996138606, autoPublish=true, PENDING.
 - **Vai trò:** Nhắc người quan tâm kiểm tra điều kiện tham dự và chuẩn bị câu hỏi; không tuyên bố đã có suất hoặc yêu cầu đặt chỗ qua Nông Sản 360.
 - **Từ khóa chính (Social SEO):** tập huấn hàng hóa phái sinh 20/11.
 - **Từ khóa phụ:** SFVN Academy TP.HCM; IB hàng hóa phái sinh; hợp đồng tương lai hàng hóa; MXV; quản trị rủi ro.
@@ -33,12 +33,12 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb19
 
-Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
-
 
 
 #TapHuanHangHoaPhaiSinh #SFVN #DoiTacIB #NongSan360
 
-**Ảnh đã lưu trong Drive:** https://drive.google.com/file/d/1x0gn2DINKSxwygJq1rpOjzlfs9m1HiCn/view. **Bài đã được đặt lịch tự đăng**, chưa xuất bản trước giờ hẹn; ảnh minh họa do Nông Sản 360 thiết kế, không phải poster chính thức của SFVN.
+**Ảnh đã lưu trong Drive:** https://drive.google.com/file/d/1Z3dWmoFzUEmvA169yvYBP1zfR47h3kjG/view. **Bài đã được đặt lịch tự đăng**, chưa xuất bản trước giờ hẹn; ảnh minh họa do Nông Sản 360 thiết kế, không phải poster chính thức của SFVN.
 
 **Bản tổng hợp đã duyệt:** [4 bài Facebook với Messenger + form](SFVN_4_BAI_FB_DA_DUYET_CTA_MESSENGER_FORM_20261114.md).
+
+**Chốt duyệt 14/11/2026:** Ảnh sạch footer 1122×1402 px đã được anh duyệt và thay trên Metricool — [Xem ảnh cuối](https://drive.google.com/file/d/1Z3dWmoFzUEmvA169yvYBP1zfR47h3kjG/view), ID Metricool mới `428100803`, giữ nguyên UUID, ngày giờ và autoPublish. Không dùng ảnh có thanh “Nhắn Fanpage…” và chữ nhỏ phía dưới. Caption đã bỏ dòng lưu ý dài theo yêu cầu.
