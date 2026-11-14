@@ -175,3 +175,8 @@
 - `updateScheduledPost` thành công, **ID mới `427715826`**, UUID giữ nguyên `6491152378912720177`, planner https://app.metricool.com/planner/calendar?blogId=8097037&openWithPostUuid=6491152378912720177 .
 - **ĐÃ XÁC MINH LẠI** bằng `getScheduledPosts`: duy nhất **1 bài**, thời gian 11:15 hôm nay, 1 ảnh `https://static.metricool.com/planner/202611/8097037-file-4100358833658287670.png`, `autoPublish=true`, mạng `facebook:PENDING`. Bài **chưa đăng công khai** tại thời điểm kiểm tra; không báo thành công xuất bản khi còn PENDING.
 - **Việc tiếp theo:** kiểm tra bài thực sự xuất hiện trên Fanpage *sau 11:15* (tốt nhất khoảng 11:25); nếu thành công ghi link bài công khai và chuyển sang chuẩn bị nội dung kế tiếp, nếu lỗi thì báo nguyên nhân, tránh đăng trùng. Kiểm thử khả năng thực thi tác vụ theo lịch riêng; không thay thế lịch tin website 07:00, không dùng OpenAI API key.
+
+### M.4. Đã tạo tác vụ kiểm thử sau giờ đăng (14/11/2026)
+- **ĐÃ TẠO tác vụ ChatGPT một lần** `Kiểm tra bài Facebook NS360`, ID `6af7de31c8f88191a8971dad6d8babaa`, lịch chạy **11:25 ngày 14/11/2026**, múi giờ `Asia/Ho_Chi_Minh`; trạng thái khi tạo `is_enabled=true`, `next_run_time=2026-11-14T11:25:00+07:00`.
+- Tác vụ được chỉ định kiểm tra bài đã hẹn 11:15 qua Metricool, cố gắng xác minh trên Fanpage (không lấy việc bài hết Pending làm kết luận), ghi checkpoint và báo cáo khi có bằng chứng; nếu thành công bắt đầu chuẩn bị kế hoạch 3 bài kiến thức, không tự đăng trùng bài chào mừng.
+- **Giới hạn:** Tác vụ hẹn chưa chạy nên chưa biết quyền công cụ có hoạt động trong môi trường lịch hay không. Lúc ghi checkpoint, bài Facebook **đang PENDING**; KHÔNG tuyên bố đã đăng. Nếu tác vụ không thể gọi Metricool hoặc GitHub phải báo rõ.
