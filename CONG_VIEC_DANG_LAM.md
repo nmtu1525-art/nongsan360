@@ -275,3 +275,10 @@
 - Các đích đều gắn ID chính xác, không tạo route mới. CSS hỗ trợ hover/focus keyboard, 4 cột desktop, 1 cột điện thoại, `scroll-margin-top:110px` tránh header che tiêu đề. Giữ an toàn dữ liệu/QR/video/CTA/cảnh báo.
 - **ĐÃ XÁC MINH GitHub readback**: đúng 4 link và 4 đích; router có xử lý `@anchor` và `scrollIntoView`, CSS đầy đủ, số lượng template vẫn 31; QR đăng ký, links app và 2 video không mất. Chưa kiểm chứng thực tế browser và GitHub Pages đã deploy.
 - Trang để khách thử: https://nmtu1525-art.github.io/nongsan360/#/mo-tai-khoan/index.html . Nếu Pages cache bản cũ, tải lại/trình duyệt ẩn danh.
+
+## R. Cập nhật liên hệ: Fanpage Facebook + điện thoại, bỏ Zalo (14/11/2026)
+- Người dùng chỉ định liên hệ qua **Fanpage Facebook** và **số điện thoại 0985272776**, **không cần Zalo**.
+- Đã kiểm tra `index.html`: hiện chỉ còn một chỗ nhắc Zalo ở `section.conversion#lien-he`; chưa có URL Facebook hay `tel:` trên website. Header và footer có liên kết nội bộ `#/@lien-he`.
+- Đã xác minh trong Metricool brand `8097037`: `brandInfo BRIN03` trả về tên Facebook Page là `Nông Sản 360`. `facebookData` có ID nội bộ `1388965107640064` nhưng Metricool trả link bài viết thật theo dạng `https://facebook.com/122095198125555913/posts/<postid>`; dùng đường dẫn trang `https://www.facebook.com/122095198125555913` suy ra từ các URL bài viết (không dùng username chưa xác minh).
+- Đang chỉnh sửa: cập nhật mục Liên hệ trang chủ bằng hai nút `Fanpage Facebook` và `Gọi 0985 272 776` (`tel:0985272776`), không đề cập Zalo. Tăng khả năng tiếp cận bằng liên kết liên hệ ở chân trang nhưng giữ nguyên các phần thư viện, QR, SFVN, video, PDF và tin tức.
+- Sẽ đọc lại mã GitHub để xác minh và ghi commit; chưa khẳng định giao diện GitHub Pages đã cập nhật khi chưa test live.
