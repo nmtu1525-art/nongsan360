@@ -6,8 +6,8 @@
 
 - Khách mới bấm **Thư viện kiến thức** hoặc một trang giáo trình → hiện form đăng ký; sau khi ghi thành công, trình duyệt lưu marker không chứa dữ liệu cá nhân để không phải đăng ký lại.
 - Form có họ tên và số điện thoại bắt buộc, email tùy chọn, chủ đề quan tâm. Không checkbox marketing, không xin quyền GPS.
-- **Khi khách chủ động nhấn nút `Đồng ý và mở thư viện miễn phí`**, trình duyệt thử gọi `https://ipwho.is/?fields=success,city,region,country` qua HTTPS để ước tính thành phố. Nhà cung cấp dịch vụ nhìn thấy IP kết nối, nhưng **không nhận họ tên, số điện thoại hoặc email** từ Form. Chỉ city/region/country được gửi tới Apps Script. **Không lưu IP, GPS, địa chỉ chi tiết hay tọa độ người dùng.**
-- Nếu dịch vụ IP lỗi, không có CORS hoặc trả về rỗng, form vẫn gửi sau tối đa khoảng 2,2 giây và K:L để trống. GeoIP có thể sai với VPN/4G và tuyệt đối không phải địa chỉ nhà.
+- **Khi khách chủ động nhấn nút `Đồng ý và mở thư viện miễn phí`**, trình duyệt thử gọi GeoJS `https://get.geojs.io/v1/ip/geo.json` qua HTTPS; nếu không có thành phố/khu vực thì thử ipwho.is làm nguồn dự phòng để ước tính thành phố. Nhà cung cấp GeoJS hoặc ipwho.is được gọi sẽ nhìn thấy IP kết nối, nhưng **không nhận họ tên, số điện thoại hoặc email** từ Form. Chỉ city/region/country được gửi tới Apps Script. **Không lưu IP, GPS, địa chỉ chi tiết hay tọa độ người dùng.**
+- Nếu cả hai nguồn GeoIP lỗi, không có CORS hoặc trả về rỗng, form vẫn gửi và K:L để trống; mỗi nguồn có giới hạn chờ 2,6 giây. GeoIP có thể sai với VPN/4G và tuyệt đối không phải địa chỉ nhà.
 - Form không có thông báo riêng về tra cứu khu vực hoặc tiến trình định vị; chỉ giữ liên kết **Chính sách dữ liệu cá nhân** (trong chính sách nêu rõ GeoIP và bên thứ ba). Trạng thái gửi thành công/lỗi vẫn hiển thị bình thường, không bật hộp xin quyền GPS.
 - RequestID V4 có tiền tố `v4-`. Nếu khách đã được đăng ký trước khi nâng cấp, việc quay lại thư viện **không** tự tạo một vị trí lịch sử.
 
@@ -63,3 +63,12 @@ Gửi một đăng ký thử bằng thông tin của chính chủ dự án. Kế
 - Tài liệu `pdf/*.pdf` công khai trên GitHub Pages vẫn có thể được mở trực tiếp; gate chỉ xử lý luồng truy cập trên giao diện trang.
 
 Checkpoint để tiếp tục: `CONG_VIEC_DANG_LAM.md`, `TRANG_THAI_DU_AN.md`.
+
+## 6. Ghi nhận sự cố và sửa V4.1 (14/11/2026)
+
+- Ảnh chụp từ chủ dự án và đọc lại `Leads!I:L` xác nhận **hai** bản ghi V4 ở trạng thái ACTIVE nhưng K:L trống. Do không lưu IP, **không thể xác định lại vị trí các bản cũ**.
+- Khả năng: trình duyệt/iframe không tải kịp hoặc không nhận kết quả từ ipwho.is; chưa có log lỗi trình duyệt để khẳng định CORS là nguyên nhân chính xác.
+- `Form.html` đã được chỉnh thành **V4.1**: GeoJS cung cấp dữ liệu thành phố/vùng qua HTTPS+CORS, ipwho.is là dự phòng. Mỗi lần đăng ký thử từng nguồn tối đa 2,6 giây; lỗi định vị không làm mất đăng ký. Không dùng GPS/API key; chỉ gửi city/region/country cho Apps Script, không đưa IP vào Sheet.
+- `Code.gs` V4 đã nhận 12 cột nên **không cần thay đổi thêm**. Cần cập nhật **Form.html V4.1** vào dự án Apps Script và `Deploy → Manage deployments → Edit → New version → Deploy`; không phải thay đổi `library-gate.js` hay bảng Google Sheet.
+- Form vẫn **không hiện lời nhắc định vị riêng**; chỉ có liên kết chính sách dữ liệu, trong đó minh bạch GeoJS và ipwho.is.
+- Sau khi redeploy, thử một lượt từ trình duyệt mới: mong đợi bản ghi `v4-` ACTIVE và K:L có thành phố/link Maps. Chưa tuyên bố đã hoạt động trên browser của khách cho đến khi test thành công.
