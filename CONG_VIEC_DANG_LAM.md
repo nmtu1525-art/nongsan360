@@ -550,3 +550,12 @@
 - Quyết định thực hiện theo phản hồi người dùng: bật gate trên route giáo trình website chính thức do đã có bằng chứng `v3- ACTIVE`; cập nhật cache-bust script trong `index.html` để browser lấy file mới. Bảo toàn 21 PDF và mọi dữ liệu; kiểm lại GitHub sau từng bước.
 - Lưu ý: gate chỉ áp dụng điều hướng trang giáo trình trong website, không phải kiểm soát quyền truy cập PDF trực tiếp; dấu đã đăng ký lưu trên trình duyệt có thể khiến cùng browser không thấy form nữa, thử ở cửa sổ ẩn danh để xác minh khách mới.
 - Bắt đầu triển khai; trạng thái từng commit sẽ ghi bổ sung ở dưới, không xóa dữ liệu.
+
+
+### Y.13. ĐÃ BẬT live gate đọc thư viện trên GitHub sau khi thấy lead V3 (14/11/2026)
+- **Đã thực hiện** thay `const LIVE_ENABLED = false;` thành `true;` trong `library-gate.js`. Commit `838a0afa1f32bb45e57b63399d0bccfe8e7b68b9`. Readback GitHub xác nhận `LIVE_ENABLED = true`, route chỉ chặn `/giao-trinh/{cf|ng|lm|ps}-NN.html` nếu browser chưa có dấu đã đăng ký; thư mục danh mục `/thu-vien/index.html` vẫn cho khách xem danh sách trước khi đăng ký.
+- **Đã thực hiện** đổi script src trong `index.html` thành `library-gate.js?v=20261114-live-v3-1` để tránh cache JS cũ. Commit `c943ec159b9271d4bfe5eaa67440d544f5e92a55`. Đọc lại `index.html` xác nhận đúng một script mới và lời gọi `NS360_LIBRARY_GATE.shouldBlock(route)` còn nguyên.
+- Trước thay đổi, đọc `Leads!I1:J80`: 1 bản ghi `v2-` ACTIVE và **1 bản ghi `v3-` ACTIVE**. Không đọc hoặc chép PII. Đây là xác minh backend đã ghi V3, nhưng chưa xác minh browser thật sau GitHub Pages publish.
+- **Chờ kiểm thử từ người dùng trên web public**: mở cửa sổ ẩn danh → `https://nmtu1525-art.github.io/nongsan360/` → `Thư viện kiến thức` → chọn một giáo trình như CF-01, phải thấy form; gửi đăng ký nếu là chủ sở hữu thử nghiệm và kiểm tra vào bài. Khi đã đăng ký trên cùng browser sẽ **không** xuất hiện form lần nữa theo thiết kế. Chỉ nhấn mục thư viện ở menu sẽ vào danh sách, chưa xuất hiện form cho đến khi nhấn giáo trình.
+- URL trang Pages qua web tool không truy cập được, nên đã xác minh GitHub commits/readback nhưng **chưa xác minh end-to-end trên site live**. URL PDF `/pdf/CF-01.pdf` trực tiếp không được bảo vệ bằng gate frontend; chức năng chỉ yêu cầu đăng ký ở các route giáo trình trong trang, không phải DRM.
+- Không thay đổi thư mục `pdf/`, `tin-tuc.json`, dữ liệu bảng Leads, nội dung Fanpage/Metricool; đã bảo toàn chúng.
