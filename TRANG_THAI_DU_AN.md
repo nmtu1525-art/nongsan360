@@ -37,8 +37,9 @@
 7. Báo cho anh bài nào được đăng, ngày công bố nguồn, nguồn, URL bài và ghi rõ điểm còn hạn chế.
 
 ## 5. Quy tắc bàn giao giữa các chat
-- Khi bắt đầu chat mới trong Project **hàng hóa phái sinh**, đọc file `TRANG_THAI_DU_AN.md` từ GitHub trước; tiếp theo kiểm tra commit HEAD, `tin-tuc.json`, cấu trúc repo, và thư mục Drive bản mới nhất. So sánh chứ không tự tin vào bộ nhớ hội thoại.
+- Khi bắt đầu chat mới trong Project **hàng hóa phái sinh**, **đọc `CONG_VIEC_DANG_LAM.md` trước** để biết công việc đang dở, sau đó đọc `TRANG_THAI_DU_AN.md`, kiểm tra commit HEAD, `tin-tuc.json`, cấu trúc repo và thư mục Drive mới nhất. Không làm lại từ đầu và không suy đoán từ trí nhớ.
 - Đọc yêu cầu mới của người dùng, đối chiếu việc đã làm, rồi làm tiếp trên mã hiện tại; không xây lại website từ đầu và không hỏi tải lại tệp đã có trên Drive.
+- **Trong lúc làm việc dài**, cập nhật `CONG_VIEC_DANG_LAM.md` ngay từ đầu và sau mỗi chặng đã lưu được, không đợi tới cuối cuộc chat; ghi rõ bước đang dở, đường dẫn/commit, bước tiếp theo, rủi ro. Công việc chưa lưu có thể mất khi chat bị ngắt bất ngờ.
 - **Sau mỗi phiên có thay đổi quan trọng**, cập nhật file này: ngày, HEAD commit, công việc đã hoàn thành, việc đang làm, trở ngại, quyết định chủ chốt, vị trí bàn giao trên Drive; đồng bộ bản mới lên Drive. Giữ nguyên lịch sử tệp cũ khi cần.
 - Nếu không đọc được GitHub/Drive, nêu rõ giới hạn và yêu cầu khôi phục kết nối, không đoán.
 
