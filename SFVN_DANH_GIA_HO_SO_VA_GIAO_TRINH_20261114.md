@@ -45,7 +45,7 @@
 ### Buổi tập huấn 20/11 và khoản hỗ trợ 2.000 USD/tháng
 - **CẢ HAI FILE KHÔNG NÊU** khoản tài trợ marketing/văn phòng `lên đến 2.000 USD/tháng`, hoặc lịch cụ thể **09:00–12:00 ngày 20/11/2026**. PDF tr.23 có thông tin hỗ trợ nội dung/data/văn phòng 150m² nhưng **không có mức hỗ trợ tiền và điều kiện nhận**; PDF tr.27–28 có hình các buổi tập huấn khác chứ không phải giấy mời riêng 20/11.
 - Nguồn web SFVN Academy, SFVN Partner có đề cập đào tạo/IB và một số cơ chế hỗ trợ đối tác theo chính sách từng thời kỳ, nhưng **chưa tìm được nguồn công khai xác nhận khoản tiền 2.000 USD/tháng** hoặc điều kiện hưởng.
-- **Ngày, giờ, địa điểm, đối tượng và điều kiện quyền lợi buổi 20/11 hiện là thông tin chủ dự án cung cấp**, trong đó địa điểm đã đối chiếu nguồn SFVN Academy. Không nói chương trình được chứng minh từ hai tài liệu; giữ hậu tố `theo thông tin chương trình` và `áp dụng với đối tác đủ điều kiện`, không bảo đảm giấy chứng nhận.
+- **Ngày, giờ, địa điểm, đối tượng và quyền lợi buổi 20/11 hiện là thông tin chủ dự án cung cấp**, trong đó địa điểm đã đối chiếu nguồn SFVN Academy. **Quy tắc diễn đạt:** Giấy chứng nhận phụ thuộc điều kiện hoàn thành tập huấn; hỗ trợ tối đa 2.000 USD/tháng phụ thuộc chính sách và xét duyệt của SFVN, không phải quyền lợi tự động. Hai file nội bộ không phải văn bản quy chế chi trả hay phê duyệt cấp giấy chứng nhận.
 - Chưa có poster, form đăng ký, quy chế chi trả hoặc số lượng suất, nên không lên bài mời với CTA đăng ký giả.
 
 ## 4. Ứng dụng cho Nông Sản 360 — quy trình đề xuất
