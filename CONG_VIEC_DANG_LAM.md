@@ -499,3 +499,8 @@
 - Kiểm tra Google Sheet tab `Leads` thời điểm hiện tại: **chưa phát hiện lượt đăng ký có `RequestID` tiền tố `v2-`**, nên chưa đủ bằng chứng form mới đã ghi thành công; một lượt đọc có quan sát bản ghi kiểu cũ, nhưng lượt đọc sau chỉ thấy header và không còn dòng đó (có thể người quản lý xóa dữ liệu thử). Không lưu nội dung cá nhân vào checkpoint.
 - Truy cập `/exec` bằng web tool chưa thành công (`Cache miss`), không thể xác minh trực tiếp giao diện sau redeploy. Chỉ bật public `LIVE_ENABLED=true` sau khi chủ dự án **thử 1 lượt gửi form v2** qua URL `https://nmtu1525-art.github.io/nongsan360/?ns360_signup_test=1#/giao-trinh/cf-01.html`, thấy mở giáo trình, sau đó đọc Sheet chứng minh `DongYXuLyDuLieu=TRUE`, `DongYNhanTin=FALSE`, `RequestID v2-`. Không công khai PII của khách trong chat.
 - Chưa đụng website công khai, 21 PDF, tin-tuc.json, lịch Metricool.
+
+### Y.7. Debug: ẩn danh vẫn không thấy form thử (14/11/2026)
+- Anh xác nhận đã bấm link kiểm thử bằng cửa sổ ẩn danh nhưng không thấy form. Chưa có v2 row xác nhận ghi dữ liệu, **giữ LIVE_ENABLED=false**.
+- Đã đối chiếu nguồn GitHub: regex URL /exec và route CF-01 đều hợp lệ, index.html có chỗ gọi gate, nhưng không truy cập được trang/asset thực qua web tool; không thể khẳng định nguyên nhân thực tế.
+- Cần làm test route độc lập chỉ dùng URL hash #/thu-vien/kiem-tra-dang-ky (không phụ thuộc query có thể bị bỏ), cưỡng bức hiển thị form khi thử kể cả có localStorage trước đó, chuyển đến CF-01 sau khi lưu thành công; thêm cache-bust JS và đọc lại tài liệu. Nếu browser vẫn không thấy màn hình, kiểm tra việc GitHub Pages phục vụ JS / Apps Script iframe trực tiếp. Không bật rộng trước test.
