@@ -1,78 +1,44 @@
-# Nông Sản 360 — Đăng ký đọc thư viện V5: GPS tùy chọn, IP dự phòng
+# Nông Sản 360 — Đăng ký thư viện V6: chỉ thành phố ước tính theo IP
 
-Cập nhật 14/11/2026. **GitHub và Google Sheets đã có mã/cột V5, nhưng Google Apps Script Web App độc lập chưa được xác nhận triển khai V5.** Không công bố tính năng GPS đã chạy thật cho tới khi người quản lý triển khai và kiểm thử.
+Cập nhật 14/11/2026. Theo quyết định của chủ dự án, ngừng yêu cầu GPS/phường-xã và **không tạo liên kết Google Maps mới**. Bảng Google Sheets được giữ nguyên cấu trúc dữ liệu lịch sử. Mã GitHub đã sửa, nhưng Web App Apps Script là bản triển khai độc lập: cần owner cập nhật và deploy V6 mới để người dùng nhận bản mới.
 
-## 1. Trải nghiệm khi đăng ký
+## 1. Trải nghiệm đăng ký
 
-1. Khách mới bấm menu **Thư viện kiến thức** hoặc một giáo trình → trang đăng ký hiện trên website.
-2. Sau khi khách nhấn **Đồng ý và mở thư viện miễn phí**, Form gửi một thông điệp có nonce sang cửa sổ website chính (GitHub Pages). Website thực hiện `navigator.geolocation.getCurrentPosition` trên HTTPS, **không yêu cầu GPS từ iframe Apps Script**.
-3. Nếu trình duyệt đã được cấp quyền trước đó, có thể không hỏi lại. Nếu chưa cấp quyền, trình duyệt hiển thị hộp thoại **Cho phép / Từ chối**. Việc bật dịch vụ vị trí trên điện thoại **không** tự động cấp quyền cho website.
-4. Nếu người dùng cho phép, trình duyệt cố lấy tọa độ và gọi BigDataCloud free client-side Reverse Geocoding API trực tiếp từ thiết bị để suy ra **thành phố/tỉnh và phường/xã hoặc khu vực gần đúng khi dữ liệu bản đồ có**. Chỉ chuyển chuỗi tên địa danh về Apps Script, không chuyển tọa độ hay IP vào Google Sheets.
-5. Nếu người dùng từ chối, tắt định vị, không hỗ trợ, hết thời gian chờ hoặc nhà cung cấp lỗi, Form quay về `estimateCity()` dùng GeoJS → ipwho.is từ trình duyệt. **Mọi trường hợp vẫn đăng ký và mở được thư viện**, kể cả không tìm thấy thành phố.
-6. Website lưu dấu đã đăng ký một lần trên trình duyệt, không lưu PII trong localStorage; cùng trình duyệt đã đăng ký sẽ không bị hỏi lại trừ khi xóa dấu. Form giữ 4 trường cơ bản, liên kết chính sách dữ liệu, không hiển thị thông báo riêng về định vị.
-
-Trình duyệt chỉ gửi GPS khi người dùng cấp quyền. BigDataCloud có thể nhận IP và GPS của phiên để cung cấp reverse geocoding và cải thiện dịch vụ theo chính sách riêng; **phải có thông tin này trong chính sách dữ liệu**. Không lấy GPS lén, không giả mạo tọa độ, không lưu tọa độ chính xác ở Sheet.
+- Khách mới vào **Thư viện kiến thức** từ website hoặc vào một giáo trình thấy form đăng ký một lần trên trình duyệt này, theo `library-gate.js`.
+- Form có họ tên, số điện thoại, email không bắt buộc và chủ đề quan tâm; giữ liên kết tới Chính sách dữ liệu cá nhân. Không có checkbox marketing hoặc hộp xin quyền GPS.
+- Khi bấm gửi, `Form.html` V6 thử tra thành phố qua `https://get.geojs.io/v1/ip/geo.json`, dự phòng qua `https://ipwho.is/?fields=success,city,region,country`. Không gửi tên, số điện thoại, email hay mã đăng ký đến bên tra cứu. Khi cả hai nguồn lỗi, khách vẫn đăng ký và đọc tài liệu được; thành phố để trống.
+- Khi Apps Script xác nhận đã ghi thành công, website lưu dấu đăng ký trên browser để lần sau không phải nhập lại. Không lưu PII trong localStorage.
+- Không dùng GPS; không lấy tọa độ hay phường/xã; không tạo link Google Maps.
 
 ## 2. Google Sheets riêng tư — tab Leads
 
-[NS360 - DATA DANG KY THU VIEN](https://docs.google.com/spreadsheets/d/1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw/edit), ID tab `1033306523`. A:L cũ giữ nguyên, thêm M:N ở cuối:
+[NS360 - DATA DANG KY THU VIEN (RIENG TU)](https://docs.google.com/spreadsheets/d/1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw/edit).
 
-| Cột | Tên trường |
-| --- | --- |
-| A | ThoiGianDangKy |
-| B | HoTen |
-| C | SoDienThoai |
-| D | Email |
-| E | ChuDeQuanTam |
-| F | NguonTruyCap |
-| G | PhienBanChinhSach |
-| H | ThoiDiemDongY |
-| I | RequestID |
-| J | TrangThai |
-| K | ThanhPhoUocTinh |
-| L | GoogleMapsUocTinh |
-| M | PhuongXaUocTinh |
-| N | NguonDinhVi |
+Cột A:J giữ nguyên; **K = `ThanhPhoUocTinh`** là dữ liệu vị trí duy nhất được bổ sung cho đăng ký mới.
 
-`NguonDinhVi` nhận một trong: `GPS_CHO_PHEP`, `IP_UOC_TINH`, `KHONG_XAC_DINH`. Cột M có thể trống ngay cả khi GPS được cho phép, nếu dịch vụ không trả tên phường/xã phù hợp hoặc độ chính xác thiết bị kém. Cột L là URL **tìm kiếm tên khu vực** trên Google Maps, **không phải ghim nhà riêng hay vị trí GPS chính xác**.
+Để không xóa hoặc lệch thông tin lịch sử, **L = `GoogleMapsUocTinh`, M = `PhuongXaUocTinh`, N = `NguonDinhVi` vẫn tồn tại nhưng đã ẩn** (có thể hiện lại khi cần kiểm toán). `Code.gs` V6 kiểm đủ 14 header và ghi 14 trường; **các trường L:N luôn rỗng với đăng ký mới**. Không xóa, sửa hoặc suy đoán vị trí của các đăng ký trước. Dropdown trạng thái J giữ nguyên.
 
-Đăng ký lịch sử giữ nguyên, không tự điền vị trí quá khứ; A:J không bị chèn/xóa; dropdown TrangThai giữ nguyên. Google Sheet không công khai, không gửi số điện thoại cho dịch vụ bản đồ.
+## 3. Cập nhật Apps Script V6 để kích hoạt
 
-## 3. Thành phần cần triển khai
+Thực hiện **cả hai file**, không chỉ sửa một file:
 
-- `library-gate.js` trên GitHub Pages: xử lý quyền GPS ở top-level, gọi BigDataCloud theo tọa độ *thiết bị hiện tại có quyền*, lọc về tên địa danh và gửi phản hồi nonce cho Form.
-- `index.html` trên GitHub: đã đổi `library-gate.js?v=20261114-v5-optional-gps-2` để tránh cache.
-- `library-registration/Form.html` phiên V5: gửi yêu cầu vị trí từ iframe, timeout hợp lý; nếu không có GPS thì gọi GeoJS → ipwho.is, gửi `requestId` tiền tố `v5-`, `ward` và `locationSource` sang Apps Script backend.
-- `library-registration/Code.gs` V5: kiểm cấu trúc 14 header, ghi đủ 14 cột, giữ RequestID tại I và trạng thái tại J. L tạo Google Maps bằng tên phường/xã + thành phố/tỉnh (nếu có) chứ không bằng lat/lon.
-- `chinh-sach-du-lieu.html`: mô tả quyền GPS tùy chọn, dịch vụ BigDataCloud, nguồn IP dự phòng và các thông tin được lưu.
+1. Mở Apps Script Web App hiện đang phục vụ URL `/exec` của website.
+2. Copy `library-registration/Code.gs` V6 từ GitHub, thay toàn bộ `Code.gs` đang dùng. V6 vẫn hỗ trợ bảng 14 cột để không phải xóa dữ liệu lịch sử, chỉ ghi thành phố K.
+3. Copy `library-registration/Form.html` V6 từ GitHub, thay toàn bộ `Form.html` đang dùng. Bản này không gửi yêu cầu GPS; RequestID có tiền tố `v6-`.
+4. Đảm bảo Script Property `SPREADSHEET_ID=1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw`.
+5. **Save → Deploy → Manage deployments → Edit → New version → Deploy**, giữ nguyên URL /exec hiện đang được gắn trong `library-gate.js`, quyền truy cập hiện tại.
 
-**Bắt buộc chủ dự án triển khai trong tài khoản Google Apps Script**: thay **cả `Code.gs` và `Form.html`** bằng bản V5 trên GitHub, Save → Deploy → Manage deployments → Edit → New version → Deploy. Giữ nguyên `/exec`, Script Property `SPREADSHEET_ID=1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw`, Execute as Me và quyền truy cập như trước. **Chỉ sửa GitHub/Drive không tự cập nhật Web App đang chạy.**
+## 4. Lỗi Google Drive trên Android — riêng với định vị
 
-Nếu chỉ triển khai Form mới mà backend vẫn V4, đăng ký vẫn có thể ghi 12 cột nhưng M:N không có dữ liệu; nếu cập nhật cả hai sẽ đúng cấu trúc V5.
+Android vẫn hiển thị “Rất tiếc, không thể mở tệp tại thời điểm này” ngay trong iframe Google Apps Script trong khi PC có thể hiển thị. Đã thử đưa link và hướng dẫn mở ngoài khung nhưng chưa giải quyết. **Bỏ GPS hoặc Maps không tự sửa được lỗi này.** Hiện website vẫn dùng Apps Script iframe để lấy form. Muốn đảm bảo mobile hoạt động cần xác minh URL /exec trực tiếp trên Android và quyền Web App; nếu vẫn lỗi, phải thiết kế form first-party và backend khác phù hợp thay vì tiếp tục thêm mã định vị.
 
-## 4. Thử nghiệm bắt buộc
+Website hiện có một liên kết “Thử mở biểu mẫu ở tab riêng” ở phía trên iframe như cách xử lý tạm. Không yêu cầu khách chia sẻ thông tin cá nhân trong chat.
 
-Dùng trình duyệt mới/ẩn danh và link `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/index.html`. Thử tối thiểu:
-- **Cho phép định vị**: có thể nhận tên thành phố và phường/xã/khu vực (không đảm bảo dịch vụ có tên phường/xã); cột N `GPS_CHO_PHEP` chỉ khi GPS và reverse geocoding thành công.
-- **Từ chối định vị**: vẫn mở thư viện, N `IP_UOC_TINH` khi IP có địa danh; M trống.
-- **Mất kết nối dịch vụ định vị**: vẫn mở thư viện, N có thể `KHONG_XAC_DINH`.
-- I bắt đầu bằng `v5-`, J là ACTIVE. Không gửi tên, số điện thoại hoặc tọa độ thử nghiệm lên chat.
+## 5. Kiểm thử khi deploy V6
 
-Bản đồ chỉ là địa danh hành chính/khu vực gần đúng; ranh giới, thiết bị và dữ liệu API có thể khác nhau. Đường dẫn PDF công khai vẫn truy cập trực tiếp qua GitHub Pages; form không phải DRM.
+- Trình duyệt mới PC: mở `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky`, đăng ký bằng thông tin tự sở hữu; xác nhận vào thư viện và Google Sheets ghi `v6-` ACTIVE.
+- Cột K có thể là thành phố ước tính; L:N của dòng V6 phải rỗng.
+- Trên Android: nếu vẫn thấy Google Drive error, **không báo nghiệm thu thành công cho thiết bị** chỉ vì PC hoạt động. Ghi nhận lỗi và xử lý kiến trúc form riêng.
+- Giữ nguyên 21 PDF, `tin-tuc.json`, danh sách khách và Facebook.
 
-## 5. Trạng thái và checkpoint
-
-- Đã bổ sung cột M:N vào Google Sheets; các đăng ký cũ không thay đổi.
-- Đã sửa GitHub `library-gate.js`, `index.html`, `Form.html`, `Code.gs`, chính sách và README.
-- **Chưa xác minh chạy thật**: quyền trình duyệt/Google Apps Script /exec trong phiên bản V5 vẫn phải test trên thiết bị thực.
-- Drive file sao lưu V4/V3 cần đồng bộ riêng nếu chưa có cách upload trực tiếp qua kết nối; GitHub `main` là nguồn mã chính.
-
-Checkpoint: `CONG_VIEC_DANG_LAM.md` và `TRANG_THAI_DU_AN.md`.
-
-## 6. Khắc phục màn hình Google Drive trên Android (14/11/2026)
-
-Triệu chứng: PC hiển thị form Apps Script bình thường, điện thoại trong khung đăng ký hiện logo Google Drive và “không thể mở tệp tại thời điểm này”. Đây có thể là lỗi xử lý đường dẫn Web App giữa Google Apps Script, Google Drive, nhiều tài khoản Google và trình duyệt/ứng dụng Android, không liên quan đến logic GPS hay dữ liệu bảng. Google đã có báo cáo tương tự: https://issuetracker.google.com/issues/520300212 và https://issuetracker.google.com/issues/574946511. Chưa có bằng chứng xác định chính xác nguyên nhân trên thiết bị chủ dự án.
-
-Đã cập nhật giao diện **chỉ dành cho điện thoại** phía trên iframe: mô tả nguyên nhân thường gặp, nút `Sao chép liên kết đăng ký` sao chép chính URL website (không phải URL Apps Script), đề nghị dán vào thanh địa chỉ Chrome hoặc Samsung Internet rồi thử tab ẩn danh; liên kết `Thử mở biểu mẫu ở tab riêng` được đưa lên trước iframe. PC vẫn hiển thị form nhúng bình thường. Mã GitHub: `library-gate.js`, `library-gate.css`, `index.html` cache-busted.
-
-**Lưu ý:** giải pháp này làm cách xử lý lỗi dễ tiếp cận hơn, **chưa bảo đảm** URL Apps Script mở được trên mọi Android. Nếu Chrome/Samsung Internet ẩn danh cũng lỗi, phải xem lại quyền triển khai Web App và xem xét thiết kế lại đăng ký với backend không phụ thuộc iframe Google Apps Script, thay vì hứa đã khắc phục triệt để. Không phải sửa `Code.gs`, `Form.html`, Sheet, GPS để thử cách mở trình duyệt trên Android.
+Checkpoint: `CONG_VIEC_DANG_LAM.md`, `TRANG_THAI_DU_AN.md`.
