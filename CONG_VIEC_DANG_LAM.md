@@ -226,3 +226,14 @@
 - Đã đối chiếu hai trang chính thức: App Store iOS `https://apps.apple.com/vn/app/sfvn-trading-%C4%91%E1%BA%A7u-t%C6%B0-h%C3%A0ng-h%C3%B3a/id6743525644` (publisher SFVN INVESTMENT CORPORATION); Google Play `https://play.google.com/store/apps/details?id=sfvn.com.maps.app` (cùng publisher).
 - Mã nguồn hiện tại trong `index.html` chứa template trang `Tìm hiểu & mở tài khoản`, khối đăng ký bằng QR, khối video hướng dẫn và cảnh báo. Sẽ thêm khu vực tải app trong đúng template này, không thay đổi QR, đăng ký, video, giáo trình, tin tức.
 - **Đang thực hiện**: kiểm tra CSS, đặt khối giao diện tải app gọn và rõ nền tảng, thêm chú thích đó là ứng dụng bên thứ ba của SFVN, xác minh HTML sau khi ghi và cập nhật checkpoint khi hoàn thành.
+
+### N.1. Đã triển khai nút tải SFVN Trading iOS / Android trên website (14/11/2026)
+- ĐÃ CHỈNH SỬA TRỰC TIẾP `index.html` trong repo `nmtu1525-art/nongsan360`, commit mã nguồn **`559f7ae8d6c5590a3a857c9f68b6629f3e8d5917`**.
+- Trong template `id="ns-guide-account"` (route `#/mo-tai-khoan/index.html`), đã bổ sung mục `ỨNG DỤNG TRÊN ĐIỆN THOẠI / Tải ứng dụng SFVN Trading` ngay sau khối đăng ký QR và trước video hướng dẫn, gồm hai card/nút rõ hệ điều hành, hỗ trợ màn hình nhỏ và trạng thái hover/focus.
+- Link iOS (nguồn App Store chính thức): `https://apps.apple.com/vn/app/sfvn-trading-%C4%91%E1%BA%A7u-t%C6%B0-h%C3%A0ng-h%C3%B3a/id6743525644`.
+- Link Android (nguồn Google Play chính thức): `https://play.google.com/store/apps/details?id=sfvn.com.maps.app`.
+- Cả hai đều xác nhận do `SFVN INVESTMENT CORPORATION` phát hành. Text trang lưu ý SFVN là bên cung cấp ứng dụng; Nông Sản 360 là kênh độc lập, tải app không bắt buộc mở tài khoản/giao dịch.
+- Bước tóm tắt đầu trang đổi thành 4 mục: tìm hiểu rủi ro → đăng ký SFVN → tải ứng dụng → video hướng dẫn.
+- **ĐÃ XÁC MINH READBACK** sau commit: đúng 1 khối tải app, đúng 1 URL mỗi nền tảng, CSS mới cho cả desktop và mobile, giữ nguyên link đăng ký mã `046C0000554`, QR, video, cảnh báo, tổng số template không thay đổi (31). Chưa thay đổi `tin-tuc.json` hoặc 21 giáo trình PDF.
+- GitHub commit status không báo job checks; công cụ web không đọc được GitHub Pages live nên **chưa xác nhận giao diện đã deploy/cập nhật trên đường dẫn công khai**. Nếu giao diện cũ, cần đợi Pages deploy và tải lại trang.
+- Đường dẫn để người dùng kiểm tra sau deploy: `https://nmtu1525-art.github.io/nongsan360/#/mo-tai-khoan/index.html`.
