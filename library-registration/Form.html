@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <base target="_top" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    *{box-sizing:border-box}body{font:15px/1.5 Arial,sans-serif;color:#28334b;background:#fff;margin:0;padding:0 6px}
+    .field{display:block;margin:0 0 13px}.field b{font-size:13px;display:block;margin-bottom:5px}
+    input:not([type=checkbox]),select{width:100%;border:1px solid #d9d7cf;border-radius:9px;padding:11px 12px;font:inherit;color:#28334b;background:#fff}
+    input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #558b67;outline-offset:2px}
+    .choice{display:flex;gap:8px;align-items:flex-start;margin:13px 0;font-size:12px;line-height:1.5}
+    .choice input{margin-top:3px;flex:none;accent-color:#2e6949}.muted{color:#596572;font-size:12px}
+    a{color:#1d6044}button{display:block;width:100%;font:700 15px Arial,sans-serif;border:0;border-radius:10px;background:#246943;color:#fff;padding:14px;cursor:pointer}
+    button:disabled{opacity:.55;cursor:wait}#notice{min-height:32px;font-size:13px;margin:10px 0;color:#a03d23}
+    .honeypot{display:none!important}p{margin:7px 0 13px}small{display:block;margin-top:10px;color:#617070;font-size:11px}
+    details{margin:10px 0 15px;padding:9px;border:1px solid #e2e7df;border-radius:9px;color:#44565a;font-size:12px}
+  </style>
+</head>
+<body>
+<form id="leadForm">
+  <label class="field"><b>Họ và tên <span aria-hidden="true">*</span></b>
+    <input id="fullName" autocomplete="name" maxlength="80" name="name" required placeholder="Nguyễn Văn A" /></label>
+  <label class="field"><b>Số điện thoại <span aria-hidden="true">*</span></b>
+    <input id="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="17" name="phone" required placeholder="09xxxxxxxx" /></label>
+  <label class="field"><b>Email <span class="muted">(không bắt buộc)</span></b>
+    <input id="email" type="email" autocomplete="email" maxlength="160" name="email" placeholder="email@vidu.vn" /></label>
+  <label class="field"><b>Chủ đề anh/chị quan tâm</b>
+    <select id="topic" name="topic"><option value="tong-hop">Tổng quan thư viện</option><option value="ca-phe">Cà phê</option><option value="ngo">Ngô</option><option value="lua-mi">Lúa mì</option><option value="phai-sinh">Hàng hóa phái sinh</option></select></label>
+  <label class="honeypot">Website <input name="website" type="text" autocomplete="off" tabindex="-1" /></label>
+  <label class="choice"><input id="privacyConsent" type="checkbox" required />
+    <span>Tôi đồng ý để <b>Nông Sản 360</b> xử lý họ tên, số điện thoại, email (nếu có) và nhóm quan tâm nhằm ghi nhận đăng ký và cấp quyền đọc thư viện miễn phí. <a href="https://nmtu1525-art.github.io/nongsan360/chinh-sach-du-lieu.html" target="_blank" rel="noopener">Chính sách dữ liệu cá nhân</a>.</span></label>
+  <label class="choice"><input id="newsConsent" type="checkbox" />
+    <span><b>Không bắt buộc:</b> Tôi muốn nhận thêm bản tin thị trường, giáo trình mới và thông báo hội thảo từ Nông Sản 360. Tôi có thể rút lại sự đồng ý.</span></label>
+  <button id="submit" type="submit">Mở toàn bộ thư viện miễn phí</button>
+  <div id="notice" role="status" aria-live="polite"></div>
+  <small>Đăng ký một lần trên trình duyệt này. Không cần mở tài khoản giao dịch. Không cung cấp mật khẩu hoặc OTP.</small>
+</form>
+<script>
+(function(){
+'use strict';
+const nonce=<?!= JSON.stringify(nonce) ?>;
+const source=<?!= JSON.stringify(visitSource) ?>;
+const origin='https://nmtu1525-art.github.io';
+const form=document.getElementById('leadForm');
+const button=document.getElementById('submit');
+const notice=document.getElementById('notice');
+const requestId=Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
+form.addEventListener('submit',function(event){
+  event.preventDefault();
+  if(!form.reportValidity())return;
+  button.disabled=true;
+  notice.style.color='#526374';
+  notice.textContent='Đang ghi nhận đăng ký an toàn…';
+  const payload={name:form.elements.name.value,phone:form.elements.phone.value,email:form.elements.email.value,
+    topic:form.elements.topic.value,website:form.elements.website.value,privacyConsent:document.getElementById('privacyConsent').checked,
+    newsConsent:document.getElementById('newsConsent').checked,source:source,requestId:requestId};
+  google.script.run.withSuccessHandler(function(result){
+    if(result&&result.ok){
+      notice.style.color='#236c42';
+      notice.textContent='Đã ghi nhận đăng ký. Đang mở thư viện…';
+      const message={type:'NS360_LIBRARY_REGISTERED',nonce:nonce,version:1};
+      window.top.postMessage(message,origin);
+      if(window.parent!==window.top)window.parent.postMessage(message,origin);
+    }else{button.disabled=false;notice.textContent='Chưa ghi nhận được thông tin. Vui lòng thử lại.';}
+  }).withFailureHandler(function(err){
+    button.disabled=false;
+    notice.style.color='#a03d23';
+    notice.textContent=(err&&err.message?err.message:'Có lỗi kết nối. Vui lòng thử lại.');
+  }).registerLead(payload);
+});
+})();
+</script>
+</body>
+</html>
