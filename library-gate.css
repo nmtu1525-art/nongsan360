@@ -10,7 +10,8 @@
 .ns-libgate-back{font-size:14px;color:#9b4e35;font-weight:700;text-decoration:none}.ns-libgate-back:hover{text-decoration:underline}
 .ns-libgate-card{background:white;border:1px solid #e1dcd0;border-radius:22px;padding:22px 23px 15px;box-shadow:0 22px 52px rgba(25,38,37,.08)}
 .ns-libgate-card h2{font-size:23px;line-height:1.25;color:#28334b;margin:0 0 7px}.ns-libgate-card>p{font-size:13px;color:#728076;margin-bottom:17px}
-.ns-libgate-card iframe{border:0;width:100%;height:670px;display:block;background:#fff}.ns-libgate-error{border:1px solid #d4a38e;background:#fff5ed;color:#9b432b;border-radius:9px;font-size:13px;padding:14px}
+.ns-libgate-card iframe{border:0;width:100%;height:670px;display:block;background:#fff}
+.ns-libgate-help{font-size:12px;line-height:1.5;margin:9px 0 3px;color:#69707b}.ns-libgate-help a{color:#236748;text-decoration:underline;font-weight:700}.ns-libgate-error{border:1px solid #d4a38e;background:#fff5ed;color:#9b432b;border-radius:9px;font-size:13px;padding:14px}
 .ns-libgate-screen a:focus-visible{outline:3px solid #478a60;outline-offset:2px}
 @media(max-width:800px){.ns-libgate-columns{grid-template-columns:1fr;gap:18px}.ns-libgate-description{padding:0}.ns-libgate-description h1{font-size:34px}.ns-libgate-card{max-width:540px;width:100%;margin:auto}}
 @media(max-width:520px){.ns-libgate-screen{width:calc(100% - 24px);padding:16px 0 55px}.ns-libgate-card{padding:18px 12px 10px;border-radius:16px}.ns-libgate-card iframe{height:700px}.ns-libgate-description ul{margin-bottom:18px}}
