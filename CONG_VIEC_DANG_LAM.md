@@ -180,3 +180,8 @@
 - **ĐÃ TẠO tác vụ ChatGPT một lần** `Kiểm tra bài Facebook NS360`, ID `6af7de31c8f88191a8971dad6d8babaa`, lịch chạy **11:25 ngày 14/11/2026**, múi giờ `Asia/Ho_Chi_Minh`; trạng thái khi tạo `is_enabled=true`, `next_run_time=2026-11-14T11:25:00+07:00`.
 - Tác vụ được chỉ định kiểm tra bài đã hẹn 11:15 qua Metricool, cố gắng xác minh trên Fanpage (không lấy việc bài hết Pending làm kết luận), ghi checkpoint và báo cáo khi có bằng chứng; nếu thành công bắt đầu chuẩn bị kế hoạch 3 bài kiến thức, không tự đăng trùng bài chào mừng.
 - **Giới hạn:** Tác vụ hẹn chưa chạy nên chưa biết quyền công cụ có hoạt động trong môi trường lịch hay không. Lúc ghi checkpoint, bài Facebook **đang PENDING**; KHÔNG tuyên bố đã đăng. Nếu tác vụ không thể gọi Metricool hoặc GitHub phải báo rõ.
+
+### QR SFVN — Yêu cầu mới 14/11/2026 (đang thực hiện)
+- Người dùng cung cấp QR, tự giải mã nhiều điểm bằng OpenCV: `https://onboarding.sfvn-invest.com.vn/register?code=046C0000554`. Cần thêm mã này vào web Nông Sản 360 để độc giả chủ động mở tài khoản.
+- Đã đối chiếu website chính thức `sfvn-invest.com.vn` và danh sách MXV: SFVN là thành viên kinh doanh 046; subdomain onboarding nằm cùng tên miền đăng ký. Web fetch biểu mẫu onboarding từ môi trường tìm kiếm không truy cập được, nên **chưa kiểm thử trực tiếp luồng form**. Không hứa mở tài khoản thành công.
+- Phương án: giữ nguyên website và các 21 PDF; đặt QR và liên kết bấm được vào khu chuyển đổi / mở tài khoản hiện có, kèm thông báo mã giới thiệu/khả năng hưởng lợi và cảnh báo rủi ro giao dịch. Dựng ảnh QR SVG nội bộ từ URL chính xác, tránh dịch vụ QR ngoài, thêm tài sản và sửa `index.html` tối thiểu, kiểm tra đầu ra và checkpoint. Không chèn CTA bán hàng vào ảnh bìa/intro Fanpage.
