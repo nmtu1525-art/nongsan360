@@ -417,3 +417,11 @@
 - Đã đồng bộ 6 file GitHub `facebook-drafts/2026-11/FB-202611[17,24,25,26,27,30]-01.md`, thay toàn bộ tham chiếu ảnh V2 bằng ảnh cũ, trạng thái `ANH ĐÃ CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG`; không thay câu chữ caption đã soát SEO. Lịch `FACEBOOK_KE_HOACH_THANG_11_2026.md` GitHub và Google Doc Drive ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` đã cập nhật.
 - **Đã READBACK cả 6 Docs và 6 draft GitHub**: mỗi bài có ID ảnh cũ, không còn ID ảnh V2, vẫn có trạng thái `CHƯA ĐĂNG`. Bộ V2 chỉ để lưu trữ khi cần.
 - Lưu ý: Chủ dự án chọn ảnh cũ **không có nghĩa đã đồng ý mọi caption tự đăng**. Chưa được xác minh đã có lịch Metricool mới; giữ quy tắc phê duyệt bài trước khi phát hành. Không cam kết Facebook không hiển thị nhãn AI cho ảnh cũ.
+
+## X. Người dùng yêu cầu xóa 6 ảnh V2 không duyệt, chuẩn hóa SEO và lên lịch 6 bài (14/11/2026)
+- Yêu cầu trực tiếp: `xóa 6 ảnh ko dc duyệt đi, 6 bản nháp bài viết rà soát chuẩn seo đi rồi lên lịch đăng`.
+- Đã đối chiếu Drive `Facebook/03_HINH_ANH_BAI_DANG`: có chính xác 6 ảnh `FB-202611[17,24,25,26,27,30]-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png` (ID 17 `1IeEmTDtByVipn6mk276siITck1Dl15dW`, 24 `1VKSOjTB88IxjcYEO9wLQVa9RLhx4aIxv`, 25 `1yoat8m7zJR-eA6qlv7edt6-vccNd7CKB`, 26 `19y2t6O6ghMjsDo8i8lyVQ6Ob8ntyz4VZ`, 27 `1fZ8NXU8UIbpHzwLmMqGhP7MEYqGeeh1g`, 30 `1ALg9So0aBQbyjXNY_VUwRvtDNNh6kD7p`).
+- Sẽ **xóa đúng 6 ảnh PNG V2** theo yêu cầu, không xóa 6 PNG ảnh cũ đã chọn, không xóa ảnh chào mừng và **không xóa file PPTX editable** vì người dùng chỉ nói 6 ảnh.
+- Đã kiểm tra Metricool lịch 14/11–02/12: chỉ bài chào mừng đã PUBLISHED, **chưa có 6 bài mới**. Chủ dự án đã ủy quyền lên lịch (autoPublish cho ngày tương lai) sau rà soát SEO và dữ kiện, dùng 6 ảnh cũ. Giờ dự kiến 17/11 10:00; 24/11 10:00; 25/11 12:00; 26/11 10:00; 27/11 10:00; 30/11 10:00 Asia/Saigon; có thể cần nhập media qua Metricool nếu ảnh Drive không public.
+- Phải đọc lại nguyên văn 6 Google Docs, giáo trình gốc đã có, loại bỏ metadata biên tập khỏi caption khi đăng, rà nguồn, hashtag, tiêu đề; mọi sửa trực tiếp Docs và GitHub, rồi đặt lịch bằng `createScheduledPost` lần lượt, readback từng mã, chống trùng. Không can thiệp lịch SFVN thiếu poster, 21 PDF, tin-tuc.json, website. Cập nhật checkpoint theo từng chặng.
+- Trạng thái hiện tại: **ĐANG THỰC HIỆN**.
