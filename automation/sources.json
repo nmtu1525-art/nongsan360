@@ -1,0 +1,12 @@
+{
+  "version": "9.3",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "publication_limit": 2,
+  "lookback_days": 7,
+  "allow_hosts": ["nass.usda.gov", "www.nass.usda.gov", "ico.org", "www.ico.org"],
+  "sources": [
+    {"id":"usda-nass-news", "name":"USDA NASS", "type":"rss", "url":"https://www.nass.usda.gov/rss/news.xml", "enabled":true},
+    {"id":"usda-nass-reports", "name":"USDA NASS", "type":"rss", "url":"https://www.nass.usda.gov/rss/reports.xml", "enabled":true},
+    {"id":"ico-press", "name":"International Coffee Organization (ICO)", "type":"html", "url":"https://ico.org/press-releases/", "enabled":true, "commodity":"Cà phê"}
+  ]
+}
