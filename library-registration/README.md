@@ -1,55 +1,56 @@
-# Nông Sản 360 — Đăng ký một lần trước khi đọc 21 giáo trình
+# Nông Sản 360 — Đăng ký đọc thư viện (phiên bản v3)
 
-**Trạng thái triển khai:** đã chuẩn bị frontend, biểu mẫu Apps Script, bảng Google Sheets riêng tư; **CHƯA BẬT form trên website** cho đến khi triển khai và thử nghiệm Web App nhận dữ liệu thật. Việc cấu hình đầu cuối cần chủ tài khoản Google thao tác một lần. Không phải hệ thống tài khoản và không bảo vệ được URL PDF gốc đang công khai.
+**Cập nhật 14/11/2026.** Form miễn phí trước khi đọc 21 giáo trình. Hiện website đang `LIVE_ENABLED = false` và chỉ cho phép kiểm tra bằng đường dẫn riêng; phải xác nhận ghi Google Sheets thành công sau khi cập nhật bản Apps Script rồi mới bật công khai.
 
-## Thành phần
+## 1. Trải nghiệm
 
-- `library-gate.js`, `library-gate.css` trong thư mục gốc website; router `index.html` gọi gate trước khi hiển thị trang `/giao-trinh/XX-YY.html`.
-- `chinh-sach-du-lieu.html`: thông báo quyền riêng tư công khai.
-- `library-registration/Code.gs`, `library-registration/Form.html`: Google Apps Script HTML Service + `google.script.run` ghi trực tiếp vào Google Sheets riêng tư; không cần OpenAI API key.
-- Google Sheet riêng tư trong Drive dự án `00_QUAN_LY_DU_AN/04_DATA_DANG_KY_THU_VIEN`, gồm tab `Leads` (12 cột) và `HuongDan`. Không bật chế độ Anyone with link.
+- Người đọc chọn một giáo trình: website hiển thị form ở lần đăng ký đầu; trên cùng trình duyệt `localStorage` ghi nhớ dấu đã hoàn thành. Không lưu họ tên, số điện thoại hay email tại client.
+- Form chỉ gồm họ tên và số điện thoại bắt buộc, email tùy chọn, chủ đề quan tâm. **Không có checkbox; đã bỏ khung thông báo dài**.
+- Nút `Đồng ý và mở thư viện miễn phí`; dưới nút có một **liên kết nhỏ** tới `chinh-sach-du-lieu.html`, mô tả mục đích xử lý để cấp quyền đọc.
+- Không thu thập hoặc suy diễn đồng ý nhận bản tin/hội thảo/quảng cáo. Chỉ dùng thông tin đúng mục đích đã công bố; muốn marketing cần cơ chế đồng ý riêng.
+- Khi gửi thành công qua Google Apps Script mới báo quyền đọc cho website; không báo thành công trước khi Sheet ghi dữ liệu.
 
-## Cài đặt một lần bằng tài khoản Google chủ dự án
+## 2. Bảng Google Sheets
 
-1. Mở Google Sheet **NS360 - DATA DANG KY THU VIEN (RIENG TU)** trong Drive, tab `Leads`, xác minh dòng tiêu đề 12 cột và quyền chỉ chủ sở hữu. Sao chép **ID** từ URL `https://docs.google.com/spreadsheets/d/<ID>/edit`.
-2. Trong Sheet chọn **Tiện ích mở rộng (Extensions) → Apps Script**. Xóa mã mẫu (chỉ trong script mới). Dán toàn bộ `library-registration/Code.gs` vào file `Code.gs`.
-3. Trong Apps Script thêm **HTML file** tên `Form` (không nhập `.html` ở ô tên), dán toàn bộ `library-registration/Form.html` vào đó.
-4. Chọn **Project Settings → Script properties → Add script property**: Name `SPREADSHEET_ID`, Value là ID Sheet riêng tư từ bước 1. Không dán mã này vào trang web hoặc các biểu mẫu công khai.
-5. Chọn **Deploy → New deployment → Web app**. Thiết lập **Execute as: Me (chủ dự án)**; **Who has access: Anyone** (để khách không cần đăng nhập Google). Chấp thuận quyền chạy script/ghi Sheets khi Google yêu cầu. Sao chép URL cuối dạng `https://script.google.com/macros/s/AKfy.../exec`.
-6. Endpoint `/exec` của người dùng đã được cấu hình trong `library-gate.js`. Website đang giữ `LIVE_ENABLED=false` để kiểm thử trước, chỉ bật form qua URL `?ns360_signup_test=1` trước đường dẫn `#/giao-trinh/cf-01.html`. Không bật chính thức trước khi xác nhận bản ghi thành công trên Sheet.
-7. Đảm bảo đã cập nhật `Form.html` lên phiên bản v2 trong chính Apps Script rồi triển khai **phiên bản Web App mới**. Mở link kiểm thử bằng cửa sổ ẩn danh, điền tên và số điện thoại của chính người thử (không chia sẻ PII qua chat), đọc thông báo gần nút và nhấn **Đồng ý và mở thư viện miễn phí**. Không có ô tích chọn. Xác minh có một dòng `Leads` mới, `DongYXuLyDuLieu = TRUE`, `DongYNhanTin = FALSE`, `RequestID` mở đầu bằng `v2-`; thử mở tập khác cùng trình duyệt mà không phải điền lại. Xóa dòng thử sau khi ghi nhận kết quả.
-8. Thử kịch bản lỗi: Apps Script hoặc Sheet không sẵn sàng → form phải thông báo lỗi và **không ghi nhớ quyền đọc**. Thử lại trên trình duyệt khác sẽ cần đăng ký lại vì localStorage không đồng bộ giữa các thiết bị.
+Google Sheet riêng tư `NS360 - DATA DANG KY THU VIEN (RIENG TU)`:
+`https://docs.google.com/spreadsheets/d/1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw/edit`
 
-## Vì sao tạm giữ website mở khi chưa cấu hình?
+Tab `Leads` giữ **10 cột**, theo đúng thứ tự:
 
-Website hiện là **GitHub Pages tĩnh**, không có server ghi Google Sheets trực tiếp. Nếu bật form trước khi Web App Google Apps Script được triển khai, khách có thể điền mà không lưu được dữ liệu hoặc bị chặn khỏi tài liệu. Vì vậy `WEB_APP_URL` đã có URL `/exec` được cung cấp, nhưng **`LIVE_ENABLED=false`**, chỉ cho chủ dự án kiểm thử bằng tham số `?ns360_signup_test=1`. Chỉ khi kiểm thử ghi Sheet và mở khóa thành công mới đặt `LIVE_ENABLED=true`.
+| Cột | Trường |
+| --- | --- |
+| A | ThoiGianDangKy |
+| B | HoTen |
+| C | SoDienThoai |
+| D | Email |
+| E | ChuDeQuanTam |
+| F | NguonTruyCap |
+| G | PhienBanChinhSach |
+| H | ThoiDiemDongY |
+| I | RequestID |
+| J | TrangThai |
 
-## Cấu trúc dữ liệu và quy tắc
+Hai cột cũ `DongYXuLyDuLieu`, `DongYNhanTin` (G–H trước đây) **đã được yêu cầu xóa**. Không xóa các cột khác, không xóa dòng đăng ký của khách. Phiên bản chính sách, thời điểm và RequestID vẫn được giữ để kiểm tra lịch sử thao tác đăng ký. Bảng Sheet không được chia sẻ công khai.
 
-`Leads`: ThoiGianDangKy, HoTen, SoDienThoai, Email, ChuDeQuanTam, NguonTruyCap, DongYXuLyDuLieu, DongYNhanTin, PhienBanChinhSach, ThoiDiemDongY, RequestID, TrangThai.
+## 3. Đồng bộ bản Google Apps Script đang chạy
 
-- Họ tên/SĐT bắt buộc, email tùy chọn. Chỉ lưu dữ liệu nếu có `DongYXuLyDuLieu = TRUE`.
-- Biểu mẫu v2 **không có ô tích chọn** và **không thu thập sự đồng ý tiếp thị**; `newsConsent` luôn `false`. Muốn gửi tin/hội thảo phải xin sự đồng ý riêng qua quy trình khác.
-- Apps Script dùng `LockService`, ID chống gửi trùng, kiểm tra dữ liệu và chống công thức giả trong bảng Sheets; cần giới hạn truy cập Sheet, theo dõi spam.
-- Website chỉ lưu một dấu xác nhận đăng ký trong `localStorage`, **không lưu số điện thoại hay email trên trình duyệt**.
-- Khách có thể yêu cầu xem/sửa/xóa qua điện thoại 0985 272 776 hoặc Messenger chính thức. Trước khi hoạt động công khai, chủ dự án cần xác nhận quy trình quản lý yêu cầu quyền dữ liệu theo pháp luật.
-- **Không quảng cáo sai rằng PDF đã được bảo vệ truy cập hoàn toàn.** Các URL `pdf/*.pdf` trong kho GitHub Pages vẫn công khai. Để bảo vệ thật sự cần di chuyển PDF sang backend hoặc lưu trữ có xác thực, không thể chỉ dùng JavaScript.
+**Bắt buộc cập nhật cả 2 file**, vì Apps Script đang chạy là bản triển khai độc lập với GitHub:
 
-## Kiểm thử kỹ thuật
+1. Mở dự án Apps Script hiện tại (nút Extensions → Apps Script từ Google Sheet nếu cần).
+2. Thay **toàn bộ** `Code.gs` bằng nội dung mới trong `library-registration/Code.gs` trên GitHub. Đây là bản **v3 10 cột**, định vị `RequestID` tại cột I.
+3. Thay **toàn bộ** file `Form.html` bằng `library-registration/Form.html` trên GitHub. Form v3 không còn khung thông báo dài/checkbox và gửi RequestID bắt đầu bằng `v3-`.
+4. Kiểm tra **Project Settings → Script Properties**: `SPREADSHEET_ID=1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw`.
+5. Nhấn Save. Chọn **Deploy → Manage deployments → Edit → Version: New version → Deploy**, giữ `Execute as: Me`, `Who has access: Anyone`. Đường dẫn Web App `/exec` đang dùng giữ nguyên.
+6. Nếu thay mã mà chưa Deploy New version, `/exec` vẫn chạy backend cũ 12 cột và sẽ báo lỗi khi Sheet chỉ còn 10 cột.
 
-- `node --check library-gate.js` để kiểm tra cú pháp JavaScript; markup Apps Script HTML cần chạy trong môi trường Apps Script, không thể xác minh đầu-cuối khi chưa deploy.
-- Đảm bảo bộ 21 PDF, `tin-tuc.json`, thư mục giáo trình, banner, nội dung và các link Metricool không thay đổi.
+## 4. Kiểm tra trước khi mở công khai
 
-## Tài liệu chính thức
+Mở link: `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky`. Trước khi gửi form phải thấy bản mới chỉ có trường thông tin và link chính sách nhỏ. Điền thông tin kiểm thử được phép sử dụng, nhấn đăng ký; phải mở được CF-01.
 
-- Google Apps Script Web apps: https://developers.google.com/apps-script/guides/web
-- Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 (hiệu lực 01/01/2026): https://bocongan.gov.vn/chinh-sach-phap-luat/bai-viet/luat-bao-ve-du-lieu-ca-nhan-chinh-thuc-co-hieu-luc-thi-hanh-tu-ngay-01-01-2026-1767186124
+Đối chiếu một dòng mới ở tab `Leads` với `RequestID` bắt đầu `v3-`, đúng vị trí **I**, trạng thái `ACTIVE` tại **J**, và dữ liệu không bị lệch cột. Chỉ sau khi thử thành công mới đổi `const LIVE_ENABLED = true` trong `library-gate.js` để bật đại trà.
 
-## Phiên bản giao diện v2 — không yêu cầu ô tích chọn (14/11/2026)
-- Người dùng chọn bỏ các ô tick. `Form.html` trên GitHub đã đổi: chỉ có nút **"Đồng ý và mở thư viện miễn phí"** và thông báo ngắn gọn về mục đích sử dụng dữ liệu kèm link chính sách.
-- Bấm nút là hành động đồng ý cụ thể cho **đăng ký/cấp quyền đọc thư viện**; logic backend hiện tại vẫn cần `privacyConsent === true`, được gửi **chỉ sau thao tác nhấn nút**.
-- **Không xin phép nhận tin quảng cáo qua form mới.** Giao diện không có ô nhận tin; `newsConsent: false` cố định. Không dùng dữ liệu này để gửi thông báo hội thảo/bản tin nếu chưa có một cơ chế đồng ý riêng, rõ ràng.
-- Mã yêu cầu mới có tiền tố `v2-` và được lưu tại cột RequestID nhằm phân biệt bản biểu mẫu để kiểm tra sau này.
-- Backend `Code.gs` và `SPREADSHEET_ID` **không đổi**; chỉ cần **cập nhật `Form.html` trong dự án Apps Script đang hoạt động**. Trong Apps Script: lưu → **Deploy → Manage deployments → Edit (bút chì) → Version: New version → Deploy** để URL `/exec` cũ chạy bản v2. **Chỉ sửa GitHub không thay đổi bản Web App đã được deploy**.
-- Website `library-gate.js` vẫn ở `LIVE_ENABLED=false`, chỉ mở form qua URL kiểm thử `?ns360_signup_test=1`. Sau khi deploy v2, thử một đăng ký chủ động và xác minh tab `Leads`: `DongYXuLyDuLieu = TRUE`, `DongYNhanTin = FALSE`, `RequestID` bắt đầu `v2-`. Chỉ bật chính thức sau khi thử thành công.
-- Nếu phát hiện hướng dẫn cũ trong README nói "tích checkbox", áp dụng **phiên bản v2 tại mục này**.
+## 5. Lưu ý bảo vệ tài liệu và dữ liệu
+
+GitHub Pages không phải hệ thống xác thực nội dung thật: các file `pdf/*.pdf` vẫn có thể truy cập qua đường dẫn gốc. Form dùng cho việc đăng ký tự nguyện và tổ chức luồng đọc, không bảo đảm DRM. Không dùng thông tin thu được cho quảng cáo/hội thảo nếu chưa có đồng ý riêng.
+
+Checkpoint dự án: `CONG_VIEC_DANG_LAM.md`, `TRANG_THAI_DU_AN.md`. Không ghi đè PDF, tin tức hay nội dung xã hội để triển khai form.
