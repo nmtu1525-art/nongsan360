@@ -342,3 +342,10 @@
 - GitHub có nguồn bản thảo gộp `facebook-drafts/2026-11/SFVN_4_BAI_SOCIAL_SEO_CHO_DUYET_TRUOC_ANH_20261114.md`, chứa đủ bốn caption 16,17,18,19/11, mỗi bài có góc tiếp cận khác, từ khóa trong tiêu đề/đoạn mở đầu, 4 hashtag, CTA liên hệ chính thức; có disclaimers SFVN.
 - Đã verify readback 4 bài, 4 hashtag/bài, đúng giờ & địa điểm, giới hạn quyền lợi, không mạo nhận chương trình giảng dạy. **Chưa tạo ảnh mới** hoặc đồng bộ caption mới vào Metricool trong bước này, vẫn cần người dùng duyệt chữ.
 - Metricool trước đó đã PENDING/autoPublish=true cho 4 bài SFVN với bản caption cũ. Cần ghi nhớ điều này và xử lý trước giờ đăng 16/11 khi người dùng duyệt, tránh ngộ nhận bản mới đã được đưa lên lịch. Giữ nguyên 6 bài giáo dục.
+
+
+## 44. Bốn liên kết CTA buổi tập huấn đã chuyển sang Messenger Fanpage (14/11/2026)
+- Page ID Messenger đúng: `1388965107640064` từ Metricool Brand 8097037, trùng link đang trên website; click link `https://m.me/1388965107640064` mở chat Fanpage Nông Sản 360.
+- Bản gộp 4 bài Social SEO và 4 draft GitHub đã cập nhật CTA. **Bốn bài SFVN đang PENDING trên Metricool đã thay đúng CTA** mà không thay nội dung khác hoặc ảnh; ID mới 16/11 `428049489`, 17/11 `428049582`, 18/11 `428049677`, 19/11 `428049751`, UUID và giờ đăng giữ nguyên, 6 evergreen không chỉnh.
+- Google Docs kế hoạch Facebook và GitHub calendar đã đồng bộ; readback 10 PENDING và Messenger trong đủ 4 caption, chưa đăng trước giờ. Mẫu câu chỉ hỗ trợ xác nhận thông tin; không tự cấp suất hoặc quyền lợi SFVN.
+- Nội dung Social SEO viết lại vẫn **CHỜ DUYỆT** trước khi dùng thay toàn bộ caption và thiết kế ảnh mới. Không động giáo trình/web/khách.
