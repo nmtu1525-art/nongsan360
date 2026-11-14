@@ -79,3 +79,8 @@
 ## 11. Điều hướng nhanh tài khoản SFVN (14/11/2026)
 - Đã biến 4 ô tổng quan trên trang `Tìm hiểu & mở tài khoản` thành liên kết tương tác đến bốn mục nội dung cùng trang: rủi ro, QR đăng ký, tải SFVN Trading, video. Sử dụng cơ chế anchor `@...` của router hiện hữu; CSS mobile và focus, scroll margin cho header.
 - Commit website `84d12cedf357c42288879ec18d26be783898082f`. Readback nguồn thành công; chưa xác minh site GitHub Pages bên ngoài.
+
+## 12. Liên hệ website qua Facebook và điện thoại (14/11/2026)
+- Website đã bỏ toàn bộ nhắc Zalo, thay bằng Fanpage Nông Sản 360 và số **0985 272 776** theo yêu cầu người dùng.
+- Link Page `https://www.facebook.com/122095198125555913` dựa trên URL post thực tế lấy qua Metricool, khớp Page Name `Nông Sản 360`. Link gọi `tel:0985272776`.
+- Hai lựa chọn liên hệ hiện ở trang chủ mục `#/@lien-he`, chân trang và trong trang hướng dẫn tài khoản SFVN; commit `4a626795f4e51f96d6a6fd41df7e188f5bbc8918`. Readback GitHub đã xác minh, chưa kiểm thử giao diện Pages live.
