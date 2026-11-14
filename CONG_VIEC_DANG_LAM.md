@@ -185,3 +185,11 @@
 - Người dùng cung cấp QR, tự giải mã nhiều điểm bằng OpenCV: `https://onboarding.sfvn-invest.com.vn/register?code=046C0000554`. Cần thêm mã này vào web Nông Sản 360 để độc giả chủ động mở tài khoản.
 - Đã đối chiếu website chính thức `sfvn-invest.com.vn` và danh sách MXV: SFVN là thành viên kinh doanh 046; subdomain onboarding nằm cùng tên miền đăng ký. Web fetch biểu mẫu onboarding từ môi trường tìm kiếm không truy cập được, nên **chưa kiểm thử trực tiếp luồng form**. Không hứa mở tài khoản thành công.
 - Phương án: giữ nguyên website và các 21 PDF; đặt QR và liên kết bấm được vào khu chuyển đổi / mở tài khoản hiện có, kèm thông báo mã giới thiệu/khả năng hưởng lợi và cảnh báo rủi ro giao dịch. Dựng ảnh QR SVG nội bộ từ URL chính xác, tránh dịch vụ QR ngoài, thêm tài sản và sửa `index.html` tối thiểu, kiểm tra đầu ra và checkpoint. Không chèn CTA bán hàng vào ảnh bìa/intro Fanpage.
+
+### QR SFVN — ĐÃ TÍCH HỢP VÀO WEBSITE (14/11/2026)
+- QR người dùng gửi giải mã ra `https://onboarding.sfvn-invest.com.vn/register?code=046C0000554`; trong website tạo 2 liên kết bấm trực tiếp tới URL này (nút CTA + QR clickable).
+- Đã tạo QR SVG tự lưu trong GitHub `assets/qr-sfvn-046C0000554.svg` (không dùng dịch vụ QR bên thứ ba), commit `aef8bae73d9a134439e685ad657cf121e085e60c`.
+- Đã sửa duy nhất file `index.html`: chèn khối `id=ns-mo-tai-khoan` ở mục Trang chủ > Bước tiếp theo > Bắt đầu cùng Nông Sản 360; tối ưu mobile, CTA đăng ký SFVN, QR cho máy tính, disclosure mã giới thiệu và cảnh báo rủi ro, giữ nguyên nội dung học tập và 21 giáo trình. Commit `6f7308f786e8225c9f8e4701cb3a04e60401d735`.
+- Đã fetch GitHub kiểm tra hai liên kết, SVG asset và nội dung đầy đủ; **chưa xác minh biểu mẫu SFVN có hoạt động đến bước hoàn tất hoặc bản GitHub Pages đã được deploy xong**. Không thực hiện đăng ký thử với dữ liệu cá nhân.
+- Website: https://nmtu1525-art.github.io/nongsan360/#/@lien-he (mục chuyển đổi), hình QR: https://nmtu1525-art.github.io/nongsan360/assets/qr-sfvn-046C0000554.svg .
+- Tiếp theo: kiểm tra giao diện Pages sau khi deploy, bấm link ngoài, xác minh có mở được trên thiết bị thật; nếu cần tiếp tục cấu hình Metricool thì gọi getBrandSettings rồi xác minh trạng thái bài đã hẹn.
