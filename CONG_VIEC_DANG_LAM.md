@@ -305,3 +305,8 @@
 - Metricool brand `8097037` tên `Nông Sản 360` có `facebookData=1388965107640064`; các link bài đăng Metricool có dạng `https://facebook.com/122095198125555913/posts/<post-id>`, cho thấy Facebook có thể dùng **hai ID khác nhau** cho Page API và Page profile.
 - Web công khai không fetch được URL Facebook do chặn truy cập, nên chưa thể kết luận Page bị ẩn hay đường dẫn số bị lỗi. Đang sửa sang dạng URL Page profile chuẩn `https://www.facebook.com/profile.php?id=122095198125555913`, xem đây là **phương án cần user kiểm thử**, không khẳng định đã mở được. Nếu vẫn lỗi, cần người dùng dùng nút `Chia sẻ trang → Sao chép liên kết` trên Fanpage thật và gửi đúng URL để thay thế, đồng thời kiểm tra trạng thái Page đã công khai.
 - Giữ nguyên điện thoại `0985272776` và các mục khác. Sẽ kiểm tra readback và cập nhật checkpoint.
+
+### S.1. Đã thay đổi đường dẫn Facebook sau khi user báo lỗi
+- Commit chỉnh website: `ae363252af6298e3eefcf9aed4fa4b1c9da07724`. Thay **cả 3 chỗ** trỏ tới Page URL kiểu `https://www.facebook.com/122095198125555913` (đã lỗi trong ảnh user) sang `https://www.facebook.com/profile.php?id=122095198125555913`.
+- Readback GitHub: 3 chỗ URL mới, 0 URL cũ, 4 nút `tel:0985272776`, không có Zalo, cả 2 video và link iOS/Android còn nguyên, số template 31.
+- **CHƯA XÁC MINH URL MỚI HOẠT ĐỘNG TRÊN FACEBOOK THỰC TẾ**: Facebook chặn browser không đăng nhập, không giả định URL profile bằng ID là đúng hoặc trang đã công khai. Người dùng cần thử bằng trình duyệt thật. Nếu vẫn lỗi, phải lấy URL chính thức bằng `Chia sẻ trang → Sao chép liên kết` từ Facebook Page Nông Sản 360, rồi thay đúng URL được người dùng cung cấp.
