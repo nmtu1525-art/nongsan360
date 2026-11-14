@@ -33,7 +33,10 @@ Theo thông tin chương trình Nông Sản 360 nhận được, SFVN sẽ tổ 
 
 📍 **Học viện SFVN – Tầng 2, Tòa nhà Mekong, 92A–94 Bạch Đằng, phường Tân Sơn Hòa, TP.HCM.**
 
-👉 Anh/chị quan tâm có thể nhắn Fanpage Nông Sản 360 để nhận thông tin liên hệ, đồng thời xác nhận trực tiếp với SFVN Academy về điều kiện và cách thức tham dự. Thông tin liên hệ chính thức: https://sfvn-academy.com.vn/contact
+👉 Để được hỗ trợ xác nhận cách thức và điều kiện tham dự, vui lòng nhắn tin Fanpage Nông Sản 360 tại đây:
+https://m.me/1388965107640064
+
+*Fanpage hỗ trợ thông tin; việc xác nhận đăng ký và suất tham dự thực hiện theo hướng dẫn của SFVN.*
 
 #NongSan360 #TapHuanHangHoaPhaiSinh #SFVN #DoiTacIB
 
