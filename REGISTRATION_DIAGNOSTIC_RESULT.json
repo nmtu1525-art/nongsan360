@@ -1,17 +1,15 @@
 {
-  "checked_at": "2026-11-14T12:32:21.558561+00:00",
+  "checked_at": "2026-11-14T12:49:30.539935+00:00",
   "method": "GET",
   "no_lead_submitted": true,
+  "context": "mobile screenshot 19:45; PC reported working",
   "http_status": 200,
-  "content_type": "text/html; charset=utf-8",
-  "final_host": "script.google.com",
-  "recognized_static_markers": [
-    "leadForm",
-    "registerLead",
-    "NS360_LIBRARY_REGISTERED",
-    "v7-"
-  ],
-  "body_length": 15038,
-  "classification": "LEGACY_REGISTRATION_FORM_INSTEAD_OF_RECEIPT",
-  "elapsed_seconds": 0.95
+  "content_type": "text/javascript; charset=utf-8",
+  "final_host": "script.googleusercontent.com",
+  "recognized_static_markers": [],
+  "body_length": 39,
+  "classification": "RECEIPT_JSONP_OK",
+  "received_boolean": true,
+  "saved": false,
+  "elapsed_seconds": 2.09
 }

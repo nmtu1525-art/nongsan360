@@ -743,3 +743,10 @@
 - Result: LEGACY_REGISTRATION_FORM_INSTEAD_OF_RECEIPT. Static markers: leadForm, registerLead, NS360_LIBRARY_REGISTERED, v7-.
 - Read REGISTRATION_DIAGNOSTIC_RESULT.json and KIEM_TRA_DANG_KY_20261114.md before further changes.
 - Native signup remains staged OFF; do not claim Android/POST success from this read-only probe.
+
+
+### Mobile signup routing check 2026-11-14 - screenshot 19:45
+- User reports PC works; Android screenshot still shows legacy Google iframe. Native production flag was false at inspection.
+- Live Sheet read in chat found one v6 ACTIVE in Leads!I1:J30, no v7 in this range; no Sheet modifications.
+- Anonymous GET receipt only, no POST/no new lead: RECEIPT_JSONP_OK.
+- Evidence: REGISTRATION_DIAGNOSTIC_RESULT.json and MOBILE_SIGNUP_20261114.md. This is not an Android end-to-end test.
