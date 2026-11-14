@@ -50,7 +50,7 @@
 
 ## 4. Ứng dụng cho Nông Sản 360 — quy trình đề xuất
 
-1. Viết trang/bài `Giới thiệu đơn vị đối tác SFVN` với các факт từ **MXV + website doanh nghiệp**, mô tả rõ Nông Sản 360 là kênh kiến thức độc lập/đơn vị giới thiệu nếu có quan hệ thương mại; không mạo nhận là SFVN hoặc MXV.
+1. Viết trang/bài `Giới thiệu đơn vị đối tác SFVN` với các dữ kiện từ **MXV + website doanh nghiệp**, mô tả rõ Nông Sản 360 là kênh kiến thức độc lập/đơn vị giới thiệu nếu có quan hệ thương mại; không mạo nhận là SFVN hoặc MXV.
 2. Dùng kiến thức về hedging, hợp đồng chuẩn hóa, phí, ký quỹ và quy trình mở tài khoản làm **hệ thống nội dung giáo dục riêng**, diễn đạt mới có nguồn/trích dẫn/đối soát; giữ cân bằng rủi ro.
 3. Phần học liệu SFVN giữ **tài liệu tham khảo nội bộ**. Chưa tự đưa PDF/PPTX, logo, hình ảnh của SFVN vào 21 giáo trình hay Drive public khi chưa có chấp thuận bản quyền/phân phối.
 4. Bài Facebook tập huấn 20/11 vẫn là **bản thảo chờ duyệt**, không chỉnh 6 bài đã đặt Metricool. Nếu SFVN có poster hoặc thông tin đăng ký, cập nhật bài và điều kiện hỗ trợ rồi mới đặt lịch.
