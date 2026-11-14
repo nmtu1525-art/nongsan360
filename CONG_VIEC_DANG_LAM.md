@@ -1,43 +1,42 @@
 # NÔNG SẢN 360 — ĐIỂM KHÔI PHỤC CÔNG VIỆC ĐANG LÀM
-> Đây là file CHECKPOINT để bàn giao ngay cả khi chat dừng đột ngột giữa công việc.
-> Cập nhật lần đầu: 14/11/2026. Trạng thái mặc định: chưa có công việc cụ thể nào đang dang dở được xác nhận.
-> Khi bắt đầu một nhiệm vụ nhiều bước, phải cập nhật file này **trước khi sửa**; sau mỗi phần có kết quả bền vững, cập nhật ngay. Không chờ đến cuối cuộc chat.
+> CHECKPOINT để bàn giao khi chuyển chat hoặc bị ngắt. Mốc cập nhật: 14/11/2026 (Asia/Ho_Chi_Minh).
+> Nguồn sự thật là GitHub/Drive ở thời điểm truy cập, không chỉ nội dung tệp này.
 
 ## A. Công việc hiện tại
-- **Trạng thái:** ĐANG CHỜ THỬ NGHIỆM BÀN GIAO CHAT MỚI (không có thay đổi website đang dang dở).
-- **Mục tiêu:** Xác minh Project Instructions mới do người dùng cho biết đã dán vào mục chỉnh sửa hướng dẫn; mở chat mới trong Project `hàng hóa phái sinh` và nhập `Tiếp tục` để kiểm thử quy trình tự đọc checkpoint.
-- **Cập nhật:** 14/11/2026, Asia/Ho_Chi_Minh.
-- **Trạng thái triển khai:** File checkpoint, file trạng thái và đường dẫn GitHub/Drive đọc được trong cuộc trò chuyện hiện tại. Chưa thể quan sát trực tiếp Project Settings hoặc việc khởi tạo chat mới từ cuộc trò chuyện này.
+- **Trạng thái:** ĐANG LÀM — đã nghiệm thu khôi phục chat mới; đang đối chiếu nguồn tin thị trường mới và chuẩn bị đồng bộ báo cáo lên Drive.
+- **Kết quả nghiệm thu chat mới (14/11/2026):** Trong cuộc trò chuyện mới trong Project `hàng hóa phái sinh`, câu lệnh `Tiếp tục` đã dẫn tới việc đọc được `CONG_VIEC_DANG_LAM.md` và `TRANG_THAI_DU_AN.md`, xác minh quyền GitHub (repo permissions.push=true) và liệt kê được thư mục Google Drive dự án. **Đã nghiệm thu chức năng đọc/khôi phục**; chưa nghiệm thu quyền GitHub của môi trường *tác vụ chạy theo lịch* ngày 15/11.
+- **HEAD lúc kiểm tra đầu phiên:** `1c6df29008b4408d1d2101fc0648dbaaf41c3761` (trước commit hiện tại); kho `nmtu1525-art/nongsan360` nhánh `main`.
+- **Dữ liệu đầu vào đã kiểm:** `tin-tuc.json` có đúng 3 tin (ICO cà phê tháng 10, USDA ngô và lúa mì WASDE tháng 11), 21 PDF ở `pdf/` (CF 5, NG 5, LM 5, PS 6).
+- **Drive đã đọc:** thư mục dự án gốc `1e7PwORibeFRjdLieHlc-2nshZyUHMK9a` và thư mục bản V9.3 `1jV9pOVDED3t-5T2zX37jZWopBED2zX7G`. Trong Drive có tài liệu bàn giao, các bản V9.x; V9.3 chứa bản ZIP *cũ* từng có bot API, không coi là mã nguồn chuẩn nếu khác với GitHub hiện tại.
+- **Việc đang tiếp tục:** kiểm tra nguồn tin chính thức mới công bố trước hoặc vào 14/11/2026, so bài cũ; chỉ biên tập/đăng nếu xác minh chắc chắn. Sau đó cập nhật trạng thái chung và đồng bộ báo cáo vào Drive không ghi đè dữ liệu cũ.
 
-## B. Đã làm và đã lưu ở đâu?
-- Có hướng dẫn dự án về tự tiếp tục (người dùng xác nhận đã dán; chưa xác minh được trực tiếp qua giao diện cài đặt).
-- GitHub `CONG_VIEC_DANG_LAM.md` và `TRANG_THAI_DU_AN.md` đọc được qua kết nối.
-- Tại thời điểm kiểm tra, HEAD `9ae0a14f7e8bf44703370b5b0871a911d493febd` (trước commit checkpoint hiện tại); tệp `tin-tuc.json` có **3 bài** với ngày 10/11 và 12/11/2026.
-- Google Drive dự án gốc có các bản V9.1–V9.3 và tài liệu khôi phục.
-- Bot GitHub Actions dùng API đã bị tắt; công việc tin tức được giao cho trợ lý ChatGPT trực tiếp, không dùng OpenAI API key.
+## B. Các phần đã hoàn thành
+1. Tạo hai tệp checkpoint trên GitHub và hướng dẫn tự tiếp tục trong Project.
+2. Nghiệm thu truy cập GitHub + Drive ngay từ chat mới bằng lệnh `Tiếp tục`.
+3. Xác nhận mã nguồn GitHub hiện có đủ 21 giáo trình PDF và 3 bản tin; không sửa hoặc xóa chúng trong quá trình nghiệm thu.
+4. Bot GitHub Actions yêu cầu OpenAI API key đã bị vô hiệu hóa từ commit `9c917cefb90b3170f92b0c07ac5a327b941ff166`; phương án xuất bản là ChatGPT qua kết nối GitHub trực tiếp, không có API key.
 
-## C. Việc chưa xong (ưu tiên)
-1. **Thử chat mới:** người dùng tạo một chat *trong Project* `hàng hóa phái sinh`, gõ `Tiếp tục`. Trợ lý đọc file này và `TRANG_THAI_DU_AN.md`, đối chiếu commit mới, dữ liệu tin, Drive. Nếu đọc được và báo đúng tiến độ, nghiệm thu cơ chế bàn giao.
-2. **Tiếp tục nội dung thị trường:** kiểm tra nguồn tin chính thức mới (ICO/USDA) và chỉ đăng bài khi có sự kiện mới xác minh được. Bài viết chuẩn SEO, hai vòng kiểm số liệu/chính tả/câu từ, không đăng trùng và không dùng API key.
-3. **Kiểm chứng tác vụ 7:00:** xác minh ở lượt đầu tiên rằng tác vụ ChatGPT theo lịch thực sự có quyền dùng GitHub; chưa có bằng chứng xuất bản theo lịch.
-4. Mỗi việc dài phải sửa file checkpoint này **trước khi làm**, cập nhật sau mỗi chặng và ghi commit mới.
+## C. Thứ tự công việc còn lại
+1. **Đang xử lý:** kiểm tra tin thị trường mới từ USDA/ICO; xác minh thời gian/số liệu/URL nguồn, không đăng trùng chủ đề đã có. Nếu không đủ nguồn, ghi rõ chưa đăng.
+2. Ghi lại kết quả, cập nhật `TRANG_THAI_DU_AN.md`; lưu một bản báo cáo tiếp tục mới trên Drive dự án, KHÔNG ghi đè V9.3 cũ và 21 giáo trình.
+3. Vào ngày 15/11/2026 sau 07:00 (giờ Việt Nam), kiểm tra liệu tác vụ ChatGPT `Đăng tin Nông Sản 360` có thực sự chạy và quyền ghi GitHub có hoạt động trong môi trường lịch hay không. Chỉ xác nhận có tin đăng khi có commit.
+4. Khi có yêu cầu thiết kế website mới, tiếp tục từ `index.html` phiên bản đang chạy, không dựng lại site từ đầu.
 
-## D. Lỗi / vướng mắc / điều cần tránh
-- Chưa thể xác nhận quyền dùng GitHub từ một **chat mới** hoặc từ môi trường chạy tác vụ tự động; cần nghiệm thu thực tế.
-- Không nói "đã đăng" nếu chưa có commit; không viết bừa số liệu, không sửa/xóa 21 PDF hoặc tin cũ; không sử dụng OpenAI API key.
-- Chưa có công việc website nào đang ở trạng thái sửa nửa chừng tại thời điểm này.
+## D. Lưu ý an toàn
+- Không được yêu cầu OpenAI API key; không bật lại workflow tự đăng cũ.
+- Giữ nguyên 21 PDF và 3 bài cũ trong `tin-tuc.json`. Không viết bừa số liệu hoặc ghi đè các bản ZIP trên Drive.
+- Không nói đã kiểm chứng tác vụ 07:00 khi tác vụ chưa chạy lần đầu.
+- Trước mọi cập nhật trên GitHub phải đọc SHA mới nhất; sau commit phải đọc lại kết quả.
+- Khi bị ngắt giữa bước tra nguồn tin, ưu tiên hoàn thành việc đó, sau đó cập nhật báo cáo trạng thái và Drive.
 
-## E. Kiểm tra toàn vẹn trước khi tiếp tục
-- Repo: https://github.com/nmtu1525-art/nongsan360 (main)
-- Bản trạng thái chung: `TRANG_THAI_DU_AN.md`.
-- Tin tức: `tin-tuc.json`, không xóa hoặc đăng trùng tin.
-- PDF: `pdf/` — 21 tệp (5 cà phê, 5 ngô, 5 lúa mì, 6 phái sinh); giữ nguyên.
-- Đọc lại nội dung mới nhất từ GitHub/Drive rồi mới quyết định bước tiếp theo.
+## E. Các địa chỉ
+- GitHub: https://github.com/nmtu1525-art/nongsan360
+- Website: https://nmtu1525-art.github.io/nongsan360/
+- Drive gốc: https://drive.google.com/drive/folders/1e7PwORibeFRjdLieHlc-2nshZyUHMK9a
+- Bản trạng thái: `TRANG_THAI_DU_AN.md`
+- Quy trình tin: `QUY_TRINH_DANG_TIN_CHATGPT_KHONG_API.md`
 
-## QUY TẮC CHECKPOINT BẮT BUỘC
-1. **Đầu việc dài:** tạo checkpoint mục tiêu, đầu vào, trạng thái nhánh/commit.
-2. **Trong khi làm:** sau mỗi chặng có kết quả (ví dụ: đã sửa file, đã biên tập bài, đã kiểm chứng, đã tải Drive), cập nhật checkpoint và commit thay đổi bền vững. Không chờ chat gần đầy mới lưu.
-3. **Trước thao tác rủi ro:** ghi chính xác trạng thái và cách quay lui; không ghi đè bản gốc.
-4. **Nếu bị ngắt đột ngột:** chat mới đọc file này trước, kiểm tra tình trạng thực tế rồi thực hiện bước chưa xong đầu tiên. Không coi việc không có ghi chú là đã hoàn tất.
-5. **Kết thúc:** cập nhật `TRANG_THAI_DU_AN.md`, ghi checkpoint "ĐÃ XONG" hoặc "ĐANG CHỜ" cùng kết quả và việc tiếp theo.
-6. **Giới hạn:** checkpoint chỉ giữ những gì đã thật sự ghi lên GitHub/Drive; nội dung chưa từng lưu có thể mất nếu chat ngắt bất ngờ. Không thể tự động phát hiện thời điểm hết giới hạn chính xác.
+## Quy tắc checkpoint
+- Trước việc dài, cập nhật mục tiêu và bước đang làm.
+- Sau mỗi chặng lưu được kết quả, ghi tiếp SHA/đầu ra và bước tiếp theo.
+- Không có chứng cứ GitHub/Drive thì không tự suy ra đã hoàn thành.
