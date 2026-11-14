@@ -157,3 +157,12 @@
 - **KẾT QUẢ: LỖI, KHÔNG TẠO BÀI/LỊCH**: Metricool báo `can't access the Google Drive file ... Make sure it is shared as 'Anyone with the link'`. Ảnh Drive hiện `shared=false`. Giữ nguyên quyền riêng tư, không tự mở công khai cho file và không lên lịch không ảnh.
 - **Việc cần giải quyết:** anh chọn (1) trong Google Drive chia sẻ duy nhất ảnh bài đăng `FB-20261114-01_ANH_CHAO_MUNG_DA_DUYET.png` thành `Bất kỳ ai có đường liên kết - Người xem`, hoặc (2) kết nối Google Drive trong Metricool (nếu gói/hệ thống hỗ trợ) để Metricool tự lấy media mà không công khai, hoặc upload ảnh thủ công trực tiếp trong Metricool. Sau khi có quyền ảnh, chạy lại `getScheduledPosts` chống trùng và mới tiến hành thử lên lịch.
 - Chưa xác nhận người dùng chọn **giờ đăng 10:00**; đây là giờ thử dựa trên đề xuất, không được xem là đã chốt lịch xuất bản. Không thông báo lịch hoạt động cho tới khi nhận post ID hoặc Planner URL và readback.
+
+### M.2. Đã lên lịch bài chào mừng trên Metricool, ngày 14/11/2026
+- Quyền ảnh Google Drive được người dùng mở `anyone:reader`; `get_file_metadata` kiểm chứng `shared=true`, riêng ảnh `1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf`, không công khai thư mục.
+- **ĐÃ LÊN LỊCH THÀNH CÔNG** qua `Metricool.createScheduledPost` cho brand `8097037`, Facebook, nội dung bài đã duyệt `FB-20261114-01` + ảnh. Metricool đã nhập ảnh vào URL riêng `static.metricool.com`.
+- Ngày giờ hẹn: **10:00 ngày 15/11/2026, múi giờ Asia/Saigon (=Asia/Ho_Chi_Minh)**. `autoPublish=true`, trạng thái mạng `facebook: PENDING`; ID `427715087`, UUID `6491152378912720177`.
+- URL Planner đã xác minh: https://app.metricool.com/planner/calendar?blogId=8097037&openWithPostUuid=6491152378912720177
+- Sau khi lập, `Metricool.getScheduledPosts` xác nhận 1 bài cùng ID, nội dung và media, **CHƯA ĐĂNG THẬT**. Kiểm tra kết quả sau 10:00 ngày 15/11 mới được kết luận thành công.
+- **Lưu ý về giờ:** lúc người dùng nhắn, hiện là khoảng 11:05 ngày 14/11. Do đó lịch 10:00 ngày 15/11 là **sáng mai**, không phải mốc đã qua. Giờ này vốn là giờ assistant đề xuất chứ **chưa được người dùng chốt rõ**. Nếu anh muốn đăng ngay ngày 14/11 hoặc chọn giờ khác, cần điều chỉnh lịch hiện tại qua `updateScheduledPost` sau khi làm rõ mong muốn; không tạo bài trùng.
+- Không bật lại GitHub Actions bot API, không sửa website/tin/21 PDF.
