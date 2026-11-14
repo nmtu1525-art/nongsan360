@@ -320,3 +320,10 @@
 - Người dùng xác nhận rõ **giấy chứng nhận chỉ cấp khi hoàn thành tập huấn đúng điều kiện**; khoản **hỗ trợ tối đa 2.000 USD/tháng không tự động**, phải theo **chính sách và xét duyệt của SFVN**. Không biến đây thành cam kết khi viết quảng bá.
 - Đã cập nhật GitHub bản thảo Facebook, kế hoạch chiến dịch và báo cáo kiểm tra hai tài liệu nguồn SFVN; đồng thời cập nhật Google Docs kế hoạch Facebook Drive. Nguồn PDF/PPTX của SFVN không chứng minh mức tài trợ hay lịch buổi riêng nên tiếp tục lưu ý giới hạn kiểm chứng.
 - Metricool 6 bài đang PENDING và nội dung website/21 PDFs không thay đổi. Bài sự kiện SFVN tiếp tục CHỜ DUYỆT.
+
+
+## 41. Chiến dịch 2 bài SFVN 20/11 — caption & ảnh đã tạo, CHỜ DUYỆT (14/11/2026)
+- Đề xuất đủ **2 bài feed** ngoài 6 evergreen: 17/11 10:00 giới thiệu và 19/11 10:00 nhắc lịch. Không đăng thêm feed ngày 20 vì có bài cà phê 10:00.
+- Hai bản thảo Social SEO lưu tại `facebook-drafts/2026-11/SFVN_IB_20261117_THONG_BAO_CHO_DUYET.md` và `SFVN_IB_20261119_NHAC_LICH_CHO_DUYET.md`; có ngày giờ, địa điểm, nguồn lời giới thiệu và điều kiện giấy chứng nhận/xét duyệt hỗ trợ đến 2.000 USD/tháng, không hứa tự động nhận.
+- Hai artwork 4:5 (1080×1350) đã tạo và QA trong cuộc trò chuyện, chưa upload Drive trước khi anh duyệt. Visual do Nông Sản 360 biên tập, không dùng như thông báo chính thức SFVN. Kế hoạch GitHub đã cập nhật. Không đăng/đặt lịch hai bài mới trên Metricool, 6 bài cũ không đổi.
+- Chờ duyệt nội dung/ảnh và bổ sung đường xác nhận tham dự cụ thể trước khi đặt lịch. Không xóa mã nguồn/tin tức/21 PDF hay ghi đè tư liệu SFVN.
