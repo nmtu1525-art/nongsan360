@@ -1,6 +1,6 @@
 # FB-SFVN-20261117-01 — Thông báo tập huấn hàng hóa phái sinh (ĐÃ LÊN LỊCH)
 
-- **Đã lên Metricool:** Thứ Ba 17/11/2026, 10:00 (Asia/Saigon), ID 428028880, UUID 7906905485232523003, autoPublish=true, PENDING.
+- **Đã lên Metricool:** Thứ Ba 17/11/2026, 10:00 (Asia/Saigon), ID 428049582, UUID 7906905485232523003, autoPublish=true, PENDING.
 - **Vai trò:** Bài giới thiệu cơ hội tìm hiểu chương trình cho người hoạt động tài chính, đầu tư, đối tác IB.
 - **Từ khóa chính (Social SEO):** tập huấn hàng hóa phái sinh SFVN.
 - **Từ khóa phụ:** SFVN Academy; IB hàng hóa phái sinh; đối tác tài chính; MXV; tập huấn hàng hóa phái sinh TP.HCM.
