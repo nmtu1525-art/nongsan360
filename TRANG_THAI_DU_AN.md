@@ -335,3 +335,10 @@
 - Kiểm tra lại Metricool 8097037: **1 PUBLISHED (chào mừng) + đúng 10 PENDING (6 evergreen + 4 SFVN)**, tất cả bật autoPublish và có một ảnh, đúng 10 mốc giờ, không tạo trùng.
 - GitHub plan `FACEBOOK_KE_HOACH_THANG_11_2026.md` và Google Docs kế hoạch ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` đã đồng bộ và readback 10 dòng. **Checkpoint Y.42 trước đó bị sửa lại theo Y.44, không dùng các lịch 21/11 nữa.**
 - Quyền lợi giấy chứng nhận và hỗ trợ tối đa USD 2.000/tháng luôn có điều kiện theo chính sách SFVN; chưa có link ghi danh riêng sự kiện. Không đụng website, 21 PDF, tin tức, sheet khách hàng.
+
+
+## 43. Bốn bài SEO SFVN đã viết đủ trước khi làm ảnh (14/11/2026)
+- Chủ dự án yêu cầu điều chỉnh quy trình: **duyệt hoàn chỉnh 4 bài viết chuẩn Social SEO trước, sau đó mới tạo/điều chỉnh ảnh đúng theo từng bài**; không lặp lại việc thiết kế ảnh rồi mới cố viết nội dung khớp ảnh.
+- GitHub có nguồn bản thảo gộp `facebook-drafts/2026-11/SFVN_4_BAI_SOCIAL_SEO_CHO_DUYET_TRUOC_ANH_20261114.md`, chứa đủ bốn caption 16,17,18,19/11, mỗi bài có góc tiếp cận khác, từ khóa trong tiêu đề/đoạn mở đầu, 4 hashtag, CTA liên hệ chính thức; có disclaimers SFVN.
+- Đã verify readback 4 bài, 4 hashtag/bài, đúng giờ & địa điểm, giới hạn quyền lợi, không mạo nhận chương trình giảng dạy. **Chưa tạo ảnh mới** hoặc đồng bộ caption mới vào Metricool trong bước này, vẫn cần người dùng duyệt chữ.
+- Metricool trước đó đã PENDING/autoPublish=true cho 4 bài SFVN với bản caption cũ. Cần ghi nhớ điều này và xử lý trước giờ đăng 16/11 khi người dùng duyệt, tránh ngộ nhận bản mới đã được đưa lên lịch. Giữ nguyên 6 bài giáo dục.
