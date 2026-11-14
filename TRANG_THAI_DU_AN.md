@@ -176,3 +176,13 @@
 - `library-gate.js` vẫn `LIVE_ENABLED = false` và có route thử `#/thu-vien/kiem-tra-dang-ky`; không mở form bắt buộc cho người đọc. Không truy cập được trang Pages và Apps Script live qua công cụ web, do đó không xác nhận đã redeploy hoặc kiểm thử trình duyệt xong.
 - Checkpoint công việc đã ghi commit `9ce8dd33371c9ac0495529bc36c8fae86bbd3409`. Bước kế tiếp phụ thuộc vào chủ dự án cập nhật **cả Code.gs + Form.html** tại Apps Script và redeploy cùng URL /exec; sau đó đăng ký thử, kiểm Sheet có RequestID `v3-` trạng thái ACTIVE và xác minh điều hướng CF-01 trước khi cân nhắc bật LIVE.
 - Không chỉnh sửa các file PDF, dữ liệu tin tức, danh sách khách, bài Metricool, file website ngoài checkpoint; không dùng OpenAI API key.
+
+
+## 28. Bật đăng ký thư viện V3 trên website (14/11/2026)
+- Người dùng xác nhận mở **link thử** thì thấy form nhưng vào web bình thường không thấy. Nguyên nhân được xác minh trong `library-gate.js`: `LIVE_ENABLED=false` chỉ cho form chạy trên route thử, chưa chặn các route giáo trình thường.
+- Readback bảng `Leads!I1:J80` cho thấy **01 v2- ACTIVE** và **01 v3- ACTIVE**, bảo đảm backend V3 đã có ghi thành công ít nhất một lượt; không truy cập/sao chép PII.
+- Đã thay `library-gate.js` sang `LIVE_ENABLED = true`, commit `838a0afa1f32bb45e57b63399d0bccfe8e7b68b9`. `index.html` đổi script cache-bust thành `library-gate.js?v=20261114-live-v3-1`, commit `c943ec159b9271d4bfe5eaa67440d544f5e92a55`.
+- Readback cả hai tệp GitHub xác nhận bật true, script đúng một lần, router điều hướng gọi gate. Chỉ chặn route `#/giao-trinh/...` với khách chưa có marker; **không chặn trang danh sách Thư viện**. Người đã đăng ký trên cùng browser không thấy form lại; mở ẩn danh để thử trải nghiệm khách mới.
+- **Chưa xác minh GitHub Pages live trên trình duyệt** vì công cụ web báo không truy cập được Pages, và chưa kiểm chứng tự động chuyển về bài học ngay sau submit phiên live. Đề nghị user tự kiểm tra ẩn danh, từ Thư viện chọn giáo trình rồi đăng ký nếu cần.
+- Gate là JavaScript giao diện, không khóa URL tĩnh `/pdf/*.pdf` trực tiếp; không tuyên bố bảo vệ tài liệu tuyệt đối. Đã giữ nguyên toàn bộ 21 PDF, `tin-tuc.json`, dữ liệu khách, các bài Facebook.
+- Checkpoint công việc cập nhật commit `ba715a8eb7dbf03123e82f261c4c30d40991f6df`.
