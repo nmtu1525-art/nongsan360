@@ -92,3 +92,9 @@
 - **Quy chuẩn lưu mới:** mỗi bài Facebook dùng cùng mã nội dung `FB-YYYYMMDD-XX` trong tên bản thảo và ảnh (ví dụ `FB-20261114-01_bai-viet.md`, `FB-20261114-01_anh.png`); ảnh thiết kế lưu `03_HINH_ANH_BAI_DANG`, caption/draft lưu `02_BAI_VIET`, không để file Facebook ở gốc.
 - **Bước kế tiếp:** chuẩn bị bài khai trương/chuyên đề Facebook trong `02_BAI_VIET` và ảnh tương ứng trong `03_HINH_ANH_BAI_DANG`; bước tạo Fanpage thật vẫn cần tài khoản Facebook của anh.
 - **Quy tắc an toàn:** chỉ thực hiện move parent, không xóa, không sửa nội dung, không đổi tên file cũ, không can thiệp website GitHub hoặc 21 PDF.
+
+## H. FACEBOOK — CHUẨN BỊ BÀI RA MẮT ĐẦU TIÊN (14/11/2026)
+- Người dùng xác nhận **OK** với bước tiếp theo: chuẩn bị bài chào mừng Fanpage và ảnh bài đăng riêng.
+- Bắt đầu chặng: biên soạn bài đầu tiên `FB-20261114-01`, thiết kế ảnh minh họa, lưu bản thảo vào Drive `Facebook/02_BAI_VIET` và ảnh vào `Facebook/03_HINH_ANH_BAI_DANG`.
+- Nguyên tắc: xây dựng thương hiệu tin tức & giáo dục thị trường; không dùng CTA mở tài khoản/affiliate trong nội dung khai trương; không hứa lợi nhuận hay tạo số liệu thị trường chưa kiểm chứng. Chưa tạo/đăng Facebook thật.
+- Thư mục đích: bài viết `1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ`, hình ảnh `1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx`. Cần xác minh file thực sự có trên Drive rồi mới đánh dấu hoàn tất.
