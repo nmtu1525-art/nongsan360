@@ -53,3 +53,8 @@
 - Đã tạo `KE_HOACH_FANPAGE_FACEBOOK.md` trên GitHub (commit `189e829fd39c249f4556811c7728a6672cd0eb3b`), có tên/username đề xuất, bio, giới thiệu, bài ghim, quy tắc nội dung và kế hoạch kênh chuyển đổi minh bạch.
 - Đã tạo phương án hình logo và ảnh mô phỏng, **chưa phải file nhận diện đã duyệt hoặc ảnh bìa Facebook độc lập**. Không dùng ảnh mô phỏng có đường dẫn/tích xanh/lượt theo dõi giả làm trang thật.
 - Chưa có truy cập tài khoản Facebook/Meta để tự tạo Page, chưa đăng bài. Bước kế tiếp: hoàn chỉnh và duyệt logo + ảnh bìa riêng, sau đó tạo Page và nhập các thông số trong bản kế hoạch.
+
+### Duyệt thiết kế và yêu cầu lưu trữ (14/11/2026)
+- Người dùng đã xác nhận **DUYỆT** 2 ảnh nhận diện tạo trong cuộc trò chuyện trước: logo hình vuông NS360 xanh/vàng và banner ngang phong cảnh nông nghiệp có khẩu hiệu `Hiểu thị trường, vững kiến thức`.
+- Yêu cầu đã được duyệt: tạo **thư mục con `Facebook`** trong thư mục gốc Nông Sản 360 trên Google Drive `1e7PwORibeFRjdLieHlc-2nshZyUHMK9a`, lưu 2 ảnh vào đó; các hình ảnh và bài viết Facebook sau này cũng lưu tại thư mục này. Không đụng dữ liệu website hoặc giáo trình.
+- **Trạng thái:** ĐANG THỰC HIỆN tạo thư mục và chuyển 2 ảnh đã duyệt lên Drive, xác minh đường dẫn/tệp sau thao tác; nếu kênh tải ảnh lên Drive bị giới hạn cần ghi rõ và duy trì tệp ảnh trong bản bàn giao khác.
