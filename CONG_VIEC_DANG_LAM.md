@@ -338,3 +338,10 @@
 - **GIỚI HẠN CẦN GHI RÕ:** Đây là **tác vụ đã tạo thành công nhưng chưa chạy**, chưa chứng minh môi trường tự động có quyền tạo ảnh/upload Drive/đăng Metricool. 20 mục trong kế hoạch là **chủ đề**, chưa phải 20 bài đã viết hoặc đã hẹn. Nếu phiên tự động không tạo được ảnh hoặc không có quyền phải **giữ bản nháp và báo lỗi** chứ không tự đăng bài thiếu ảnh. Chưa có 20 post IDs trên Metricool.
 - Lịch `Đăng tin Nông Sản 360` website lúc 07:00 hàng ngày vẫn độc lập và đang bật, không đụng tới, không dùng OpenAI API key.
 - Sau lần tự động đầu vào **08:00 16/11/2026**, cần xem báo cáo lần chạy và xác minh trên Drive/Metricool/GitHub; nếu lỗi quyền hoặc tạo ảnh phải sửa trước khi tiếp tục 19 lượt còn lại, tránh bỏ sót.
+
+### U.2. Hội thảo SFVN tuần 16–22/11/2026 — dành một bài thông báo mời tham dự
+- Người dùng cho biết **SFVN có hội thảo tuần sau** (tuần 16–22/11) và muốn Fanpage Nông Sản 360 đăng bài **giới thiệu, mời khách tham dự**.
+- Đã tra web: trang lịch tập huấn chính thức của SFVN có thông báo chương trình đào tạo/sự kiện **tháng 11/2026**, và SFVN công bố chuỗi đào tạo tháng 11, nhưng **chưa xác định được buổi cụ thể mà người dùng nói tới**, chưa có ngày giờ/địa điểm/chủ đề/link đăng ký đã đối chiếu. **Không tự gán hội thảo cụ thể hoặc link không đúng**.
+- Ưu tiên 1 bài "Hội thảo SFVN — Nông Sản 360 thông tin mời tham dự" trước ngày diễn ra 2–4 ngày; có thể thay một chủ đề thuộc kế hoạch 20 bài, không làm 21 bài nếu vẫn mục tiêu 20 bài và không đăng trùng. Giữ tư cách Nông Sản 360 là kênh thông tin độc lập, SFVN là đơn vị tổ chức, không mạo nhận là đơn vị tổ chức hoặc yêu cầu mở tài khoản.
+- **Đang chờ thông tin người dùng:** ảnh poster/thông báo chính thức hoặc ít nhất tiêu đề chủ đề, ngày/giờ, hình thức online/offline, địa điểm/link tham dự và đăng ký, phí tham dự nếu có. Khi có đủ, viết caption mời khách chuyên nghiệp, làm ảnh dựa trên poster được duyệt (nếu cần), lưu Drive Facebook/02_BAI_VIET và 03_HINH_ANH_BAI_DANG, rồi đưa vào Metricool sau khi đối chiếu lịch và tránh đè bài đã duyệt.
+- Nhớ cập nhật lịch GitHub/Drive và prompt tự động 20 bài để không bỏ qua nội dung sự kiện khi lịch bắt đầu 16/11 lúc 08:00.
