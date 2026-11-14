@@ -463,3 +463,9 @@
 - Da tich hop vao index.html commit abc0ded06c1f1266ae1122a613a4277a65679ac8; footer link privacy commit ce8e916bff6c9817cba5912f20c153fa8cebea12. Readback xac minh 31 templates, route, QR, video, tin tuc, 21 PDF khong doi. Node --check JS PASS; logic test gate off neu chua co URL, on chi khi URL /exec hop le va nguoi dung chua dang ky.
 - DANG CHO KICH HOAT: library-gate.js const WEB_APP_URL = ''; hien khong co form dang ky hoat dong tren trang va chua thu duoc lead. Can chu du an mo private Sheet > Extensions > Apps Script, dan Code.gs, tao Form.html, Script Properties SPREADSHEET_ID, Deploy Web app (Execute as Me; Access Anyone), sao chep /exec URL; sau do cau hinh library-gate.js va thu gui du lieu real. Connector Drive khong deploy Apps Script duoc; KHONG tu nhan hoan tat end-to-end.
 - PDF pdf/*.pdf con cong khai, gate JS khong phai bao ve tai lieu thuc su; thu vien muc luc va tin tuc giu mo. Nguoi dung phai kiem tra chinh sach du lieu truoc khi mo thu lead.
+
+### Y.2. Người dùng cung cấp Web App /exec (14/11/2026)
+- Đã nhận đúng endpoint Google Apps Script: `https://script.google.com/macros/s/AKfycbwOanbih1xPmM07lBtMdfkll3_8JNYRRKzW0x7qFGuWsVqjHDuYf5YmA9JNonthV5EWyQ/exec`.
+- Đã kiểm tra file frontend `library-gate.js`, Apps Script `library-registration/Code.gs`, `Form.html` và `index.html` từ GitHub; server backend dùng Script Property `SPREADSHEET_ID` và Sheet tab `Leads`, chỉ khi `registerLead()` trả `ok=true` mới gửi postMessage để mở quyền đọc.
+- Đã thử truy cập endpoint qua công cụ web nhưng nhận `Cache miss`; container HTTP không phân giải DNS từ runtime. **Chưa xác minh endpoint công khai hoặc Google Sheet ghi đúng dữ liệu. Không khẳng định đã đăng ký thành công.**
+- **Đang thực hiện**: cấu hình URL này trên `library-gate.js`, thêm điều hướng/fallback nếu iframe bị chặn, kiểm tra readback và JS, sau đó cần thử một lượt đăng ký thực tế từ trình duyệt user và đọc lại bảng Google Sheets. Không bịa dòng lead thử.
