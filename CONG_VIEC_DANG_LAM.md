@@ -268,3 +268,10 @@
 - Đã đọc `index.html` bản hiện tại: 4 ô hiện là `<span>`, không tương tác. Đang triển khai thành điều hướng thực sự đến các mục trên **cùng trang**: thông tin/rủi ro; đăng ký QR; tải ứng dụng iOS/Android; video hướng dẫn.
 - Cần xử lý đúng router hash `#/mo-tai-khoan/index.html`, tránh `#guide-...` làm hỏng SPA. Thêm hiệu ứng cuộn, trạng thái focus/hover cho desktop/mobile, bảo toàn nội dung, video và QR.
 - Trạng thái: **ĐANG THỰC HIỆN**; chưa xác minh commit HTML. Sau thay đổi đọc lại GitHub, kiểm tra liên kết và cập nhật checkpoint.
+
+### Q.1. ĐÃ HOÀN THÀNH bốn ô điều hướng nhanh (14/11/2026)
+- Commit `84d12cedf357c42288879ec18d26be783898082f`: sửa `index.html`, thay 4 `<span>` không tương tác bằng 4 liên kết thật trong `<nav class="ns-guide-summary">`, điều hướng cùng trang bằng cú pháp `#/mo-tai-khoan/index.html@...` do router hiện có đã hỗ trợ.
+- 01 `@guide-risk` → phần `Những lưu ý quan trọng` (rủi ro sản phẩm, ký quỹ, an toàn khi nạp tiền); 02 `@guide-register` → đăng ký và QR; 03 `@guide-apps` → nút SFVN Trading iOS/Android; 04 `@guide-videos` → hai video.
+- Các đích đều gắn ID chính xác, không tạo route mới. CSS hỗ trợ hover/focus keyboard, 4 cột desktop, 1 cột điện thoại, `scroll-margin-top:110px` tránh header che tiêu đề. Giữ an toàn dữ liệu/QR/video/CTA/cảnh báo.
+- **ĐÃ XÁC MINH GitHub readback**: đúng 4 link và 4 đích; router có xử lý `@anchor` và `scrollIntoView`, CSS đầy đủ, số lượng template vẫn 31; QR đăng ký, links app và 2 video không mất. Chưa kiểm chứng thực tế browser và GitHub Pages đã deploy.
+- Trang để khách thử: https://nmtu1525-art.github.io/nongsan360/#/mo-tai-khoan/index.html . Nếu Pages cache bản cũ, tải lại/trình duyệt ẩn danh.
