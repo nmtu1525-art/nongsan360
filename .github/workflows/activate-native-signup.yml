@@ -1,0 +1,138 @@
+name: Activate native library signup
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/activate-native-signup.yml']
+permissions:
+  contents: write
+concurrency:
+  group: ns360-native-signup-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify anonymous receipt and prepare bounded frontend changes
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, re, secrets, time, urllib.request, urllib.parse
+          from datetime import datetime, timezone
+          from pathlib import Path
+          gate_path = Path('library-gate.js')
+          gate = gate_path.read_text(encoding='utf-8')
+          assert gate.count('const NATIVE_ENABLED = false;') == 1, 'Unexpected production flag; stop rather than overwrite.'
+          endpoint = re.search(r"const WEB_APP_URL = '([^']+)'", gate).group(1)
+          assert urllib.parse.urlsplit(endpoint).hostname == 'script.google.com'
+          report = {'checked_at': datetime.now(timezone.utc).isoformat(), 'no_lead_submitted': True, 'probes': []}
+          agents = [('desktop', 'Mozilla/5.0 NS360ReadOnlyCheck'), ('android_ua', 'Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 Chrome/131.0.0.0 Mobile Safari/537.36')]
+          for label, agent in agents:
+              callback = 'NS360_RC_releasecheck' + label
+              params = {'action': 'receipt', 'id': 'v7-' + secrets.token_hex(20), 'callback': callback}
+              started = time.monotonic()
+              req = urllib.request.Request(endpoint + '?' + urllib.parse.urlencode(params), headers={'User-Agent': agent, 'Cache-Control': 'no-cache'})
+              with urllib.request.urlopen(req, timeout=35) as res:
+                  body = res.read(100000).decode('utf-8', errors='replace').strip()
+                  status, kind = res.status, res.headers.get('Content-Type', '')
+              matched = re.fullmatch(re.escape(callback) + r'\((.*)\);?\s*', body, re.S)
+              assert matched, 'Deployed endpoint does not support receipts; no frontend changes published.'
+              payload = json.loads(matched.group(1))
+              assert payload == {'ok': False}, 'Random ID must return exactly {ok:false}, with no personal data.'
+              report['probes'].append({'user_agent': label, 'status': status, 'content_type': kind, 'receipt_contract': 'PASS', 'seconds': round(time.monotonic()-started, 2)})
+          protected = {str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in Path('pdf').glob('*.pdf')}
+          protected['tin-tuc.json'] = hashlib.sha256(Path('tin-tuc.json').read_bytes()).hexdigest()
+          assert len(protected) == 22, 'Expected 21 PDFs plus news JSON.'
+          gate = gate.replace('const NATIVE_ENABLED = false;', 'const NATIVE_ENABLED = true;')
+          gate = gate.replace('// Staged first-party form; keep production iframe until Apps Script POST/receipt is deployed and tested.', '// Native form is the default after the deployed receipt contract check; device submission still requires acknowledgement.')
+          old = '    if((NATIVE_ENABLED || nativePreviewMode()) && window.NS360_LIBRARY_NATIVE){'
+          assert gate.count(old) == 1
+          new = '''    if(NATIVE_ENABLED || nativePreviewMode()){
+                if(!window.NS360_LIBRARY_NATIVE){
+                  host.innerHTML='<main class="ns-libgate-screen"><section class="ns-libgate-card"><h2>Chưa tải được biểu mẫu</h2><p>Vui lòng tải lại trang để mở biểu mẫu đăng ký.</p><a href="?v=20261114-native-live#/thu-vien/index.html">Tải lại biểu mẫu</a></section></main>';
+                  return;
+                }'''
+          gate = gate.replace(old, new)
+          gate_path.write_text(gate, encoding='utf-8')
+          index_path = Path('index.html')
+          before = index_path.read_text(encoding='utf-8')
+          index = before
+          version = '20261114-native-live-1'
+          for asset in ['library-gate.js', 'library-native-form.js', 'library-gate.css']:
+              index, count = re.subn(re.escape(asset) + r'\?v=[^"<>]+', asset + '?v=' + version, index)
+              assert count == 1, 'Expected exactly one versioned reference to ' + asset
+          assert before.count('href="pdf/') == index.count('href="pdf/') == 42
+          assert index.index('library-native-form.js?v=') < index.index('NS360_LIBRARY_GATE.shouldBlock(route)')
+          index_path.write_text(index, encoding='utf-8')
+          for path, digest in protected.items():
+              assert hashlib.sha256(Path(path).read_bytes()).hexdigest() == digest
+          report.update(native_enabled=True, asset_version=version, protected_files_unchanged=len(protected), mobile_device_submission_verified=False)
+          Path('NATIVE_SIGNUP_RELEASE_20261114.json').write_text(json.dumps(report, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+      - name: Check syntax and registration routing without writing leads
+        run: |
+          node <<'JS'
+          const assert=require('node:assert/strict');
+          const fs=require('node:fs');
+          const vm=require('node:vm');
+          const crypto=require('node:crypto').webcrypto;
+          const gate=fs.readFileSync('library-gate.js','utf8');
+          const native=fs.readFileSync('library-native-form.js','utf8');
+          for(const file of ['library-gate.js','library-native-form.js','library-registration/Code.gs'])new vm.Script(fs.readFileSync(file,'utf8'),{filename:file});
+          function env(marker=null,nativeLoaded=true){
+            let written=0,rendered=0,options=null;
+            const win={addEventListener(){},removeEventListener(){},dispatchEvent(){}};
+            if(nativeLoaded)win.NS360_LIBRARY_NATIVE={render(host,route,opts){rendered++;options=opts;host.innerHTML='<form id="ns-native-form"></form>';}};
+            const storage={getItem(){return marker;},setItem(k,v){written++;marker=v;}};
+            const host={innerHTML:'',querySelector(){throw Error('Unexpected legacy iframe branch');}};
+            const ctx={window:win,location:{search:'',hash:'#/thu-vien/index.html'},document:{referrer:''},localStorage:storage,URL,URLSearchParams,crypto,Uint8Array,Event:class Event{constructor(type){this.type=type;}}};
+            vm.runInNewContext(gate,ctx);
+            return {host,api:win.NS360_LIBRARY_GATE,get written(){return written;},get rendered(){return rendered;},get options(){return options;}};
+          }
+          const guest=env();
+          assert.equal(guest.api.shouldBlock('/thu-vien/index.html'),true);
+          guest.api.render(guest.host,'/thu-vien/index.html');
+          assert.equal(guest.rendered,1);
+          assert.equal(guest.written,0);
+          assert.equal(guest.host.innerHTML.includes('iframe'),false);
+          assert.equal(guest.api.hasAccess(),false);
+          guest.options.onSuccess();
+          assert.equal(guest.written,1);
+          assert.equal(guest.api.shouldBlock('/thu-vien/index.html'),false);
+          const returning=env('granted-2026-11-14');
+          assert.equal(returning.api.shouldBlock('/giao-trinh/cf-01.html'),false);
+          const newLesson=env();
+          assert.equal(newLesson.api.shouldBlock('/giao-trinh/ng-01.html'),true);
+          assert.equal(newLesson.api.shouldBlock('/tin-tuc/index.html'),false);
+          const missing=env(null,false);
+          missing.api.render(missing.host,'/thu-vien/index.html');
+          assert.equal(missing.host.innerHTML.includes('iframe'),false);
+          assert.equal(missing.written,0);
+          assert.equal(missing.api.hasAccess(),false);
+          assert(native.indexOf('const saved=await verifyReceipt')<native.indexOf('onSuccess();'));
+          assert(!/getCurrentPosition|bigdatacloud|maps\/search/.test(native));
+          const report=JSON.parse(fs.readFileSync('NATIVE_SIGNUP_RELEASE_20261114.json','utf8'));
+          report.tests={javascript_syntax:'PASS',normal_guest_native_routing:'PASS',no_access_before_ack:'PASS',returning_reader:'PASS',protected_lesson:'PASS',unprotected_news:'PASS',missing_asset_no_google_iframe:'PASS'};
+          fs.writeFileSync('NATIVE_SIGNUP_RELEASE_20261114.json',JSON.stringify(report,null,2)+'\n');
+          console.log(JSON.stringify(report.tests));
+          JS
+      - name: Append checkpoint and preserve release
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          note = '\n\n### Native signup enabled after 19:45 mobile report (2026-11-14)\n'
+          note += '- Confirmed root routing issue: NATIVE_ENABLED was false, so normal visitors still received the Google iframe.\n'
+          note += '- Fresh anonymous receipt probes with desktop and Android user-agent strings returned the expected JSONP boolean. No POST/new lead/personal data in probes.\n'
+          note += '- Enabled native form for normal visits and updated all three asset cache versions. Missing native asset now shows a local retry, never silently loads the Google iframe.\n'
+          note += '- Routing/syntax/no-access-before-server-ack tests PASS. PDFs (21), news JSON, Sheets data and Facebook were not changed.\n'
+          note += '- Evidence: NATIVE_SIGNUP_RELEASE_20261114.json. Android user-agent probe is NOT a test on the owner phone; final device submission remains to be confirmed.\n'
+          for name in ['CONG_VIEC_DANG_LAM.md','TRANG_THAI_DU_AN.md','MOBILE_SIGNUP_20261114.md']:
+              with Path(name).open('a',encoding='utf-8') as out:out.write(note)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add library-gate.js index.html NATIVE_SIGNUP_RELEASE_20261114.json CONG_VIEC_DANG_LAM.md TRANG_THAI_DU_AN.md MOBILE_SIGNUP_20261114.md
+          git commit -m 'Enable on-site signup for ordinary mobile and desktop visits after receipt checks'
+          git push origin HEAD:main
