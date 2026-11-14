@@ -84,3 +84,7 @@
 - Website đã bỏ toàn bộ nhắc Zalo, thay bằng Fanpage Nông Sản 360 và số **0985 272 776** theo yêu cầu người dùng.
 - Link Page `https://www.facebook.com/122095198125555913` dựa trên URL post thực tế lấy qua Metricool, khớp Page Name `Nông Sản 360`. Link gọi `tel:0985272776`.
 - Hai lựa chọn liên hệ hiện ở trang chủ mục `#/@lien-he`, chân trang và trong trang hướng dẫn tài khoản SFVN; commit `4a626795f4e51f96d6a6fd41df7e188f5bbc8918`. Readback GitHub đã xác minh, chưa kiểm thử giao diện Pages live.
+
+## 13. Chỉnh liên kết Fanpage sau khi phản hồi lỗi (14/11/2026)
+- Người dùng phản hồi link Fanpage trong mục Liên hệ hiển thị "Bạn hiện không xem được nội dung này". Đã thay liên kết dạng số suy ra từ bài đăng thành `https://www.facebook.com/profile.php?id=122095198125555913`, commit `ae363252af6298e3eefcf9aed4fa4b1c9da07724`; đã xác minh readback 3 link mới, điện thoại và các tính năng khác giữ nguyên.
+- **Chưa xác minh thực tế liên kết mới mở được Facebook.** Nếu user vẫn thấy lỗi, yêu cầu họ sao chép link Trang trực tiếp trong app Facebook để thay bằng canonical share URL; không tiếp tục đoán ID.
