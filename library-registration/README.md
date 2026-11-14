@@ -44,3 +44,12 @@ Website hiện là **GitHub Pages tĩnh**, không có server ghi Google Sheets t
 
 - Google Apps Script Web apps: https://developers.google.com/apps-script/guides/web
 - Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 (hiệu lực 01/01/2026): https://bocongan.gov.vn/chinh-sach-phap-luat/bai-viet/luat-bao-ve-du-lieu-ca-nhan-chinh-thuc-co-hieu-luc-thi-hanh-tu-ngay-01-01-2026-1767186124
+
+## Phiên bản giao diện v2 — không yêu cầu ô tích chọn (14/11/2026)
+- Người dùng chọn bỏ các ô tick. `Form.html` trên GitHub đã đổi: chỉ có nút **"Đồng ý và mở thư viện miễn phí"** và thông báo ngắn gọn về mục đích sử dụng dữ liệu kèm link chính sách.
+- Bấm nút là hành động đồng ý cụ thể cho **đăng ký/cấp quyền đọc thư viện**; logic backend hiện tại vẫn cần `privacyConsent === true`, được gửi **chỉ sau thao tác nhấn nút**.
+- **Không xin phép nhận tin quảng cáo qua form mới.** Giao diện không có ô nhận tin; `newsConsent: false` cố định. Không dùng dữ liệu này để gửi thông báo hội thảo/bản tin nếu chưa có một cơ chế đồng ý riêng, rõ ràng.
+- Mã yêu cầu mới có tiền tố `v2-` và được lưu tại cột RequestID nhằm phân biệt bản biểu mẫu để kiểm tra sau này.
+- Backend `Code.gs` và `SPREADSHEET_ID` **không đổi**; chỉ cần **cập nhật `Form.html` trong dự án Apps Script đang hoạt động**. Trong Apps Script: lưu → **Deploy → Manage deployments → Edit (bút chì) → Version: New version → Deploy** để URL `/exec` cũ chạy bản v2. **Chỉ sửa GitHub không thay đổi bản Web App đã được deploy**.
+- Website `library-gate.js` vẫn ở `LIVE_ENABLED=false`, chỉ mở form qua URL kiểm thử `?ns360_signup_test=1`. Sau khi deploy v2, thử một đăng ký chủ động và xác minh tab `Leads`: `DongYXuLyDuLieu = TRUE`, `DongYNhanTin = FALSE`, `RequestID` bắt đầu `v2-`. Chỉ bật chính thức sau khi thử thành công.
+- Nếu phát hiện hướng dẫn cũ trong README nói "tích checkbox", áp dụng **phiên bản v2 tại mục này**.
