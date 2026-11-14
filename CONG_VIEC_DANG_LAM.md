@@ -66,3 +66,11 @@
   - Bìa: `NS360_ANH_BIA_FANPAGE_DA_DUYET_2026-11-14.png`, 2,597,652 bytes, https://drive.google.com/file/d/1pGGtE8cpY0CHbaG1KBF19cpybhpyXlRm/view
 - **Quy ước từ giờ:** Mọi tài liệu Facebook của Nông Sản 360 (ảnh bài viết, avatar, banner, lịch bài, caption, bản thảo) sẽ được lưu trong thư mục Drive Facebook trên; không lưu lẫn vào các bản phát hành website, không xóa dữ liệu khác.
 - **Tiếp theo:** tạo Fanpage Facebook thật và thiết lập hình ảnh/thông tin bằng tài khoản anh (hiện không có quyền Facebook), sau đó chuẩn bị các bài đăng khai trương. Chưa đăng gì lên Facebook.
+
+## G. SẮP XẾP DRIVE GỐC VÀ FACEBOOK (14/11/2026) — ĐANG THỰC HIỆN
+- **Yêu cầu:** Người dùng muốn phân loại rõ các ảnh đã duyệt trong Facebook, có chỗ riêng cho ảnh bài viết, nội dung bài viết, video, lịch đăng; đồng thời tổ chức lại thư mục Drive gốc Nông Sản 360.
+- **Nguồn đã kiểm:** Drive gốc `1e7PwORibeFRjdLieHlc-2nshZyUHMK9a`, Facebook `19aUO-V0SCy5NJ1JUPW0wmZGWbbIi6MeA` có đúng hai PNG đã duyệt, và nhiều thư mục phiên bản website V8/V9, thư viện/giáo trình và tệp bàn giao ở gốc.
+- **Phương án an toàn:** giữ nguyên ID các file và folder; chỉ tạo thư mục phân loại và DI CHUYỂN (không tạo bản sao, không ghi đè hay xóa). Facebook vẫn nằm trực tiếp dưới Drive gốc. `Facebook/01_NHAN_DIEN_THUONG_HIEU` chứa hai ảnh đã duyệt; các mục khác: `02_BAI_VIET`, `03_HINH_ANH_BAI_DANG`, `04_VIDEO_REELS`, `05_KE_HOACH_LICH_DANG`, `06_BAO_CAO`. Drive gốc sẽ có `00_QUAN_LY_DU_AN`, `01_WEBSITE`, `02_GIAO_TRINH_VA_THU_VIEN`, `Facebook`; giữ nguyên tên các folder/tệp cũ khi chuyển.
+- **Chiến lược website:** gom folder release V8/V9 dưới `01_WEBSITE/01_LUU_TRU_PHIEN_BAN`, các HTML/ZIP mẫu cũ dưới `01_WEBSITE/02_MAU_NGUON_CU` — không coi các ZIP V9.3 là mã nguồn website chuẩn, GitHub vẫn là chuẩn.
+- **Cách quay lui:** Drive file IDs giữ nguyên, nếu di chuyển nhầm trả lại bằng addParents=id_nguon/removeParents=id_dich. Tất cả tài sản hiện có đều ở parent Drive gốc, ngoại trừ 2 PNG ở parent Facebook. Trước khi move từng item phải kiểm tra parent ID thật bằng get_file_metadata, sau đó verify bằng metadata/list_folder.
+- **Giới hạn:** không sửa mã nguồn GitHub, không động các tệp PDF chứa nội dung, chỉ di chuyển folder ngoài. Không đổi tên tệp cũ.
