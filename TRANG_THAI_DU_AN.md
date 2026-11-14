@@ -194,3 +194,11 @@
 - Đọc lại mã nguồn xác nhận đầy đủ: gate bật, menu link đúng, route chặn đúng, script cache-bust duy nhất, router gọi `shouldBlock`. Backend Apps Script v3 trước đó đã có bản ghi `v3- ACTIVE` trong `Leads`. Bảo toàn bản v2 cũ.
 - **Chưa xác minh bằng trình duyệt thật**: Pages live không mở được bằng công cụ web. Chủ dự án kiểm tra bằng **ẩn danh**: web → Thư viện kiến thức → form → gửi thành công → danh mục thư viện; người đã có localStorage marker cùng browser sẽ bỏ qua form đúng thiết kế.
 - Gate client-side không chặn được URL file PDF tĩnh công khai; không tuyên bố dữ liệu PDF được bảo vệ. Không chạm 21 PDF, `tin-tuc.json`, bài Facebook, file Drive hoặc dữ liệu khách.
+
+
+## 30. Ghi nhận thành phố ước tính và bỏ thông báo riêng trên form (14/11/2026)
+- Theo yêu cầu chủ dự án, tab Leads Google Sheet đã thêm K `ThanhPhoUocTinh` và L `GoogleMapsUocTinh`, không chèn/xóa cột A:J, không lưu IP hoặc GPS. Mã `Code.gs` V4 trên GitHub tạo liên kết Google Maps cho khu vực từ city/region/country; `Form.html` V4 thử tra cứu ipwho.is khi người dùng bấm gửi, thất bại thì vẫn ghi nhận form bình thường.
+- Chủ dự án không muốn hiện thông báo riêng lúc đăng ký. GitHub `Form.html` đã bỏ đoạn giải thích GeoIP trên giao diện và bỏ dòng "đang xác định khu vực", chỉ giữ link `Chính sách dữ liệu cá nhân` và thông báo gửi thành công/lỗi. Commit `0e057a029851dd7809b63ce903ed21dafd5cb851`. Chính sách dữ liệu vẫn nêu rõ việc ước tính theo IP và dịch vụ bên thứ ba, không che giấu cách xử lý.
+- Tài liệu hướng dẫn đã cập nhật commit `d99c38750b50b8f4dc309fe7937855891f0cde76`. Đã đọc lại Sheet `Leads!I1:L4` thấy header đúng và chưa có bản ghi `v4-` để xác minh K/L.
+- **Chưa hoạt động chính thức**: bản V4 mới trên GitHub, Drive `Form.html` hiện vẫn là V3 và Apps Script /exec độc lập chưa được triển khai V4. Chưa kiểm thử API geo-IP trong browser. Cần owner cập nhật cả `Code.gs` và `Form.html` cùng một deployment version, thực hiện đăng ký thử rồi đối chiếu K:L trước khi xác nhận.
+- Bảo toàn website/21 PDF, tin tức, Facebook và dữ liệu đăng ký.
