@@ -327,3 +327,11 @@
 - Hai bản thảo Social SEO lưu tại `facebook-drafts/2026-11/SFVN_IB_20261117_THONG_BAO_CHO_DUYET.md` và `SFVN_IB_20261119_NHAC_LICH_CHO_DUYET.md`; có ngày giờ, địa điểm, nguồn lời giới thiệu và điều kiện giấy chứng nhận/xét duyệt hỗ trợ đến 2.000 USD/tháng, không hứa tự động nhận.
 - Hai artwork 4:5 (1080×1350) đã tạo và QA trong cuộc trò chuyện, chưa upload Drive trước khi anh duyệt. Visual do Nông Sản 360 biên tập, không dùng như thông báo chính thức SFVN. Kế hoạch GitHub đã cập nhật. Không đăng/đặt lịch hai bài mới trên Metricool, 6 bài cũ không đổi.
 - Chờ duyệt nội dung/ảnh và bổ sung đường xác nhận tham dự cụ thể trước khi đặt lịch. Không xóa mã nguồn/tin tức/21 PDF hay ghi đè tư liệu SFVN.
+
+
+## 42. Đã thực thi 4 bài truyền thông SFVN + giữ 6 bài kiến thức nguyên lịch (14/11/2026)
+- Chủ dự án yêu cầu cuối cùng: sáu bài evergreen **giữ NGUYÊN** 16/11 10:00, 18/11 12:00, 20/11 10:00, 23/11 10:00, 25/11 12:00, 27/11 10:00. Đã phục hồi ngô về 23/11 sau khi từng dời nhầm 21/11. Sáu caption/ảnh giữ nguyên, bài ngô giữ UUID `-4519204595844625623`, ID thay thành `428033042`.
+- Bổ sung đủ bốn bài SFVN 16/11 **18:30** (ID 428039062), 17/11 **10:00** (ID 428028880), 18/11 **18:30** (ID 428039173), 19/11 **10:00** (ID 428029358). Hai bài 16/18 dùng giờ buổi tối để tránh trùng bài kiến thức trong ngày. Caption Social SEO riêng ở `facebook-drafts/2026-11/`, bốn ảnh 1080×1350 trong `Facebook/03_HINH_ANH_BAI_DANG` Drive; không mạo nhận poster chính thức SFVN.
+- Kiểm tra lại Metricool 8097037: **1 PUBLISHED (chào mừng) + đúng 10 PENDING (6 evergreen + 4 SFVN)**, tất cả bật autoPublish và có một ảnh, đúng 10 mốc giờ, không tạo trùng.
+- GitHub plan `FACEBOOK_KE_HOACH_THANG_11_2026.md` và Google Docs kế hoạch ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` đã đồng bộ và readback 10 dòng. **Checkpoint Y.42 trước đó bị sửa lại theo Y.44, không dùng các lịch 21/11 nữa.**
+- Quyền lợi giấy chứng nhận và hỗ trợ tối đa USD 2.000/tháng luôn có điều kiện theo chính sách SFVN; chưa có link ghi danh riêng sự kiện. Không đụng website, 21 PDF, tin tức, sheet khách hàng.
