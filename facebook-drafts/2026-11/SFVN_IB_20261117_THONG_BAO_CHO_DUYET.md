@@ -1,6 +1,6 @@
 # FB-SFVN-20261117-01 — Thông báo tập huấn hàng hóa phái sinh (ĐÃ LÊN LỊCH)
 
-- **Đã lên Metricool:** Thứ Ba 17/11/2026, 10:00 (Asia/Saigon), ID 428072673, UUID 7906905485232523003, autoPublish=true, PENDING.
+- **Đã lên Metricool:** Thứ Ba 17/11/2026, 10:00 (Asia/Saigon), ID 428100359, UUID 7906905485232523003, autoPublish=true, PENDING.
 - **Vai trò:** Bài giới thiệu cơ hội tìm hiểu chương trình cho người hoạt động tài chính, đầu tư, đối tác IB.
 - **Từ khóa chính (Social SEO):** tập huấn hàng hóa phái sinh SFVN.
 - **Từ khóa phụ:** SFVN Academy; IB hàng hóa phái sinh; đối tác tài chính; MXV; tập huấn hàng hóa phái sinh TP.HCM.
@@ -39,12 +39,12 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb17
 
-Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
-
 
 
 #TapHuanHangHoaPhaiSinh #SFVN #DoiTacIB #NongSan360
 
-**Ảnh đã lưu trong Drive:** https://drive.google.com/file/d/1K9dCywhaPLNUUdLszjeHSmzC-gFCo252/view. **Bài đã được đặt lịch tự đăng**, chưa xuất bản trước giờ hẹn; ảnh minh họa do Nông Sản 360 thiết kế, không phải poster chính thức của SFVN.
+**Ảnh đã lưu trong Drive:** https://drive.google.com/file/d/1yIpvHhPrne492V5QBEdOk7XvXMW2QJFX/view. **Bài đã được đặt lịch tự đăng**, chưa xuất bản trước giờ hẹn; ảnh minh họa do Nông Sản 360 thiết kế, không phải poster chính thức của SFVN.
 
 **Bản tổng hợp đã duyệt:** [4 bài Facebook với Messenger + form](SFVN_4_BAI_FB_DA_DUYET_CTA_MESSENGER_FORM_20261114.md).
+
+**Chốt duyệt 14/11/2026:** Ảnh sạch footer 1122×1402 px đã được anh duyệt và thay trên Metricool — [Xem ảnh cuối](https://drive.google.com/file/d/1yIpvHhPrne492V5QBEdOk7XvXMW2QJFX/view), ID Metricool mới `428100359`, giữ nguyên UUID, ngày giờ và autoPublish. Không dùng ảnh có thanh “Nhắn Fanpage…” và chữ nhỏ phía dưới. Caption đã bỏ dòng lưu ý dài theo yêu cầu.
