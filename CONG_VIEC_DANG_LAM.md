@@ -262,3 +262,9 @@
 - Sau khi anh nhắn `đã cấp`, gọi `Google_Drive.get_file_metadata` **2 lần** cho video mở tài khoản `1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev`; cả hai kết quả vẫn **shared=false, chỉ có permission type=user role=owner**.
 - Video nạp tiền `1dzdSfBeYAU1oYMF74Otvb7LSzv1Yq-eW` **shared=true, anyone:reader**.
 - Mã website `index.html` vẫn chứa chính xác 2 iframe và link dự phòng. **Không cần tải lại video hoặc sửa mã HTML; chỉ còn quyền công khai video mở tài khoản**. Hướng dẫn người dùng mở đúng file ID `1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev`, vào Chia sẻ → Quản lý quyền truy cập → Bất kỳ ai có liên kết → Người xem → Lưu, và xác nhận lại. Không khẳng định đã phát được ở phía khách khi video còn riêng tư.
+
+## Q. Điều hướng nhanh 4 bước trong trang tìm hiểu tài khoản SFVN (14/11/2026)
+- Người dùng gửi ảnh 4 ô `01. Tìm hiểu sản phẩm và rủi ro`, `02. Đăng ký tại SFVN`, `03. Tải ứng dụng SFVN`, `04. Xem video hướng dẫn` và đề nghị bấm vào là đến đúng phần.
+- Đã đọc `index.html` bản hiện tại: 4 ô hiện là `<span>`, không tương tác. Đang triển khai thành điều hướng thực sự đến các mục trên **cùng trang**: thông tin/rủi ro; đăng ký QR; tải ứng dụng iOS/Android; video hướng dẫn.
+- Cần xử lý đúng router hash `#/mo-tai-khoan/index.html`, tránh `#guide-...` làm hỏng SPA. Thêm hiệu ứng cuộn, trạng thái focus/hover cho desktop/mobile, bảo toàn nội dung, video và QR.
+- Trạng thái: **ĐANG THỰC HIỆN**; chưa xác minh commit HTML. Sau thay đổi đọc lại GitHub, kiểm tra liên kết và cập nhật checkpoint.
