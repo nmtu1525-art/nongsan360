@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- NS360 Form v3: minimal compact privacy link; explicit registration-button action; no marketing opt-in. -->
+<!-- NS360 Form v4: approximate city-only IP lookup on submit; no GPS or stored IP; no marketing opt-in. -->
 <html lang="vi">
 <head>
   <base target="_top" />
@@ -30,7 +30,7 @@
   <label class="honeypot">Website <input name="website" type="text" autocomplete="off" tabindex="-1" /></label>
   <button id="submit" type="submit">Đồng ý và mở thư viện miễn phí</button>
   <div id="notice" role="status" aria-live="polite"></div>
-  <small>Thông tin chỉ dùng để đăng ký đọc thư viện. <a href="https://nmtu1525-art.github.io/nongsan360/chinh-sach-du-lieu.html" target="_blank" rel="noopener noreferrer">Chính sách dữ liệu cá nhân</a>. Không cần mở tài khoản giao dịch hoặc cung cấp OTP.</small>
+  <small>Khi bấm đăng ký, hệ thống thử ước tính thành phố qua IP bằng dịch vụ ipwho.is (không dùng GPS, không lưu IP; kết quả có thể sai). Nếu không xác định được, việc đăng ký vẫn tiếp tục. Thông tin đăng ký dùng để mở thư viện và thống kê khu vực. <a href="https://nmtu1525-art.github.io/nongsan360/chinh-sach-du-lieu.html" target="_blank" rel="noopener noreferrer">Chính sách dữ liệu cá nhân</a>. Không cần mở tài khoản giao dịch hoặc cung cấp OTP.</small>
 </form>
 <script>
 (function(){
@@ -41,16 +41,35 @@ const origin='https://nmtu1525-art.github.io';
 const form=document.getElementById('leadForm');
 const button=document.getElementById('submit');
 const notice=document.getElementById('notice');
-const requestId='v3-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
-form.addEventListener('submit',function(event){
+const requestId='v4-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
+async function estimateCity(){
+  // This is an IP lookup, not a GPS/location-permission request.
+  // Do not send name, phone, email or RequestID to the geolocation provider.
+  const controller=new AbortController();
+  const timer=setTimeout(function(){controller.abort();},2200);
+  try{
+    const res=await fetch('https://ipwho.is/?fields=success,city,region,country',
+      {method:'GET',mode:'cors',cache:'no-store',signal:controller.signal,referrerPolicy:'no-referrer'});
+    if(!res.ok)return {};
+    const data=await res.json();
+    if(!data||data.success!==true||typeof data.city!=='string'||!data.city.trim())return {};
+    return {city:data.city.slice(0,70),
+      region:typeof data.region==='string'?data.region.slice(0,70):'',
+      country:typeof data.country==='string'?data.country.slice(0,70):''};
+  }catch(_){return {};}
+  finally{clearTimeout(timer);}
+}
+form.addEventListener('submit',async function(event){
   event.preventDefault();
   if(!form.reportValidity())return;
   button.disabled=true;
   notice.style.color='#526374';
-  notice.textContent='Đang ghi nhận đăng ký an toàn…';
+  notice.textContent='Đang xác định khu vực gần đúng và ghi nhận đăng ký…';
+  const geo=await estimateCity();
   const payload={name:form.elements.name.value,phone:form.elements.phone.value,email:form.elements.email.value,
     topic:form.elements.topic.value,website:form.elements.website.value,
-    privacyConsent:true,source:source,requestId:requestId};
+    privacyConsent:true,source:source,requestId:requestId,
+    city:geo.city||'',region:geo.region||'',country:geo.country||''};
   google.script.run.withSuccessHandler(function(result){
     if(result&&result.ok){
       notice.style.color='#236c42';
