@@ -267,3 +267,11 @@
 - Live Sheet read in chat found one v6 ACTIVE in Leads!I1:J30, no v7 in this range; no Sheet modifications.
 - Anonymous GET receipt only, no POST/no new lead: RECEIPT_JSONP_OK.
 - Evidence: REGISTRATION_DIAGNOSTIC_RESULT.json and MOBILE_SIGNUP_20261114.md. This is not an Android end-to-end test.
+
+
+### Native signup enabled after 19:45 mobile report (2026-11-14)
+- Confirmed root routing issue: NATIVE_ENABLED was false, so normal visitors still received the Google iframe.
+- Fresh anonymous receipt probes with desktop and Android user-agent strings returned the expected JSONP boolean. No POST/new lead/personal data in probes.
+- Enabled native form for normal visits and updated all three asset cache versions. Missing native asset now shows a local retry, never silently loads the Google iframe.
+- Routing/syntax/no-access-before-server-ack tests PASS. PDFs (21), news JSON, Sheets data and Facebook were not changed.
+- Evidence: NATIVE_SIGNUP_RELEASE_20261114.json. Android user-agent probe is NOT a test on the owner phone; final device submission remains to be confirmed.

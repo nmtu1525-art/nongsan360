@@ -1,0 +1,33 @@
+{
+  "checked_at": "2026-11-14T12:51:03.309764+00:00",
+  "no_lead_submitted": true,
+  "probes": [
+    {
+      "user_agent": "desktop",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "receipt_contract": "PASS",
+      "seconds": 2.43
+    },
+    {
+      "user_agent": "android_ua",
+      "status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "receipt_contract": "PASS",
+      "seconds": 1.48
+    }
+  ],
+  "native_enabled": true,
+  "asset_version": "20261114-native-live-1",
+  "protected_files_unchanged": 22,
+  "mobile_device_submission_verified": false,
+  "tests": {
+    "javascript_syntax": "PASS",
+    "normal_guest_native_routing": "PASS",
+    "no_access_before_ack": "PASS",
+    "returning_reader": "PASS",
+    "protected_lesson": "PASS",
+    "unprotected_news": "PASS",
+    "missing_asset_no_google_iframe": "PASS"
+  }
+}
