@@ -1,0 +1,54 @@
+{
+  "mock_only": true,
+  "no_network_no_leads": true,
+  "tests": [
+    {
+      "name": "strict JSONP parsing rejects HTML, mismatched callback and non-boolean",
+      "status": "PASS"
+    },
+    {
+      "name": "receipt fetch omits credentials and parses saved result",
+      "status": "PASS"
+    },
+    {
+      "name": "script fallback is anonymous with no referrer",
+      "status": "PASS"
+    },
+    {
+      "name": "one POST grants access only after acknowledged saved receipt",
+      "status": "PASS"
+    },
+    {
+      "name": "opaque POST plus unavailable receipt never grants access",
+      "status": "PASS"
+    },
+    {
+      "name": "check again verifies same ID without a second POST",
+      "status": "PASS"
+    },
+    {
+      "name": "reload resumes pending ID even with empty contact fields",
+      "status": "PASS"
+    },
+    {
+      "name": "valid not-saved reply permits retry with same id",
+      "status": "PASS"
+    },
+    {
+      "name": "3.9 second response exceeds old limit but is accepted",
+      "status": "PASS"
+    },
+    {
+      "name": "POST redirect failure still verifies saved server record",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid input does not POST and does not grant access",
+      "status": "PASS"
+    },
+    {
+      "name": "expired pending token is not restored",
+      "status": "PASS"
+    }
+  ]
+}

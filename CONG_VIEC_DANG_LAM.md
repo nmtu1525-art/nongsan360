@@ -770,3 +770,14 @@
 - mobile_emulation/anonymous_script: CALLBACK_EXECUTED; seconds=1.72.
 - mobile_emulation/fetch_omit: CALLBACK_PARSED; seconds=1.44.
 - Evidence: RECEIPT_BROWSER_RESULT_20261114.json and RECEIPT_FIX_20261114.md. No lead writes or access bypass.
+
+
+### Receipt recovery fix after 19:55 screenshot (2026-11-14)
+- Live Sheet read showed 2 V7 ACTIVE rows while user reported confirmation error; no contact details or real request tokens copied to repository. POST can save; receipt transport needed hardening.
+- Native receipt now uses CORS fetch credentials:omit and strict JSON parsing of the existing callback wrapper, with anonymous script fallback. Per-fetch deadline 12s, bounded verification window 40s, no access from opaque POST or timeout.
+- Pending random request token only is stored in sessionStorage (24h maximum, cleared on success). Reload/check-again verifies the same request without new POST; valid not-yet-saved reply allows retry using the same ID. No contact data stored in the browser.
+- Error states are distinct RCP-NETWORK/TIMEOUT/PROTOCOL/HTTP/PENDING/CLIENT. Check-only works after reload even with empty fields.
+- 12 functional mock tests PASS, including response slower than old 3.6s, opaque response without ack, no duplicate POST on recheck, retry same ID, reload recovery, and no access before server ack.
+- Real Chromium desktop/mobile-emulation read-only probes support anonymous receipt transport; anonymous live GET still returns proper boolean. No diagnostic POST or fake lead created.
+- Only library-native-form.js and index asset versions changed in production. Code.gs, gate flags, 21 PDFs, news JSON and customer Sheet untouched. No Apps Script redeploy needed for this frontend fix.
+- Evidence: RECEIPT_BROWSER_RESULT_20261114.json, RECEIPT_FIX_TESTS_20261114.json, RECEIPT_FIX_RELEASE_20261114.json. Actual owner-phone submission remains unverified; clean browser tests do not prove the precise cause on that device.

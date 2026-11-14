@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-11-14T13:03:05.040399+00:00",
+  "no_post_no_lead_writes": true,
+  "backend_changed": false,
+  "receipt_get": {
+    "http_status": 200,
+    "content_type": "text/javascript; charset=utf-8",
+    "allow_origin": "*"
+  },
+  "tests_passed": 12,
+  "asset_version": "20261114-receipt-fix-2",
+  "protected_files_unchanged": 24,
+  "owner_phone_e2e_verified": false
+}
