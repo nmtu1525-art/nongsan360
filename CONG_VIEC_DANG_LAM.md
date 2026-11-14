@@ -583,3 +583,11 @@
 - **Chưa xác định nguyên nhân điện thoại không hiện**: có thể thiếu thao tác vào Thư viện, cache phiên JS cũ, trình duyệt đã lưu marker riêng, hoặc JS/script trang live khác với mã GitHub. Công cụ web không mở được URL Pages và URL JS live, nên chưa xác minh triển khai qua trình duyệt thật. Không khẳng định do IP hay sửa mã khi chưa có bằng chứng.
 - Bước kiểm tra người dùng: đóng mọi tab ẩn danh, mở một phiên mới → trang chủ → Thư viện; trên điện thoại mở riêng `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky` xem form có hiện. Đối chiếu hai trường hợp trước khi sửa gate; không yêu cầu nhập PII vào chat.
 - Không thay đổi `library-gate.js`, `index.html`, form Apps Script, Leads, PDF, tin, Facebook/Metricool.
+
+
+### Y.17. Xác nhận hiện form trên trình duyệt Cốc Cốc (14/11/2026)
+- Sau khi người dùng báo trình duyệt trước đó không hiện form trong lần mở lại và điện thoại, đã thử **trình duyệt Cốc Cốc và xác nhận form đăng ký xuất hiện**.
+- Kết quả này **phù hợp với cơ chế lưu dấu đăng ký theo browser/localStorage**: trên browser khác chưa có marker thì hiện form, browser đã có marker sẽ bỏ qua; không có logic kiểm tra IP trong `library-gate.js`.
+- Đã xác nhận ít nhất một trình duyệt thực tế tải giao diện form qua website theo phản hồi của chủ dự án. Chưa có chứng cứ để khẳng định mọi trình duyệt và bước submit/điều hướng sau đó đều hoạt động hoàn toàn.
+- **Không sửa mã thêm** vì đây là hành vi dự kiến cho khách đã đăng ký. Giữ `LIVE_ENABLED=true`, bảo toàn 21 giáo trình, dữ liệu Leads, tin tức và 6 bài Fanpage đã lên lịch.
+- Bước nghiệm thu còn lại: nếu cần, kiểm tra 1 phiên khách mới thực tế hoàn tất form V3 và vào thư viện, kiểm tra `RequestID v3-` trên Sheet mà không đưa thông tin cá nhân vào chat.
