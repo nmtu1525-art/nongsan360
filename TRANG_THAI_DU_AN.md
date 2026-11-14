@@ -362,3 +362,9 @@
 - Sheet Google `NS360 - DATA DANG KY THU VIEN (RIENG TU)` có tab mới `SFVN_TapHuan_20_11` lọc động nguồn sự kiện, không đụng dữ liệu cũ. Google Docs kế hoạch Facebook và kế hoạch GitHub đồng bộ.
 - Bốn bài SFVN đã được duyệt và cập nhật lại toàn bộ caption trên Metricool, gồm hai CTA: Messenger `https://m.me/1388965107640064` và form từ từng bài `?src=fb16/17/18/19`. IDs 428072540, 428072673, 428072813, 428072942; giữ lịch 16–19/11, 1 ảnh/bài, autoPublish=true. Sáu bài evergreen không đổi; tổng 10 PENDING, 1 PUBLISHED.
 - **Chờ nghiệm thu form POST thực tế**; chưa tuyên bố đã có khách/suất được SFVN duyệt. Không upload/sửa 21 giáo trình, tin tức hay Leads cũ.
+
+
+## 48. Dọn bốn ảnh SFVN cũ khỏi Drive (14/11/2026)
+- Theo yêu cầu chủ dự án, đã **xóa vĩnh viễn đúng 4 ảnh SFVN bản cũ** (Drive IDs `1POHdGLXENTqklSPyxar19TvaRYpIu23d`, `1K9dCywhaPLNUUdLszjeHSmzC-gFCo252`, `1INX0tpduWoAwZd0XmmiTMMmauS__DugR`, `1x0gn2DINKSxwygJq1rpOjzlfs9m1HiCn`) để tránh nhầm lẫn.
+- Drive folder `1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx` sau dọn: 11 ảnh, giữ đủ bốn ảnh `NS360_SFVN_202611{16,17,18,19}_DA_DUYET_KHONG_CTA.png` và bảy ảnh Facebook khác. 4 lệnh delete thành công, đã readback xác nhận cũ vắng mặt.
+- Metricool vẫn dùng 4 ảnh đã duyệt ở static.metricool.com cho đúng UUID, autoPublish PENDING; không thay ảnh, caption hay lịch sáu bài kiến thức. Các tài liệu checkpoint cũ liệt kê ID ảnh đã xóa chỉ mang tính lịch sử; chỉ dùng bộ ảnh **DA_DUYET_KHONG_CTA** để đăng.
