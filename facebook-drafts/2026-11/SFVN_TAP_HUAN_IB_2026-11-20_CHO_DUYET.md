@@ -6,8 +6,8 @@
 - Tên chương trình: Tập huấn Hàng hóa Phái sinh dành cho các IB và đối tác trong lĩnh vực tài chính, đầu tư.
 - Thời gian: **9:00–12:00, thứ Sáu 20/11/2026** (thay dự đoán cũ 21/11).
 - Địa điểm: SFVN Academy, tầng 2, Tòa nhà Mekong, 92A–94 Bạch Đằng, phường Tân Sơn Hòa, TP.HCM.
-- Giấy chứng nhận hoàn thành tập huấn **chỉ khi đáp ứng điều kiện chương trình**.
-- Cơ hội trở thành đối tác SFVN, với **chính sách hỗ trợ Marketing và chi phí văn phòng lên đến USD 2.000/tháng cho đối tác đủ điều kiện**, không phải mức được cấp mặc nhiên.
+- Giấy chứng nhận **chỉ cấp khi đáp ứng điều kiện hoàn thành tập huấn**.
+- Cơ hội trở thành đối tác SFVN; khoản hỗ trợ Marketing/chi phí văn phòng **tối đa 2.000 USD/tháng phụ thuộc chính sách và xét duyệt của SFVN**, không phải quyền lợi tự động.
 - Giao lưu đối tác tài chính; hiểu thị trường và hoạt động hàng hóa phái sinh qua MXV.
 - Chưa có poster, form ghi danh, phí tham dự, điều kiện chi tiết cấp giấy và hỗ trợ tài chính, sức chứa hoặc danh sách diễn giả.
 
@@ -21,9 +21,9 @@ Theo thông tin chương trình, SFVN tổ chức buổi tập huấn dành cho 
 
 ✅ Tìm hiểu thị trường hàng hóa phái sinh trong khuôn khổ hoạt động của Sở Giao dịch Hàng hóa Việt Nam (MXV).
 
-✅ Có cơ hội nhận **giấy chứng nhận hoàn thành tập huấn** khi đáp ứng các yêu cầu của chương trình.
+✅ **Giấy chứng nhận hoàn thành tập huấn** được cấp khi đáp ứng đầy đủ điều kiện hoàn thành chương trình.
 
-✅ Tìm hiểu cơ hội trở thành đối tác SFVN, cùng chính sách hỗ trợ marketing và chi phí văn phòng **lên đến 2.000 USD/tháng dành cho đối tác đủ điều kiện**.
+✅ Tìm hiểu cơ hội trở thành đối tác SFVN. **Hỗ trợ marketing và chi phí văn phòng tối đa 2.000 USD/tháng** chỉ áp dụng theo **chính sách và kết quả xét duyệt của SFVN**, không tự động dành cho người tham dự.
 
 ✅ Giao lưu, kết nối với các IB và đối tác trong lĩnh vực tài chính, đầu tư.
 
@@ -45,3 +45,5 @@ Theo thông tin chương trình, SFVN tổ chức buổi tập huấn dành cho 
 - Địa điểm được đối chiếu tại https://sfvn-academy.com.vn/contact và https://sfvn-partner.com/ .
 - Chưa tìm thấy thông báo sự kiện 20/11 công khai hoặc bảng điều kiện 2.000 USD, nên không tuyên bố kiểm chứng độc lập các nội dung đó.
 - Không bảo đảm mọi người dự đều có chứng nhận hoặc được hỗ trợ tiền; không tạo đường đăng ký giả, không dùng logo/poster chưa được duyệt.
+
+**Lưu ý diễn đạt đã được chủ dự án xác nhận:** Giấy chứng nhận phụ thuộc điều kiện hoàn thành tập huấn; hỗ trợ tối đa 2.000 USD/tháng phụ thuộc chính sách và xét duyệt của SFVN, không phải quyền lợi tự động.
