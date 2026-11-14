@@ -155,3 +155,8 @@
 - `Form.html` GitHub và bản sao Drive ID `1yzk8DZC3hjffAvwDn2TT25eQ6FtXfig5` đã được readback đúng nội dung và khớp hoàn toàn; đã sửa bản giải thích gate, chính sách dữ liệu và README trên GitHub.
 - **Chưa được cập nhật trên Google Apps Script Web App đang deploy**: cần chủ dự án copy Form.html mới vào editor và Deploy > Manage deployments > Edit > New version > Deploy. URL `/exec` hiện có giữ nguyên.
 - Gate website `LIVE_ENABLED=false`, chỉ có link test. Sau redeploy, kiểm thử một lượt, xác minh trên Google Sheets `privacy=true, news=false, RequestID v2-` trước khi bật form toàn trang. Không đụng 21 giáo trình PDF và các bài Facebook đã scheduled.
+
+## 25. Sửa test form đăng ký không xuất hiện trên ẩn danh (14/11/2026)
+- Chủ dự án báo ẩn danh vẫn không thấy form. Đã cập nhật `library-gate.js` (commit `c2412126c6e964bc6a4ca113e073f60265bac123`) với **hash test route `#/thu-vien/kiem-tra-dang-ky`**, buộc show form dù có `localStorage` cũ, chuyển CF-01 chỉ sau khi Google Apps Script trả đăng ký thành công, bổ sung link kiểm tra App Script trực tiếp nếu khung iframe trống. Giữ chế độ `LIVE_ENABLED=false` cho người dùng thường.
+- `index.html` commit `78e0059593948cce4993e5fba637830c00b2b2c3` cache-bust thư viện JS, `library-gate.css` commit `1483aff9a57454c0dba5165974a3cd07e99a9691` hỗ trợ link fallback.
+- Readback GitHub: 31 templates, 21 giáo trình (42 link PDF), tin tức, Form v2 không checkbox và backend URL được giữ. **Chưa thể kiểm tra live browser hoặc xác nhận ghi bản đăng ký v2 trên Sheet** do giới hạn công cụ; chờ người dùng thử link `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky` rồi đối chiếu Lead Sheet. Không bật đại trà khi chưa có bằng chứng.
