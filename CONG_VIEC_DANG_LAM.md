@@ -1008,3 +1008,9 @@
 - **Chưa bật/chưa kiểm thử** Instant Reply/Saved Replies thực tế trên Meta Business Suite vì công cụ kết nối hiện có không cho thao tác Inbox Fanpage. Chủ trang cần vào Meta Business Suite để kích hoạt thủ công, thử từ Facebook khác; không tuyên bố đã có auto-reply.
 - **Metricool readback lần cuối không thay đổi:** 1 PUBLISHED chào mừng và đúng 10 PENDING, cả 10 UUID đúng giờ, autoPublish=true, media=1. 6 evergreen nguyên lịch và 4 SFVN 16–19/11; KHÔNG gọi updateScheduledPost.
 - Bước tiếp theo hợp lý: chủ dự án duyệt nội dung hai tài liệu và kích hoạt Messenger Instant Reply trong Meta; kiểm thử 3 câu hỏi và form thật, rồi thiết kế bảng CRM nội bộ có quyền phù hợp (không ghi đè sheet Leads/form nguồn).
+
+
+### Y.59. Bắt đầu chặng mẫu CRM chăm sóc khách (14/11/2026, phiên tiếp tục)
+- Đã đọc lại hai checkpoint, HEAD GitHub và Drive gốc; xác nhận Y.58 đã hoàn thành hai tài liệu Messenger/SOP và lịch Metricool được giữ nguyên tại lần kiểm trước.
+- Chặng mới: tạo **mẫu CRM rỗng**, phân luồng khách hỏi tập huấn / kiến thức / chủ động hỏi hợp tác hoặc mở tài khoản, có trường ghi nhận consent, trạng thái, ngày hẹn và chủ phụ trách. Không sao chép PII, không chỉnh Sheet `Leads` hoặc lịch Metricool.
+- Trước khi ứng dụng thực tế cần người dùng duyệt mẫu; không tuyên bố đồng bộ tự động nếu chưa kiểm thử.
