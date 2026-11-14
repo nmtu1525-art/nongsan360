@@ -942,3 +942,19 @@
 - Bản copy 4 bài đã duyệt và có Messenger + form: `facebook-drafts/2026-11/SFVN_4_BAI_FB_DA_DUYET_CTA_MESSENGER_FORM_20261114.md` (mỗi bài link nguồn riêng), 4 draft lẻ đồng bộ. ĐÃ UPDATE đúng 4 post Metricool theo UUID cũ, IDs mới: **16/11 18:30 #428072540; 17/11 10:00 #428072673; 18/11 18:30 #428072813; 19/11 10:00 #428072942**. Readback: cả 4 PENDING, autoPublish=true, 1 ảnh, đủ 2 liên kết và giữ giờ; không tạo bài trùng.
 - Sáu evergreen nguyên 16/11 10:00, 18/11 12:00, 20/11 10:00, 23/11 10:00, 25/11 12:00, 27/11 10:00; Metricool tổng **1 PUBLISHED chào mừng + 10 PENDING**. Không sửa 21 PDF, website library registration, tin tức, bài Facebook evergreen hay dữ liệu Leads cũ.
 - Đã cập nhật `FACEBOOK_KE_HOACH_THANG_11_2026.md`, kế hoạch Google Docs Drive `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` và readback đúng IDs mới, 2 CTA. **Bước E2E tiếp theo:** chỉ khi có một khách tự nguyện gửi form, kiểm xem `Leads` nhận source `sfvn20261120-*`, tab event xuất hiện dòng và browser báo thành công; nếu có lỗi, giữ mã để chẩn đoán; không tự báo hoàn tất E2E.
+
+
+### Y.52. Duyệt 4 ảnh sửa cuối và bài viết SFVN (14/11/2026)
+- Chủ dự án nói **"duyệt 4 ảnh mới sửa xong, và bài viết"** sau khi yêu cầu giữ nguyên bốn poster SFVN chỉ bỏ **thanh xanh lá “Nhắn tin Fanpage Nông Sản 360…” và dòng chữ nhỏ in nghiêng ngay bên dưới**. Đây là duyệt 4 poster phiên bản cuối, **không phải yêu cầu tạo hình mới**.
+- Đã rà soát ảnh thực trong phiên làm việc và đối chiếu 4 thiết kế với ảnh người dùng đánh dấu đỏ: bản IB 16/11, thông báo quyền lợi 17/11, 3 câu hỏi 18/11, còn 1 ngày 19/11. Bốn ảnh chỉnh sau khi bỏ footer xanh và dòng dưới có kích thước 1122×1402 (xấp xỉ 4:5) được giữ nguyên nguyên vẹn, copy tên rõ ràng:
+  - `/mnt/data/NS360_SFVN_20261116_DA_DUYET_KHONG_CTA.png` (nguồn `a_clean_high_resolution_professional_vietnamese.png`).
+  - `/mnt/data/NS360_SFVN_20261117_DA_DUYET_KHONG_CTA.png` (nguồn `a_clean_professional_high_resolution_infographic.png`).
+  - `/mnt/data/NS360_SFVN_20261118_DA_DUYET_KHONG_CTA.png` (nguồn `a_polished_high_resolution_infographic_poster_in.png`).
+  - `/mnt/data/NS360_SFVN_20261119_DA_DUYET_KHONG_CTA.png` (nguồn `a_clean_high_resolution_vietnamese_infographic_po.png`).
+- Bộ caption chính đang ở `facebook-drafts/2026-11/SFVN_4_BAI_FB_DA_DUYET_CTA_MESSENGER_FORM_20261114.md`, 4 post Metricool UUID bất biến:
+  - 16/11 18:30 UUID `-5232083627600753537`, hiện ID `428072540`
+  - 17/11 10:00 UUID `7906905485232523003`, hiện ID `428072673`
+  - 18/11 18:30 UUID `-8895106555576431118`, hiện ID `428072813`
+  - 19/11 10:00 UUID `-9108208944996138606`, hiện ID `428072942`.
+- Bước thực hiện: upload 4 ảnh DA_DUYET vào Drive `Nông Sản 360 - Website HTML/Facebook/03_HINH_ANH_BAI_DANG` **bằng tên mới, không ghi đè/xóa bốn ảnh cũ**, xác minh file IDs và permissions anyone reader rồi cập nhật media của **chỉ 4 UUID SFVN** trên Metricool, giữ caption/giờ/autoPublish. Đối chiếu yêu cầu trước: bỏ dòng "Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin..." khỏi caption công khai nếu còn, còn trang form vẫn ghi rõ bản chất yêu cầu thông tin.
+- Readback đủ 10 PENDING (6 evergreen+4 SFVN), Media bốn bài mới. Đồng bộ link ảnh, Metricool ID mới vào GitHub plan + Google Docs kế hoạch và ghi checkpoint cuối. Không sửa 21 PDF, tin tức, website form, Google Sheets khách hay nội dung sáu bài kiến thức.
