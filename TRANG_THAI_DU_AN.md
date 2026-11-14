@@ -314,3 +314,9 @@
 - Địa điểm đã đối chiếu trên sfvn-academy.com.vn/contact và sfvn-partner.com. Cần poster/đường ghi danh/điều kiện chính thức để đăng truyền thông.
 - GitHub draft `facebook-drafts/2026-11/SFVN_TAP_HUAN_IB_2026-11-20_CHO_DUYET.md` và lịch `FACEBOOK_KE_HOACH_THANG_11_2026.md` cập nhật; kế hoạch Google Docs Drive cùng ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` sửa và readback đúng; Metricool **không có bài SFVN** và sáu evergreen vẫn nguyên (1 PUBLISHED + 6 PENDING).
 - Phương án khi đủ dữ kiện: 17/11 10:00 bài thông báo và 19/11 10:00 nhắc lịch (chưa đặt). Lưu ý bài cà phê 20/11 10:00 trùng sự kiện nhưng không tự đổi.
+
+
+## 40. Ràng buộc quyền lợi SFVN 20/11 đã chốt (14/11/2026)
+- Người dùng xác nhận rõ **giấy chứng nhận chỉ cấp khi hoàn thành tập huấn đúng điều kiện**; khoản **hỗ trợ tối đa 2.000 USD/tháng không tự động**, phải theo **chính sách và xét duyệt của SFVN**. Không biến đây thành cam kết khi viết quảng bá.
+- Đã cập nhật GitHub bản thảo Facebook, kế hoạch chiến dịch và báo cáo kiểm tra hai tài liệu nguồn SFVN; đồng thời cập nhật Google Docs kế hoạch Facebook Drive. Nguồn PDF/PPTX của SFVN không chứng minh mức tài trợ hay lịch buổi riêng nên tiếp tục lưu ý giới hạn kiểm chứng.
+- Metricool 6 bài đang PENDING và nội dung website/21 PDFs không thay đổi. Bài sự kiện SFVN tiếp tục CHỜ DUYỆT.
