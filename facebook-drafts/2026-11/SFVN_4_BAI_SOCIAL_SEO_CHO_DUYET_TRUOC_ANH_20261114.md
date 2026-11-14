@@ -4,7 +4,7 @@
 
 **Nguồn:** thông tin buổi tập huấn ngày 20/11/2026 do chủ dự án cung cấp; địa chỉ được đối chiếu với hồ sơ SFVN Academy trong báo cáo `SFVN_DANH_GIA_HO_SO_VA_GIAO_TRINH_20261114.md`; phần kiến thức nền hợp đồng tương lai/MXV/rủi ro dựa trên hai tài liệu SFVN đã đánh giá và biên tập lại. Không có thông báo công khai riêng xác minh giờ/ngày/chính sách hỗ trợ 2.000 USD. Không dùng ảnh/logo gốc SFVN nếu chưa có quyền.
 
-**Quy tắc bắt buộc:** giấy chứng nhận chỉ khi đủ điều kiện hoàn thành; hỗ trợ marketing và văn phòng **tối đa 2.000 USD/tháng** phụ thuộc chính sách, điều kiện và xét duyệt SFVN, không phải quyền lợi mặc nhiên. Không bịa link đăng ký hoặc chương trình giảng dạy chính thức; CTA chỉ dẫn tới trang liên hệ SFVN Academy.
+**Quy tắc bắt buộc:** giấy chứng nhận chỉ khi đủ điều kiện hoàn thành; hỗ trợ marketing và văn phòng **tối đa 2.000 USD/tháng** phụ thuộc chính sách, điều kiện và xét duyệt SFVN, không phải quyền lợi mặc nhiên. Không bịa link đăng ký hoặc chương trình giảng dạy chính thức; CTA dẫn trực tiếp tới Messenger Fanpage Nông Sản 360 qua liên kết https://m.me/1388965107640064; Fanpage chỉ hỗ trợ thông tin, không xác nhận suất thay SFVN.
 
 **Khung giờ đã đặt trước đây (để đối chiếu, chưa phải đã duyệt mới):** SFVN 16/11 18:30; 17/11 10:00; 18/11 18:30; 19/11 10:00. **Sáu bài kiến thức giữ nguyên mọi lịch, nội dung và ảnh.** Chưa tạo hoặc thay ảnh ở bước biên soạn chữ này.
 
@@ -39,7 +39,10 @@ Trong lĩnh vực tài chính, một đối tác IB không chỉ cần biết s�
 
 💬 Anh/chị đang quan tâm nhất đến *sản phẩm, vai trò IB hay quản trị rủi ro*? Hãy chia sẻ ở phần bình luận.
 
-Để xác nhận cách thức và điều kiện tham dự, vui lòng liên hệ trực tiếp SFVN Academy: https://sfvn-academy.com.vn/contact
+👉 Để được hỗ trợ xác nhận cách thức và điều kiện tham dự, vui lòng nhắn tin Fanpage Nông Sản 360 tại đây:
+https://m.me/1388965107640064
+
+*Fanpage hỗ trợ thông tin; việc xác nhận đăng ký và suất tham dự thực hiện theo hướng dẫn của SFVN.*
 
 *Ba nhóm kiến thức trên do Nông Sản 360 tổng hợp, không phải chương trình giảng dạy chính thức đã được SFVN công bố.*
 
@@ -76,7 +79,10 @@ Theo thông tin chương trình Nông Sản 360 nhận được, SFVN tổ chứ
 🗓 **Thứ Sáu, 20/11/2026 | 09:00–12:00**
 📍 **SFVN Academy – Tầng 2, Tòa nhà Mekong, 92A–94 Bạch Đằng, phường Tân Sơn Hòa, TP.HCM.**
 
-👉 Để tìm hiểu điều kiện, cách thức tham dự và tình trạng tiếp nhận, anh/chị vui lòng liên hệ trực tiếp SFVN Academy: https://sfvn-academy.com.vn/contact
+👉 Để được hỗ trợ xác nhận cách thức và điều kiện tham dự, vui lòng nhắn tin Fanpage Nông Sản 360 tại đây:
+https://m.me/1388965107640064
+
+*Fanpage hỗ trợ thông tin; việc xác nhận đăng ký và suất tham dự thực hiện theo hướng dẫn của SFVN.*
 
 Theo anh/chị, khi tìm hiểu một cơ hội hợp tác IB, yếu tố nào nên được ưu tiên: kiến thức sản phẩm, chính sách hợp tác hay hỗ trợ vận hành?
 
@@ -115,7 +121,10 @@ Ký quỹ ban đầu, ký quỹ duy trì và nguy cơ phát sinh yêu cầu bổ
 
 💬 Nếu được đặt một câu hỏi tại buổi tập huấn, anh/chị sẽ muốn hỏi điều gì nhất?
 
-📩 Xác nhận điều kiện và cách thức tham dự với SFVN Academy: https://sfvn-academy.com.vn/contact
+👉 Để được hỗ trợ xác nhận cách thức và điều kiện tham dự, vui lòng nhắn tin Fanpage Nông Sản 360 tại đây:
+https://m.me/1388965107640064
+
+*Fanpage hỗ trợ thông tin; việc xác nhận đăng ký và suất tham dự thực hiện theo hướng dẫn của SFVN.*
 
 *Đây là danh sách gợi ý của Nông Sản 360, không phải nội dung giảng dạy đã được SFVN xác nhận. Giao dịch có đòn bẩy tiềm ẩn rủi ro thua lỗ đáng kể.*
 
@@ -150,7 +159,10 @@ Nếu anh/chị quan tâm tham dự, hãy kiểm tra ba việc sau:
 
 🎓 **Lưu ý về quyền lợi chương trình:** Giấy chứng nhận phụ thuộc điều kiện hoàn thành tập huấn. Chính sách hỗ trợ marketing và chi phí văn phòng **tối đa 2.000 USD/tháng**, nếu áp dụng, phải theo **điều kiện và xét duyệt của SFVN**; không phải quyền lợi tự động.
 
-👉 **Đầu mối xác nhận thông tin tham dự:** https://sfvn-academy.com.vn/contact
+👉 Để được hỗ trợ xác nhận cách thức và điều kiện tham dự, vui lòng nhắn tin Fanpage Nông Sản 360 tại đây:
+https://m.me/1388965107640064
+
+*Fanpage hỗ trợ thông tin; việc xác nhận đăng ký và suất tham dự thực hiện theo hướng dẫn của SFVN.*
 
 Nông Sản 360 chia sẻ thông tin chương trình để những người quan tâm chủ động tìm hiểu; chúng tôi không xác nhận suất tham dự thay đơn vị tổ chức.
 
