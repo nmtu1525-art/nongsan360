@@ -958,3 +958,18 @@
   - 19/11 10:00 UUID `-9108208944996138606`, hiện ID `428072942`.
 - Bước thực hiện: upload 4 ảnh DA_DUYET vào Drive `Nông Sản 360 - Website HTML/Facebook/03_HINH_ANH_BAI_DANG` **bằng tên mới, không ghi đè/xóa bốn ảnh cũ**, xác minh file IDs và permissions anyone reader rồi cập nhật media của **chỉ 4 UUID SFVN** trên Metricool, giữ caption/giờ/autoPublish. Đối chiếu yêu cầu trước: bỏ dòng "Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin..." khỏi caption công khai nếu còn, còn trang form vẫn ghi rõ bản chất yêu cầu thông tin.
 - Readback đủ 10 PENDING (6 evergreen+4 SFVN), Media bốn bài mới. Đồng bộ link ảnh, Metricool ID mới vào GitHub plan + Google Docs kế hoạch và ghi checkpoint cuối. Không sửa 21 PDF, tin tức, website form, Google Sheets khách hay nội dung sáu bài kiến thức.
+
+
+### Y.54. Đã xóa chính xác bốn ảnh SFVN cũ, giữ bốn ảnh final (14/11/2026)
+- Người dùng gửi screenshot chọn **bốn ảnh cũ** trong thư mục `Nông Sản 360 - Website HTML/Facebook/03_HINH_ANH_BAI_DANG`, yêu cầu xóa để không nhầm với bốn poster SFVN cuối đã duyệt.
+- Đã đối chiếu tên/ID/parent folder, xác minh cả bốn bài Metricool đã ingest 4 ảnh final (UUID bất biến, PENDING), rồi **xóa vĩnh viễn đúng bốn Drive files cũ**:
+  - `NS360_SFVN_Bai1_16-11-2026.png` — ID `1POHdGLXENTqklSPyxar19TvaRYpIu23d`.
+  - `NS360_SFVN_Bai1_ThongBao_17-11-2026.png` — ID `1K9dCywhaPLNUUdLszjeHSmzC-gFCo252`.
+  - `NS360_SFVN_Bai3_18-11-2026.png` — ID `1INX0tpduWoAwZd0XmmiTMMmauS__DugR`.
+  - `NS360_SFVN_Bai2_NhacLich_19-11-2026.png` — ID `1x0gn2DINKSxwygJq1rpOjzlfs9m1HiCn`.
+- Bốn lệnh Google Drive `delete_file` đều trả `success=true`; **readback list_folder** cho thấy thư mục còn 11 ảnh (giảm từ 15), không có bốn ID trên, giữ nguyên bốn ảnh final:
+  - 16/11 `NS360_SFVN_20261116_DA_DUYET_KHONG_CTA.png`, ID `19GZZ7sFTGBh5wgJrzDRlKJjCqR976aLb`
+  - 17/11 `NS360_SFVN_20261117_DA_DUYET_KHONG_CTA.png`, ID `1yIpvHhPrne492V5QBEdOk7XvXMW2QJFX`
+  - 18/11 `NS360_SFVN_20261118_DA_DUYET_KHONG_CTA.png`, ID `1RmqlP9jQUtl2-7H41i8OAH56LWN_QYKF`
+  - 19/11 `NS360_SFVN_20261119_DA_DUYET_KHONG_CTA.png`, ID `1Z3dWmoFzUEmvA169yvYBP1zfR47h3kjG`.
+- Giữ lại nguyên 7 ảnh Facebook kiến thức/chào mừng, 6 bài evergreen và bốn bài SFVN trên Metricool. Không thay caption, lịch, form, 21 PDF, tin tức hoặc Google Sheet khách.
