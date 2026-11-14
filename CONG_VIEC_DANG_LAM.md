@@ -48,3 +48,8 @@
 - **Trạng thái:** ĐANG THỰC HIỆN — chuẩn bị bộ thông số Fanpage, hình ảnh chính thức và bản nội dung giới thiệu; không đưa `mở tài khoản`, `affiliate` hay CTA bán hàng lên ảnh bìa, avatar, tiểu sử, bài ghim giới thiệu.
 - **Nguyên tắc:** không đăng nội dung liên quan mở tài khoản khi chưa có đơn vị/đường dẫn đăng ký thật được kiểm tra; không dùng thông tin liên hệ hoặc URL giả. Chưa có quyền Facebook, không được báo đã tạo Fanpage thật.
 - **Việc tiếp theo:** thiết kế logo/banner, hoàn thiện trường Fanpage và bài giới thiệu; lưu tệp bàn giao vào GitHub/Drive nếu có thể. Bảo toàn `index.html`, `tin-tuc.json` và 21 PDF.
+
+### Tiến độ Fanpage đã lưu
+- Đã tạo `KE_HOACH_FANPAGE_FACEBOOK.md` trên GitHub (commit `189e829fd39c249f4556811c7728a6672cd0eb3b`), có tên/username đề xuất, bio, giới thiệu, bài ghim, quy tắc nội dung và kế hoạch kênh chuyển đổi minh bạch.
+- Đã tạo phương án hình logo và ảnh mô phỏng, **chưa phải file nhận diện đã duyệt hoặc ảnh bìa Facebook độc lập**. Không dùng ảnh mô phỏng có đường dẫn/tích xanh/lượt theo dõi giả làm trang thật.
+- Chưa có truy cập tài khoản Facebook/Meta để tự tạo Page, chưa đăng bài. Bước kế tiếp: hoàn chỉnh và duyệt logo + ảnh bìa riêng, sau đó tạo Page và nhập các thông số trong bản kế hoạch.
