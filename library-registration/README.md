@@ -6,30 +6,30 @@
 
 - `library-gate.js`, `library-gate.css` trong thư mục gốc website; router `index.html` gọi gate trước khi hiển thị trang `/giao-trinh/XX-YY.html`.
 - `chinh-sach-du-lieu.html`: thông báo quyền riêng tư công khai.
-- `backend/Code.gs`, `backend/Form.html`: Google Apps Script HTML Service + `google.script.run` ghi trực tiếp vào Google Sheets riêng tư; không cần OpenAI API key.
+- `library-registration/Code.gs`, `library-registration/Form.html`: Google Apps Script HTML Service + `google.script.run` ghi trực tiếp vào Google Sheets riêng tư; không cần OpenAI API key.
 - Google Sheet riêng tư trong Drive dự án `00_QUAN_LY_DU_AN/04_DATA_DANG_KY_THU_VIEN`, gồm tab `Leads` (12 cột) và `HuongDan`. Không bật chế độ Anyone with link.
 
 ## Cài đặt một lần bằng tài khoản Google chủ dự án
 
 1. Mở Google Sheet **NS360 - DATA DANG KY THU VIEN (RIENG TU)** trong Drive, tab `Leads`, xác minh dòng tiêu đề 12 cột và quyền chỉ chủ sở hữu. Sao chép **ID** từ URL `https://docs.google.com/spreadsheets/d/<ID>/edit`.
-2. Trong Sheet chọn **Tiện ích mở rộng (Extensions) → Apps Script**. Xóa mã mẫu (chỉ trong script mới). Dán toàn bộ `backend/Code.gs` vào file `Code.gs`.
-3. Trong Apps Script thêm **HTML file** tên `Form` (không nhập `.html` ở ô tên), dán toàn bộ `backend/Form.html` vào đó.
+2. Trong Sheet chọn **Tiện ích mở rộng (Extensions) → Apps Script**. Xóa mã mẫu (chỉ trong script mới). Dán toàn bộ `library-registration/Code.gs` vào file `Code.gs`.
+3. Trong Apps Script thêm **HTML file** tên `Form` (không nhập `.html` ở ô tên), dán toàn bộ `library-registration/Form.html` vào đó.
 4. Chọn **Project Settings → Script properties → Add script property**: Name `SPREADSHEET_ID`, Value là ID Sheet riêng tư từ bước 1. Không dán mã này vào trang web hoặc các biểu mẫu công khai.
 5. Chọn **Deploy → New deployment → Web app**. Thiết lập **Execute as: Me (chủ dự án)**; **Who has access: Anyone** (để khách không cần đăng nhập Google). Chấp thuận quyền chạy script/ghi Sheets khi Google yêu cầu. Sao chép URL cuối dạng `https://script.google.com/macros/s/AKfy.../exec`.
-6. Mở file `library-gate.js` trên GitHub `nmtu1525-art/nongsan360`. Thay đúng dòng `const WEB_APP_URL = '';` bằng URL `/exec` đã sao chép (giữ dấu nháy và chấm phẩy). Lưu commit. Khi URL hợp lệ, gate được bật ở trang giáo trình, các trang danh mục và tin tức vẫn mở.
-7. Mở website bằng cửa sổ **ẩn danh** → Thư viện → chọn một giáo trình → điền thông tin giả phục vụ kiểm thử + tích đồng ý cần thiết → gửi. Xác nhận xuất hiện **một dòng mới** trong tab `Leads` của Sheet; đồng thời giáo trình được mở và chuyển sang giáo trình khác không cần nhập lại. Kiểm tra nếu không chọn nhận tin thì cột `DongYNhanTin = FALSE`. Xóa **dòng kiểm thử** sau khi hoàn thành.
+6. Endpoint `/exec` của người dùng đã được cấu hình trong `library-gate.js`. Website đang giữ `LIVE_ENABLED=false` để kiểm thử trước, chỉ bật form qua URL `?ns360_signup_test=1` trước đường dẫn `#/giao-trinh/cf-01.html`. Không bật chính thức trước khi xác nhận bản ghi thành công trên Sheet.
+7. Đảm bảo đã cập nhật `Form.html` lên phiên bản v2 trong chính Apps Script rồi triển khai **phiên bản Web App mới**. Mở link kiểm thử bằng cửa sổ ẩn danh, điền tên và số điện thoại của chính người thử (không chia sẻ PII qua chat), đọc thông báo gần nút và nhấn **Đồng ý và mở thư viện miễn phí**. Không có ô tích chọn. Xác minh có một dòng `Leads` mới, `DongYXuLyDuLieu = TRUE`, `DongYNhanTin = FALSE`, `RequestID` mở đầu bằng `v2-`; thử mở tập khác cùng trình duyệt mà không phải điền lại. Xóa dòng thử sau khi ghi nhận kết quả.
 8. Thử kịch bản lỗi: Apps Script hoặc Sheet không sẵn sàng → form phải thông báo lỗi và **không ghi nhớ quyền đọc**. Thử lại trên trình duyệt khác sẽ cần đăng ký lại vì localStorage không đồng bộ giữa các thiết bị.
 
 ## Vì sao tạm giữ website mở khi chưa cấu hình?
 
-Website hiện là **GitHub Pages tĩnh**, không có server ghi Google Sheets trực tiếp. Nếu bật form trước khi Web App Google Apps Script được triển khai, khách có thể điền mà không lưu được dữ liệu hoặc bị chặn khỏi tài liệu. Vì vậy `WEB_APP_URL` để rỗng và **gate tự tắt** cho đến khi URL thật được nhập và đã kiểm thử.
+Website hiện là **GitHub Pages tĩnh**, không có server ghi Google Sheets trực tiếp. Nếu bật form trước khi Web App Google Apps Script được triển khai, khách có thể điền mà không lưu được dữ liệu hoặc bị chặn khỏi tài liệu. Vì vậy `WEB_APP_URL` đã có URL `/exec` được cung cấp, nhưng **`LIVE_ENABLED=false`**, chỉ cho chủ dự án kiểm thử bằng tham số `?ns360_signup_test=1`. Chỉ khi kiểm thử ghi Sheet và mở khóa thành công mới đặt `LIVE_ENABLED=true`.
 
 ## Cấu trúc dữ liệu và quy tắc
 
 `Leads`: ThoiGianDangKy, HoTen, SoDienThoai, Email, ChuDeQuanTam, NguonTruyCap, DongYXuLyDuLieu, DongYNhanTin, PhienBanChinhSach, ThoiDiemDongY, RequestID, TrangThai.
 
 - Họ tên/SĐT bắt buộc, email tùy chọn. Chỉ lưu dữ liệu nếu có `DongYXuLyDuLieu = TRUE`.
-- Đồng ý nhận tin/hội thảo **tùy chọn, không được tích sẵn**.
+- Biểu mẫu v2 **không có ô tích chọn** và **không thu thập sự đồng ý tiếp thị**; `newsConsent` luôn `false`. Muốn gửi tin/hội thảo phải xin sự đồng ý riêng qua quy trình khác.
 - Apps Script dùng `LockService`, ID chống gửi trùng, kiểm tra dữ liệu và chống công thức giả trong bảng Sheets; cần giới hạn truy cập Sheet, theo dõi spam.
 - Website chỉ lưu một dấu xác nhận đăng ký trong `localStorage`, **không lưu số điện thoại hay email trên trình duyệt**.
 - Khách có thể yêu cầu xem/sửa/xóa qua điện thoại 0985 272 776 hoặc Messenger chính thức. Trước khi hoạt động công khai, chủ dự án cần xác nhận quy trình quản lý yêu cầu quyền dữ liệu theo pháp luật.
