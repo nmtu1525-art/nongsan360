@@ -68,3 +68,11 @@ Bản đồ chỉ là địa danh hành chính/khu vực gần đúng; ranh gi�
 - Drive file sao lưu V4/V3 cần đồng bộ riêng nếu chưa có cách upload trực tiếp qua kết nối; GitHub `main` là nguồn mã chính.
 
 Checkpoint: `CONG_VIEC_DANG_LAM.md` và `TRANG_THAI_DU_AN.md`.
+
+## 6. Khắc phục màn hình Google Drive trên Android (14/11/2026)
+
+Triệu chứng: PC hiển thị form Apps Script bình thường, điện thoại trong khung đăng ký hiện logo Google Drive và “không thể mở tệp tại thời điểm này”. Đây có thể là lỗi xử lý đường dẫn Web App giữa Google Apps Script, Google Drive, nhiều tài khoản Google và trình duyệt/ứng dụng Android, không liên quan đến logic GPS hay dữ liệu bảng. Google đã có báo cáo tương tự: https://issuetracker.google.com/issues/520300212 và https://issuetracker.google.com/issues/574946511. Chưa có bằng chứng xác định chính xác nguyên nhân trên thiết bị chủ dự án.
+
+Đã cập nhật giao diện **chỉ dành cho điện thoại** phía trên iframe: mô tả nguyên nhân thường gặp, nút `Sao chép liên kết đăng ký` sao chép chính URL website (không phải URL Apps Script), đề nghị dán vào thanh địa chỉ Chrome hoặc Samsung Internet rồi thử tab ẩn danh; liên kết `Thử mở biểu mẫu ở tab riêng` được đưa lên trước iframe. PC vẫn hiển thị form nhúng bình thường. Mã GitHub: `library-gate.js`, `library-gate.css`, `index.html` cache-busted.
+
+**Lưu ý:** giải pháp này làm cách xử lý lỗi dễ tiếp cận hơn, **chưa bảo đảm** URL Apps Script mở được trên mọi Android. Nếu Chrome/Samsung Internet ẩn danh cũng lỗi, phải xem lại quyền triển khai Web App và xem xét thiết kế lại đăng ký với backend không phụ thuộc iframe Google Apps Script, thay vì hứa đã khắc phục triệt để. Không phải sửa `Code.gs`, `Form.html`, Sheet, GPS để thử cách mở trình duyệt trên Android.
