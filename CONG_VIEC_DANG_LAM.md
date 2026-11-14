@@ -758,3 +758,15 @@
 - Enabled native form for normal visits and updated all three asset cache versions. Missing native asset now shows a local retry, never silently loads the Google iframe.
 - Routing/syntax/no-access-before-server-ack tests PASS. PDFs (21), news JSON, Sheets data and Facebook were not changed.
 - Evidence: NATIVE_SIGNUP_RELEASE_20261114.json. Android user-agent probe is NOT a test on the owner phone; final device submission remains to be confirmed.
+
+
+### Receipt browser diagnosis after 19:55 (2026-11-14)
+- Live Sheet chat inspection found 2 V7 ACTIVE records despite client confirmation error. No customer identifiers were committed.
+- Chromium read-only receipt probes, with all POST requests blocked; clean desktop/mobile-emulated contexts, not the owner phone.
+- desktop/classic_script: CALLBACK_EXECUTED; seconds=2.7.
+- desktop/anonymous_script: CALLBACK_EXECUTED; seconds=1.92.
+- desktop/fetch_omit: CALLBACK_PARSED; seconds=1.92.
+- mobile_emulation/classic_script: CALLBACK_EXECUTED; seconds=2.22.
+- mobile_emulation/anonymous_script: CALLBACK_EXECUTED; seconds=1.72.
+- mobile_emulation/fetch_omit: CALLBACK_PARSED; seconds=1.44.
+- Evidence: RECEIPT_BROWSER_RESULT_20261114.json and RECEIPT_FIX_20261114.md. No lead writes or access bypass.

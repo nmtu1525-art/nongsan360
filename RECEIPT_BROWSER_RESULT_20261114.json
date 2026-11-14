@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-11-14T13:00:15.801Z",
+  "no_post_no_leads": true,
+  "real_owner_device_test": false,
+  "results": [
+    {
+      "browser": "desktop",
+      "method": "classic_script",
+      "outcome": "CALLBACK_EXECUTED",
+      "saved": false,
+      "seconds": 2.7
+    },
+    {
+      "browser": "desktop",
+      "method": "anonymous_script",
+      "outcome": "CALLBACK_EXECUTED",
+      "saved": false,
+      "seconds": 1.92
+    },
+    {
+      "browser": "desktop",
+      "method": "fetch_omit",
+      "outcome": "CALLBACK_PARSED",
+      "saved": false,
+      "http_status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "seconds": 1.92
+    },
+    {
+      "browser": "mobile_emulation",
+      "method": "classic_script",
+      "outcome": "CALLBACK_EXECUTED",
+      "saved": false,
+      "seconds": 2.22
+    },
+    {
+      "browser": "mobile_emulation",
+      "method": "anonymous_script",
+      "outcome": "CALLBACK_EXECUTED",
+      "saved": false,
+      "seconds": 1.72
+    },
+    {
+      "browser": "mobile_emulation",
+      "method": "fetch_omit",
+      "outcome": "CALLBACK_PARSED",
+      "saved": false,
+      "http_status": 200,
+      "content_type": "text/javascript; charset=utf-8",
+      "seconds": 1.44
+    }
+  ]
+}
