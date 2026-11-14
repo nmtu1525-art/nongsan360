@@ -40,3 +40,11 @@
 - Trước việc dài, cập nhật mục tiêu và bước đang làm.
 - Sau mỗi chặng lưu được kết quả, ghi tiếp SHA/đầu ra và bước tiếp theo.
 - Không có chứng cứ GitHub/Drive thì không tự suy ra đã hoàn thành.
+
+## F. CHẶNG MỚI: FANPAGE FACEBOOK NÔNG SẢN 360 (14/11/2026)
+- **Lệnh người dùng:** Bắt đầu Fanpage Facebook, chuẩn bị tên, logo, ảnh bìa, mô tả, giới thiệu và nội dung trang; người dùng đã duyệt định hướng không quảng cáo mở tài khoản trên ảnh bìa/tiểu sử.
+- **Mục tiêu thương hiệu công khai:** Nông Sản 360 là kênh tin tức, kiến thức, phân tích về thị trường nông sản và hàng hóa phái sinh; thông điệp `Hiểu thị trường, vững kiến thức`.
+- **Mục tiêu kinh doanh nội bộ:** thu hút người quan tâm hợp pháp tới nội dung, rồi chuyển đổi người tự có nhu cầu mở tài khoản qua link giới thiệu affiliate; khi giới thiệu phải minh bạch quyền lợi liên kết, rủi ro giao dịch và không hứa lợi nhuận.
+- **Trạng thái:** ĐANG THỰC HIỆN — chuẩn bị bộ thông số Fanpage, hình ảnh chính thức và bản nội dung giới thiệu; không đưa `mở tài khoản`, `affiliate` hay CTA bán hàng lên ảnh bìa, avatar, tiểu sử, bài ghim giới thiệu.
+- **Nguyên tắc:** không đăng nội dung liên quan mở tài khoản khi chưa có đơn vị/đường dẫn đăng ký thật được kiểm tra; không dùng thông tin liên hệ hoặc URL giả. Chưa có quyền Facebook, không được báo đã tạo Fanpage thật.
+- **Việc tiếp theo:** thiết kế logo/banner, hoàn thiện trường Fanpage và bài giới thiệu; lưu tệp bàn giao vào GitHub/Drive nếu có thể. Bảo toàn `index.html`, `tin-tuc.json` và 21 PDF.
