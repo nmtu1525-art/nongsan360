@@ -310,3 +310,10 @@
 - Commit chỉnh website: `ae363252af6298e3eefcf9aed4fa4b1c9da07724`. Thay **cả 3 chỗ** trỏ tới Page URL kiểu `https://www.facebook.com/122095198125555913` (đã lỗi trong ảnh user) sang `https://www.facebook.com/profile.php?id=122095198125555913`.
 - Readback GitHub: 3 chỗ URL mới, 0 URL cũ, 4 nút `tel:0985272776`, không có Zalo, cả 2 video và link iOS/Android còn nguyên, số template 31.
 - **CHƯA XÁC MINH URL MỚI HOẠT ĐỘNG TRÊN FACEBOOK THỰC TẾ**: Facebook chặn browser không đăng nhập, không giả định URL profile bằng ID là đúng hoặc trang đã công khai. Người dùng cần thử bằng trình duyệt thật. Nếu vẫn lỗi, phải lấy URL chính thức bằng `Chia sẻ trang → Sao chép liên kết` từ Facebook Page Nông Sản 360, rồi thay đúng URL được người dùng cung cấp.
+
+## T. Sửa liên hệ mở THẲNG Messenger, không qua Page URL lỗi (14/11/2026)
+- Người dùng xác nhận link Page số và profile.php đều dẫn đến lỗi `Bạn hiện không xem được nội dung này`, yêu cầu có đường dẫn vào thẳng Messenger.
+- Kiểm tra Meta Messenger Platform chính thức: link `https://m.me/<PAGE-ID hoặc PAGE-USERNAME>` dùng để mở hội thoại trực tiếp từ website; tra lại Metricool brand `8097037`, kết nối Facebook Page `Nông Sản 360`, `networksData.facebookData=1388965107640064`, là định danh Page kết nối, không phải tiền tố URL bài đăng `122095198125555913` vốn đã gây lỗi.
+- Đang sửa các CTA Fanpage ở trang chủ, footer và hướng dẫn tài khoản sang `https://m.me/1388965107640064`, đổi câu chữ thành `Nhắn tin Messenger`, giữ số điện thoại `0985 272 776`.
+- **Giới hạn cần kiểm thử:** web tool không truy cập được `m.me`/giao diện Meta đăng nhập để xác nhận chat chính xác. Sau commit phải nhờ người dùng thử nhấn ở trình duyệt; nếu Messenger cũng không mở đúng Trang, lấy URL messenger trực tiếp do Facebook cung cấp hoặc username Page đã chốt, tránh suy đoán tiếp.
+- Chưa sửa 21 giáo trình và các tin tức.
