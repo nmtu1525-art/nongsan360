@@ -65,3 +65,8 @@
 - Đã kiểm tra lại `list_folder`: Drive gốc chỉ còn đúng 4 thư mục; Facebook còn 6 thư mục; thư mục nhận diện có đúng 2 file PNG.
 - Quy ước đặt tên bài và ảnh Facebook: dùng chung mã `FB-YYYYMMDD-XX` để dễ đối chiếu; các nhóm sau này lưu đúng folder tương ứng.
 - Commit checkpoint xác nhận: `63c5ed53de6058c8b575661f5ce1f3cc195aa48b`. Fanpage Facebook thật vẫn chưa được tạo; không có quyền Facebook trực tiếp. Tiếp theo là biên soạn nội dung khai trương và thiết lập Fanpage bằng tài khoản chủ sở hữu.
+
+## 9. Bổ sung liên kết SFVN Trading trên website (14/11/2026)
+- Mục `Tìm hiểu & mở tài khoản` đã được bổ sung nút tải app SFVN Trading cho iOS (App Store) và Android (Google Play), bằng chỉnh sửa trực tiếp `index.html` trên GitHub, commit `559f7ae8d6c5590a3a857c9f68b6629f3e8d5917`.
+- Hai URL store được kiểm tra với trang ứng dụng chính thức và cùng nhà phát triển SFVN INVESTMENT CORPORATION. Bản ghi đọc lại GitHub sau cập nhật đã xác nhận đúng cả hai URL, đúng một khối app, giữ nguyên QR đăng ký và cảnh báo. Chưa xác minh GitHub Pages live vì kết nối web không truy cập được.
+- Bài Facebook chào mừng mã `FB-20261114-01` được đưa vào lịch Metricool lúc 11:15 ngày 14/11 (có checkpoint chi tiết trong `CONG_VIEC_DANG_LAM.md`), một tác vụ kiểm tra sau đăng được đặt 11:25 cùng ngày. Không tự suy đoán bài đã công khai nếu chưa có xác minh.
