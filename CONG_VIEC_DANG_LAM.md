@@ -781,3 +781,18 @@
 - Real Chromium desktop/mobile-emulation read-only probes support anonymous receipt transport; anonymous live GET still returns proper boolean. No diagnostic POST or fake lead created.
 - Only library-native-form.js and index asset versions changed in production. Code.gs, gate flags, 21 PDFs, news JSON and customer Sheet untouched. No Apps Script redeploy needed for this frontend fix.
 - Evidence: RECEIPT_BROWSER_RESULT_20261114.json, RECEIPT_FIX_TESTS_20261114.json, RECEIPT_FIX_RELEASE_20261114.json. Actual owner-phone submission remains unverified; clean browser tests do not prove the precise cause on that device.
+
+
+### Y.34. Đổi lịch 6 bài Facebook theo nhịp Thứ 2–4–6 (14/11/2026, khoảng 20:26 ICT)
+- Người dùng chủ động yêu cầu **sắp xếp lại lịch và giờ đăng đúng 6 bài đã lên Metricool**, không tạo bài mới, không chỉnh caption/ảnh.
+- Đã đọc lại 2 checkpoint, lịch Facebook `FACEBOOK_KE_HOACH_THANG_11_2026.md`, brand Metricool 8097037 (`Asia/Saigon`) và 6 provider posts PENDING (autoPublish=true). Metricool giờ đề xuất cho tài khoản mới chỉ là tín hiệu sơ bộ: thứ Hai 10:00, thứ Tư 12:00, thứ Sáu 10:00 có điểm tương đối tốt; chưa chứng minh hiệu quả thực tế.
+- Lịch mới chọn **2 tuần, mỗi tuần ba bài**: 
+  1. **16/11 10:00 (T2)**: Thư viện 21 giáo trình, từ 30/11, Metricool post cũ #427793267, uuid 2892558411312677904.
+  2. **18/11 12:00 (T4)**: Hàng thực vs hợp đồng tương lai, từ 17/11, post cũ #427792755, uuid 3337223766451964816.
+  3. **20/11 10:00 (T6)**: Cà phê & cung cầu, từ 24/11, post cũ #427792908, uuid 7078376323180218337.
+  4. **23/11 10:00 (T2)**: Ngô ngoài thời tiết, từ 25/11, post cũ #427792991, uuid -4519204595844625623.
+  5. **25/11 12:00 (T4)**: Lúa mì, từ 26/11, post cũ #427793073, uuid -7607156822577820498.
+  6. **27/11 10:00 (T6)**: Ký quỹ & rủi ro, vẫn 27/11 10:00, post cũ #427793151, uuid 6054798094436680609.
+- Cần cập nhật **5 bài phải đổi giờ/ngày**, bài cuối đã đúng lịch nên giữ nguyên (tổng vẫn 6); `updateScheduledPost` làm thay ID, uuid giữ; thay đúng ngày/giờ và giữ toàn bộ nội dung, ảnh, mediaAltText, Facebook POST, autoPublish, firstCommentText, metadata quan trọng. Readback `getScheduledPosts` sau mỗi chặng và cuối.
+- Sau khi xác nhận Metricool, đồng bộ lịch GitHub/Drive nếu có quyền và ghi checkpoint cuối. Mã bài `FB-YYYYMMDD-01` là **mã tài sản ban đầu**, ngày trong tên có thể khác lịch đăng mới; tuyệt đối không tạo thêm bài vì đổi tên mã.
+- Giữ nguyên 21 PDF, `tin-tuc.json`, bản ghi khách, website, bài chào mừng, 5 ô SFVN chưa xác minh, automation khác. Không tuyên bố bài PUBLISHED trước giờ hẹn.
