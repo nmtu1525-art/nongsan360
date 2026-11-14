@@ -30,7 +30,7 @@
   <label class="honeypot">Website <input name="website" type="text" autocomplete="off" tabindex="-1" /></label>
   <button id="submit" type="submit">Đồng ý và mở thư viện miễn phí</button>
   <div id="notice" role="status" aria-live="polite"></div>
-  <small>Khi bấm đăng ký, hệ thống thử ước tính thành phố qua IP bằng dịch vụ ipwho.is (không dùng GPS, không lưu IP; kết quả có thể sai). Nếu không xác định được, việc đăng ký vẫn tiếp tục. Thông tin đăng ký dùng để mở thư viện và thống kê khu vực. <a href="https://nmtu1525-art.github.io/nongsan360/chinh-sach-du-lieu.html" target="_blank" rel="noopener noreferrer">Chính sách dữ liệu cá nhân</a>. Không cần mở tài khoản giao dịch hoặc cung cấp OTP.</small>
+  <small>Thông tin được xử lý theo <a href="https://nmtu1525-art.github.io/nongsan360/chinh-sach-du-lieu.html" target="_blank" rel="noopener noreferrer">Chính sách dữ liệu cá nhân</a>. Không cần mở tài khoản giao dịch hoặc cung cấp OTP.</small>
 </form>
 <script>
 (function(){
@@ -64,7 +64,7 @@ form.addEventListener('submit',async function(event){
   if(!form.reportValidity())return;
   button.disabled=true;
   notice.style.color='#526374';
-  notice.textContent='Đang xác định khu vực gần đúng và ghi nhận đăng ký…';
+  notice.textContent='Đang ghi nhận đăng ký…';
   const geo=await estimateCity();
   const payload={name:form.elements.name.value,phone:form.elements.phone.value,email:form.elements.email.value,
     topic:form.elements.topic.value,website:form.elements.website.value,
