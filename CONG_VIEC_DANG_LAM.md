@@ -3,12 +3,12 @@
 > Nguồn sự thật là GitHub/Drive ở thời điểm truy cập, không chỉ nội dung tệp này.
 
 ## A. Công việc hiện tại
-- **Trạng thái:** ĐANG LÀM — đã nghiệm thu khôi phục chat mới; đang đối chiếu nguồn tin thị trường mới và chuẩn bị đồng bộ báo cáo lên Drive.
+- **Trạng thái:** ĐÃ XONG chặng nghiệm thu chat mới và đối chiếu ban đầu; ĐANG CHỜ xác minh số liệu chi tiết nguồn mới và lần chạy tác vụ 07:00 ngày 15/11.
 - **Kết quả nghiệm thu chat mới (14/11/2026):** Trong cuộc trò chuyện mới trong Project `hàng hóa phái sinh`, câu lệnh `Tiếp tục` đã dẫn tới việc đọc được `CONG_VIEC_DANG_LAM.md` và `TRANG_THAI_DU_AN.md`, xác minh quyền GitHub (repo permissions.push=true) và liệt kê được thư mục Google Drive dự án. **Đã nghiệm thu chức năng đọc/khôi phục**; chưa nghiệm thu quyền GitHub của môi trường *tác vụ chạy theo lịch* ngày 15/11.
 - **HEAD lúc kiểm tra đầu phiên:** `1c6df29008b4408d1d2101fc0648dbaaf41c3761` (trước commit hiện tại); kho `nmtu1525-art/nongsan360` nhánh `main`.
 - **Dữ liệu đầu vào đã kiểm:** `tin-tuc.json` có đúng 3 tin (ICO cà phê tháng 10, USDA ngô và lúa mì WASDE tháng 11), 21 PDF ở `pdf/` (CF 5, NG 5, LM 5, PS 6).
 - **Drive đã đọc:** thư mục dự án gốc `1e7PwORibeFRjdLieHlc-2nshZyUHMK9a` và thư mục bản V9.3 `1jV9pOVDED3t-5T2zX37jZWopBED2zX7G`. Trong Drive có tài liệu bàn giao, các bản V9.x; V9.3 chứa bản ZIP *cũ* từng có bot API, không coi là mã nguồn chuẩn nếu khác với GitHub hiện tại.
-- **Việc đang tiếp tục:** kiểm tra nguồn tin chính thức mới công bố trước hoặc vào 14/11/2026, so bài cũ; chỉ biên tập/đăng nếu xác minh chắc chắn. Sau đó cập nhật trạng thái chung và đồng bộ báo cáo vào Drive không ghi đè dữ liệu cũ.
+- **Kết quả rà soát:** đã kiểm tra USDA/ICO; WASDE 10/11 và ICO CMR 10/2026 đã được dùng trong ba bài; USDA FAS có Weekly Export Sales 13/11 nhưng chưa trích xuất/xác minh đủ số liệu chi tiết để viết bài. Không đăng tin mới. Đã cập nhật `TRANG_THAI_DU_AN.md` tại commit `da3ae1300346a7c32dbaaff68c4c29f7b6bfec0e`. Đồng bộ bản cập nhật trạng thái lên Drive chưa thực hiện trong phiên này; bản Drive cũ vẫn còn nguyên.
 
 ## B. Các phần đã hoàn thành
 1. Tạo hai tệp checkpoint trên GitHub và hướng dẫn tự tiếp tục trong Project.
@@ -17,8 +17,8 @@
 4. Bot GitHub Actions yêu cầu OpenAI API key đã bị vô hiệu hóa từ commit `9c917cefb90b3170f92b0c07ac5a327b941ff166`; phương án xuất bản là ChatGPT qua kết nối GitHub trực tiếp, không có API key.
 
 ## C. Thứ tự công việc còn lại
-1. **Đang xử lý:** kiểm tra tin thị trường mới từ USDA/ICO; xác minh thời gian/số liệu/URL nguồn, không đăng trùng chủ đề đã có. Nếu không đủ nguồn, ghi rõ chưa đăng.
-2. Ghi lại kết quả, cập nhật `TRANG_THAI_DU_AN.md`; lưu một bản báo cáo tiếp tục mới trên Drive dự án, KHÔNG ghi đè V9.3 cũ và 21 giáo trình.
+1. **Tiếp theo:** kiểm tra bản gốc Weekly Export Sales USDA ngày 13/11, đối chiếu số liệu chi tiết và chọn góc tin không trùng; không đăng cho tới khi chắc chắn.
+2. `TRANG_THAI_DU_AN.md` đã cập nhật trên GitHub. Việc đồng bộ phiên bản mới lên Drive còn chờ; KHÔNG ghi đè V9.3 cũ và 21 giáo trình.
 3. Vào ngày 15/11/2026 sau 07:00 (giờ Việt Nam), kiểm tra liệu tác vụ ChatGPT `Đăng tin Nông Sản 360` có thực sự chạy và quyền ghi GitHub có hoạt động trong môi trường lịch hay không. Chỉ xác nhận có tin đăng khi có commit.
 4. Khi có yêu cầu thiết kế website mới, tiếp tục từ `index.html` phiên bản đang chạy, không dựng lại site từ đầu.
 
