@@ -368,3 +368,12 @@
 - Theo yêu cầu chủ dự án, đã **xóa vĩnh viễn đúng 4 ảnh SFVN bản cũ** (Drive IDs `1POHdGLXENTqklSPyxar19TvaRYpIu23d`, `1K9dCywhaPLNUUdLszjeHSmzC-gFCo252`, `1INX0tpduWoAwZd0XmmiTMMmauS__DugR`, `1x0gn2DINKSxwygJq1rpOjzlfs9m1HiCn`) để tránh nhầm lẫn.
 - Drive folder `1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx` sau dọn: 11 ảnh, giữ đủ bốn ảnh `NS360_SFVN_202611{16,17,18,19}_DA_DUYET_KHONG_CTA.png` và bảy ảnh Facebook khác. 4 lệnh delete thành công, đã readback xác nhận cũ vắng mặt.
 - Metricool vẫn dùng 4 ảnh đã duyệt ở static.metricool.com cho đúng UUID, autoPublish PENDING; không thay ảnh, caption hay lịch sáu bài kiến thức. Các tài liệu checkpoint cũ liệt kê ID ảnh đã xóa chỉ mang tính lịch sử; chỉ dùng bộ ảnh **DA_DUYET_KHONG_CTA** để đăng.
+
+
+## 49. Bốn bài viết SFVN đã có bản Google Docs trên Drive (14/11/2026)
+- Đã bổ sung bốn Google Docs **bài viết đã duyệt** ngày 16, 17, 18, 19/11 trong `Facebook/02_BAI_VIET` (folder ID `1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ`), không còn chỉ nằm ở GitHub/Metricool.
+- **16/11:** [IB hàng hóa phái sinh](https://docs.google.com/document/d/167Z9-4JkZUlpHvX0rPMlEKvKm44bqtuaWIQ-tiZMhok/edit)
+- **17/11:** [Giới thiệu tập huấn SFVN](https://docs.google.com/document/d/1-erF3kmmg4JDPLBkYaQ_KpVWJ6qMCsBDYEJcqcQyW_U/edit)
+- **18/11:** [Ba câu hỏi IB chuẩn bị](https://docs.google.com/document/d/1XGfq3Ip1CBd66VyOCt-C4NOruenwoGDdLnGDH5OZJg4/edit)
+- **19/11:** [Nhắc lịch tập huấn SFVN](https://docs.google.com/document/d/1GXw6Znrg1uvj5SK8o8UvfYl7kMJUSA6Fs-0pxP5X-dM/edit)
+- Đã kiểm tra nguyên văn từng caption khớp với bốn bài đang PENDING trên Metricool, có link ảnh final, Messenger và form; không can thiệp sáu bài evergreen và dữ liệu khác.
