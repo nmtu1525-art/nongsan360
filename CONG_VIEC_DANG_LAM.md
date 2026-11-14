@@ -988,3 +988,13 @@
 - **18/11:** [Ba câu hỏi IB chuẩn bị](https://docs.google.com/document/d/1XGfq3Ip1CBd66VyOCt-C4NOruenwoGDdLnGDH5OZJg4/edit)
 - **19/11:** [Nhắc lịch tập huấn SFVN](https://docs.google.com/document/d/1GXw6Znrg1uvj5SK8o8UvfYl7kMJUSA6Fs-0pxP5X-dM/edit)
 - Đã xác minh Drive parent đúng, đủ 4 tài liệu, readback 4 Docs đối chiếu **nguyên văn từng caption** với Metricool; có Messenger `https://m.me/1388965107640064` và link form `src=fb16/17/18/19`. Không tạo bài mới trên Metricool, không sửa 6 bài evergreen, ảnh, form, 21 PDF hay dữ liệu khách.
+
+
+### Y.57. Kịch bản Messenger và quy trình chăm sóc khách SFVN (14/11/2026)
+- Người dùng yêu cầu triển khai **ưu tiên 1**: viết đầy đủ kịch bản trả lời Messenger Fanpage Nông Sản 360 và quy trình chăm sóc khách quan tâm tập huấn SFVN 20/11/2026, lưu lên Drive, **giữ nguyên 10 bài PENDING trên Metricool**.
+- Đã kiểm tra checkpoint hiện hành, 4 caption được duyệt và thẩm định SFVN; Metricool brand 8097037 readback 1 PUBLISHED + 10 PENDING (6 evergreen + 4 SFVN), có media và autoPublish. Lưu snapshot toàn bộ UUID/ngày/giờ/status để đối chiếu khi kết thúc, **không gọi cập nhật bài**.
+- Phạm vi mới: tạo tài liệu Google Docs nội bộ gồm (1) lời chào và 12+ mẫu trả lời nhanh theo tình huống, FAQ xác thực, không bảo đảm giấy chứng nhận hoặc trợ cấp 2.000 USD/tháng, (2) SOP xử lý lead SFVN từ Messenger/form, cách phân loại, thời hạn phản hồi tham khảo, theo dõi nguồn và consent, hướng dẫn xử lý khi khách quan tâm mở tài khoản, rút đồng ý/xóa dữ liệu và chuyển SFVN khi vượt thẩm quyền.
+- **Không thiết lập tin nhắn tự động thực tế trong Meta Business Suite** khi chưa có công cụ inbox/permission; tài liệu là bản cấu hình sẵn để chủ trang áp dụng, không được tuyên bố đã kích hoạt.
+- Drive tạo folder riêng `Facebook/07_CHAM_SOC_KHACH_HANG` hoặc dùng thư mục hiện có nếu đã có, giữ nguyên các thư mục/21 giáo trình/dữ liệu khách. Tạo hai Google Docs native và đọc lại cả hai; cập nhật checkpoint sau hoàn thành.
+- Thông tin được phép: 20/11/2026 09:00–12:00, SFVN Academy tầng 2 Tòa nhà Mekong 92A–94 Bạch Đằng P. Tân Sơn Hòa TP.HCM do người dùng cung cấp; giấy chứng nhận chỉ khi đủ điều kiện; hỗ trợ marketing/văn phòng tối đa USD 2.000/tháng theo xét duyệt SFVN, không tự động; không có form đăng ký suất chính thức.
+- Fanpage Messenger `https://m.me/1388965107640064`, biểu mẫu nhận thông tin `https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html`, Google Sheet `SFVN_TapHuan_20_11` chỉ lấy consent buổi tập huấn, không tự gửi marketing/affiliate. Không sao chép dữ liệu PII vào tài liệu hoặc GitHub.
