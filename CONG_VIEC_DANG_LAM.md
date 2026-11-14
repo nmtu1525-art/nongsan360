@@ -214,3 +214,9 @@
 - Người dùng gửi 2 ảnh: khi nhấn CTA `Tìm hiểu tài khoản` từ phần giới thiệu trên trang chủ, trình duyệt cuộn tới cuối trang chủ (mục `lien-he`) thay vì vào trang riêng; ảnh còn hiển thị khu QR phiên bản cũ. Người dùng yêu cầu xóa câu `Liên kết dùng mã giới thiệu... Nông Sản 360 có thể được ghi nhận quyền lợi...` ở giao diện trang mới; không cần giới thiệu/quảng bá khoản đó.
 - Đã kiểm tra trực tiếp mã nguồn GitHub: link CTA này vẫn `href="#/@lien-he"` (đúng nguyên nhân scroll cuối trang). Route trang riêng `#/mo-tai-khoan/index.html` đã tồn tại; trong nguồn mới homepage không còn QR trực tiếp, do đó ảnh QR cũ có thể do deploy/cache/chụp trước lần cập nhật (chưa khẳng định nguyên nhân).
 - Cần thay chính xác link CTA `Tìm hiểu tài khoản` → `#/mo-tai-khoan/index.html`, xóa đoạn disclosure quảng bá khỏi giao diện (giữ `rel=sponsored` và URL đúng), sửa CSS dư thừa nếu an toàn; kiểm tra readback và phiên bản đã public khi có thể. Không thay giáo trình, tin tức.
+
+### Đã sửa CTA điều hướng nhầm xuống cuối trang (14/11/2026)
+- Ảnh người dùng chứng minh nút `Tìm hiểu tài khoản` ở phần giới thiệu trang chủ còn `href=#/@lien-he`, vì vậy nhảy xuống cuối trang. Đã thay bằng `href=#/mo-tai-khoan/index.html` (route trang con có sẵn).
+- Đã xóa câu quảng bá `Liên kết dùng mã giới thiệu... Nông Sản 360 có thể được ghi nhận quyền lợi giới thiệu...` khỏi giao diện theo yêu cầu chủ dự án; vẫn giữ QR và URL có mã `046C0000554`, rel=sponsored để đánh dấu liên kết thương mại với máy tìm kiếm. Ảnh QR alt đổi sang mô tả trung lập, bỏ CSS cũ dư thừa.
+- Readback GitHub: CTA đúng route, route template tồn tại, không còn QR ở trang chủ, có video placeholders, mẫu template cân bằng. Commit `24c0ad4da113c1d335c9221437ca417c72007751`.
+- GitHub Pages live không đọc được bằng web tool, vì vậy không thể xác thực triển khai/ảnh còn cache; nếu ảnh trang cũ, người dùng nên refresh mạnh hoặc mở tab ẩn danh sau khi Pages deploy. Chưa thay đổi nội dung tin tức hoặc giáo trình.
