@@ -193,3 +193,9 @@
 - Đã fetch GitHub kiểm tra hai liên kết, SVG asset và nội dung đầy đủ; **chưa xác minh biểu mẫu SFVN có hoạt động đến bước hoàn tất hoặc bản GitHub Pages đã được deploy xong**. Không thực hiện đăng ký thử với dữ liệu cá nhân.
 - Website: https://nmtu1525-art.github.io/nongsan360/#/@lien-he (mục chuyển đổi), hình QR: https://nmtu1525-art.github.io/nongsan360/assets/qr-sfvn-046C0000554.svg .
 - Tiếp theo: kiểm tra giao diện Pages sau khi deploy, bấm link ngoài, xác minh có mở được trên thiết bị thật; nếu cần tiếp tục cấu hình Metricool thì gọi getBrandSettings rồi xác minh trạng thái bài đã hẹn.
+
+### ĐANG TRIỂN KHAI: trang con “Tìm hiểu & mở tài khoản” (14/11/2026)
+- Yêu cầu mới của người dùng: không hiển thị khối QR/đăng ký chi tiết trực tiếp trên trang chủ. Đổi thành lối dẫn tới **một trang con riêng**, có QR + đường dẫn bấm trực tiếp https://onboarding.sfvn-invest.com.vn/register?code=046C0000554 và khu vực chuẩn bị cho video hướng dẫn **mở tài khoản, nạp tiền** sẽ được người dùng cung cấp sau. Không bịa video đã có.
+- Quyết định triển khai bằng route nội bộ `#/mo-tai-khoan/index.html` nhất quán với SPA GitHub Pages hiện hành; thêm mục truy cập từ trang chủ và chân trang; giữ nguyên tin tức & giáo trình.
+- Đã tạo QR chính xác từ URL bằng Python qrcode và **quét kiểm tra được** bằng OpenCV. SVG QR hiện tại trong GitHub được viết thủ công từ turn trước: cần thay bằng dữ liệu kiểm thử chính xác để tránh khách quét lỗi.
+- Chưa xong sửa website; tiếp theo cập nhật QR SVG, sửa index.html route/template/CSS và kiểm tra readback, cập nhật trạng thái.
