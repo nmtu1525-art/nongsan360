@@ -897,3 +897,11 @@
 - Đã readback file GitHub và kiểm tự động: **đúng 4 bài**, ~272–318 từ/bài, mỗi bài 4 hashtag, ngày 20/11/2026 + địa chỉ 92A–94 Bạch Đằng + link liên hệ SFVN Academy chính xác. Có quy tắc giấy chứng nhận phụ thuộc điều kiện hoàn thành, tài trợ tối đa 2.000 USD/tháng theo xét duyệt SFVN; không hứa lợi nhuận hay ghi link ghi danh sai.
 - **Chặng này KHÔNG tạo ảnh mới, KHÔNG sửa lại 6 bài evergreen, KHÔNG thay caption/ảnh 4 bài đang PENDING trên Metricool.** Các phiên bản trước đã có ảnh và được đặt lịch `autoPublish=true`; **lưu ý rủi ro nếu chưa duyệt mà đến ngày đăng: cần xử lý trước 16/11/2026**. Không tuyên bố 4 caption mới đã thay trên Metricool; chỉ là bản thảo chờ người dùng xem.
 - Bước tiếp theo sau khi chủ dự án duyệt: cập nhật 4 caption đúng UUID đã có trên Metricool; **sau đó** phát triển ý tưởng và tạo 4 ảnh theo nội dung đã duyệt, QA rồi đưa lên Drive/Metricool theo đúng thứ tự. Bảo toàn tài liệu học, 21 PDF, tin, Sheet khách.
+
+
+### Y.47. Thay CTA sự kiện SFVN thành Messenger Fanpage (14/11/2026, 21:31 ICT)
+- Người dùng yêu cầu câu **“Để xác nhận cách thức và điều kiện tham dự, vui lòng liên hệ tại đây”** trong 4 bài SFVN phải dẫn trực tiếp vào chat Messenger Fanpage **Nông Sản 360**, không sang trang liên hệ SFVN Academy.
+- Đã xác thực URL Messenger từ 2 nguồn thuộc tài khoản: `library-gate.js` đang dùng `https://m.me/1388965107640064`, và Metricool Brand Settings brand 8097037 `networksData.facebookData=1388965107640064`. Không dùng ID Page được suy ra từ URL bài viết.
+- Facebook feed caption không biến riêng cụm “tại đây” thành link nhúng có nhãn qua Markdown; cần viết **tại đây: https://m.me/1388965107640064** dưới dạng URL đầy đủ để Meta tự nhận liên kết có thể bấm.
+- Chỉ thay CTA của 4 caption SFVN trong **bản gộp Social SEO** và 4 draft nguồn, và nếu cập nhật 4 bài Metricool đã PENDING, chỉ sửa link/CTA, giữ nguyên nguyên văn các phần khác, 1 ảnh/bài, autoPublish, ngày giờ, UUID; **không tự coi toàn bộ bộ caption mới đã duyệt**. Giữ ghi chú việc ghi danh/suất tham dự phải xác nhận theo quy trình SFVN, Fanpage chỉ hỗ trợ liên hệ.
+- Không chỉnh 6 bài evergreen, poster/ảnh, Google Sheet khách, 21 PDF, website. Sau khi hoàn tất, readback chính xác 4 CTA Messenger và cập nhật checkpoint.
