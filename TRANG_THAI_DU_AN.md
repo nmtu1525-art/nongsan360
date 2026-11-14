@@ -349,3 +349,8 @@
 - Bản gộp 4 bài Social SEO và 4 draft GitHub đã cập nhật CTA. **Bốn bài SFVN đang PENDING trên Metricool đã thay đúng CTA** mà không thay nội dung khác hoặc ảnh; ID mới 16/11 `428049489`, 17/11 `428049582`, 18/11 `428049677`, 19/11 `428049751`, UUID và giờ đăng giữ nguyên, 6 evergreen không chỉnh.
 - Google Docs kế hoạch Facebook và GitHub calendar đã đồng bộ; readback 10 PENDING và Messenger trong đủ 4 caption, chưa đăng trước giờ. Mẫu câu chỉ hỗ trợ xác nhận thông tin; không tự cấp suất hoặc quyền lợi SFVN.
 - Nội dung Social SEO viết lại vẫn **CHỜ DUYỆT** trước khi dùng thay toàn bộ caption và thiết kế ảnh mới. Không động giáo trình/web/khách.
+
+## 45. Bốn bài SFVN đã hiệu đính Social SEO, đang chờ duyệt chữ (14/11/2026)
+- Source of truth mới nhất: `facebook-drafts/2026-11/SFVN_4_BAI_SOCIAL_SEO_CHO_DUYET_TRUOC_ANH_20261114.md` commit `5bbda3e4a5605d52a84461b0a474c8567b046603`. Đã thay bốn caption bằng bản rút gọn, câu mở đầu SEO rõ, ít trùng nhau, CTA Messenger https://m.me/1388965107640064, bốn hashtag mỗi bài và lưu ý nguồn/điều kiện SFVN.
+- Đã đối chiếu địa chỉ SFVN Academy trên trang chính thức và tư cách TVKD 046 ở MXV; thông tin buổi 20/11 và hỗ trợ tối đa 2.000 USD/tháng vẫn là nội dung do người dùng cung cấp, chưa có tài liệu sự kiện công khai xác minh độc lập.
+- **Chỉ chỉnh nguồn nội dung trên GitHub, chưa cập nhật bản mới vào Metricool và chưa thiết kế lại ảnh**; bốn bài SFVN trên Metricool vẫn bật autoPublish như lịch đã thống nhất nên cần duyệt, thay trước 16/11. Sáu bài giáo dục và dữ liệu dự án không thay.
