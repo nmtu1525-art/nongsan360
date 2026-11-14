@@ -199,3 +199,13 @@
 - Quyết định triển khai bằng route nội bộ `#/mo-tai-khoan/index.html` nhất quán với SPA GitHub Pages hiện hành; thêm mục truy cập từ trang chủ và chân trang; giữ nguyên tin tức & giáo trình.
 - Đã tạo QR chính xác từ URL bằng Python qrcode và **quét kiểm tra được** bằng OpenCV. SVG QR hiện tại trong GitHub được viết thủ công từ turn trước: cần thay bằng dữ liệu kiểm thử chính xác để tránh khách quét lỗi.
 - Chưa xong sửa website; tiếp theo cập nhật QR SVG, sửa index.html route/template/CSS và kiểm tra readback, cập nhật trạng thái.
+
+### Trang con mở tài khoản & video hướng dẫn — ĐÃ TRIỂN KHAI (14/11/2026)
+- Người dùng yêu cầu tách QR/đăng ký khỏi trang chủ; đã chuyển phần chi tiết sang route `#/mo-tai-khoan/index.html`, có lối dẫn từ trang chủ, menu và footer.
+- Trang mới chứa QR, nút mở trang đăng ký SFVN bấm trực tiếp, URL hiển thị đầy đủ `https://onboarding.sfvn-invest.com.vn/register?code=046C0000554` (mã `046C0000554`); khai báo mã giới thiệu, không thu thập thông tin đăng ký trên Nông Sản 360.
+- Bố trí 3 ô video chờ người dùng cung cấp: hướng dẫn mở tài khoản, hướng dẫn nạp tiền, hướng dẫn sử dụng tài khoản; **chưa có video thật**, không được báo đã đăng video.
+- Cảnh báo rủi ro đòn bẩy và lừa đảo nạp tiền vào tài khoản cá nhân; dành không gian hiển thị trên mobile.
+- Sửa `index.html` commit `63918698604496a72ee62efdf210815121595726`; tạo lại QR SVG bằng ma trận QR chính xác mã hóa từ URL, kiểm tra Python qrcode + OpenCV decode, commit `83ceea13b44b3cca8d49aed87de120dda12176b5`.
+- Đã fetch lại GitHub kiểm tra route, template, links, 3 video placeholders và QR SVG. Web tool **không truy cập được URL GitHub Pages**, do đó chưa xác minh bản deploy trên trình duyệt thực tế. Không thay đổi 21 PDF, tin tức hoặc nguồn thư viện.
+- URL dự kiến: https://nmtu1525-art.github.io/nongsan360/#/mo-tai-khoan/index.html
+- Tiếp theo: người dùng đưa các video, kiểm tra hướng dẫn là chính xác và không tiết lộ tài khoản cá nhân; tải lên Drive/video hosting, nhúng vào 3 khung đã chuẩn bị rồi kiểm thử giao diện mobile.
