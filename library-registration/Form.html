@@ -42,22 +42,31 @@ const form=document.getElementById('leadForm');
 const button=document.getElementById('submit');
 const notice=document.getElementById('notice');
 const requestId='v4-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
-async function estimateCity(){
-  // This is an IP lookup, not a GPS/location-permission request.
-  // Do not send name, phone, email or RequestID to the geolocation provider.
+// Geolocate only after an intentional submit. No GPS, no stored IP and no PII sent.
+async function lookupApproximateCity(url, provider){
   const controller=new AbortController();
-  const timer=setTimeout(function(){controller.abort();},2200);
+  const timer=setTimeout(function(){controller.abort();},2600);
   try{
-    const res=await fetch('https://ipwho.is/?fields=success,city,region,country',
-      {method:'GET',mode:'cors',cache:'no-store',signal:controller.signal,referrerPolicy:'no-referrer'});
-    if(!res.ok)return {};
+    const res=await fetch(url,{
+      method:'GET',mode:'cors',cache:'no-store',signal:controller.signal,referrerPolicy:'no-referrer'
+    });
+    if(!res.ok)return null;
     const data=await res.json();
-    if(!data||data.success!==true||typeof data.city!=='string'||!data.city.trim())return {};
-    return {city:data.city.slice(0,70),
-      region:typeof data.region==='string'?data.region.slice(0,70):'',
-      country:typeof data.country==='string'?data.country.slice(0,70):''};
-  }catch(_){return {};}
+    if(!data||typeof data!=='object')return null;
+    if(provider==='ipwho'&&data.success!==true)return null;
+    const txt=value=>typeof value==='string'?value.trim().slice(0,70):'';
+    const region=txt(data.region);
+    const city=txt(data.city)||region; // Province-level fallback, not a precise location.
+    if(!city)return null;
+    return {city:city,region:region!==city?region:'',country:txt(data.country)};
+  }catch(_){return null;}
   finally{clearTimeout(timer);}
+}
+async function estimateCity(){
+  // GeoJS supports browser HTTPS/CORS; ipwho.is remains a fallback.
+  return (await lookupApproximateCity('https://get.geojs.io/v1/ip/geo.json','geojs'))
+    || (await lookupApproximateCity('https://ipwho.is/?fields=success,city,region,country','ipwho'))
+    || {};
 }
 form.addEventListener('submit',async function(event){
   event.preventDefault();
