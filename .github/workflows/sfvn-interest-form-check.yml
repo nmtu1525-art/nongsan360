@@ -1,0 +1,71 @@
+name: SFVN inquiry form read-only smoke check
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/sfvn-interest-form-check.yml']
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Static verify form, consent, privacy and JavaScript
+        run: |
+          python3 - <<'PY'
+          import re, pathlib, json
+          h=pathlib.Path('sfvn-tap-huan-20-11-2026.html').read_text(encoding='utf-8')
+          privacy=pathlib.Path('chinh-sach-du-lieu.html').read_text(encoding='utf-8')
+          assert '<form id="sfvn-interest-form"' in h
+          for name in ('name','phone','email'):
+            assert re.search(r'<input[^>]*name="'+name+r'"[^>]*required',h),name
+          assert re.search(r'<input[^>]*name="consent"[^>]*required',h)
+          assert 'chinh-sach-du-lieu.html#sfvn-interest' in h
+          assert 'id="sfvn-interest"' in privacy and 'sfvn20261120' in privacy
+          assert 'Đây là biểu mẫu' in h and 'không phải' in h.lower()
+          assert 'https://m.me/1388965107640064' in h
+          assert "topic:'phai-sinh'" in h and "privacyConsent:'true'" in h
+          assert 'sfvn20261120' in h and 'getCurrentPosition' not in h
+          assert 'sessionStorage' in h and 'localStorage' not in h
+          assert 'mode:\x27no-cors\x27' in h and 'verify()' in h
+          scripts=re.findall(r'<script[^>]*>(.*?)</script>',h,re.S)
+          assert len(scripts)==1
+          pathlib.Path('/tmp/sfvn-form.js').write_text(scripts[0],encoding='utf-8')
+          print(json.dumps({'html':'PASS','privacy':'PASS','fields':['name','phone','email'],'consent':'required','backend':'existing library endpoint with event-only source','no_post':True},ensure_ascii=False))
+          PY
+          node --check /tmp/sfvn-form.js
+      - name: Read-only live endpoint and deployed page check
+        run: |
+          python3 - <<'PY'
+          import json,re,secrets,time,urllib.request,urllib.parse,urllib.error
+          base='https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html'
+          ready=False;error=''
+          for attempt in range(9):
+            try:
+              req=urllib.request.Request(base+'?version=20261114-eventinfo',headers={'User-Agent':'Mozilla/5.0 ns360-sfvn-form-smoke','Cache-Control':'no-cache'})
+              with urllib.request.urlopen(req,timeout=20) as res:
+                data=res.read(250000).decode('utf-8','replace')
+                ready=res.status==200 and 'sfvn-interest-form' in data and 'chinh-sach-du-lieu.html#sfvn-interest' in data
+              if ready:break
+              error='Missing expected form markers'
+            except Exception as exc:error=type(exc).__name__
+            time.sleep(8)
+          assert ready, 'Page not verified live after retries: '+error
+          import pathlib
+          js=pathlib.Path('library-gate.js').read_text()
+          endpoint=re.search(r"const WEB_APP_URL = '([^']+)'",js).group(1)
+          callback='NS360_RC_event'+secrets.token_hex(8)
+          rid='v7-'+secrets.token_hex(20)
+          qs=urllib.parse.urlencode({'action':'receipt','id':rid,'callback':callback})
+          with urllib.request.urlopen(endpoint+'?'+qs,timeout=30) as res:
+            body=res.read(2000).decode('utf-8','replace').strip()
+            code=res.status
+          expected=callback+'({"ok":false});'
+          assert body==expected, 'Receipt does not follow anonymous contract'
+          print(json.dumps({'page_url':base,'http_status':200,'form_visible_on_live_site':True,'anonymous_receipt_status':code,'receipt_is_false_for_random_id':True,'no_post_or_personal_data_sent':True},ensure_ascii=False))
+          PY
