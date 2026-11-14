@@ -606,3 +606,9 @@
 - Google Maps URL chuẩn `https://www.google.com/maps/search/?api=1&query=` + mã hóa thành phố, khu vực, quốc gia. Link đánh dấu khu vực hành chính ước tính, không phải nơi ở.
 - Kế hoạch mở rộng cuối bảng `Leads`: **K = ThanhPhoUocTinh; L = GoogleMapsUocTinh**, giữ A:J như hiện tại, bảo toàn dữ liệu cũ và dropdown trạng thái J. Backend phải kiểm 12 header, append 12 fields; form bản v4 `RequestID v4-`. `Code.gs`, `Form.html`, policy, README cần cập nhật GitHub và bản sao Drive khi có thể.
 - LƯU Ý QUAN TRỌNG: Apps Script deploy trên tài khoản người dùng là bản độc lập, connector GitHub/Drive/Sheets không có quyền tự redeploy dự án đó. Không khẳng định tính năng live cho đến khi chủ dự án triển khai Code.gs + Form.html, thử có RequestID v4- và Google Maps hợp lệ. Giữ gate website hiện có, 21 PDF, tin tức và Facebook.
+
+
+### Y.20. Gọn form V4, không thông báo riêng về thành phố (14/11/2026)
+- Chủ dự án yêu cầu "không cần thông báo khi đăng ký đâu" sau chặng bổ sung geo-IP. Diễn giải: **không hiển thị một lời nhắc riêng về định vị**, không ghi trạng thái "đang xác định khu vực" trong form; giữ biểu mẫu gọn và phản hồi thành công/lỗi cơ bản.
+- Vẫn phải duy trì liên kết `Chính sách dữ liệu cá nhân` trên form, trong chính sách mô tả dùng IP để suy ra thành phố qua dịch vụ bên thứ ba, không thu GPS hay lưu IP. Không âm thầm ẩn thông tin xử lý dữ liệu trong chính sách.
+- Mã V4 `library-registration/Form.html` trên GitHub đã được soạn nhưng **chưa redeploy Apps Script**; bản Drive cũ vẫn V3 lúc đọc. Giữ K:L trên Sheet, không sửa dữ liệu cũ hoặc thay đổi gate live. Cần sửa Form và tài liệu hướng dẫn, kiểm chứng readback rồi đồng bộ Drive nếu có đường upload hợp lệ. Không tuyên bố việc định vị chạy thật nếu chưa test phiên V4.
