@@ -1,0 +1,104 @@
+name: Receipt browser diagnostic
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/receipt-browser-diagnostic.yml']
+permissions:
+  contents: write
+concurrency:
+  group: ns360-receipt-browser-diagnostic
+  cancel-in-progress: false
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser test runtime outside repository
+        run: |
+          mkdir -p /tmp/ns360-browser
+          cd /tmp/ns360-browser
+          npm init -y >/dev/null
+          npm install playwright@1.56.1 --no-audit --no-fund
+          npx playwright install chromium --with-deps
+      - name: Compare three read-only browser receipt paths
+        env:
+          NODE_PATH: /tmp/ns360-browser/node_modules
+        run: |
+          node <<'JS'
+          const fs=require('node:fs');
+          const {chromium,devices}=require('playwright');
+          (async()=>{
+            const source=fs.readFileSync('library-gate.js','utf8');
+            const endpoint=source.match(/const WEB_APP_URL = '([^']+)'/)[1];
+            const browser=await chromium.launch({headless:true});
+            const report={checked_at:new Date().toISOString(),no_post_no_leads:true,real_owner_device_test:false,results:[]};
+            for(const variant of ['desktop','mobile_emulation']){
+              const context=await browser.newContext(variant==='mobile_emulation'?{...devices['Pixel 7']}:{viewport:{width:1280,height:900}});
+              const page=await context.newPage();
+              // Explicitly prevent accidental writes from all page resources.
+              await page.route('**/*',route=>route.request().method()==='POST'?route.abort():route.continue());
+              try{
+                await page.goto('https://nmtu1525-art.github.io/nongsan360/?receipt_diagnostic=1955#/',{waitUntil:'domcontentloaded',timeout:45000});
+                for(const method of ['classic_script','anonymous_script','fetch_omit']){
+                  const result=await page.evaluate(async({endpoint,method})=>{
+                    const id='v7-'+Array.from(crypto.getRandomValues(new Uint8Array(20)),b=>b.toString(16).padStart(2,'0')).join('');
+                    const callback='NS360_RC_diag'+Array.from(crypto.getRandomValues(new Uint8Array(10)),b=>b.toString(16).padStart(2,'0')).join('');
+                    const url=new URL(endpoint);url.searchParams.set('action','receipt');url.searchParams.set('id',id);url.searchParams.set('callback',callback);
+                    const start=performance.now();
+                    if(method==='fetch_omit'){
+                      const ctrl=new AbortController();const timer=setTimeout(()=>ctrl.abort(),16000);
+                      try{
+                        const res=await fetch(url.href,{method:'GET',mode:'cors',credentials:'omit',redirect:'follow',signal:ctrl.signal,referrerPolicy:'no-referrer'});
+                        const text=(await res.text()).trim();
+                        const prefix=callback+'(';let payload=null;
+                        if(text.startsWith(prefix)&&text.endsWith(');'))payload=JSON.parse(text.slice(prefix.length,-2));
+                        return {method,outcome:payload&&typeof payload.ok==='boolean'?'CALLBACK_PARSED':'UNEXPECTED_BODY',saved:payload?.ok,http_status:res.status,content_type:res.headers.get('content-type'),seconds:+((performance.now()-start)/1000).toFixed(2)};
+                      }catch(e){return {method,outcome:e.name==='AbortError'?'TIMEOUT':'FETCH_ERROR',seconds:+((performance.now()-start)/1000).toFixed(2)};}
+                      finally{clearTimeout(timer);}
+                    }
+                    return await new Promise(resolve=>{
+                      const script=document.createElement('script');let done=false,timer;
+                      const finish=(outcome,payload)=>{if(done)return;done=true;clearTimeout(timer);script.remove();window[callback]=()=>{};resolve({method,outcome,saved:payload?.ok,seconds:+((performance.now()-start)/1000).toFixed(2)});};
+                      window[callback]=payload=>finish(payload&&typeof payload.ok==='boolean'?'CALLBACK_EXECUTED':'INVALID_CALLBACK',payload);
+                      script.onerror=()=>finish('SCRIPT_ERROR');
+                      script.onload=()=>{if(!done)finish('LOADED_WITHOUT_CALLBACK');};
+                      if(method==='anonymous_script'){script.crossOrigin='anonymous';script.referrerPolicy='no-referrer';}
+                      timer=setTimeout(()=>finish('TIMEOUT'),16000);script.src=url.href;document.head.appendChild(script);
+                    });
+                  },{endpoint,method});
+                  report.results.push({browser:variant,...result});
+                }
+              }catch(e){report.results.push({browser:variant,outcome:'PAGE_TEST_FAILED',error_type:e.name});}
+              await context.close();
+            }
+            await browser.close();
+            fs.writeFileSync('RECEIPT_BROWSER_RESULT_20261114.json',JSON.stringify(report,null,2)+'\n');
+            console.log(JSON.stringify(report,null,2));
+          })().catch(e=>{console.error(e.name);process.exit(1);});
+          JS
+      - name: Preserve redacted result and checkpoints
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          report=json.loads(Path('RECEIPT_BROWSER_RESULT_20261114.json').read_text())
+          note='\n\n### Receipt browser diagnosis after 19:55 (2026-11-14)\n'
+          note+='- Live Sheet chat inspection found 2 V7 ACTIVE records despite client confirmation error. No customer identifiers were committed.\n'
+          note+='- Chromium read-only receipt probes, with all POST requests blocked; clean desktop/mobile-emulated contexts, not the owner phone.\n'
+          for row in report['results']:
+              note+='- '+row['browser']+'/'+row.get('method','page')+': '+row['outcome']+'; seconds='+str(row.get('seconds','n/a'))+'.\n'
+          note+='- Evidence: RECEIPT_BROWSER_RESULT_20261114.json and RECEIPT_FIX_20261114.md. No lead writes or access bypass.\n'
+          for name in ['CONG_VIEC_DANG_LAM.md','TRANG_THAI_DU_AN.md']:
+              with Path(name).open('a',encoding='utf-8') as f:f.write(note)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add RECEIPT_BROWSER_RESULT_20261114.json CONG_VIEC_DANG_LAM.md TRANG_THAI_DU_AN.md
+          git commit -m 'Checkpoint: real browser receipt diagnostics, no registration submission'
+          git pull --rebase origin main
+          git push origin HEAD:main
