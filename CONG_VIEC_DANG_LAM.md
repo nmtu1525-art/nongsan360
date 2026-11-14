@@ -166,3 +166,12 @@
 - Sau khi lập, `Metricool.getScheduledPosts` xác nhận 1 bài cùng ID, nội dung và media, **CHƯA ĐĂNG THẬT**. Kiểm tra kết quả sau 10:00 ngày 15/11 mới được kết luận thành công.
 - **Lưu ý về giờ:** lúc người dùng nhắn, hiện là khoảng 11:05 ngày 14/11. Do đó lịch 10:00 ngày 15/11 là **sáng mai**, không phải mốc đã qua. Giờ này vốn là giờ assistant đề xuất chứ **chưa được người dùng chốt rõ**. Nếu anh muốn đăng ngay ngày 14/11 hoặc chọn giờ khác, cần điều chỉnh lịch hiện tại qua `updateScheduledPost` sau khi làm rõ mong muốn; không tạo bài trùng.
 - Không bật lại GitHub Actions bot API, không sửa website/tin/21 PDF.
+
+### M.3. Người dùng yêu cầu đổi lịch đăng hôm nay để kiểm thử — ĐÃ XONG (14/11/2026)
+- Người dùng: `hôm nay đi để test ok thì lam tiếp để đẩy nhanh tiến độ`, xác nhận đổi thời điểm bài chào mừng đã duyệt sang **hôm nay** thay vì mai.
+- `genui.time` trả về thời gian Việt Nam **14/11/2026 11:05:16 +07:00** trước khi đổi.
+- `Metricool.getScheduledPosts` xác minh chỉ có 1 bài `FB-20261114-01`, trước đó ID `427715087`, UUID `6491152378912720177`, 10:00 ngày 15/11.
+- **ĐÃ GỌI** `Metricool.updateScheduledPost` giữ nguyên caption, 1 ảnh đã được Metricool nhận, `autoPublish=true`, chỉ thay thời điểm thành **11:15 ngày 14/11/2026, Asia/Saigon**.
+- `updateScheduledPost` thành công, **ID mới `427715826`**, UUID giữ nguyên `6491152378912720177`, planner https://app.metricool.com/planner/calendar?blogId=8097037&openWithPostUuid=6491152378912720177 .
+- **ĐÃ XÁC MINH LẠI** bằng `getScheduledPosts`: duy nhất **1 bài**, thời gian 11:15 hôm nay, 1 ảnh `https://static.metricool.com/planner/202611/8097037-file-4100358833658287670.png`, `autoPublish=true`, mạng `facebook:PENDING`. Bài **chưa đăng công khai** tại thời điểm kiểm tra; không báo thành công xuất bản khi còn PENDING.
+- **Việc tiếp theo:** kiểm tra bài thực sự xuất hiện trên Fanpage *sau 11:15* (tốt nhất khoảng 11:25); nếu thành công ghi link bài công khai và chuyển sang chuẩn bị nội dung kế tiếp, nếu lỗi thì báo nguyên nhân, tránh đăng trùng. Kiểm thử khả năng thực thi tác vụ theo lịch riêng; không thay thế lịch tin website 07:00, không dùng OpenAI API key.
