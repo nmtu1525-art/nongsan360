@@ -1,56 +1,65 @@
-# Nông Sản 360 — Đăng ký đọc thư viện (phiên bản v3)
+# Nông Sản 360 — Đăng ký đọc thư viện (phiên bản V4, thành phố ước tính)
 
-**Cập nhật 14/11/2026.** Form miễn phí trước khi đọc 21 giáo trình. Hiện website đang `LIVE_ENABLED = false` và chỉ cho phép kiểm tra bằng đường dẫn riêng; phải xác nhận ghi Google Sheets thành công sau khi cập nhật bản Apps Script rồi mới bật công khai.
+**Cập nhật 14/11/2026.** Website đã bật thư viện cho khách mới qua form một lần theo trình duyệt (`library-gate.js`, `LIVE_ENABLED = true`). Backend Apps Script trên tài khoản chủ dự án cần **triển khai lại phiên bản V4** mới để lưu thêm khu vực. Không được coi tính năng V4 đã live nếu chưa redeploy và kiểm thử.
 
 ## 1. Trải nghiệm
 
-- Người đọc chọn một giáo trình: website hiển thị form ở lần đăng ký đầu; trên cùng trình duyệt `localStorage` ghi nhớ dấu đã hoàn thành. Không lưu họ tên, số điện thoại hay email tại client.
-- Form chỉ gồm họ tên và số điện thoại bắt buộc, email tùy chọn, chủ đề quan tâm. **Không có checkbox; đã bỏ khung thông báo dài**.
-- Nút `Đồng ý và mở thư viện miễn phí`; dưới nút có một **liên kết nhỏ** tới `chinh-sach-du-lieu.html`, mô tả mục đích xử lý để cấp quyền đọc.
-- Không thu thập hoặc suy diễn đồng ý nhận bản tin/hội thảo/quảng cáo. Chỉ dùng thông tin đúng mục đích đã công bố; muốn marketing cần cơ chế đồng ý riêng.
-- Khi gửi thành công qua Google Apps Script mới báo quyền đọc cho website; không báo thành công trước khi Sheet ghi dữ liệu.
+- Khách mới bấm **Thư viện kiến thức** hoặc một trang giáo trình → hiện form đăng ký; sau khi ghi thành công, trình duyệt lưu marker không chứa dữ liệu cá nhân để không phải đăng ký lại.
+- Form có họ tên và số điện thoại bắt buộc, email tùy chọn, chủ đề quan tâm. Không checkbox marketing, không xin quyền GPS.
+- **Khi khách chủ động nhấn nút `Đồng ý và mở thư viện miễn phí`**, trình duyệt thử gọi `https://ipwho.is/?fields=success,city,region,country` qua HTTPS để ước tính thành phố. Nhà cung cấp dịch vụ nhìn thấy IP kết nối, nhưng **không nhận họ tên, số điện thoại hoặc email** từ Form. Chỉ city/region/country được gửi tới Apps Script. **Không lưu IP, GPS, địa chỉ chi tiết hay tọa độ người dùng.**
+- Nếu dịch vụ IP lỗi, không có CORS hoặc trả về rỗng, form vẫn gửi sau tối đa khoảng 2,2 giây và K:L để trống. GeoIP có thể sai với VPN/4G và tuyệt đối không phải địa chỉ nhà.
+- Form có dòng thông báo ngắn về tra cứu IP/đơn vị cung cấp và liên kết chính sách dữ liệu, không bật hộp xin quyền GPS.
+- RequestID V4 có tiền tố `v4-`. Nếu khách đã được đăng ký trước khi nâng cấp, việc quay lại thư viện **không** tự tạo một vị trí lịch sử.
 
-## 2. Bảng Google Sheets
+## 2. Bảng Google Sheets riêng tư
 
-Google Sheet riêng tư `NS360 - DATA DANG KY THU VIEN (RIENG TU)`:
-`https://docs.google.com/spreadsheets/d/1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw/edit`
+[NS360 - DATA DANG KY THU VIEN (RIENG TU)](https://docs.google.com/spreadsheets/d/1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw/edit), tab `Leads`:
 
-Tab `Leads` giữ **10 cột**, theo đúng thứ tự:
+| Cột | Trường | Ghi chú |
+|---|---|---|
+| A | ThoiGianDangKy | Giữ nguyên |
+| B | HoTen | Giữ nguyên |
+| C | SoDienThoai | Giữ nguyên |
+| D | Email | Giữ nguyên |
+| E | ChuDeQuanTam | Giữ nguyên |
+| F | NguonTruyCap | Giữ nguyên |
+| G | PhienBanChinhSach | Giữ nguyên |
+| H | ThoiDiemDongY | Giữ nguyên |
+| I | RequestID | Chống trùng, bản V4 tiền tố `v4-` |
+| J | TrangThai | Dropdown ACTIVE/WITHDRAWN/DELETED giữ nguyên |
+| K | ThanhPhoUocTinh | Thành phố và tỉnh/bang ước tính, có thể trống |
+| L | GoogleMapsUocTinh | Liên kết tìm kiếm khu vực trên Google Maps, **không** phải vị trí chính xác |
 
-| Cột | Trường |
-| --- | --- |
-| A | ThoiGianDangKy |
-| B | HoTen |
-| C | SoDienThoai |
-| D | Email |
-| E | ChuDeQuanTam |
-| F | NguonTruyCap |
-| G | PhienBanChinhSach |
-| H | ThoiDiemDongY |
-| I | RequestID |
-| J | TrangThai |
+Không bổ sung hay tự đoán vị trí cho các dòng cũ. Giữ quyền truy cập Sheet riêng tư, không chia sẻ công khai.
 
-Hai cột cũ `DongYXuLyDuLieu`, `DongYNhanTin` (G–H trước đây) **đã được yêu cầu xóa**. Không xóa các cột khác, không xóa dòng đăng ký của khách. Phiên bản chính sách, thời điểm và RequestID vẫn được giữ để kiểm tra lịch sử thao tác đăng ký. Bảng Sheet không được chia sẻ công khai.
+## 3. Bắt buộc cập nhật Apps Script để V4 hoạt động
 
-## 3. Đồng bộ bản Google Apps Script đang chạy
+**GitHub và bản sao Drive không tự động cập nhật Apps Script Web App đang triển khai.**
 
-**Bắt buộc cập nhật cả 2 file**, vì Apps Script đang chạy là bản triển khai độc lập với GitHub:
+1. Trên Google Apps Script hiện tại của anh, sao lưu phiên bản đang chạy nếu muốn.
+2. Thay hoàn toàn `Code.gs` bằng `library-registration/Code.gs` mới (đọc/ghi 12 cột, RequestID vẫn cột I, bản ghi 12 trường).
+3. Thay hoàn toàn `Form.html` bằng `library-registration/Form.html` mới (tra cứu geo-IP khi nhấn đăng ký, gửi city/region/country, `v4-`).
+4. Xác nhận Script Property `SPREADSHEET_ID=1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw`.
+5. **Save → Deploy → Manage deployments → Edit → New version → Deploy**, giữ URL `/exec` và các quyền như phiên bản đang hoạt động.
 
-1. Mở dự án Apps Script hiện tại (nút Extensions → Apps Script từ Google Sheet nếu cần).
-2. Thay **toàn bộ** `Code.gs` bằng nội dung mới trong `library-registration/Code.gs` trên GitHub. Đây là bản **v3 10 cột**, định vị `RequestID` tại cột I.
-3. Thay **toàn bộ** file `Form.html` bằng `library-registration/Form.html` trên GitHub. Form v3 không còn khung thông báo dài/checkbox và gửi RequestID bắt đầu bằng `v3-`.
-4. Kiểm tra **Project Settings → Script Properties**: `SPREADSHEET_ID=1_fKgwxop4-pTIORlnhRVCNCWJXLhZIpPV2nBMv8dDEw`.
-5. Nhấn Save. Chọn **Deploy → Manage deployments → Edit → Version: New version → Deploy**, giữ `Execute as: Me`, `Who has access: Anyone`. Đường dẫn Web App `/exec` đang dùng giữ nguyên.
-6. Nếu thay mã mà chưa Deploy New version, `/exec` vẫn chạy backend cũ 12 cột và sẽ báo lỗi khi Sheet chỉ còn 10 cột.
+Để tránh lệch dữ liệu, cần triển khai **cả hai file trong cùng một version**. Google Sheet đã mở rộng 12 header: bản backend V3 đang chạy có thể vẫn ghi 10 cột và để K:L trống đến khi redeploy.
 
-## 4. Kiểm tra trước khi mở công khai
+## 4. Nghiệm thu
 
-Mở link: `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky`. Trước khi gửi form phải thấy bản mới chỉ có trường thông tin và link chính sách nhỏ. Điền thông tin kiểm thử được phép sử dụng, nhấn đăng ký; phải mở được CF-01.
+Mở trang khách mới bằng trình duyệt chưa có dấu đăng ký:
+`https://nmtu1525-art.github.io/nongsan360/#/thu-vien/index.html`.
 
-Đối chiếu một dòng mới ở tab `Leads` với `RequestID` bắt đầu `v3-`, đúng vị trí **I**, trạng thái `ACTIVE` tại **J**, và dữ liệu không bị lệch cột. Chỉ sau khi thử thành công mới đổi `const LIVE_ENABLED = true` trong `library-gate.js` để bật đại trà.
+Gửi một đăng ký thử bằng thông tin của chính chủ dự án. Kết quả mong đợi:
+- Khách vào được Thư viện sau khi form báo thành công.
+- Tab `Leads` có dòng mới `RequestID` tiền tố `v4-`, `TrangThai=ACTIVE` cột J.
+- Nếu geo-IP khả dụng: K là thành phố/khu vực ước tính, L là đường dẫn Google Maps tìm khu vực. Nếu không khả dụng, K:L trống nhưng đăng ký vẫn thành công.
+- Giữ nguyên các dòng lịch sử và 21 PDF. Không nhập dữ liệu cá nhân vào chat.
 
-## 5. Lưu ý bảo vệ tài liệu và dữ liệu
+## 5. Quyền riêng tư và giới hạn
 
-GitHub Pages không phải hệ thống xác thực nội dung thật: các file `pdf/*.pdf` vẫn có thể truy cập qua đường dẫn gốc. Form dùng cho việc đăng ký tự nguyện và tổ chức luồng đọc, không bảo đảm DRM. Không dùng thông tin thu được cho quảng cáo/hội thảo nếu chưa có đồng ý riêng.
+- Ghi nhận khu vực phục vụ thống kê vùng độc giả. IP là dữ liệu bên cung cấp geo-IP có thể nhận từ yêu cầu mạng; trang chỉ lưu tên thành phố/khu vực và link Google Maps tương đối.
+- Chính sách dữ liệu: `chinh-sach-du-lieu.html` trên website.
+- Không dùng số điện thoại khách đăng ký để gửi marketing khi chưa có đồng ý riêng.
+- Tài liệu `pdf/*.pdf` công khai trên GitHub Pages vẫn có thể được mở trực tiếp; gate chỉ xử lý luồng truy cập trên giao diện trang.
 
-Checkpoint dự án: `CONG_VIEC_DANG_LAM.md`, `TRANG_THAI_DU_AN.md`. Không ghi đè PDF, tin tức hay nội dung xã hội để triển khai form.
+Checkpoint để tiếp tục: `CONG_VIEC_DANG_LAM.md`, `TRANG_THAI_DU_AN.md`.
