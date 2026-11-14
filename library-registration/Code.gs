@@ -1,4 +1,4 @@
-/** Nông Sản 360 — Registration backend for free library. */
+/** Nông Sản 360 — Registration backend for free library, schema v3 (10 columns). */
 const LIBRARY_CONFIG = Object.freeze({
   allowedParentOrigin: 'https://nmtu1525-art.github.io',
   sheetName: 'Leads',
@@ -38,7 +38,6 @@ function registerLead(payload) {
   const topic = safeText(payload.topic, 25);
   const source = safeText(payload.source, 45);
   const requestId = safeText(payload.requestId, 80);
-  const optedIntoNews = payload.newsConsent === true;
 
   if (name.length < 2 || name.length > LIBRARY_CONFIG.maxNameLength) throw new Error('Họ tên cần từ 2 đến 80 ký tự.');
   if (!/^(?:0[0-9]{9,10}|\+84[0-9]{9,10})$/.test(phone)) throw new Error('Vui lòng kiểm tra số điện thoại Việt Nam.');
@@ -51,21 +50,21 @@ function registerLead(payload) {
   const doc = SpreadsheetApp.openById(id);
   const sheet = doc.getSheetByName(LIBRARY_CONFIG.sheetName);
   if (!sheet) throw new Error('Không tìm thấy bảng dữ liệu đăng ký.');
-  const header = sheet.getRange(1, 1, 1, 12).getDisplayValues()[0];
-  if (header[0] !== 'ThoiGianDangKy' || header[2] !== 'SoDienThoai' || header[10] !== 'RequestID') {
+  const header = sheet.getRange(1, 1, 1, 10).getDisplayValues()[0];
+  if (header[0] !== 'ThoiGianDangKy' || header[2] !== 'SoDienThoai' || header[8] !== 'RequestID') {
     throw new Error('Cấu trúc bảng dữ liệu không chính xác.');
   }
 
   const lock = LockService.getScriptLock();
   if (!lock.tryLock(15000)) throw new Error('Đường truyền đang bận. Xin thử lại.');
   try {
-    const duplicate = sheet.getRange(2, 11, Math.max(sheet.getLastRow() - 1, 1), 1)
+    const duplicate = sheet.getRange(2, 9, Math.max(sheet.getLastRow() - 1, 1), 1)
       .createTextFinder(requestId).matchEntireCell(true).findNext();
     if (duplicate) return { ok: true, alreadySaved: true };
     const stamp = Utilities.formatDate(new Date(), 'Asia/Ho_Chi_Minh', 'yyyy-MM-dd HH:mm:ss');
     sheet.appendRow([
       stamp, safeSheetText(name, 80), safeSheetText(phone, 20), safeSheetText(email, 160),
-      safeSheetText(topic, 25), safeSheetText(source, 45), true, optedIntoNews,
+      safeSheetText(topic, 25), safeSheetText(source, 45),
       LIBRARY_CONFIG.privacyVersion, stamp, safeSheetText(requestId, 80), 'ACTIVE'
     ]);
     SpreadsheetApp.flush();
