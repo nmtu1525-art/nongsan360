@@ -391,3 +391,18 @@
 - Phương án được chọn: không dùng image_gen hoặc hình tổng hợp, thay bằng **6 social graphic dạng biên tập 4:5 dựng thủ công theo vector/type/layout qua PptxGenJS**, dùng hình khối/biểu tượng tối giản do thiết kế trực tiếp, chữ tiếng Việt và màu xanh navy/kem/vàng theo trang web; nếu logo gốc được sử dụng thì lấy từ tài sản có sẵn. Đây không phải mẹo xóa metadata hoặc vượt qua hệ thống nhãn của Facebook. Không tuyên bố do con người thiết kế 100%.
 - Giữ nguyên 6 ảnh cũ trên Google Drive `Facebook/03_HINH_ANH_BAI_DANG` và 6 bài đã soát SEO; tạo **file ảnh mới với hậu tố `ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`** để tránh ghi đè. Khi có 6 ảnh mới, xác minh tồn tại trên Drive và liên kết trong bản nháp/Google Docs, cập nhật checkpoint, chưa tự đăng Metricool vì người dùng chưa duyệt.
 - Đang thực hiện: thiết kế bản gốc slide 4:5 có thể chỉnh sửa, xuất 6 PNG, kiểm tra ảnh/độ nét/nội dung, lưu bản PNG và tùy chọn PPTX thiết kế trên Drive.
+
+### W.1. Hoàn thành 6 ảnh phiên bản V2 dạng đồ họa biên tập (14/11/2026)
+- Đã tạo bộ **6 thiết kế hình học/chữ trên PptxGenJS**, tỷ lệ 4:5, xuất PNG thực tế **1080×1350**, độ phân giải xác minh bằng `file`/PIL. Không dùng image_gen cho phiên bản V2; dùng shape/text trên canvas kiểu thẻ thông tin chuyên nghiệp. Slide PPTX đã chạy `slides_test.py` **PASS (không có overflow)**, render PNG và quan sát mẫu; không mô phỏng dữ liệu giá, không làm giả ảnh chụp.
+- **Không đảm bảo Facebook không gắn nhãn AI** — Meta tự quyết định. Đây là cách tạo đồ họa từ bố cục và chữ, không phải thao tác giả mạo xuất xứ hay xóa nhãn.
+- Đã lưu **6 file V2 mới** lên Google Drive folder Facebook/03_HINH_ANH_BAI_DANG (`1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx`) **mỗi file là ảnh mới không ghi đè ảnh cũ**, metadata readback đúng `image/png`, đúng folder:
+  - `FB-20261117-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`: `1IeEmTDtByVipn6mk276siITck1Dl15dW` — so sánh hàng thực/futures.
+  - `FB-20261124-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`: `1VKSOjTB88IxjcYEO9wLQVa9RLhx4aIxv` — 4 yếu tố cà phê.
+  - `FB-20261125-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`: `1yoat8m7zJR-eA6qlv7edt6-vccNd7CKB` — 4 nhóm dữ liệu ngô.
+  - `FB-20261126-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`: `19y2t6O6ghMjsDo8i8lyVQ6Ob8ntyz4VZ` — 4 câu hỏi lúa mì.
+  - `FB-20261127-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`: `1fZ8NXU8UIbpHzwLmMqGhP7MEYqGeeh1g` — ký quỹ không phải mức lỗ tối đa.
+  - `FB-20261130-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png`: `1ALg9So0aBQbyjXNY_VUwRvtDNNh6kD7p` — 21 giáo trình 5+5+5+6.
+- Nguồn **PPTX có thể chỉnh sửa** cùng folder Drive ID `17kK1z7JMDociLH_g2-dCMSJz5SEa8MHY`, tên `NS360_6_ARTWORK_VECTOR_EDITORIAL_V2_EDITABLE.pptx`; metadata readback xác minh file PowerPoint ở đúng folder.
+- **Đã cập nhật 6 Google Docs bản nháp** bằng quyền sửa Docs, thay link ảnh cũ thành V2 và ghi rõ `ẢNH V2 ĐỒ HỌA BIÊN TẬP (ĐÃ LƯU DRIVE, CHƯA DUYỆT)`, không thay caption đã soát SEO, không đăng; kết quả mỗi file 4 thay thế thành công.
+- **Đã cập nhật 6 bản nháp GitHub** `facebook-drafts/2026-11/FB-202611[17,24,25,26,27,30]-01.md` bằng liên kết ảnh V2, giữ ảnh cũ nguyên trên Drive. Đồng bộ lịch `FACEBOOK_KE_HOACH_THANG_11_2026.md` GitHub + Google Doc `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8`.
+- **TRẠNG THÁI**: ĐÃ TẠO VÀ LƯU DRIVE, **CHỜ ANH DUYỆT ẢNH V2**. Không đưa post mới vào Metricool, không hứa Meta không gắn nhãn. Khi duyệt mới xếp lịch bài.
