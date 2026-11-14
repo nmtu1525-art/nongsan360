@@ -42,3 +42,18 @@ Website hiện có một liên kết “Thử mở biểu mẫu ở tab riêng�
 - Giữ nguyên 21 PDF, `tin-tuc.json`, danh sách khách và Facebook.
 
 Checkpoint: `CONG_VIEC_DANG_LAM.md`, `TRANG_THAI_DU_AN.md`.
+
+
+## 6. Đăng ký ngay trên website — chế độ kiểm thử an toàn (14/11/2026)
+
+Android tiếp tục báo lỗi Google Drive ngay cả khi mở link Apps Script /exec riêng; PC vẫn vào form. Đã bổ sung phương án giao diện **first-party** tại `library-native-form.js`, nhưng **chưa bật cho toàn bộ khách** vì cần backend và kiểm thử lưu dữ liệu thật.
+
+- `library-gate.js`: giữ `LIVE_ENABLED=true` và `NATIVE_ENABLED=false` để không phá form PC đang chạy. Thử riêng ở URL: `https://nmtu1525-art.github.io/nongsan360/?ns360_native_signup_test=1#/thu-vien/kiem-tra-dang-ky`.
+- `library-native-form.js`: hiển thị form trên GitHub Pages; đăng ký như cũ, tra cứu IP ở browser; gửi `application/x-www-form-urlencoded` POST tới Apps Script doPost bằng `fetch(...mode:'no-cors')`. **Không đánh dấu đã đăng ký từ opaque POST**.
+- `Code.gs`: giữ `doGet` hiện có để PC có form như trước; thêm `doPost` nhận dữ liệu form first-party, dùng chung `registerLead` và 14 cột. Thêm `doGet?action=receipt&id=v7-...&callback=NS360_RC_...` chỉ trả JSONP boolean một `RequestID` có ACTIVE hay không. Không trả bất kỳ tên, điện thoại, email hay vùng địa lý. RequestID có entropy 160-bit, cố định trong lần thử lại, chống ghi trùng.
+- Khi gửi POST, frontend chờ GET receipt thành công để gọi `saveAccess()` và mở thư viện. Nếu Google Apps Script /exec hoặc redirect Googleusercontent vẫn lỗi trên Android, receipt sẽ không xác nhận được: **không cấp quyền đọc giả**, báo thử lại/liên hệ Fanpage.
+- Form native được nạp từ `index.html` nhưng mặc định OFF. CSS chỉ dùng trong chế độ native. Bản PC legacy không thay đổi.
+- **Khôi phục liên hệ khách trên điện thoại ngay lập tức**: trang legacy có nút `Nhắn Fanpage Nông Sản 360 để được hỗ trợ đăng ký` trên mobile, dẫn tới Messenger Page, không xin OTP/mật khẩu. Không tự tạo bản ghi Sheets từ tin nhắn, không tự mở thư viện khi chưa xác nhận.
+- Để thử native, chủ dự án phải cập nhật ít nhất `Code.gs` trên Apps Script đang deploy, **Save → Deploy → Manage deployments → Edit → New version**. Kiểm tra **Execute as: Me**, **Who has access: Anyone** (nếu người dùng công khai), không sử dụng tài khoản đăng nhập riêng. Phải kiểm tra quyền phù hợp với bảo vệ dữ liệu và công khai Web App trước khi dùng.
+- Sau deploy, thử trên điện thoại, xác minh sheet `Leads` có một dòng `v7-`, `TrangThai=ACTIVE`, thành phố K nếu GeoIP khả dụng; L:N rỗng. Chỉ bật `NATIVE_ENABLED=true` sau E2E đủ an toàn trên điện thoại và PC. Mọi dữ liệu lịch sử giữ nguyên.
+- Lưu ý kỹ thuật: Apps Script có thể chuyển tiếp qua Googleusercontent và JSONP receipt cũng có thể bị Android chặn. Nếu thử thật thất bại, cần backend độc lập có CORS/ACK chính thức thay vì hứa đã sửa; không bật native nếu còn lỗi. Không bao giờ lưu PII vào URL GET.
