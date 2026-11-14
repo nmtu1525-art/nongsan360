@@ -2,6 +2,8 @@
 
 **Trạng thái:** Bản nội dung cho lịch 16/11, ảnh 1080x1350 `NS360_SFVN_Bai1_16-11-2026.png`. Từ khóa: tập huấn hàng hóa phái sinh SFVN, IB hàng hóa phái sinh, quản trị rủi ro, MXV. Ảnh Nông Sản 360 thiết kế, không phải poster chính thức SFVN. Không khẳng định ba điểm là agenda chính thức.
 
+**Metricool (sau đổi CTA):** ID 428049489; bấm link Messenger https://m.me/1388965107640064.
+
 ## NỘI DUNG FACEBOOK
 
 🌾 **VÌ SAO IB NÊN TÌM HIỂU HÀNG HÓA PHÁI SINH TRƯỚC KHI KẾT NỐI KHÁCH HÀNG?**
