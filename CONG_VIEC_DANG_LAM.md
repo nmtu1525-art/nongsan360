@@ -666,3 +666,12 @@
 - Đã readback GitHub 6 file và Google Sheets M:N, xác minh tất cả đặc điểm chính và không có dòng lịch sử bị thay đổi. **Chưa xác minh end-to-end trên điện thoại/GitHub Pages public**. Google Apps Script `/exec` đang chạy là bản deploy độc lập, chưa được chủ dự án cập nhật `Code.gs` + `Form.html` V5. Cần chủ dự án cập nhật **cả hai file**, Deploy > Manage deployments > Edit > New version rồi thử 3 trường hợp GPS cho phép, từ chối, API lỗi.
 - Bản code raw trong Drive còn cũ (trước đó Form Drive ID `1yzk8DZC3hjffAvwDn2TT25eQ6FtXfig5` bản V3); chưa có đường connector được hỗ trợ để upload source GitHub vào đúng ID Drive nên **chưa tuyên bố đã đồng bộ Drive code**. GitHub main là bản nguồn để copy.
 - Không yêu cầu OpenAI API key, không thay đổi 21 PDF, `tin-tuc.json`, lịch Facebook hoặc dữ liệu khách.
+
+
+### Y.27. Kiểm tra cuối V5 và sửa cơ chế gửi lại (14/11/2026)
+- Đã thay `locationRequestHandled` bằng `locationLookupPromise` trong `library-gate.js` để Form khi gửi lại vẫn nhận được kết quả GPS trước đó, không kích hoạt nhiều yêu cầu quyền. Commit `fcef6576bed9cdb2ac3acdae07b3a74efee132d2`.
+- Đã đổi cache-bust duy nhất trong `index.html` sang `library-gate.js?v=20261114-v5-optional-gps-2`, commit `d6b7e0aeef0e930e33df0c7baf6aca1e00519100`; README khớp, commit `cf7994e0e42157200959dab417197582bf16ba16`.
+- Readback `index.html` không có CSP meta gây chặn fetch mới, có đúng một import JS V5 và router gate; `library-gate.js` kiểm nonce, nguồn Google, request location; regex phường/xã dùng `(?:\\s|$)` thay vì word boundary ASCII. `Form.html` V5 còn yêu cầu GPS, timeout, IP fallback; `Code.gs` append 14 trường; chính sách giải thích GPS opt-in và nhà cung cấp thấy tọa độ.
+- Đã kiểm lại Sheets `Leads!A1:N1`: header 14 cột đúng, 4 lượt lịch sử trong phạm vi đọc vẫn còn (v3 + 3 v4), hai cột M:N chưa có dữ liệu; `TrangThai` cột J vẫn giữ dropdown ở những hàng kiểm tra. Không tạo bản ghi giả.
+- Kết quả kiểm tra là **đối chiếu mã GitHub + cấu trúc Sheet**, chưa phải kiểm thử browser thực/live GPS và chưa xác nhận Apps Script V5 deploy. Thử tải file từ raw GitHub qua container không được (DNS/cache miss), nên chưa chạy node --check trực tiếp trên đúng source GitHub; không tự nhận đã chạy.
+- Đang chờ chủ dự án **copy cả Code.gs và Form.html V5 sang Apps Script /exec, Save và Deploy New version**; rồi thử cho phép GPS, từ chối GPS, và lỗi mạng. Nếu cần sửa thì tiếp tục từ đây. Không tự ý cập nhật dữ liệu lịch sử hay bật lại workflow API.
