@@ -1,0 +1,10 @@
+{
+  "checked_at": "2026-11-14T12:31:33.414295+00:00",
+  "method": "GET",
+  "no_lead_submitted": true,
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "final_host": "script.google.com",
+  "classification": "HTML_INSTEAD_OF_JSONP_POSSIBLY_OLD_DEPLOYMENT",
+  "elapsed_seconds": 0.73
+}

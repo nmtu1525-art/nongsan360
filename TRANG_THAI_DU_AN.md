@@ -245,3 +245,11 @@
 - **Đã chuẩn bị bản mới chưa bật chính thức**: Form first-party `library-native-form.js`, Apps Script `doPost` + JSONP receipt boolean theo RequestID v7-, có cơ chế không coi `no-cors` POST là thành công, không gửi PII trong URL. Files GitHub đã có source và cú pháp JS/GS parse PASS. `NATIVE_ENABLED=false` bảo toàn legacy PC. URL thử `https://nmtu1525-art.github.io/nongsan360/?ns360_native_signup_test=1#/thu-vien/kiem-tra-dang-ky`.
 - **Chưa triển khai backend Web App, chưa xác nhận Android**. Owner phải cập nhật Code.gs Apps Script, Save và Deploy New version; kiểm Who has access Anyone/Execute as Me. Cần test trên Android/PC, có bản v7- ACTIVE trong Leads và backend xác nhận receipt thành công mới bật native cho mọi người. Khi Android vẫn không xác nhận được GET receipt Google, cần backend độc lập có CORS thực sự.
 - Không hứa vấn đề mobile đã khắc phục. Giữ nguyên Sheet và 21 PDFs, dữ liệu cũ, tin và Facebook.
+
+
+### Registration diagnostic 2026-11-14 - read-only runtime probe
+- User reports native signup cannot confirm registration on both mobile and desktop.
+- Live Sheet read in chat found only headers in Leads!I1:J50; no Sheet writes were made.
+- Anonymous GET receipt probe from GitHub Actions (no POST, no fake lead): HTML_INSTEAD_OF_JSONP_POSSIBLY_OLD_DEPLOYMENT.
+- Evidence: REGISTRATION_DIAGNOSTIC_RESULT.json and KIEM_TRA_DANG_KY_20261114.md.
+- Native flag remains OFF; successful anonymous receipt does not establish browser POST or Android success.

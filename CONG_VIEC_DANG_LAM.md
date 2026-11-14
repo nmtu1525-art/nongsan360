@@ -728,3 +728,11 @@
 - Readback GitHub và dùng JS parser `new Function` kiểm 2 JS + `Code.gs`: **PASS syntax**; `index.html` chỉ nạp file native mới và không đổi gate chế độ live. README cập nhật deploy/giới hạn commit `9d354e9bcbb56406c047803fad28411017d07176`.
 - **TRẠNG THÁI CHƯA TRIỂN KHAI/NGHIỆM THU:** Apps Script đang deploy chưa tự nhận `doPost` và receipt; owner phải copy `Code.gs` mới vào Apps Script hiện hữu, Save + Deploy New version; kiểm quyền Execute as Me/Who has access Anyone. Sau đó test URL preview native thật trên Android và kiểm bản ghi v7- ACTIVE trong Leads. Nếu thành công mới chuyển NATIVE_ENABLED=true cho khách công khai; nếu còn lỗi Googleusercontent cần backend CORS độc lập, không bật native.
 - Messenger fallback là hỗ trợ thủ công, **không phải tự động ghi Google Sheets**. Chủ dự án cần biết khách mobile còn bị lỗi form legacy cho đến khi triển khai giải pháp. Giữ 21 PDF, tin, các bản lead, Facebook và các cột lịch sử.
+
+
+### Registration diagnostic 2026-11-14 - read-only runtime probe
+- User reports native signup cannot confirm registration on both mobile and desktop.
+- Live Sheet read in chat found only headers in Leads!I1:J50; no Sheet writes were made.
+- Anonymous GET receipt probe from GitHub Actions (no POST, no fake lead): HTML_INSTEAD_OF_JSONP_POSSIBLY_OLD_DEPLOYMENT.
+- Evidence: REGISTRATION_DIAGNOSTIC_RESULT.json and KIEM_TRA_DANG_KY_20261114.md.
+- Native flag remains OFF; successful anonymous receipt does not establish browser POST or Android success.
