@@ -1,5 +1,5 @@
 /* Nông Sản 360 — one-time library reader registration.
- * Live V3 library reader registration enabled after a successful v3 ACTIVE sheet record.
+ * Live library signup; optional first-party GPS permission with IP fallback.
  * No PII is stored in the browser; only a non-sensitive access marker.
  */
 (function(){
@@ -45,9 +45,60 @@
     try{const u=new URL(origin);return u.protocol==='https:' && (u.hostname==='script.google.com'||u.hostname==='script.googleusercontent.com'||u.hostname.endsWith('.googleusercontent.com'));}
     catch(_){return false;}
   }
+  // GPS is requested from the first-party HTTPS page, never from the embedded Apps Script iframe.
+  // Reverse-geocoding coordinates stay in this browser call; only coarse place names cross to the form.
+  function lookupGpsArea(){
+    return new Promise(resolve=>{
+      if(!navigator.geolocation || !window.isSecureContext){resolve(null);return;}
+      let finished=false;
+      let watchdog;
+      const finish=value=>{
+        if(finished)return;
+        finished=true;
+        clearTimeout(watchdog);
+        resolve(value);
+      };
+      watchdog=setTimeout(()=>finish(null),7000); // Includes browser permission prompt; never block signup.
+      try{
+        navigator.geolocation.getCurrentPosition(async position=>{
+          if(finished)return;
+          const coords=position && position.coords;
+          if(!coords||!Number.isFinite(coords.latitude)||!Number.isFinite(coords.longitude)){finish(null);return;}
+          const controller=new AbortController();
+          const stop=setTimeout(()=>controller.abort(),2600);
+          try{
+            const url=new URL('https://api.bigdatacloud.net/data/reverse-geocode-client');
+            url.searchParams.set('latitude',String(coords.latitude));
+            url.searchParams.set('longitude',String(coords.longitude));
+            url.searchParams.set('localityLanguage','vi');
+            const res=await fetch(url.href,{method:'GET',mode:'cors',signal:controller.signal,referrerPolicy:'no-referrer',cache:'no-store'});
+            if(!res.ok){finish(null);return;}
+            const data=await res.json();
+            if(!data||typeof data!=='object'){finish(null);return;}
+            const clean=value=>typeof value==='string'?value.trim().slice(0,90):'';
+            const city=clean(data.city)||clean(data.principalSubdivision);
+            const region=clean(data.principalSubdivision);
+            const country=clean(data.countryName);
+            if(!city){finish(null);return;}
+            const administrative=Array.isArray(data.localityInfo?.administrative)?data.localityInfo.administrative:[];
+            const names=administrative.map(v=>clean(v&&v.name)).filter(Boolean);
+            const wardLike=name=>/^(phường|xã|thị trấn|ward|commune)\b/i.test(name);
+            const wardCandidate=names.filter(wardLike).pop()||
+              (clean(data.locality)!==city?clean(data.locality):'');
+            // Poor positioning must not be labeled as a ward/commune.
+            const ward=Number.isFinite(coords.accuracy)&&coords.accuracy<=2000?clean(wardCandidate):'';
+            finish({city,region:region===city?'':region,country,ward,locationSource:'GPS_CHO_PHEP'});
+          }catch(_){finish(null);}
+          finally{clearTimeout(stop);}
+        },()=>finish(null),{enableHighAccuracy:true,timeout:4500,maximumAge:60000});
+      }catch(_){finish(null);}
+    });
+  }
+
   function renderGate(host,route){
     if(activeMessageHandler){window.removeEventListener('message',activeMessageHandler);activeMessageHandler=null;}
     const nonce=randomNonce();
+    let locationRequestHandled=false;
     const url=new URL(WEB_APP_URL);
     url.searchParams.set('nonce',nonce);
     url.searchParams.set('src',sourceName());
@@ -58,7 +109,20 @@
     if(directLink)directLink.href=url.href;
     activeMessageHandler=function(event){
       if(!isTrustedGoogleOrigin(event.origin))return;
-      if(!event.data||event.data.type!=='NS360_LIBRARY_REGISTERED'||event.data.version!==1||event.data.nonce!==nonce)return;
+      if(!event.data||event.data.version!==1||event.data.nonce!==nonce)return;
+      if(event.data.type==='NS360_LIBRARY_LOCATION_REQUEST'){
+        if(locationRequestHandled||!event.source)return;
+        locationRequestHandled=true;
+        const replyTarget=event.source;
+        const replyOrigin=event.origin;
+        lookupGpsArea().then(area=>{
+          // Never send GPS coordinates, IP or any identifying data back to the registration iframe.
+          try{replyTarget.postMessage({type:'NS360_LIBRARY_LOCATION_RESULT',nonce,version:1,area:area||null},replyOrigin);}
+          catch(_){/* Form falls back to city-level IP lookup. */}
+        });
+        return;
+      }
+      if(event.data.type!=='NS360_LIBRARY_REGISTERED')return;
       saveAccess();
       window.removeEventListener('message',activeMessageHandler);
       activeMessageHandler=null;
