@@ -8,7 +8,7 @@
 - Form có họ tên và số điện thoại bắt buộc, email tùy chọn, chủ đề quan tâm. Không checkbox marketing, không xin quyền GPS.
 - **Khi khách chủ động nhấn nút `Đồng ý và mở thư viện miễn phí`**, trình duyệt thử gọi `https://ipwho.is/?fields=success,city,region,country` qua HTTPS để ước tính thành phố. Nhà cung cấp dịch vụ nhìn thấy IP kết nối, nhưng **không nhận họ tên, số điện thoại hoặc email** từ Form. Chỉ city/region/country được gửi tới Apps Script. **Không lưu IP, GPS, địa chỉ chi tiết hay tọa độ người dùng.**
 - Nếu dịch vụ IP lỗi, không có CORS hoặc trả về rỗng, form vẫn gửi sau tối đa khoảng 2,2 giây và K:L để trống. GeoIP có thể sai với VPN/4G và tuyệt đối không phải địa chỉ nhà.
-- Form có dòng thông báo ngắn về tra cứu IP/đơn vị cung cấp và liên kết chính sách dữ liệu, không bật hộp xin quyền GPS.
+- Form không có thông báo riêng về tra cứu khu vực hoặc tiến trình định vị; chỉ giữ liên kết **Chính sách dữ liệu cá nhân** (trong chính sách nêu rõ GeoIP và bên thứ ba). Trạng thái gửi thành công/lỗi vẫn hiển thị bình thường, không bật hộp xin quyền GPS.
 - RequestID V4 có tiền tố `v4-`. Nếu khách đã được đăng ký trước khi nâng cấp, việc quay lại thư viện **không** tự tạo một vị trí lịch sử.
 
 ## 2. Bảng Google Sheets riêng tư
