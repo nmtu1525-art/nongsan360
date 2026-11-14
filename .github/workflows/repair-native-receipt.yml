@@ -1,0 +1,84 @@
+name: Repair native receipt recovery
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/repair-native-receipt.yml']
+permissions:
+  contents: write
+concurrency:
+  group: ns360-receipt-fix-release
+  cancel-in-progress: false
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify browser transport evidence and snapshot protected files
+        run: |
+          python3 - <<'PY'
+          import json,hashlib
+          from pathlib import Path
+          report=json.loads(Path('RECEIPT_BROWSER_RESULT_20261114.json').read_text())
+          for browser in ('desktop','mobile_emulation'):
+              assert any(x['browser']==browser and x.get('method')=='fetch_omit' and x['outcome']=='CALLBACK_PARSED' and x.get('saved') is False for x in report['results'])
+          paths=list(Path('pdf').glob('*.pdf'))+[Path('tin-tuc.json'),Path('library-registration/Code.gs'),Path('library-gate.js')]
+          assert len(paths)==24
+          checks={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
+          Path('/tmp/ns360-protected.json').write_text(json.dumps(checks))
+          PY
+      - name: Prepare exact-source patch and run functional tests
+        run: |
+          python3 automation/patch_native_receipt.py
+          node --check library-native-form.js
+          node tests/native-receipt-recovery.test.cjs
+      - name: Recheck deployed receipt contract anonymously without a POST
+        run: |
+          python3 - <<'PY'
+          import json,re,secrets,urllib.request,urllib.parse,hashlib
+          from pathlib import Path
+          from datetime import datetime,timezone
+          src=Path('library-gate.js').read_text()
+          endpoint=re.search(r"const WEB_APP_URL = '([^']+)'",src).group(1)
+          cb='NS360_RC_releaseanonymous'
+          params={'action':'receipt','id':'v7-'+secrets.token_hex(20),'callback':cb}
+          req=urllib.request.Request(endpoint+'?'+urllib.parse.urlencode(params),headers={'Origin':'https://nmtu1525-art.github.io','User-Agent':'Mozilla/5.0'})
+          with urllib.request.urlopen(req,timeout=30) as res:
+              text=res.read(2048).decode('utf-8').strip()
+              headers={'http_status':res.status,'content_type':res.headers.get('Content-Type'),'allow_origin':res.headers.get('Access-Control-Allow-Origin')}
+          m=re.fullmatch(re.escape(cb)+r'\((.*)\);?\s*',text,re.S)
+          assert m and json.loads(m.group(1))=={'ok':False}, 'Unexpected receipt response; do not publish.'
+          before=json.loads(Path('/tmp/ns360-protected.json').read_text())
+          for name,digest in before.items():assert hashlib.sha256(Path(name).read_bytes()).hexdigest()==digest
+          tests=json.loads(Path('RECEIPT_FIX_TESTS_20261114.json').read_text())
+          assert len(tests['tests'])==12 and all(t['status']=='PASS' for t in tests['tests'])
+          result={'checked_at':datetime.now(timezone.utc).isoformat(),'no_post_no_lead_writes':True,'backend_changed':False,'receipt_get':headers,'tests_passed':12,'asset_version':'20261114-receipt-fix-2','protected_files_unchanged':len(before),'owner_phone_e2e_verified':False}
+          Path('RECEIPT_FIX_RELEASE_20261114.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2))
+          PY
+      - name: Preserve patch, evidence and progress
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          note='\n\n### Receipt recovery fix after 19:55 screenshot (2026-11-14)\n'
+          note+='- Live Sheet read showed 2 V7 ACTIVE rows while user reported confirmation error; no contact details or real request tokens copied to repository. POST can save; receipt transport needed hardening.\n'
+          note+='- Native receipt now uses CORS fetch credentials:omit and strict JSON parsing of the existing callback wrapper, with anonymous script fallback. Per-fetch deadline 12s, bounded verification window 40s, no access from opaque POST or timeout.\n'
+          note+='- Pending random request token only is stored in sessionStorage (24h maximum, cleared on success). Reload/check-again verifies the same request without new POST; valid not-yet-saved reply allows retry using the same ID. No contact data stored in the browser.\n'
+          note+='- Error states are distinct RCP-NETWORK/TIMEOUT/PROTOCOL/HTTP/PENDING/CLIENT. Check-only works after reload even with empty fields.\n'
+          note+='- 12 functional mock tests PASS, including response slower than old 3.6s, opaque response without ack, no duplicate POST on recheck, retry same ID, reload recovery, and no access before server ack.\n'
+          note+='- Real Chromium desktop/mobile-emulation read-only probes support anonymous receipt transport; anonymous live GET still returns proper boolean. No diagnostic POST or fake lead created.\n'
+          note+='- Only library-native-form.js and index asset versions changed in production. Code.gs, gate flags, 21 PDFs, news JSON and customer Sheet untouched. No Apps Script redeploy needed for this frontend fix.\n'
+          note+='- Evidence: RECEIPT_BROWSER_RESULT_20261114.json, RECEIPT_FIX_TESTS_20261114.json, RECEIPT_FIX_RELEASE_20261114.json. Actual owner-phone submission remains unverified; clean browser tests do not prove the precise cause on that device.\n'
+          for name in ['CONG_VIEC_DANG_LAM.md','TRANG_THAI_DU_AN.md','RECEIPT_FIX_20261114.md']:
+              with Path(name).open('a',encoding='utf-8') as out:out.write(note)
+          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add library-native-form.js index.html RECEIPT_FIX_TESTS_20261114.json RECEIPT_FIX_RELEASE_20261114.json CONG_VIEC_DANG_LAM.md TRANG_THAI_DU_AN.md RECEIPT_FIX_20261114.md
+          git commit -m 'Fix saved-but-unconfirmed native signup with anonymous receipt and pending recovery'
+          git pull --rebase origin main
+          git push origin HEAD:main
