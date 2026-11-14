@@ -34,9 +34,9 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb16
 
-*Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải xác nhận đăng ký hay giữ suất tham dự. Việc xác nhận suất do SFVN thực hiện.*
+Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
 
-Fanpage hỗ trợ thông tin; việc xác nhận suất tham dự theo hướng dẫn của SFVN. Ba nhóm kiến thức trên là gợi ý của Nông Sản 360, không phải lịch giảng dạy chính thức.
+Ba nhóm kiến thức trên là gợi ý của Nông Sản 360, không phải lịch giảng dạy chính thức.
 
 #NongSan360 #IBHangHoaPhaiSinh #TapHuanHangHoaPhaiSinh #SFVN
 
@@ -72,9 +72,9 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb17
 
-*Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải xác nhận đăng ký hay giữ suất tham dự. Việc xác nhận suất do SFVN thực hiện.*
+Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
 
-Fanpage hỗ trợ thông tin; SFVN là đơn vị xác nhận điều kiện và suất tham dự.
+
 
 #TapHuanHangHoaPhaiSinh #SFVN #DoiTacIB #NongSan360
 
@@ -108,9 +108,9 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb18
 
-*Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải xác nhận đăng ký hay giữ suất tham dự. Việc xác nhận suất do SFVN thực hiện.*
+Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
 
-Đây là các câu hỏi do Nông Sản 360 gợi ý, không phải nội dung giảng dạy chính thức đã được SFVN xác nhận. Việc xác nhận tham dự theo hướng dẫn của SFVN.
+Đây là các câu hỏi do Nông Sản 360 gợi ý, không phải nội dung giảng dạy chính thức đã được SFVN xác nhận.
 
 #NongSan360 #HangHoaPhaiSinh #HopDongTuongLai #QuanTriRuiRo
 
@@ -141,8 +141,8 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb19
 
-*Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải xác nhận đăng ký hay giữ suất tham dự. Việc xác nhận suất do SFVN thực hiện.*
+Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
 
-Fanpage hỗ trợ thông tin; việc xác nhận suất tham dự do SFVN thực hiện.
+
 
 #TapHuanHangHoaPhaiSinh #SFVN #DoiTacIB #NongSan360
