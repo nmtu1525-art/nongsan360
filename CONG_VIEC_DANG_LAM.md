@@ -832,3 +832,11 @@
 - Đã cập nhật kế hoạch Google Docs trên Drive ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8`, 4 replaceAllText được xác nhận và readback thành công. Không còn giả định 21/11. Mức tài trợ không trình bày như cam kết mặc định.
 - Đọc lại Metricool: vẫn 7 bài tổng (1 PUBLISHED, 6 PENDING theo lịch 16,18,20,23,25,27/11), **0 bài SFVN đã schedule**, không sửa/xóa ảnh hay caption hoặc thay giờ bài cà phê 20/11 10:00 dù trùng buổi tập huấn.
 - Chưa có poster chương trình, form/link đăng ký, điều kiện cấp giấy, điều kiện tài trợ hoặc chính sách tham gia; cần chủ dự án gửi thông tin khi có, không coi đã xác minh từ SFVN công khai chỉ vì người dùng cung cấp. Chỉ tiếp tục lên lịch/đăng khi có thông tin cơ bản và duyệt nội dung.
+
+
+### Y.40. Chốt điều kiện chứng nhận và xét duyệt hỗ trợ SFVN (14/11/2026)
+- Chủ dự án bổ sung điều kiện ràng buộc: **"Giấy chứng nhận phụ thuộc điều kiện hoàn thành tập huấn; hỗ trợ tối đa $2.000/tháng phụ thuộc chính sách và xét duyệt của SFVN, không phải quyền lợi tự động."** Quy tắc này phải áp dụng nhất quán trên Fanpage, website, tài liệu tư vấn, thông báo tập huấn; tuyệt đối không nói khách tham gia mặc nhiên được chứng nhận hoặc khoản hỗ trợ.
+- Đã sửa bản thảo `facebook-drafts/2026-11/SFVN_TAP_HUAN_IB_2026-11-20_CHO_DUYET.md` và `FACEBOOK_KE_HOACH_THANG_11_2026.md` (commits `c344034a1412798809db57971bdd29003d98852c`, `76ac1b5b9987d01e72823d445ad478d3a2579a3f`).
+- Đã cập nhật nội bộ `SFVN_DANH_GIA_HO_SO_VA_GIAO_TRINH_20261114.md` commit `8743809c61219b23124d0c37d1a7c142b535a2d3`; hai file nguồn SFVN chưa có văn bản quy chế/duyệt 2.000 USD/tháng.
+- Đã cập nhật và xác nhận 1 vị trí thay thế trên **Google Docs kế hoạch Facebook** Drive ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8`; lưu đúng điều kiện của chủ dự án.
+- Không thay sáu bài Metricool đã đặt lịch, không đăng bài SFVN đang chờ duyệt, không chia sẻ tài liệu gốc, không sửa website hay dữ liệu khách.
