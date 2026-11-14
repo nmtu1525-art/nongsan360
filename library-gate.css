@@ -15,10 +15,3 @@
 .ns-libgate-screen a:focus-visible{outline:3px solid #478a60;outline-offset:2px}
 @media(max-width:800px){.ns-libgate-columns{grid-template-columns:1fr;gap:18px}.ns-libgate-description{padding:0}.ns-libgate-description h1{font-size:34px}.ns-libgate-card{max-width:540px;width:100%;margin:auto}}
 @media(max-width:520px){.ns-libgate-screen{width:calc(100% - 24px);padding:16px 0 55px}.ns-libgate-card{padding:18px 12px 10px;border-radius:16px}.ns-libgate-card iframe{height:700px}.ns-libgate-description ul{margin-bottom:18px}}
-
-.ns-libgate-mobile-help{display:none;border:1px solid #e1dcd0;background:#f7f9f6;border-radius:12px;padding:13px 14px;margin:0 0 15px;color:#28334b;font-size:13px;line-height:1.6}
-.ns-libgate-mobile-help strong{display:block;font-size:14px;margin-bottom:4px}
-.ns-libgate-mobile-help p{margin:0 0 9px;color:#505c63;font-size:13px;line-height:1.6}
-#ns-libgate-copy-mobile-url{display:inline-block;padding:10px 14px;border:0;border-radius:9px;background:#246943;color:#fff;font-weight:700;font-size:13px;cursor:pointer}
-#ns-libgate-copy-mobile-status{display:block;margin-top:7px;color:#246943;font-size:12px}
-@media(max-width:800px){.ns-libgate-mobile-help{display:block}.ns-libgate-card .ns-libgate-help{margin:5px 0 14px}}
