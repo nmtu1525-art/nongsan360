@@ -306,3 +306,11 @@
 - Readback Metricool xác minh đúng 6 bài PENDING, autoPublish=true, mỗi bài một ảnh; 1 bài chào mừng đã PUBLISHED trước đó. ID mới lần lượt `427999607`, `427999763`, `427999835`, `427999900`, `427999964`; ký quỹ giữ `427793151`. UUID bền vững để chống trùng không đổi.
 - GitHub `FACEBOOK_KE_HOACH_THANG_11_2026.md` đã được cập nhật commit `f38464b59f7e56d99c9bc6ca9d03b93db635f0d7`. Bản gốc Google Docs/Draft mã FB-YYYYMMDD không đổi tên theo ngày vì đó là mã tài sản, caption và ảnh không thay.
 - 5 slot hội thảo SFVN chưa có chứng cứ chính thức nên vẫn giữ chưa schedule. Không thay 21 PDF, website, tin tức hay dữ liệu khách.
+
+
+## 38. SFVN tập huấn dành cho IB ngày 20/11/2026 — đã ghi nhận, bài chờ duyệt (14/11/2026)
+- Người dùng cung cấp thông tin cụ thể: thứ Sáu **20/11/2026, 09:00–12:00**, Học viện SFVN tầng 2 tòa Mekong 92A–94 Bạch Đằng, P. Tân Sơn Hòa TP.HCM; dành cho IB/đối tác tài chính. Đã sửa giả định cũ thứ Bảy 21/11.
+- Các quyền lợi **có điều kiện**: giấy chứng nhận khi đáp ứng yêu cầu; cơ hội hợp tác, hỗ trợ Marketing/chi phí văn phòng **tối đa USD 2.000/tháng cho đối tác đủ điều kiện**, kết nối, học về thị trường qua MXV. Thông tin quyền lợi/chính sách là từ người dùng, chưa có trang event-specific công khai để xác minh, không cam kết mặc nhiên.
+- Địa điểm đã đối chiếu trên sfvn-academy.com.vn/contact và sfvn-partner.com. Cần poster/đường ghi danh/điều kiện chính thức để đăng truyền thông.
+- GitHub draft `facebook-drafts/2026-11/SFVN_TAP_HUAN_IB_2026-11-20_CHO_DUYET.md` và lịch `FACEBOOK_KE_HOACH_THANG_11_2026.md` cập nhật; kế hoạch Google Docs Drive cùng ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` sửa và readback đúng; Metricool **không có bài SFVN** và sáu evergreen vẫn nguyên (1 PUBLISHED + 6 PENDING).
+- Phương án khi đủ dữ kiện: 17/11 10:00 bài thông báo và 19/11 10:00 nhắc lịch (chưa đặt). Lưu ý bài cà phê 20/11 10:00 trùng sự kiện nhưng không tự đổi.
