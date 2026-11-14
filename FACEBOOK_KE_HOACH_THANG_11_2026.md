@@ -8,16 +8,16 @@
 |---|---|---|---|---|
 | 14/11 | FB-20261114-01 | Bài chào mừng Nông Sản 360 | ĐÃ XUẤT BẢN — Metricool PUBLISHED | https://facebook.com/122095198125555913/posts/122095197489555913 |
 | 16/11 | FB-20261116-01 | SFVN 1/5: Thông báo hội thảo | CHỜ POSTER/TÊN/NGÀY/GIỜ/ĐỊA ĐIỂM/LINK | — |
-| 17/11 | FB-20261117-01 | Hàng thực và hợp đồng tương lai | ĐÃ SOÁT SEO FACEBOOK — ẢNH ĐỒ HỌA V2 CHỜ DUYỆT | https://docs.google.com/document/d/1BoSe95szvIxQCkoaN-Ee_A_2mnOz_MmbgAauoFlT_TU/edit |
+| 17/11 | FB-20261117-01 | Hàng thực và hợp đồng tương lai | ĐÃ SOÁT SEO FACEBOOK — CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG | https://docs.google.com/document/d/1BoSe95szvIxQCkoaN-Ee_A_2mnOz_MmbgAauoFlT_TU/edit |
 | 18/11 | FB-20261118-01 | SFVN 2/5: Nêu nội dung hội thảo | CHỜ CHƯƠNG TRÌNH CHÍNH THỨC | — |
 | 19/11 | FB-20261119-01 | SFVN 3/5: Ai nên tham dự, giá trị thực tế | CHỜ CHƯƠNG TRÌNH CHÍNH THỨC | — |
 | 20/11 | FB-20261120-01 | SFVN 4/5: Nhắc lịch + đăng ký | CHỜ LỊCH + LINK ĐĂNG KÝ CHÍNH THỨC | — |
 | 23/11 | FB-20261123-01 | SFVN 5/5: Tổng kết hội thảo | CHỜ XÁC NHẬN ĐÃ DIỄN RA + TÀI LIỆU/ẢNH HỢP LỆ | — |
-| 24/11 | FB-20261124-01 | Cà phê được mùa: giá có chắc giảm? | ĐÃ SOÁT SEO FACEBOOK — ẢNH ĐỒ HỌA V2 CHỜ DUYỆT | https://docs.google.com/document/d/1GOPJzk_2A2RCWPhT_kWWPF73ki7jvccAezA3p5biX0w/edit |
-| 25/11 | FB-20261125-01 | Ngô: theo dõi dữ liệu gì ngoài thời tiết? | ĐÃ SOÁT SEO FACEBOOK — ẢNH ĐỒ HỌA V2 CHỜ DUYỆT | https://docs.google.com/document/d/1NrmH4HZne6Tckjr9nKrNeVOppR8xHEv_2LgPSFwY5ZA/edit |
-| 26/11 | FB-20261126-01 | Lúa mì: mùa vụ, cung–cầu và thương mại | ĐÃ SOÁT SEO FACEBOOK — ẢNH ĐỒ HỌA V2 CHỜ DUYỆT | https://docs.google.com/document/d/1Umhielo4ZjKVtOUUsqTx0FnOoL1cil645njXJw8zezc/edit |
-| 27/11 | FB-20261127-01 | Ký quỹ không phải mức lỗ tối đa | ĐÃ SOÁT SEO FACEBOOK — ẢNH ĐỒ HỌA V2 CHỜ DUYỆT | https://docs.google.com/document/d/1O83rXG0e3KFAxYNhzw_7HVLhBFGwPJU86cVnAQ3Dj00/edit |
-| 30/11 | FB-20261130-01 | Thư viện 21 giáo trình Nông Sản 360 | ĐÃ SOÁT SEO FACEBOOK — ẢNH ĐỒ HỌA V2 CHỜ DUYỆT | https://docs.google.com/document/d/1_HQTN7rJKXJrOZ19dh7rGxl28Q-r4bnG3l0rpg_a6jA/edit |
+| 24/11 | FB-20261124-01 | Cà phê được mùa: giá có chắc giảm? | ĐÃ SOÁT SEO FACEBOOK — CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG | https://docs.google.com/document/d/1GOPJzk_2A2RCWPhT_kWWPF73ki7jvccAezA3p5biX0w/edit |
+| 25/11 | FB-20261125-01 | Ngô: theo dõi dữ liệu gì ngoài thời tiết? | ĐÃ SOÁT SEO FACEBOOK — CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG | https://docs.google.com/document/d/1NrmH4HZne6Tckjr9nKrNeVOppR8xHEv_2LgPSFwY5ZA/edit |
+| 26/11 | FB-20261126-01 | Lúa mì: mùa vụ, cung–cầu và thương mại | ĐÃ SOÁT SEO FACEBOOK — CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG | https://docs.google.com/document/d/1Umhielo4ZjKVtOUUsqTx0FnOoL1cil645njXJw8zezc/edit |
+| 27/11 | FB-20261127-01 | Ký quỹ không phải mức lỗ tối đa | ĐÃ SOÁT SEO FACEBOOK — CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG | https://docs.google.com/document/d/1O83rXG0e3KFAxYNhzw_7HVLhBFGwPJU86cVnAQ3Dj00/edit |
+| 30/11 | FB-20261130-01 | Thư viện 21 giáo trình Nông Sản 360 | ĐÃ SOÁT SEO FACEBOOK — CHỌN ẢNH BẢN ĐẦU — CHƯA ĐĂNG | https://docs.google.com/document/d/1_HQTN7rJKXJrOZ19dh7rGxl28Q-r4bnG3l0rpg_a6jA/edit |
 
 **Tổng:** 1 bài đã xuất bản + 6 bản nháp hoàn chỉnh + 5 mục SFVN chờ dữ kiện = 12 mục dự kiến. **Chưa có 11 bài mới nào được xác nhận lịch Metricool.**
 
@@ -33,3 +33,8 @@
 - **6 ảnh PNG 1080 × 1350** được dựng bằng bố cục hình khối và chữ trong PowerPoint, không dùng bộ tạo ảnh AI hoặc ảnh phong cảnh tổng hợp. Facebook có thể gắn nhãn theo tiêu chí riêng, **không bảo đảm không bị dán nhãn AI**.
 - Ảnh: `Facebook/03_HINH_ANH_BAI_DANG/FB-YYYYMMDD-01_ANH_DO_HOA_BIEN_TAP_V2_CHO_DUYET.png` (6 ngày 17, 24, 25, 26, 27, 30/11). Bản PPTX chỉnh sửa: https://docs.google.com/presentation/d/17kK1z7JMDociLH_g2-dCMSJz5SEa8MHY/edit .
 - **Đã giữ nguyên toàn bộ 6 ảnh nháp cũ**, không ghi đè hoặc xóa. Caption/SEO các bài không thay đổi; chỉ cập nhật tham chiếu ảnh V2 trong Google Docs và GitHub. Không đăng Metricool trước khi anh duyệt.
+
+## Quyết định cuối của anh về ảnh (14/11/2026)
+- Anh chọn **dùng lại 6 ảnh minh họa bản đầu** cho các bài 17, 24, 25, 26, 27, 30/11. Đây là bộ có tên `FB-YYYYMMDD-01_ANH_NHAP_CHUA_DUYET.png` trong Drive `Facebook/03_HINH_ANH_BAI_DANG`.
+- Bộ ảnh thiết kế V2 vẫn được **lưu trữ**, không chọn để đăng. Liên kết trong 6 Google Docs và 6 bản thảo GitHub đã thay về ảnh gốc theo yêu cầu.
+- Đã chốt lựa chọn ảnh, **chưa đồng nghĩa duyệt đăng nội dung**. Chưa đặt lịch/đăng Facebook; nếu Meta gắn nhãn AI thì không thể cam kết tránh được.
