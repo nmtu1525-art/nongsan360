@@ -13,7 +13,7 @@
   // URL hash-based test route works even when query parameters are stripped by a browser or redirect.
   const ownerTestMode = () => new URLSearchParams(location.search).get('ns360_signup_test') === '1' || location.hash.split('@')[0] === '#'+TEST_ROUTE;
   const isEnabled = () => isConfigured && (LIVE_ENABLED || ownerTestMode());
-  const protectedRoute = route => /^\/giao-trinh\/(?:cf|ng|lm|ps)-\d{2}\.html$/.test(route);
+  const protectedRoute = route => route === '/thu-vien/index.html' || /^\/giao-trinh\/(?:cf|ng|lm|ps)-\d{2}\.html$/.test(route);
   let accessThisSession = false;
   let activeMessageHandler = null;
 
