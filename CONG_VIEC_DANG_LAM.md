@@ -317,3 +317,8 @@
 - Đang sửa các CTA Fanpage ở trang chủ, footer và hướng dẫn tài khoản sang `https://m.me/1388965107640064`, đổi câu chữ thành `Nhắn tin Messenger`, giữ số điện thoại `0985 272 776`.
 - **Giới hạn cần kiểm thử:** web tool không truy cập được `m.me`/giao diện Meta đăng nhập để xác nhận chat chính xác. Sau commit phải nhờ người dùng thử nhấn ở trình duyệt; nếu Messenger cũng không mở đúng Trang, lấy URL messenger trực tiếp do Facebook cung cấp hoặc username Page đã chốt, tránh suy đoán tiếp.
 - Chưa sửa 21 giáo trình và các tin tức.
+
+### T.1. Đã chuyển 3 nút liên hệ sang Messenger (14/11/2026)
+- Commit website `e97b633bcf118b86a88cce4285e8848c300e92ea`: thay tất cả 3 liên kết Page bị lỗi (`facebook.com/profile.php?id=122095198125555913`) bằng link **trò chuyện trực tiếp** `https://m.me/1388965107640064` theo ID Page kết nối trong Metricool. Đổi nội dung hiển thị thành **Nhắn tin Messenger**, và mô tả mở hộp thoại.
+- Readback GitHub xác minh đúng **3 href Messenger, 0 href Page cũ, 4 tel:0985272776, 0 Zalo**, App Store, Google Play, hai iframe video và 31 templates còn đủ; không ghi đè tin tức/giáo trình.
+- Định dạng `m.me/PAGE-ID` được chứng thực là dạng liên kết Messenger từ tài liệu Meta, nhưng **m.me cụ thể bị chặn đối với công cụ duyệt web**, nên chưa xác minh người dùng mở được hộp chat thật. Cần người dùng nhấn thử nút Messenger mới và kiểm tra Trang nhận tin; nếu vẫn không đúng, dùng Messenger URL do Facebook cung cấp từ giao diện quản trị Fanpage, không suy đoán thêm.
