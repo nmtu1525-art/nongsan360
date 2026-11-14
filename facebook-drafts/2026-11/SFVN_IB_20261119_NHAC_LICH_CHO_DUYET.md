@@ -1,6 +1,6 @@
 # FB-SFVN-20261119-01 — Nhắc lịch trước buổi tập huấn (ĐÃ LÊN LỊCH)
 
-- **Đã lên Metricool:** Thứ Năm 19/11/2026, 10:00 (Asia/Saigon), ID 428029358, UUID -9108208944996138606, autoPublish=true, PENDING.
+- **Đã lên Metricool:** Thứ Năm 19/11/2026, 10:00 (Asia/Saigon), ID 428049751, UUID -9108208944996138606, autoPublish=true, PENDING.
 - **Vai trò:** Nhắc người quan tâm kiểm tra điều kiện tham dự và chuẩn bị câu hỏi; không tuyên bố đã có suất hoặc yêu cầu đặt chỗ qua Nông Sản 360.
 - **Từ khóa chính (Social SEO):** tập huấn hàng hóa phái sinh 20/11.
 - **Từ khóa phụ:** SFVN Academy TP.HCM; IB hàng hóa phái sinh; hợp đồng tương lai hàng hóa; MXV; quản trị rủi ro.
