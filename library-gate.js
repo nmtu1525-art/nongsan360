@@ -4,7 +4,7 @@
  */
 (function(){
   'use strict';
-  const WEB_APP_URL = ''; // After Apps Script deployment: paste verified https://script.google.com/macros/s/.../exec URL.
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwOanbih1xPmM07lBtMdfkll3_8JNYRRKzW0x7qFGuWsVqjHDuYf5YmA9JNonthV5EWyQ/exec'; // After Apps Script deployment: paste verified https://script.google.com/macros/s/.../exec URL.
   const STORAGE_KEY = 'ns360-library-reader-v1';
   const isConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/.test(WEB_APP_URL);
   const protectedRoute = route => /^\/giao-trinh\/(?:cf|ng|lm|ps)-\d{2}\.html$/.test(route);
