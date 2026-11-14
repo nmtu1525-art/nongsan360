@@ -18,7 +18,7 @@ jobs:
       - name: Probe anonymous GET receipt without submitting personal data
         run: |
           python3 - <<'PY'
-          import json, re, secrets, time, urllib.request, urllib.error, urllib.parse
+          import json, re, secrets, time, urllib.request, urllib.error, urllib.parse, html
           from pathlib import Path
           from datetime import datetime, timezone
           source = Path('library-gate.js').read_text(encoding='utf-8')
@@ -35,10 +35,16 @@ jobs:
                   body = res.read(500000).decode('utf-8', errors='replace')
                   result.update(http_status=res.status, content_type=res.headers.get('Content-Type', ''), final_host=urllib.parse.urlsplit(res.url).hostname)
               match = re.fullmatch(re.escape(callback) + r'\((.*)\);?\s*', body.strip(), re.S)
-              lower = body.lower()
+              decoded = html.unescape(body)
+              lower = decoded.lower()
+              known = ['leadForm', 'registerLead', 'NS360_LIBRARY_REGISTERED', 'NS360 Form v3', 'NS360 Form v4', 'NS360 Form v5', 'NS360 Form v6', 'v7-', 'Script function not found', 'Authorization required', 'Google Drive', 'ServiceLogin', 'You need access', 'You do not have permission', 'Exception:']
+              result['recognized_static_markers'] = [marker for marker in known if marker.lower() in lower]
+              result['body_length'] = len(body)
               if match:
                   payload = json.loads(match.group(1))
                   result.update(classification='RECEIPT_JSONP_OK', received_boolean=isinstance(payload.get('ok'), bool), saved=payload.get('ok'))
+              elif 'leadform' in lower and 'registerlead' in lower:
+                  result['classification'] = 'LEGACY_REGISTRATION_FORM_INSTEAD_OF_RECEIPT'
               elif 'accounts.google.com' in str(result.get('final_host')) or 'servicelogin' in lower:
                   result['classification'] = 'AUTH_OR_GOOGLE_LOGIN_HTML'
               elif 'unable to open' in lower or 'file you have requested' in lower or 'sorry, unable' in lower:
@@ -46,7 +52,7 @@ jobs:
               elif 'script function not found' in lower:
                   result['classification'] = 'APPS_SCRIPT_FUNCTION_MISSING'
               elif '<html' in lower or '<!doctype' in lower:
-                  result['classification'] = 'HTML_INSTEAD_OF_JSONP_POSSIBLY_OLD_DEPLOYMENT'
+                  result['classification'] = 'HTML_INSTEAD_OF_JSONP'
               else:
                   result['classification'] = 'UNEXPECTED_RESPONSE'
           except urllib.error.HTTPError as exc:
@@ -54,15 +60,14 @@ jobs:
           except Exception as exc:
               result.update(classification='TRANSPORT_ERROR', exception_type=type(exc).__name__)
           result['elapsed_seconds'] = round(time.monotonic() - started, 2)
-          # No response bodies, personal data, request IDs, or tokens in the report.
+          # Only allowlisted static marker names, never raw HTML or personal information.
           Path('REGISTRATION_DIAGNOSTIC_RESULT.json').write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
           print(json.dumps(result, ensure_ascii=False, indent=2))
-          note = '\n\n### Registration diagnostic 2026-11-14 - read-only runtime probe\n'
-          note += '- User reports native signup cannot confirm registration on both mobile and desktop.\n'
-          note += '- Live Sheet read in chat found only headers in Leads!I1:J50; no Sheet writes were made.\n'
-          note += '- Anonymous GET receipt probe from GitHub Actions (no POST, no fake lead): ' + result['classification'] + '.\n'
-          note += '- Evidence: REGISTRATION_DIAGNOSTIC_RESULT.json and KIEM_TRA_DANG_KY_20261114.md.\n'
-          note += '- Native flag remains OFF; successful anonymous receipt does not establish browser POST or Android success.\n'
+          note = '\n\n### Registration diagnostic 2026-11-14 - deployed backend markers\n'
+          note += '- Anonymous GET only; no POST, no new lead, no personal data in this probe.\n'
+          note += '- Result: ' + result['classification'] + '. Static markers: ' + ', '.join(result.get('recognized_static_markers', [])) + '.\n'
+          note += '- Read REGISTRATION_DIAGNOSTIC_RESULT.json and KIEM_TRA_DANG_KY_20261114.md before further changes.\n'
+          note += '- Native signup remains staged OFF; do not claim Android/POST success from this read-only probe.\n'
           for name in ('CONG_VIEC_DANG_LAM.md', 'TRANG_THAI_DU_AN.md'):
               with Path(name).open('a', encoding='utf-8') as out:
                   out.write(note)
@@ -73,6 +78,6 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add REGISTRATION_DIAGNOSTIC_RESULT.json CONG_VIEC_DANG_LAM.md TRANG_THAI_DU_AN.md
           if ! git diff --cached --quiet; then
-            git commit -m 'Checkpoint: anonymous registration receipt diagnostic, no lead submission'
+            git commit -m 'Checkpoint: deployed registration backend read-only diagnostic'
             git push origin HEAD:main
           fi
