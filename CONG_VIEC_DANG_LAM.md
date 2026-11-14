@@ -1020,3 +1020,10 @@
 - Đã mở lại workbook bằng openpyxl để xác minh đúng 3 sheet và không có hồ sơ khách thật.
 - **CHƯA upload Drive**: công cụ import Google Sheets trả schema mismatch `source_file` yêu cầu object trong khi đầu vào được công bố dạng string; không được tuyên bố đã tạo Google Sheet native. File local có thể tải trực tiếp qua chat hiện tại.
 - Không sửa Sheet Leads, lịch Metricool, website hay 21 PDF. Việc tiếp theo: đưa bản đã duyệt lên Drive bằng luồng import hỗ trợ object/file ref hợp lệ, kiểm thử trực tiếp Meta Messenger và form khách tự nguyện; không nhập giả PII.
+
+### Y.61. Quay lại đúng bước Meta Messenger theo ảnh checkpoint (14/11/2026)
+- Chủ dự án chỉ rõ ảnh checkpoint: **ưu tiên cấu hình lời chào và câu trả lời nhanh trong Meta Business Suite**, sau đó thử Messenger thật, mới hoàn thiện CRM. Không coi mẫu CRM rỗng Y.60 là thay thế bước Meta.
+- Đã mở lại hai Google Docs Messenger/SOP trực tiếp từ Drive để đối chiếu nguyên văn, xác nhận 16 mẫu và quy trình 7 bước tồn tại.
+- Đã cung cấp thao tác thủ công `Meta Business Suite → Inbox → Automations → Instant reply`, lời chào dễ đọc và saved reply SFVN_06 có link form `?src=messenger`.
+- **CHƯA kích hoạt được Meta**: kết nối công cụ hiện có không có quyền thao tác Inbox/Automations Fanpage; cần chủ trang mở giao diện, thao tác và xác minh bằng tin nhắn tài khoản khác. Chưa khẳng định bật thành công.
+- Giữ nguyên lịch Metricool 10 PENDING theo checkpoint gần nhất; không gọi update post, không thay 21 PDF/Leads/site.
