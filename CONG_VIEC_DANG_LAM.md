@@ -4,25 +4,28 @@
 > Khi bắt đầu một nhiệm vụ nhiều bước, phải cập nhật file này **trước khi sửa**; sau mỗi phần có kết quả bền vững, cập nhật ngay. Không chờ đến cuối cuộc chat.
 
 ## A. Công việc hiện tại
-- **Trạng thái:** Chưa có nhiệm vụ dang dở được xác nhận tại thời điểm tạo file.
-- **Mục tiêu và yêu cầu của anh:** (điền khi nhận nhiệm vụ)
-- **Thời gian bắt đầu / lần cập nhật:** (điền ngày giờ Việt Nam)
-- **Trạng thái triển khai:** CHƯA BẮT ĐẦU / ĐANG LÀM / BỊ CHẶN / ĐÃ XONG.
+- **Trạng thái:** ĐANG CHỜ THỬ NGHIỆM BÀN GIAO CHAT MỚI (không có thay đổi website đang dang dở).
+- **Mục tiêu:** Xác minh Project Instructions mới do người dùng cho biết đã dán vào mục chỉnh sửa hướng dẫn; mở chat mới trong Project `hàng hóa phái sinh` và nhập `Tiếp tục` để kiểm thử quy trình tự đọc checkpoint.
+- **Cập nhật:** 14/11/2026, Asia/Ho_Chi_Minh.
+- **Trạng thái triển khai:** File checkpoint, file trạng thái và đường dẫn GitHub/Drive đọc được trong cuộc trò chuyện hiện tại. Chưa thể quan sát trực tiếp Project Settings hoặc việc khởi tạo chat mới từ cuộc trò chuyện này.
 
 ## B. Đã làm và đã lưu ở đâu?
-- Liệt kê từng bước hoàn thành kèm **đường dẫn cụ thể** (GitHub commit, file trên Drive, mã bài tin tức, bản ZIP).
-- Phân biệt **đã commit**, **đã lưu Drive**, **đã kiểm thử**, và **chỉ mới soạn trong chat**.
-- Ghi SHA hoặc commit HEAD đã đọc để chống ghi đè thay đổi mới.
+- Có hướng dẫn dự án về tự tiếp tục (người dùng xác nhận đã dán; chưa xác minh được trực tiếp qua giao diện cài đặt).
+- GitHub `CONG_VIEC_DANG_LAM.md` và `TRANG_THAI_DU_AN.md` đọc được qua kết nối.
+- Tại thời điểm kiểm tra, HEAD `9ae0a14f7e8bf44703370b5b0871a911d493febd` (trước commit checkpoint hiện tại); tệp `tin-tuc.json` có **3 bài** với ngày 10/11 và 12/11/2026.
+- Google Drive dự án gốc có các bản V9.1–V9.3 và tài liệu khôi phục.
+- Bot GitHub Actions dùng API đã bị tắt; công việc tin tức được giao cho trợ lý ChatGPT trực tiếp, không dùng OpenAI API key.
 
 ## C. Việc chưa xong (ưu tiên)
-1. (ghi hành động tiếp theo cụ thể, đầu vào cần dùng, công cụ và đường dẫn)
-2. (ghi những việc còn lại)
-3. (ghi bước kiểm thử và nghiệm thu)
+1. **Thử chat mới:** người dùng tạo một chat *trong Project* `hàng hóa phái sinh`, gõ `Tiếp tục`. Trợ lý đọc file này và `TRANG_THAI_DU_AN.md`, đối chiếu commit mới, dữ liệu tin, Drive. Nếu đọc được và báo đúng tiến độ, nghiệm thu cơ chế bàn giao.
+2. **Tiếp tục nội dung thị trường:** kiểm tra nguồn tin chính thức mới (ICO/USDA) và chỉ đăng bài khi có sự kiện mới xác minh được. Bài viết chuẩn SEO, hai vòng kiểm số liệu/chính tả/câu từ, không đăng trùng và không dùng API key.
+3. **Kiểm chứng tác vụ 7:00:** xác minh ở lượt đầu tiên rằng tác vụ ChatGPT theo lịch thực sự có quyền dùng GitHub; chưa có bằng chứng xuất bản theo lịch.
+4. Mỗi việc dài phải sửa file checkpoint này **trước khi làm**, cập nhật sau mỗi chặng và ghi commit mới.
 
 ## D. Lỗi / vướng mắc / điều cần tránh
-- Lỗi đang gặp, log, URL hoặc cách tái hiện.
-- Bất kỳ dữ liệu chưa được xác minh, quyền truy cập chưa được kiểm tra.
-- Tuyệt đối không ghi password, API key hay dữ liệu nhạy cảm.
+- Chưa thể xác nhận quyền dùng GitHub từ một **chat mới** hoặc từ môi trường chạy tác vụ tự động; cần nghiệm thu thực tế.
+- Không nói "đã đăng" nếu chưa có commit; không viết bừa số liệu, không sửa/xóa 21 PDF hoặc tin cũ; không sử dụng OpenAI API key.
+- Chưa có công việc website nào đang ở trạng thái sửa nửa chừng tại thời điểm này.
 
 ## E. Kiểm tra toàn vẹn trước khi tiếp tục
 - Repo: https://github.com/nmtu1525-art/nongsan360 (main)
