@@ -74,3 +74,10 @@
 - **Chiến lược website:** gom folder release V8/V9 dưới `01_WEBSITE/01_LUU_TRU_PHIEN_BAN`, các HTML/ZIP mẫu cũ dưới `01_WEBSITE/02_MAU_NGUON_CU` — không coi các ZIP V9.3 là mã nguồn website chuẩn, GitHub vẫn là chuẩn.
 - **Cách quay lui:** Drive file IDs giữ nguyên, nếu di chuyển nhầm trả lại bằng addParents=id_nguon/removeParents=id_dich. Tất cả tài sản hiện có đều ở parent Drive gốc, ngoại trừ 2 PNG ở parent Facebook. Trước khi move từng item phải kiểm tra parent ID thật bằng get_file_metadata, sau đó verify bằng metadata/list_folder.
 - **Giới hạn:** không sửa mã nguồn GitHub, không động các tệp PDF chứa nội dung, chỉ di chuyển folder ngoài. Không đổi tên tệp cũ.
+
+### Giai đoạn 1 — đã tạo các thư mục phân loại
+- Drive gốc: `00_QUAN_LY_DU_AN` = 1fr6KNFoxzmIE9acK1vk-VS-QzeUsQH42; `01_WEBSITE` = 12sUvRlqtF1MX6IgfduYgVbkpKkZ-hbdu; `02_GIAO_TRINH_VA_THU_VIEN` = 1zhjm0RmCF9Ta_2gTWOygD7jeO-3j5Vku; vẫn giữ `Facebook` = 19aUO-V0SCy5NJ1JUPW0wmZGWbbIi6MeA.
+- Website: `01_LUU_TRU_PHIEN_BAN` = 1hwVNUDMGQVSPinJst1n1yzxaOgxvV2wv; `02_MAU_NGUON_CU` = 1gKz4pzh9JPNNt_HZay0T4ZlxTvKMspY1.
+- Giáo trình: `01_KIEM_DUYET_GIAO_TRINH` = 1QSYlvOdwJkcsWpy9gh1QK6bEWf_boSw2.
+- Facebook: `01_NHAN_DIEN_THUONG_HIEU` = 1zwf2GnHuGfaNnhkTOGsgllpZRKIanvrp, `02_BAI_VIET` = 1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ, `03_HINH_ANH_BAI_DANG` = 1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx, `04_VIDEO_REELS` = 1t8_tjV044gu52-lVKCS2CUjDP_v5Hgi6, `05_KE_HOACH_LICH_DANG` = 1g4y9gEZ32iXb2YvoKLvjuzoI7U3R4gLg, `06_BAO_CAO` = 12EbsqDeTvPYzbks6rFzspynsOquPHKs_.
+- Thư mục được tạo thành công, **bước đang làm tiếp**: di chuyển tệp cũ an toàn theo từng cụm, xác minh đúng parent và nội dung sau mỗi chặng.
