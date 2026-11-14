@@ -298,3 +298,11 @@
 - Real Chromium desktop/mobile-emulation read-only probes support anonymous receipt transport; anonymous live GET still returns proper boolean. No diagnostic POST or fake lead created.
 - Only library-native-form.js and index asset versions changed in production. Code.gs, gate flags, 21 PDFs, news JSON and customer Sheet untouched. No Apps Script redeploy needed for this frontend fix.
 - Evidence: RECEIPT_BROWSER_RESULT_20261114.json, RECEIPT_FIX_TESTS_20261114.json, RECEIPT_FIX_RELEASE_20261114.json. Actual owner-phone submission remains unverified; clean browser tests do not prove the precise cause on that device.
+
+
+## 37. Lịch Facebook 6 bài đã sắp lại hoàn chỉnh (14/11/2026)
+- Đã thay lịch 5 bài cũ trên Metricool, giữ một bài đang đúng giờ; kết quả là **6 bài PENDING đăng vào 16, 18, 20, 23, 25, 27/11/2026** theo nhịp T2 10:00 / T4 12:00 / T6 10:00 (múi giờ Asia/Saigon).
+- Bài Thư viện 21 giáo trình được chuyển lên **16/11 10:00** để sớm thu hút người đọc vào website; thứ tự tiếp theo: hàng thực vs tương lai 18/11, cà phê 20/11, ngô 23/11, lúa mì 25/11, ký quỹ 27/11.
+- Readback Metricool xác minh đúng 6 bài PENDING, autoPublish=true, mỗi bài một ảnh; 1 bài chào mừng đã PUBLISHED trước đó. ID mới lần lượt `427999607`, `427999763`, `427999835`, `427999900`, `427999964`; ký quỹ giữ `427793151`. UUID bền vững để chống trùng không đổi.
+- GitHub `FACEBOOK_KE_HOACH_THANG_11_2026.md` đã được cập nhật commit `f38464b59f7e56d99c9bc6ca9d03b93db635f0d7`. Bản gốc Google Docs/Draft mã FB-YYYYMMDD không đổi tên theo ngày vì đó là mã tài sản, caption và ảnh không thay.
+- 5 slot hội thảo SFVN chưa có chứng cứ chính thức nên vẫn giữ chưa schedule. Không thay 21 PDF, website, tin tức hay dữ liệu khách.
