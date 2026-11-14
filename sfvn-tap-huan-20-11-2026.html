@@ -53,6 +53,7 @@
  'use strict';
  const ENDPOINT='https://script.google.com/macros/s/AKfycbwOanbih1xPmM07lBtMdfkll3_8JNYRRKzW0x7qFGuWsVqjHDuYf5YmA9JNonthV5EWyQ/exec';
  const FORM=document.getElementById('sfvn-interest-form');
+ FORM.noValidate=true; // Submit event always runs, then reportValidity checks updated custom messages.
  const STATUS=document.getElementById('state');
  const BUTTON=document.getElementById('send');
  const KEY='ns360-sfvn-interest-pending-v1';
