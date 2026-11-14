@@ -102,11 +102,26 @@
     const url=new URL(WEB_APP_URL);
     url.searchParams.set('nonce',nonce);
     url.searchParams.set('src',sourceName());
-    host.innerHTML='\n      <main class="ns-libgate-screen">\n        <nav class="ns-libgate-breadcrumb"><a href="#/">Trang chủ</a> / <a href="#/thu-vien/index.html">Thư viện</a> / Đăng ký đọc</nav>\n        <div class="ns-libgate-columns">\n          <section class="ns-libgate-description"><span class="ns-libgate-label">THƯ VIỆN NÔNG SẢN 360</span>\n            <h1>Mở quyền đọc miễn phí một lần</h1>\n            <p>Đăng ký một lần trên trình duyệt này để đọc <strong>21 giáo trình</strong> về cà phê, ngô, lúa mì và hàng hóa phái sinh.</p>\n            <ul><li>Đọc các giáo trình không cần mở tài khoản giao dịch.</li><li>Chuyển qua lại giữa các tài liệu mà không nhập lại thông tin.</li><li>Không tự động đăng ký nhận bản tin hay quảng cáo.</li></ul>\n            <p class="ns-libgate-small">Chúng tôi chỉ lưu trên trình duyệt dấu hiệu đã đăng ký, không lưu họ tên, điện thoại hoặc email tại đây.</p>\n            <a class="ns-libgate-back" href="#/thu-vien/index.html">← Quay lại danh mục tài liệu</a>\n          </section>\n          <section class="ns-libgate-card" aria-label="Biểu mẫu đăng ký đọc tài liệu">\n            <h2>Đăng ký đọc thư viện</h2>\n            <p>Miễn phí · Một lần trên trình duyệt này</p>\n            <iframe id="ns-libgate-frame" title="Form đăng ký đọc thư viện Nông Sản 360" loading="eager" referrerpolicy="no-referrer"></iframe>\n            <p class="ns-libgate-help">Không thấy biểu mẫu trong khung? <a id="ns-libgate-direct-link" href="#" target="_blank" rel="noopener noreferrer">Kiểm tra trang Google Apps Script ↗</a></p>\n            <div id="ns-libgate-error" class="ns-libgate-error" hidden>Chưa thể mở biểu mẫu. Hãy thử tải lại trang hoặc liên hệ <a href="tel:0985272776">0985 272 776</a>.</div>\n          </section>\n        </div>\n      </main>';
+    host.innerHTML='\n      <main class="ns-libgate-screen">\n        <nav class="ns-libgate-breadcrumb"><a href="#/">Trang chủ</a> / <a href="#/thu-vien/index.html">Thư viện</a> / Đăng ký đọc</nav>\n        <div class="ns-libgate-columns">\n          <section class="ns-libgate-description"><span class="ns-libgate-label">THƯ VIỆN NÔNG SẢN 360</span>\n            <h1>Mở quyền đọc miễn phí một lần</h1>\n            <p>Đăng ký một lần trên trình duyệt này để đọc <strong>21 giáo trình</strong> về cà phê, ngô, lúa mì và hàng hóa phái sinh.</p>\n            <ul><li>Đọc các giáo trình không cần mở tài khoản giao dịch.</li><li>Chuyển qua lại giữa các tài liệu mà không nhập lại thông tin.</li><li>Không tự động đăng ký nhận bản tin hay quảng cáo.</li></ul>\n            <p class="ns-libgate-small">Chúng tôi chỉ lưu trên trình duyệt dấu hiệu đã đăng ký, không lưu họ tên, điện thoại hoặc email tại đây.</p>\n            <a class="ns-libgate-back" href="#/thu-vien/index.html">← Quay lại danh mục tài liệu</a>\n          </section>\n          <section class="ns-libgate-card" aria-label="Biểu mẫu đăng ký đọc tài liệu">\n            <h2>Đăng ký đọc thư viện</h2>\n            <p>Miễn phí · Một lần trên trình duyệt này</p>\n            <div class="ns-libgate-mobile-help" role="note">\n              <strong>Điện thoại báo lỗi Google Drive?</strong>\n              <p>Đường dẫn Google Apps Script đôi khi bị lỗi trong khung nhúng hoặc khi dùng nhiều tài khoản Google. Sao chép liên kết, dán vào thanh địa chỉ Chrome hoặc Samsung Internet; thử tab ẩn danh nếu cần.</p>\n              <button type="button" id="ns-libgate-copy-mobile-url">Sao chép liên kết đăng ký</button>\n              <span id="ns-libgate-copy-mobile-status" role="status" aria-live="polite"></span>\n            </div>\n            <p class="ns-libgate-help">Không thấy biểu mẫu trong khung? <a id="ns-libgate-direct-link" href="#" target="_blank" rel="noopener noreferrer">Thử mở biểu mẫu ở tab riêng ↗</a></p>\n            <iframe id="ns-libgate-frame" title="Form đăng ký đọc thư viện Nông Sản 360" loading="eager" referrerpolicy="no-referrer"></iframe>\n            <div id="ns-libgate-error" class="ns-libgate-error" hidden>Chưa thể mở biểu mẫu. Hãy thử tải lại trang hoặc liên hệ <a href="tel:0985272776">0985 272 776</a>.</div>\n          </section>\n        </div>\n      </main>';
     const iframe=host.querySelector('#ns-libgate-frame');
     iframe.src=url.href;
     const directLink=host.querySelector('#ns-libgate-direct-link');
     if(directLink)directLink.href=url.href;
+    const copyMobile=host.querySelector('#ns-libgate-copy-mobile-url');
+    const copyStatus=host.querySelector('#ns-libgate-copy-mobile-status');
+    if(copyMobile){
+      copyMobile.addEventListener('click',async function(){
+        const retryUrl=new URL(location.href);
+        retryUrl.hash=route===TEST_ROUTE?'#'+TEST_ROUTE:'#/thu-vien/index.html';
+        try{
+          if(!navigator.clipboard||!navigator.clipboard.writeText)throw new Error('Clipboard unavailable');
+          await navigator.clipboard.writeText(retryUrl.href);
+          if(copyStatus)copyStatus.textContent='Đã sao chép. Dán liên kết vào Chrome hoặc Samsung Internet.';
+        }catch(_){
+          window.prompt('Sao chép liên kết để dán vào Chrome hoặc Samsung Internet:',retryUrl.href);
+        }
+      });
+    }
     activeMessageHandler=function(event){
       if(!isTrustedGoogleOrigin(event.origin))return;
       if(!event.data||event.data.version!==1||event.data.nonce!==nonce)return;
