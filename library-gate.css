@@ -15,3 +15,6 @@
 .ns-libgate-screen a:focus-visible{outline:3px solid #478a60;outline-offset:2px}
 @media(max-width:800px){.ns-libgate-columns{grid-template-columns:1fr;gap:18px}.ns-libgate-description{padding:0}.ns-libgate-description h1{font-size:34px}.ns-libgate-card{max-width:540px;width:100%;margin:auto}}
 @media(max-width:520px){.ns-libgate-screen{width:calc(100% - 24px);padding:16px 0 55px}.ns-libgate-card{padding:18px 12px 10px;border-radius:16px}.ns-libgate-card iframe{height:700px}.ns-libgate-description ul{margin-bottom:18px}}
+
+.ns-libgate-mobile-alternative{display:none;padding:10px 12px;border-radius:10px;border:1px solid #d7e3da;background:#f5faf7;color:#395d48!important}
+@media(max-width:800px){.ns-libgate-mobile-alternative{display:block}}
