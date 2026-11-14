@@ -121,3 +121,16 @@
 ## 19. Quyết định ảnh Facebook cuối cùng: quay lại 6 ảnh cũ (14/11/2026)
 - Người dùng quyết định **sử dụng bộ 6 ảnh minh họa bản đầu**, không dùng 6 đồ họa V2 cho lịch Fanpage tháng 11. Đã thay đúng ID ảnh cũ trong **6 Google Docs + 6 draft GitHub**, kiểm tra lại mỗi file có link cũ, không còn tham chiếu V2; lịch tháng 11 Google Docs và GitHub cũng đã chỉnh.
 - 6 ảnh V2 và file PPTX vẫn bảo toàn trên Drive như bản lưu trữ, không xóa/ghi đè. **Chưa đăng các bài mới**, ảnh được chọn nhưng caption vẫn cần phê duyệt trước khi xếp lịch Metricool. Facebook có thể quyết định gắn nhãn AI với ảnh minh họa cũ.
+
+## 20. Đã xóa 6 PNG V2 không được duyệt; 6 bài Facebook hoàn tất Social SEO và lên lịch (14/11/2026)
+- Đã xóa vĩnh viễn **đúng 6 ảnh PNG thiết kế V2 không duyệt**, giữ **6 ảnh bản đầu** đã được chủ dự án chọn + ảnh chào mừng + file PPTX chỉnh sửa (PPTX không nằm trong 6 ảnh yêu cầu xóa). Readback thư mục ảnh Drive xác minh chính xác.
+- Đã đọc/rà 6 Google Docs, nguồn giáo trình và route website, xác minh ảnh cũ công khai theo link `anyone:reader`. Caption giữ đúng chuyên môn, từ khóa chính, liên kết đọc giáo trình, 4 hashtag, CTA hỏi đáp; tách riêng metadata SEO khỏi nội dung đăng.
+- **Đã lên lịch Metricool tự động 6 bài, mỗi bài kèm ảnh bản đầu**, readback xác minh 6 provider Facebook **PENDING**, `autoPublish=true`:
+  - 17/11 10:00 — ID `427792755`
+  - 24/11 10:00 — ID `427792908`
+  - 25/11 12:00 — ID `427792991`
+  - 26/11 10:00 — ID `427793073`
+  - 27/11 10:00 — ID `427793151`
+  - 30/11 10:00 — ID `427793267`
+- Đã cập nhật cả 6 Google Docs + 6 GitHub draft, lịch tháng 11 Drive/GitHub; automation tháng 11 đã cập nhật prompt chống trùng. **Chưa coi là published**, cần đối chiếu sau giờ đăng.
+- Bài chào mừng 14/11 PUBLISHED; 5 slot SFVN còn thiếu poster/thông báo chính thức nên CHƯA schedule. Giữ an toàn website, `tin-tuc.json`, 21 giáo trình, automation website.
