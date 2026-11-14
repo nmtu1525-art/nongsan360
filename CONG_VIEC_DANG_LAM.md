@@ -542,3 +542,11 @@
 - **CHƯA THAY ĐỔI backend sản xuất hay bật public.** Ứng dụng Apps Script không có connector chỉnh mã/deploy trực tiếp trong phiên này. Chủ dự án cần mở dự án Apps Script hiện tại, dán đúng bản `Code.gs` và `Form.html` V3 từ GitHub/Drive, Save, `Deploy > Manage deployments > Edit > New version > Deploy` trên URL /exec đang dùng, sau đó đăng ký thử bằng thông tin của chính mình trên `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky`.
 - **Bước tiếp theo sau khi chủ dự án xác nhận deploy/thử:** kiểm tra `Leads!I:J` để thấy RequestID `v3-` và ACTIVE; nếu xác nhận form chuyển được CF-01 và ghi bản v3 đúng, tiếp tục chạy kiểm tra bảo vệ nội dung rồi mới chuyển `LIVE_ENABLED = true` sau chấp thuận. Không tự bịa kết quả.
 - Bảo toàn toàn bộ 21 PDF, tin-tuc.json, mã website khác, bài Facebook đã lên lịch, dữ liệu khách và thư mục Drive.
+
+
+### Y.12. Người dùng xác nhận link test thấy form nhưng website thường không thấy (14/11/2026)
+- Đã rà soát mã `library-gate.js`: `LIVE_ENABLED=false` nên đây là khác biệt có chủ đích giữa route test `#/thu-vien/kiem-tra-dang-ky` và route giáo trình từ website; `index.html` đang gọi `window.NS360_LIBRARY_GATE.shouldBlock(route)` đúng.
+- **Kiểm tra mới** tab `Leads!I1:J80` (không đọc PII): 2 bản ghi `ACTIVE`, gồm một `v2-` và **một `v3-`**; chứng minh backend V3 đã ghi được ít nhất một lượt đăng ký. Người dùng xác nhận link test thực tế đã hiển thị form. Kiểm tra URL Pages trực tiếp qua web tool không truy cập được, không khẳng định đã chạy E2E chuyển trang trên browser.
+- Quyết định thực hiện theo phản hồi người dùng: bật gate trên route giáo trình website chính thức do đã có bằng chứng `v3- ACTIVE`; cập nhật cache-bust script trong `index.html` để browser lấy file mới. Bảo toàn 21 PDF và mọi dữ liệu; kiểm lại GitHub sau từng bước.
+- Lưu ý: gate chỉ áp dụng điều hướng trang giáo trình trong website, không phải kiểm soát quyền truy cập PDF trực tiếp; dấu đã đăng ký lưu trên trình duyệt có thể khiến cùng browser không thấy form nữa, thử ở cửa sổ ẩn danh để xác minh khách mới.
+- Bắt đầu triển khai; trạng thái từng commit sẽ ghi bổ sung ở dưới, không xóa dữ liệu.
