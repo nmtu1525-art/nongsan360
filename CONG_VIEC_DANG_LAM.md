@@ -368,3 +368,20 @@
 - Automation ID `Automation_7ffdf2af72088191acb4f4dcb23b9e00` đã được **cập nhật thành `Fanpage NS360 — lịch 11 bài tháng 11`**, chạy 08:00 T2–T6 từ 16/11, **COUNT=11**, kết thúc 30/11. Prompt đọc lịch THÁNG 11 mới và draft đã viết, **chỉ đăng khi bài/ảnh đã được người dùng duyệt và thông tin SFVN được xác nhận**, nếu không báo trạng thái NHÁP; không tự động đăng bài chưa duyệt. Kiểm chứng `success=true`, `is_enabled=true`, `next_run=2026-11-16T08:00:00+07:00`.
 - **Hiện chưa có hình cho 6 bài và 5 mục SFVN chưa có poster chính thức. Không có 11 bài mới nào được lịch Metricool xác nhận**. SFVN 21/11 thứ Bảy chỉ là mốc giả định. Cần user duyệt 6 caption, có ảnh và poster/chi tiết hội thảo để tiếp tục.
 - Bài Facebook chào mừng 14/11 status PUBLISHED giữ nguyên. Lịch tin website 07:00, 21 PDF, index.html và tin-tuc.json không động đến.
+
+### V.2. ĐÃ KIỂM TRA DRIVE + SOÁT SOCIAL SEO 6 BÀI + LƯU 6 ẢNH NHÁP (14/11/2026)
+- Người dùng hỏi rõ `đã vào Drive chưa, bài viết đã rà soát lại chuẩn SEO chưa`. Đã mở **chính xác cả 6 Google Docs** và xác minh đầy đủ nội dung, ID file, trạng thái bản nháp tại `Facebook/02_BAI_VIET`. Ban đầu thư mục ảnh chỉ có 1 ảnh chào mừng.
+- Đã tải lên Google Drive qua công cụ Files **6 ảnh PNG 1122x1402 (xấp xỉ 4:5)**, vào folder `Facebook/03_HINH_ANH_BAI_DANG` ID `1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx`. Kiểm tra metadata từng ảnh: tất cả MIME `image/png`, đúng thư mục; list folder sau upload có **7 ảnh** (1 ảnh chào mừng + 6 ảnh nháp). ID:
+  - 17/11 `1FDKGapP1o5psdDKKdCRqDjMTyvY09LOc` (hàng thực/futures ngô);
+  - 24/11 `1CDdMMmD2UiM77eN0_T1Jvh1YNfHNE5fF` (cà phê);
+  - 25/11 `1vaqObq_4DpLcttDlGLNB0Nem2me5PVBP` (ngô);
+  - 26/11 `1__v5VotGrr4EJVgEbuCq4IJ2vdGfqDWY` (lúa mì);
+  - 27/11 `10C4CTLml6qX3P6J6F6Cze3-o4dseWR7S` (ký quỹ);
+  - 30/11 `1jbyc_ej_Mq3m47ewEbn-ayzV8g9tff3S` (thư viện 21 giáo trình).
+- **ẢNH LÀ NHÁP CHƯA DUYỆT**, không đưa vào Metricool: là minh họa cách điệu, có thể trông quá AI so với sở thích user; cần đánh giá phong cách, chữ, logo, tính chính xác, rồi có thể làm lại theo hướng ảnh chụp/editorial. Không coi ảnh được duyệt chỉ vì đã tải lên Drive, không tự public permission và không tự đăng.
+- Đã rà soát 6 caption ở mức **Social SEO cho Facebook**, không phải bảo đảm xếp hạng Google/web: chỉnh tiêu đề tự nhiên có cụm từ khóa chính (hợp đồng tương lai hàng hóa, giá cà phê, giá ngô, giá lúa mì, ký quỹ hàng hóa phái sinh, thư viện Nông Sản 360), giữ thuật ngữ đúng theo giáo trình, 4 hashtag liên quan, liên kết nội bộ tới bài học, thêm câu hỏi CTA phù hợp. Không gán dữ liệu giá thị trường hiện tại/tin nóng chưa kiểm chứng.
+- Đã cập nhật **trực tiếp 6 Google Docs** bằng `batch_update_document` với write-control revision; từng phép thay đều thành công (6 trường/bài), và đọc lại cả 6 xác minh từ khóa chính, ảnh Drive, CTA, liên kết giáo trình, vẫn `CHƯA ĐĂNG`. Bổ sung metadata SEO Facebook và alt mô tả ảnh nằm ngoài phần `NỘI DUNG FACEBOOK`, ghi rõ không sao chép vào Facebook.
+- Đồng bộ **6 bản thảo GitHub** `facebook-drafts/2026-11/FB-202611[17,24,25,26,27,30]-01.md` bằng nội dung đã sửa từ Google Docs để automation không dùng bản cũ. Các file khác không thay đổi.
+- **Đã kiểm tra khung giờ gợi ý Metricool** brand `8097037` với `getBestTimeToPostByNetwork` trong hai tuần 16–29 và 30/11. Gợi ý sơ bộ: thứ Hai/Ba/Năm/Sáu **10:00**, thứ Tư **12:00** (điểm giờ 12 nhỉnh hơn 10 rất ít); cuối tuần nếu có bài: thứ Bảy/Chủ nhật **10:00**. **Fanpage mới, dữ liệu không đủ để gọi đây là giờ tối ưu đã được kiểm chứng.** Giờ thứ Tư 25/11 đã chỉnh **12:00** trong Google Docs + GitHub bản nháp.
+- Đã cập nhật lịch GitHub `FACEBOOK_KE_HOACH_THANG_11_2026.md` và Drive Google Doc `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` về 6 bài SEO + 6 ảnh nháp, thêm khung giờ dự kiến.
+- **Đã xác minh thư mục Drive** sau cùng có 6 Docs trong 02_BAI_VIET, 6 ảnh nháp trong 03_HINH_ANH_BAI_DANG; 5 bài SFVN còn chờ poster chính thức. **Chưa có 6 bài mới được user phê duyệt, chưa lên lịch Metricool hoặc xuất bản.** Không sửa website, 21 PDF và tin-tuc.json; đề xuất form một lần cho thư viện vẫn CHƯA triển khai vì cần thiết kế quyền/đồng ý/lưu lead, không tự ý chặn nội dung hiện có.
