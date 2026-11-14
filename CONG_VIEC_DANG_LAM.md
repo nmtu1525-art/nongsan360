@@ -448,3 +448,11 @@
 - Đã gọi `Google_Drive.delete_file` cho chính xác file đó; trả `success=true`.
 - **Readback folder sau xóa**: chính xác **7 file = 6 ảnh PNG bản đầu được chọn cho FB-202611[17,24,25,26,27,30]-01 + 1 ảnh chào mừng**. **Không còn 6 PNG V2 và không còn PowerPoint V2**. Không xóa dữ liệu khác.
 - Lịch Metricool 6 bài đã tạo ở mục X.1 giữ nguyên trạng thái PENDING/autoPublish, không tạo hoặc đăng thêm bài.
+
+## Y. Bắt đầu triển khai form đăng ký đọc 21 giáo trình một lần (14/11/2026)
+- Chủ dự án đồng ý đề xuất: khi khách nhấn Đọc tài liệu sẽ đăng ký họ tên, SĐT bắt buộc, email không bắt buộc; tách riêng sự đồng ý xử lý dữ liệu cho cung cấp quyền đọc và ô tùy chọn nhận bản tin/hội thảo. Điền một lần trên cùng trình duyệt, giữ thư viện danh mục/tin tức công khai cho SEO; không yêu cầu tài khoản giao dịch.
+- Readback `index.html`: GitHub Pages là SPA hash-router (`ROUTES`, `render`), các giáo trình PDF trực tiếp `pdf/*.pdf`; chưa có backend, form, localStorage. **Không thể dùng gate JavaScript để bảo mật PDF gốc**; việc chặn UI chỉ phục vụ thu đăng ký tự nguyện, URL PDF gốc vẫn có thể được truy cập trực tiếp.
+- Kiến trúc đang làm: form nhúng qua **Google Apps Script HTML Service** chạy dưới quyền chủ sở hữu, ghi vào **Google Sheet riêng tư**; chỉ khi server báo ghi dữ liệu thành công mới gửi thông điệp tới website để lưu trạng thái `localStorage` không chứa PII, dùng một lần mỗi trình duyệt; bật form khi endpoint triển khai và xác minh; nếu không có endpoint, **giữ thư viện truy cập như hiện tại** để không chặn khách mà không thu được dữ liệu.
+- Không có connector triển khai Apps Script web app trong các công cụ đã kết nối: cần chủ sở hữu thực hiện bước **Deploy Web app** một lần, sao chép URL `/exec` vào cấu hình GitHub. Tuyệt đối không nhận form thật khi chưa lưu dữ liệu; không tuyên bố đã hoạt động end-to-end trước khi deploy và test.
+- Đã xác minh Luật Bảo vệ dữ liệu cá nhân 91/2025/QH15 có hiệu lực 01/01/2026, consent phải rõ mục đích và có quyền yêu cầu chỉnh sửa/xóa; cần chú ý phân tách marketing opt-in.
+- Bước thực hiện: tạo bảng dữ liệu lead riêng tư trên Drive, GitHub Apps Script code/form và hướng dẫn cấu hình, tích hợp modal chặn đường đọc PDF qua router với feature flag an toàn, kiểm tra readback và cập nhật checkpoint. Giữ nguyên 21 PDF và các tin/website khác.
