@@ -253,3 +253,10 @@
 - Anonymous GET receipt probe from GitHub Actions (no POST, no fake lead): HTML_INSTEAD_OF_JSONP_POSSIBLY_OLD_DEPLOYMENT.
 - Evidence: REGISTRATION_DIAGNOSTIC_RESULT.json and KIEM_TRA_DANG_KY_20261114.md.
 - Native flag remains OFF; successful anonymous receipt does not establish browser POST or Android success.
+
+
+### Registration diagnostic 2026-11-14 - deployed backend markers
+- Anonymous GET only; no POST, no new lead, no personal data in this probe.
+- Result: LEGACY_REGISTRATION_FORM_INSTEAD_OF_RECEIPT. Static markers: leadForm, registerLead, NS360_LIBRARY_REGISTERED, v7-.
+- Read REGISTRATION_DIAGNOSTIC_RESULT.json and KIEM_TRA_DANG_KY_20261114.md before further changes.
+- Native signup remains staged OFF; do not claim Android/POST success from this read-only probe.
