@@ -138,3 +138,9 @@
 ## 21. Dọn sạch bộ ảnh V2 bị từ chối (14/11/2026)
 - Theo ảnh chụp phản hồi của người dùng, đã xóa **nốt file PowerPoint `NS360_6_ARTWORK_VECTOR_EDITORIAL_V2_EDITABLE.pptx` (ID `17kK1z7JMDociLH_g2-dCMSJz5SEa8MHY`)** khỏi Drive, API trả `success=true`.
 - Readback thư mục ảnh xác minh chỉ còn **7 PNG: 6 ảnh bản đầu đã chọn + ảnh chào mừng**. Toàn bộ 6 PNG V2 và file PPTX V2 đã xóa khỏi Drive. Không sửa 6 post Metricool đã lên lịch và không chạm giáo trình, website hoặc tin tức.
+
+## 22. Thu vien dang ky mot lan — cho ket noi Google Apps Script (14/11/2026)
+- Google Sheet native RIENG TU da tao trong Drive/00_QUAN_LY_DU_AN/04_DATA_DANG_KY_THU_VIEN; tab Leads 12 cot va HuongDan, 0 leads; chi co owner duoc xem.
+- Website GitHub Pages da them library-gate.js/.css va chinh-sach-du-lieu.html, da tich hop router sach vao index.html va footer privacy; du lieu sach PDF, news JSON, 31 templates, SFVN videos, cac bai Facebook da len lich khong bi thay doi.
+- Backend Apps Script Code.gs + Form.html va README o Github/library-registration va Drive; form name/phone bat buoc, email optional, 2 consent khac nhau, browser luu marker khong PII.
+- CHUA LIVE: const WEB_APP_URL = '' trong library-gate.js. Khong kich hoat form khi chua co Web App /exec da deploy va test. Chu du an can deploy Apps Script bang tai khoan Google va gui URL /exec de xac minh, sau do bat gate. Tinh nang chi ghi nho tren cung trinh duyet; PDF public URL van mo truc tiep.
