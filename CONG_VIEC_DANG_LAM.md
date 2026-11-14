@@ -646,3 +646,12 @@
 - **CHƯA CẬP NHẬT APPS SCRIPT ĐANG DEPLOY**: chủ dự án phải thay duy nhất `Form.html` bản V4.1 trong Apps Script, Save -> Deploy -> Manage deployments -> Edit -> New version -> Deploy. `Code.gs` V4 đã xử lý 12 cột đúng; không cần chỉnh Sheet, trang website, gate.
 - Sau deploy thử một đăng ký mới, kiểm K/L có tên thành phố hoặc vùng và URL Google Maps. Nếu vẫn trống, cần log console trình duyệt hoặc kiểm tra nơi gọi dịch vụ GeoIP trong iframe. Bản Drive Form ID `1yzk8DZC3hjffAvwDn2TT25eQ6FtXfig5` trước đó vẫn V3, **chưa đồng bộ bản V4.1 lên Drive**; dùng GitHub làm nguồn chính.
 - Bảo toàn PDF/News/Website, 6 bài Facebook, dữ liệu cũ; không bịa vị trí.
+
+
+### Y.25. Bắt đầu bổ sung GPS có xin quyền và phường/xã tùy chọn (14/11/2026)
+- Yêu cầu: khách mở GPS thì dùng kết quả đã cấp quyền; nếu chưa cấp thì trình duyệt hỏi quyền, từ chối vẫn đăng ký thành công và dùng geo-IP ước tính; phường/xã nếu xác định được, link Maps gần khu vực.
+- Đã đọc lại GitHub `library-gate.js`, `library-registration/Form.html`, `Code.gs`, policy, README và tab Sheets. Hiện có 12 header A:L và 4 lượt đăng ký trong phạm vi đọc, các bản cũ phải giữ nguyên; `LIVE_ENABLED=true`.
+- Kỹ thuật lựa chọn: yêu cầu Geolocation API ở **trang chủ GitHub Pages (top-level)** qua postMessage từ Form iframe Apps Script và nonce một lần, vì quyền geolocation trong iframe bên thứ ba có thể bị chặn. Khi người dùng bấm gửi form, browser sẽ hỏi quyền nếu chưa granted; nếu từ chối/timeout thì GeoJS/ipwho.is ước tính theo IP. Không làm giả phường/xã khi bản đồ thiếu dữ liệu.
+- Đảo tọa độ thành tên khu vực bằng endpoint browser BigDataCloud `https://api.bigdatacloud.net/data/reverse-geocode-client` chỉ khi người dùng đồng ý GPS; dịch vụ bên thứ ba thấy tọa độ và IP của kết nối, phải ghi rõ trong chính sách dữ liệu. Chỉ gửi về Apps Script **tên thành phố/region/ward hoặc khu vực**, không gửi IP/lat/lon; Google Maps vẫn dựa trên tên địa danh, không lưu tọa độ chính xác.
+- Dự kiến thêm M:`PhuongXaUocTinh` và N:`NguonDinhVi` bên phải K:L; backend 14 trường, không đổi các cột A:L hoặc dữ liệu cũ. Không bật thay đổi trong Apps Script /exec nếu chưa user redeploy. Cần nghiệm thu ba nhánh: GPS granted có phường (nếu có nguồn), denied fallback IP, lỗi toàn bộ vẫn đăng ký. Website giữ 21 PDF, news JSON, Facebook.
+- Chỉ cập nhật checkpoint và mã sau khi đọc SHA mới, readback và kiểm tra cú pháp; không tự nhận đã test trên điện thoại thật.
