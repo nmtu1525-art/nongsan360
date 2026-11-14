@@ -441,3 +441,10 @@
 - Đã sửa **6 Google Docs**, **6 bản thảo GitHub** với ID lịch, UUID, status `PENDING`; không thay caption đã soát SEO. Đã **viết lại lịch HIỆN HÀNH** `FACEBOOK_KE_HOACH_THANG_11_2026.md` trên GitHub commit `fe2887721e8a2d8393000a3745a3fed558e84b53` và cập nhật Google Doc Drive ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8` đầy đủ 6 planner URLs. Đã readback Drive thấy đủ sáu ID, không còn sai trạng thái V2.
 - **ĐÃ SỬA automation** `Fanpage NS360 — lịch 11 bài tháng 11` ID `Automation_7ffdf2af72088191acb4f4dcb23b9e00` để **KHÔNG tạo lại sáu bài đã schedule**, chỉ kiểm PUBLISHED sau giờ, năm slot hội thảo SFVN tiếp tục chờ poster và sự phê duyệt riêng; `update success=true`, schedule 08:00 T2–T6, next 16/11 08:00.
 - Bài chào mừng 14/11 `PUBLISHED`, giữ nguyên. Năm bài hội thảo SFVN vẫn **chưa đăng/chưa lên lịch** vì thiếu poster/chủ đề/giờ/nơi đăng ký. **Không tự ý thay đổi website/tin-tuc.json/21 PDF**.
+
+### X.2. ĐÃ XÓA NỐT FILE POWERPOINT V2 KHÔNG ĐƯỢC DUYỆT (14/11/2026)
+- Anh gửi ảnh chụp cho thấy file `NS360_6_ARTWORK_VECTOR_EDITORIAL_V2_EDITABLE.pptx` vẫn nằm trong thư mục ảnh Facebook và yêu cầu xóa nốt.
+- Đã xác minh metadata và vị trí trong `Facebook/03_HINH_ANH_BAI_DANG`: PowerPoint ID `17kK1z7JMDociLH_g2-dCMSJz5SEa8MHY` là bản thiết kế V2 không dùng.
+- Đã gọi `Google_Drive.delete_file` cho chính xác file đó; trả `success=true`.
+- **Readback folder sau xóa**: chính xác **7 file = 6 ảnh PNG bản đầu được chọn cho FB-202611[17,24,25,26,27,30]-01 + 1 ảnh chào mừng**. **Không còn 6 PNG V2 và không còn PowerPoint V2**. Không xóa dữ liệu khác.
+- Lịch Metricool 6 bài đã tạo ở mục X.1 giữ nguyên trạng thái PENDING/autoPublish, không tạo hoặc đăng thêm bài.
