@@ -10,12 +10,54 @@ const LIBRARY_CONFIG = Object.freeze({
 
 function doGet(e) {
   const params = (e && e.parameter) || {};
+  if (String(params.action || '') === 'receipt') {
+    // Public endpoint returns ONLY whether a high-entropy request ID is saved.
+    // No name, phone, email, or any other private sheet information is exposed.
+    const callback = String(params.callback || '');
+    const requestId = String(params.id || '');
+    if (!/^NS360_RC_[a-zA-Z0-9_]{8,48}$/.test(callback) ||
+        !/^v7-[a-zA-Z0-9_-]{18,70}$/.test(requestId)) {
+      return ContentService.createTextOutput('/* invalid receipt request */')
+        .setMimeType(ContentService.MimeType.JAVASCRIPT);
+    }
+    const found = findActiveLeadByRequestId_(requestId);
+    return ContentService.createTextOutput(callback + '(' + JSON.stringify({ok:found}) + ');')
+      .setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
   const t = HtmlService.createTemplateFromFile('Form');
   const nonce = String(params.nonce || '');
   t.nonce = /^[a-zA-Z0-9_-]{12,80}$/.test(nonce) ? nonce : '';
   t.visitSource = /^[a-zA-Z0-9_-]{2,45}$/.test(String(params.src || '')) ? String(params.src) : 'website-library';
   return t.evaluate().setTitle('Đăng ký đọc thư viện Nông Sản 360')
     .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
+}
+
+/**
+ * First-party GitHub Pages native form submits as application/x-www-form-urlencoded.
+ * Cross-origin no-cors HTTP responses are opaque: browser MUST verify via receipt
+ * before granting library access. This handler never returns personal data.
+ */
+function doPost(e) {
+  const p = (e && e.parameter) || {};
+  const body = {
+    name: p.name, phone: p.phone, email: p.email, topic: p.topic,
+    website: p.website, privacyConsent: p.privacyConsent === 'true',
+    source: p.source, requestId: p.requestId,
+    city: p.city, region: p.region, country: p.country
+  };
+  const result = registerLead(body);
+  return ContentService.createTextOutput(result && result.ok ? 'ACCEPTED' : 'ERROR')
+    .setMimeType(ContentService.MimeType.TEXT);
+}
+
+function findActiveLeadByRequestId_(requestId) {
+  const id = PropertiesService.getScriptProperties().getProperty('SPREADSHEET_ID');
+  if (!id) return false;
+  const sheet = SpreadsheetApp.openById(id).getSheetByName(LIBRARY_CONFIG.sheetName);
+  if (!sheet || sheet.getLastRow() < 2) return false;
+  const hit = sheet.getRange(2, 9, sheet.getLastRow() - 1, 1)
+    .createTextFinder(requestId).matchEntireCell(true).findNext();
+  return !!hit && String(sheet.getRange(hit.getRow(), 10).getDisplayValue()) === 'ACTIVE';
 }
 
 function safeText(value, limit) {
