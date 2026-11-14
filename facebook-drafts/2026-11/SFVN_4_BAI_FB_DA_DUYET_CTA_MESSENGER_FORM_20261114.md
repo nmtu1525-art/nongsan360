@@ -34,8 +34,6 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb16
 
-Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
-
 Ba nhóm kiến thức trên là gợi ý của Nông Sản 360, không phải lịch giảng dạy chính thức.
 
 #NongSan360 #IBHangHoaPhaiSinh #TapHuanHangHoaPhaiSinh #SFVN
@@ -72,8 +70,6 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb17
 
-Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
-
 
 
 #TapHuanHangHoaPhaiSinh #SFVN #DoiTacIB #NongSan360
@@ -108,8 +104,6 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb18
 
-Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
-
 Đây là các câu hỏi do Nông Sản 360 gợi ý, không phải nội dung giảng dạy chính thức đã được SFVN xác nhận.
 
 #NongSan360 #HangHoaPhaiSinh #HopDongTuongLai #QuanTriRuiRo
@@ -141,8 +135,17 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb19
 
-Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
-
 
 
 #TapHuanHangHoaPhaiSinh #SFVN #DoiTacIB #NongSan360
+
+
+## ĐÃ DUYỆT BẢN CUỐI — 4 BÀI VIẾT VÀ 4 ẢNH NGÀY 14/11/2026
+- Người dùng đã duyệt cả 4 caption Social SEO và 4 poster sửa cuối.
+- Theo yêu cầu, đã bỏ câu lưu ý dài `Lưu ý: Biểu mẫu chỉ tiếp nhận...` khỏi caption ở cả 4 bài, giữ đầy đủ 2 đường liên hệ Messenger + form. Thông tin về bản chất biểu mẫu và sự đồng ý xử lý dữ liệu vẫn được trình bày trên trang form/chính sách dữ liệu.
+- Ảnh final là bản giữ nguyên đồ họa, bỏ thanh xanh `Nhắn tin Fanpage Nông Sản 360...` và chữ chú thích nhỏ ngay bên dưới, kích thước 1122×1402 px, đã lưu vào `Facebook/03_HINH_ANH_BAI_DANG`.
+- 16/11: https://drive.google.com/file/d/19GZZ7sFTGBh5wgJrzDRlKJjCqR976aLb/view — Metricool 428100194.
+- 17/11: https://drive.google.com/file/d/1yIpvHhPrne492V5QBEdOk7XvXMW2QJFX/view — Metricool 428100359.
+- 18/11: https://drive.google.com/file/d/1RmqlP9jQUtl2-7H41i8OAH56LWN_QYKF/view — Metricool 428100588.
+- 19/11: https://drive.google.com/file/d/1Z3dWmoFzUEmvA169yvYBP1zfR47h3kjG/view — Metricool 428100803.
+- Đã cập nhật media/caption trực tiếp vào đúng 4 UUID cũ, không tạo bài trùng hoặc đổi giờ đăng; giữ nguyên cả sáu bài kiến thức.
