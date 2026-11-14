@@ -136,3 +136,10 @@
 - Đã dùng Drive `list_folder` xác nhận folder nhận diện chỉ có **logo mới nhất + bìa mới nhất**, và folder lưu trữ có đúng ảnh bìa cũ.
 - Anh đang tạo Fanpage trên Facebook (đã gửi ảnh màn hình tạo trang, tiểu sử và ảnh đại diện); tên người dùng đang cân nhắc `nongsan360vn`, **chưa xác minh chốt thành công**. Anh cần tự tải bìa mới lên Facebook; chưa có quyền thao tác trực tiếp trên Page.
 - Bước tiếp theo: hoàn thiện Page, kết nối Fanpage vào Metricool đang kết nối ChatGPT (trước đây Metricool báo chưa có mạng xã hội), rồi kiểm thử lịch đăng kèm ảnh. Chưa bật công việc đăng Facebook tự động.
+
+## L. FANPAGE ĐÃ TẠO, CHỜ KẾT NỐI VỚI METRICOOL (14/11/2026)
+- Người dùng đã gửi ảnh xác nhận Fanpage `Nông Sản 360` hoạt động với avatar NS360, cover mới không logo và tiểu sử về tin tức/phân tích; đã tạo trang trên Facebook, nhưng chưa biết URL/username cuối cùng.
+- Khi người dùng yêu cầu tiếp tục với Metricool, gọi `Metricool.getBrandSettings` trực tiếp và nhận lỗi ứng dụng **"This brand doesn't have any social network connected yet"**, URL chính xác: https://app.metricool.com/brands/connections?blogId=8097037 . Kết nối ChatGPT↔Metricool có hiệu lực, nhưng **Metricool↔Facebook Page chưa có**, chưa thể lập lịch hoặc đăng.
+- Đã kiểm tra hướng dẫn chính thức Metricool: mục Connections > Facebook > Connect Page, đăng nhập bằng **Facebook cá nhân giữ quyền quản trị/toàn quyền** của Fanpage; cho phép các quyền cần thiết và chọn Page `Nông Sản 360`. Không chọn Facebook profile cá nhân vì Metricool chỉ hỗ trợ Page. Nếu Page không hiện, kiểm tra sai tài khoản FB hoặc quyền Page, đăng xuất FB ở trình duyệt rồi kết nối lại.
+- Tiếp theo: sau khi người dùng thao tác kết nối, **gọi lại getBrandSettings**, xác minh brandId, tên Page, timezone, rồi đọc lịch đang lên và chuẩn bị lịch bài chào mừng đã duyệt với ảnh từ Google Drive (ID bài `1siBa1EcWXcAQCmWNGdEcDPV2gmUTHZ2-`, ảnh `1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf`). KHÔNG đăng nếu Page chưa khớp hoặc chưa có đầy đủ quyền.
+- Mục tiêu dài hạn: tự nghiên cứu, biên tập, tạo ảnh, lưu Drive, lên lịch Metricool và xác minh bài đăng; chức năng tạo ảnh trong tác vụ tự động vẫn chưa được nghiệm thu.
