@@ -406,3 +406,7 @@
 - **Đã cập nhật 6 Google Docs bản nháp** bằng quyền sửa Docs, thay link ảnh cũ thành V2 và ghi rõ `ẢNH V2 ĐỒ HỌA BIÊN TẬP (ĐÃ LƯU DRIVE, CHƯA DUYỆT)`, không thay caption đã soát SEO, không đăng; kết quả mỗi file 4 thay thế thành công.
 - **Đã cập nhật 6 bản nháp GitHub** `facebook-drafts/2026-11/FB-202611[17,24,25,26,27,30]-01.md` bằng liên kết ảnh V2, giữ ảnh cũ nguyên trên Drive. Đồng bộ lịch `FACEBOOK_KE_HOACH_THANG_11_2026.md` GitHub + Google Doc `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8`.
 - **TRẠNG THÁI**: ĐÃ TẠO VÀ LƯU DRIVE, **CHỜ ANH DUYỆT ẢNH V2**. Không đưa post mới vào Metricool, không hứa Meta không gắn nhãn. Khi duyệt mới xếp lịch bài.
+
+### W.2. Chủ dự án chọn quay lại dùng 6 ảnh cũ (14/11/2026)
+- Người dùng nói rõ: `thoi dùng 6 ảnh cũ đi` — **chọn lại bộ 6 ảnh minh họa đầu tiên** (ID cũ trong mục V.2), không dùng bộ 6 đồ họa V2 cho bài đăng.
+- Đang đổi 6 tham chiếu ảnh trong Google Docs + GitHub draft và lịch tháng 11 về file ảnh cũ, giữ nguyên cả hai bộ trên Drive, không ghi đè/xóa. Các bài vẫn chưa được đặt lịch Metricool/đăng khi chưa kiểm duyệt nội dung.
