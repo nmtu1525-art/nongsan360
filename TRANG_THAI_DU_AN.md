@@ -75,3 +75,7 @@
 - Đã nhận 2 video MP4 tại `01_WEBSITE/03_VIDEO_HUONG_DAN_TAI_KHOAN_SFVN`: mở tài khoản Drive ID `1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev` và nạp tiền ID `1dzdSfBeYAU1oYMF74Otvb7LSzv1Yq-eW`.
 - Đã sửa `index.html`, nhúng 2 video vào 2 ô hướng dẫn tương ứng (Drive iframe preview + liên kết dự phòng), commit `01324d9f38fd45690f129d2eda3db751d1524e78`, readback xác minh mã HTML và giữ nguyên tính năng cũ.
 - Drive video **nạp tiền đã mở quyền anyone:reader**, video **mở tài khoản còn private**: cần chủ sở hữu cấp `Bất kỳ ai có liên kết → Người xem` cho video 01. Chưa kiểm thử phát video trên trang Pages công khai. Không xác nhận đã xem nội dung bên trong chỉ qua metadata.
+
+## 11. Điều hướng nhanh tài khoản SFVN (14/11/2026)
+- Đã biến 4 ô tổng quan trên trang `Tìm hiểu & mở tài khoản` thành liên kết tương tác đến bốn mục nội dung cùng trang: rủi ro, QR đăng ký, tải SFVN Trading, video. Sử dụng cơ chế anchor `@...` của router hiện hữu; CSS mobile và focus, scroll margin cho header.
+- Commit website `84d12cedf357c42288879ec18d26be783898082f`. Readback nguồn thành công; chưa xác minh site GitHub Pages bên ngoài.
