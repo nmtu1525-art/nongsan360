@@ -1,8 +1,8 @@
-/** Nông Sản 360 — Registration backend for free library, schema v4 (12 columns, approximate city only). */
+/** Nông Sản 360 — Registration backend for free library, schema v5 (14 columns, optional GPS ward + IP fallback). */
 const LIBRARY_CONFIG = Object.freeze({
   allowedParentOrigin: 'https://nmtu1525-art.github.io',
   sheetName: 'Leads',
-  privacyVersion: '2026-11-14',
+  privacyVersion: '2026-11-14-v5',
   maxNameLength: 80,
   maxEmailLength: 160,
   maxCityLength: 70
@@ -39,12 +39,15 @@ function registerLead(payload) {
   const topic = safeText(payload.topic, 25);
   const source = safeText(payload.source, 45);
   const requestId = safeText(payload.requestId, 80);
-  // City-level approximate IP geolocation only. No IP, GPS or precise coordinates are saved.
+  // Only coarse place names are saved; raw IP and GPS coordinates never reach the Sheet.
   const city = safeText(payload.city, LIBRARY_CONFIG.maxCityLength);
   const region = safeText(payload.region, LIBRARY_CONFIG.maxCityLength);
   const country = safeText(payload.country, LIBRARY_CONFIG.maxCityLength);
+  const methodRaw = safeText(payload.locationSource, 28);
+  const locationSource = ['GPS_CHO_PHEP','IP_UOC_TINH'].includes(methodRaw) ? methodRaw : 'KHONG_XAC_DINH';
+  const ward = locationSource === 'GPS_CHO_PHEP' ? safeText(payload.ward, 90) : '';
   const cityLabel = city ? [city, region !== city ? region : ''].filter(Boolean).join(', ') : '';
-  const mapQuery = city ? [city, region !== city ? region : '', country].filter(Boolean).join(', ') : '';
+  const mapQuery = city ? [ward, city, region !== city ? region : '', country].filter(Boolean).join(', ') : '';
   const mapsUrl = mapQuery ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(mapQuery) : '';
 
   if (name.length < 2 || name.length > LIBRARY_CONFIG.maxNameLength) throw new Error('Họ tên cần từ 2 đến 80 ký tự.');
@@ -58,9 +61,10 @@ function registerLead(payload) {
   const doc = SpreadsheetApp.openById(id);
   const sheet = doc.getSheetByName(LIBRARY_CONFIG.sheetName);
   if (!sheet) throw new Error('Không tìm thấy bảng dữ liệu đăng ký.');
-  const header = sheet.getRange(1, 1, 1, 12).getDisplayValues()[0];
+  const header = sheet.getRange(1, 1, 1, 14).getDisplayValues()[0];
   if (header[0] !== 'ThoiGianDangKy' || header[2] !== 'SoDienThoai' || header[8] !== 'RequestID' ||
-      header[9] !== 'TrangThai' || header[10] !== 'ThanhPhoUocTinh' || header[11] !== 'GoogleMapsUocTinh') {
+      header[9] !== 'TrangThai' || header[10] !== 'ThanhPhoUocTinh' || header[11] !== 'GoogleMapsUocTinh' ||
+      header[12] !== 'PhuongXaUocTinh' || header[13] !== 'NguonDinhVi') {
     throw new Error('Cấu trúc bảng dữ liệu không chính xác.');
   }
 
@@ -75,7 +79,8 @@ function registerLead(payload) {
       stamp, safeSheetText(name, 80), safeSheetText(phone, 20), safeSheetText(email, 160),
       safeSheetText(topic, 25), safeSheetText(source, 45),
       LIBRARY_CONFIG.privacyVersion, stamp, safeSheetText(requestId, 80), 'ACTIVE',
-      safeSheetText(cityLabel, 145), mapsUrl
+      safeSheetText(cityLabel, 145), mapsUrl,
+      safeSheetText(ward, 90), locationSource
     ]);
     SpreadsheetApp.flush();
     return { ok: true };
