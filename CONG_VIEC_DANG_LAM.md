@@ -58,3 +58,11 @@
 - Người dùng đã xác nhận **DUYỆT** 2 ảnh nhận diện tạo trong cuộc trò chuyện trước: logo hình vuông NS360 xanh/vàng và banner ngang phong cảnh nông nghiệp có khẩu hiệu `Hiểu thị trường, vững kiến thức`.
 - Yêu cầu đã được duyệt: tạo **thư mục con `Facebook`** trong thư mục gốc Nông Sản 360 trên Google Drive `1e7PwORibeFRjdLieHlc-2nshZyUHMK9a`, lưu 2 ảnh vào đó; các hình ảnh và bài viết Facebook sau này cũng lưu tại thư mục này. Không đụng dữ liệu website hoặc giáo trình.
 - **Trạng thái:** ĐANG THỰC HIỆN tạo thư mục và chuyển 2 ảnh đã duyệt lên Drive, xác minh đường dẫn/tệp sau thao tác; nếu kênh tải ảnh lên Drive bị giới hạn cần ghi rõ và duy trì tệp ảnh trong bản bàn giao khác.
+
+### Hoàn tất lưu hai ảnh lên Google Drive (14/11/2026)
+- **ĐÃ XONG:** Tạo thư mục `Facebook` trực tiếp bên trong Drive gốc `Nông Sản 360 - Website HTML`: https://drive.google.com/drive/folders/19aUO-V0SCy5NJ1JUPW0wmZGWbbIi6MeA
+- **ĐÃ XONG:** Đã upload và đọc lại metadata xác minh chính xác hai PNG đã duyệt (không phải ảnh mockup):
+  - Logo: `NS360_LOGO_FANPAGE_DA_DUYET_2026-11-14.png`, 1,601,564 bytes, https://drive.google.com/file/d/17f1PdxJMK5slfABFvDgeZFxkuRpvbB7h/view
+  - Bìa: `NS360_ANH_BIA_FANPAGE_DA_DUYET_2026-11-14.png`, 2,597,652 bytes, https://drive.google.com/file/d/1pGGtE8cpY0CHbaG1KBF19cpybhpyXlRm/view
+- **Quy ước từ giờ:** Mọi tài liệu Facebook của Nông Sản 360 (ảnh bài viết, avatar, banner, lịch bài, caption, bản thảo) sẽ được lưu trong thư mục Drive Facebook trên; không lưu lẫn vào các bản phát hành website, không xóa dữ liệu khác.
+- **Tiếp theo:** tạo Fanpage Facebook thật và thiết lập hình ảnh/thông tin bằng tài khoản anh (hiện không có quyền Facebook), sau đó chuẩn bị các bài đăng khai trương. Chưa đăng gì lên Facebook.
