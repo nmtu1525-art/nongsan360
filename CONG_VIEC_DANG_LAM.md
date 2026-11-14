@@ -121,3 +121,9 @@
 - **Quy trình đề xuất:** khi người dùng tạo Fanpage, kết nối công cụ xuất bản hỗ trợ Page và quyền upload ảnh, xác minh đăng thử 1 bài thật; thiết lập lịch riêng, quy tắc tránh trùng, giới hạn 1 bài/ngày khi có nguồn, checklist kiểm chứng/sửa lỗi và giám sát trạng thái; nếu lỗi không đăng hoặc cần quyền người dùng thì báo ngay.
 - Về mục tiêu affiliate: công khai nội dung có ích, không spam liên kết mở tài khoản trong bài tin; khi thực hiện CTA riêng phải minh bạch giới thiệu và rủi ro giao dịch. Không yêu cầu OpenAI API key.
 - **TRẠNG THÁI:** ĐÃ DỌN BẢN TRÙNG; chưa có Facebook Page/connector thật, chưa bật tự động đăng Facebook. Việc kế tiếp là liên kết Fanpage và kiểm thử khả năng đăng từ kết nối, sau đó thống nhất lịch cụ thể để thiết lập automation mới.
+
+## J. METRICOOL ĐÃ KẾT NỐI CHATGPT, CHƯA KẾT NỐI FACEBOOK (14/11/2026)
+- Người dùng thông báo `Kết nối metricool rồi`; đã gọi trực tiếp công cụ `Metricool.getBrandSettings` và kết quả trả về: **tài khoản Metricool chưa kết nối bất kỳ mạng xã hội nào**; công cụ hướng dẫn trang kết nối `https://app.metricool.com/brands/connections?blogId=8097037`.
+- **Đã xác minh kết nối ChatGPT ↔ Metricool có phản hồi**, nhưng **chưa có Facebook Page** và **không thể lập lịch/đăng Facebook** cho tới khi anh tạo Fanpage thật và kết nối trang đó vào Metricool bằng tài khoản Facebook có quyền quản trị.
+- Giữ nguyên 1 bài chào mừng + ảnh đã duyệt trên Drive, không đăng, không tạo bài trùng; tác vụ tự đăng website 07:00 là riêng và không dùng thay cho Facebook.
+- **Bước tiếp theo:** anh tạo `Nông Sản 360` tại https://www.facebook.com/pages/create rồi kết nối Facebook Page tại địa chỉ Metricool nêu trên; khi hoàn thành, gọi lại `getBrandSettings`, lấy brandId/timezone và thử khởi tạo bài đăng có ảnh từ tài liệu Drive đã duyệt. Chưa hứa chạy toàn bộ chuỗi tự sinh ảnh qua automation cho tới khi được kiểm thử.
