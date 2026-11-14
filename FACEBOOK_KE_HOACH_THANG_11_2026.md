@@ -2,7 +2,7 @@
 
 **Cập nhật:** ngày 14/11/2026 (đổi lịch sau 20:26 ICT). Fanpage: **Nông Sản 360**, Metricool brand **8097037**, múi giờ **Asia/Saigon (UTC+7)**.
 
-**Kết quả xác minh mới:** Bài chào mừng 14/11 đã **PUBLISHED**; **6 bài evergreen đã sắp lại lịch Thứ Hai/Tư/Sáu trong hai tuần 16–27/11**, autoPublish=true, mỗi bài giữ 1 ảnh bản đầu, trạng thái **PENDING**. Metricool readback 7 bài (1 published + 6 pending) xác nhận không tạo trùng. **5 bài chiến dịch hội thảo SFVN chỉ là ô dự phòng, chưa có poster/chương trình chính thức, KHÔNG ĐƯỢC ĐĂNG khi chưa xác minh dữ kiện**. Tổng kế hoạch 12 bài = 1 đã xuất bản + 6 chờ xuất bản + 5 chưa thể lên lịch.
+**Kết quả xác minh mới:** Bài chào mừng 14/11 đã **PUBLISHED**; **6 bài evergreen đã sắp lại lịch Thứ Hai/Tư/Sáu trong hai tuần 16–27/11**, autoPublish=true, mỗi bài giữ 1 ảnh bản đầu, trạng thái **PENDING**. Metricool readback 7 bài (1 published + 6 pending) xác nhận không tạo trùng. **Thông tin SFVN 20/11 đã được chủ dự án cung cấp** và có bản thảo chờ duyệt; chưa có poster/đường ghi danh cụ thể nên **chưa đăng/lên lịch bài SFVN**. Sáu bài evergreen trên Metricool vẫn giữ nguyên (1 bài chào mừng PUBLISHED + 6 bài PENDING). Các ô SFVN dự phòng trước đây không tự động trở thành bài đã đặt lịch.
 
 ## Các bài đã xác minh trên Metricool
 
@@ -18,10 +18,14 @@
 
 **Giờ đăng mới:** 3 bài mỗi tuần Thứ Hai 10:00 / Thứ Tư 12:00 / Thứ Sáu 10:00 trong hai tuần 16–27/11. Giờ tham khảo dựa trên Metricool; Fanpage mới, chưa có bằng chứng bảo đảm hiệu quả. Bài đầu là thư viện để dẫn người đọc từ Facebook sang website. **Mã FB-YYYYMMDD-01 là mã tài sản gốc, không đổi theo ngày đăng mới**.
 
-## Hội thảo SFVN — CHỜ XÁC NHẬN
+## Tập huấn SFVN — ĐÃ NHẬN THÔNG TIN NGÀY 20/11, CHỜ DUYỆT TRUYỀN THÔNG
 
-- Dự kiến 5 ô: 16/11 bài thông báo, 18/11 nội dung, 19/11 đối tượng tham dự, 20/11 nhắc lịch, 23/11 tổng kết.
-- Chủ dự án chỉ nhớ hội thảo có thể diễn ra **thứ Bảy 21/11/2026**; **chưa kiểm chứng ngày/giờ/địa điểm/diễn giả/link đăng ký**. Không được tự đăng bài mời/tổng kết thiếu bằng chứng. Khi có poster chính thức, cập nhật lại thứ tự và số bài với anh.
+- **Dữ liệu người dùng cung cấp 14/11/2026:** Chương trình Tập huấn Hàng hóa Phái sinh dành cho **IB và đối tác tài chính, đầu tư**, **09:00–12:00 thứ Sáu 20/11/2026**, **Học viện SFVN – tầng 2, Tòa nhà Mekong, 92A–94 Bạch Đằng, phường Tân Sơn Hòa, TP.HCM**. Ngày này **thay thế hoàn toàn dự đoán trước đây về thứ Bảy 21/11**.
+- **Quyền lợi theo nội dung người dùng:** nhận giấy chứng nhận khi đáp ứng điều kiện chương trình; cơ hội hợp tác với SFVN; chính sách hỗ trợ marketing/chi phí văn phòng **lên đến 2.000 USD/tháng chỉ dành cho đối tác đủ điều kiện**; giao lưu kết nối; tìm hiểu hàng hóa phái sinh trong khuôn khổ MXV. Không tuyên bố cấp chứng nhận hay hỗ trợ tiền mặc nhiên.
+- **Nguồn đối chiếu độc lập:** địa điểm học viện tại https://sfvn-academy.com.vn/contact và https://sfvn-partner.com/ . Chưa tìm thấy công bố công khai riêng ngày 20/11, poster, link ghi danh hoặc điều kiện chi tiết khoản 2.000 USD/tháng. Thông tin sự kiện/ưu đãi hiện do chủ dự án cung cấp, không gắn nhãn đã được xác nhận từ website SFVN.
+- **Bản thảo chờ duyệt:** [SFVN 20/11 — nội dung bài Facebook](facebook-drafts/2026-11/SFVN_TAP_HUAN_IB_2026-11-20_CHO_DUYET.md).
+- **Gợi ý riêng nếu xác nhận thông tin ghi danh:** 17/11 10:00 một bài thông báo, 19/11 10:00 một bài nhắc lịch; tổng kết sau sự kiện chỉ khi có ảnh thật/đồng ý sử dụng. Không cần năm bài dồn dập. **Chưa tạo post SFVN trên Metricool**, chưa thay ảnh/caption sáu bài kiến thức.
+- **Xung đột cần lưu ý:** bài kiến thức cà phê đang đặt **20/11 10:00**, cùng khung 09:00–12:00 tập huấn. Chỉ điều chỉnh sau khi chủ dự án quyết định ưu tiên truyền thông sự kiện; hiện giữ nguyên lịch đã duyệt.
 
 ## 6 ảnh được chọn sử dụng
 - **FB-20261117-01**: [ảnh gốc đã chọn](https://drive.google.com/file/d/1FDKGapP1o5psdDKKdCRqDjMTyvY09LOc/view), nguồn nội dung PS-01 / PS-02, Metricool ID `427999763`
