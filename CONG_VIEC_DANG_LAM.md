@@ -574,3 +574,12 @@
 - Readback GitHub xác minh `gateLive=true`, `libraryIndexProtected=true`, route giáo trình còn bảo vệ, menu trỏ đúng library index, script mới chỉ xuất hiện đúng 1 lần, và router gọi `shouldBlock(route)`.
 - **Hướng dẫn thử**: ở tab ẩn danh mới, mở `https://nmtu1525-art.github.io/nongsan360/`, bấm **Thư viện kiến thức** → mong đợi thấy form V3. Nếu đã đăng ký trong cùng trình duyệt, dấu `localStorage` khiến form không hiện nữa đúng thiết kế. Cần xác nhận GitHub Pages live và submit → hiển thị thư viện trên thiết bị thật; công cụ web bên này không truy cập được URL live.
 - Đã kiểm `Leads!I1:J80` thấy 1 v2 ACTIVE và 1 v3 ACTIVE trước khi bật; không chỉnh dữ liệu, không yêu cầu thêm thông tin cá nhân trong chat. Không sửa tài liệu/tin tức/Metricool.
+
+
+### Y.16. Chẩn đoán hiển thị form khác nhau giữa ẩn danh và điện thoại (14/11/2026)
+- Người dùng báo: tab ẩn danh lần đầu hiện form, lần hai không hiện; thử điện thoại cũng không thấy, hỏi có phải do IP. Đã đọc lại GitHub `library-gate.js` và `index.html`: `LIVE_ENABLED=true`, protectedRoute gồm `/thu-vien/index.html` + các trang `/giao-trinh/...`, tham chiếu JS `library-gate.js?v=20261114-live-v3-library-2` đúng.
+- **Không có kiểm tra IP** trong logic gate. Chỉ kiểm tra marker `ns360-library-reader-v1` trên `localStorage` cùng origin và `accessThisSession` trong bộ nhớ tab. Sau gửi đăng ký thành công, marker `granted-2026-11-14` có thể được lưu. Các tab ẩn danh vẫn có thể dùng chung storage cho tới khi đóng *tất cả* phiên/tab ẩn danh; điện thoại khác không dùng chung localStorage với máy tính.
+- `#/thu-vien/kiem-tra-dang-ky` là route chẩn đoán cưỡng bức form kể cả đã có marker; mở thẳng trang chủ không tự hiển thị form, phải vào menu `Thư viện kiến thức`.
+- **Chưa xác định nguyên nhân điện thoại không hiện**: có thể thiếu thao tác vào Thư viện, cache phiên JS cũ, trình duyệt đã lưu marker riêng, hoặc JS/script trang live khác với mã GitHub. Công cụ web không mở được URL Pages và URL JS live, nên chưa xác minh triển khai qua trình duyệt thật. Không khẳng định do IP hay sửa mã khi chưa có bằng chứng.
+- Bước kiểm tra người dùng: đóng mọi tab ẩn danh, mở một phiên mới → trang chủ → Thư viện; trên điện thoại mở riêng `https://nmtu1525-art.github.io/nongsan360/#/thu-vien/kiem-tra-dang-ky` xem form có hiện. Đối chiếu hai trường hợp trước khi sửa gate; không yêu cầu nhập PII vào chat.
+- Không thay đổi `library-gate.js`, `index.html`, form Apps Script, Leads, PDF, tin, Facebook/Metricool.
