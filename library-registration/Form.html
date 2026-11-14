@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- NS360 Form v2: explicit registration-button consent; no preselected marketing opt-in. -->
+<!-- NS360 Form v3: minimal compact privacy link; explicit registration-button action; no marketing opt-in. -->
 <html lang="vi">
 <head>
   <base target="_top" />
@@ -10,7 +10,7 @@
     .field{display:block;margin:0 0 13px}.field b{font-size:13px;display:block;margin-bottom:5px}
     input,select{width:100%;border:1px solid #d9d7cf;border-radius:9px;padding:11px 12px;font:inherit;color:#28334b;background:#fff}
     input:focus-visible,select:focus-visible,button:focus-visible{outline:3px solid #558b67;outline-offset:2px}
-    .consent-notice{border:1px solid #dfe8de;background:#f6faf6;padding:11px 12px;border-radius:9px;margin:14px 0;font-size:12px;line-height:1.6;color:#465859}.consent-notice a{font-weight:700;text-decoration:underline}.muted{color:#596572;font-size:12px}
+    .muted{color:#596572;font-size:12px}
     a{color:#1d6044}button{display:block;width:100%;font:700 15px Arial,sans-serif;border:0;border-radius:10px;background:#246943;color:#fff;padding:14px;cursor:pointer}
     button:disabled{opacity:.55;cursor:wait}#notice{min-height:32px;font-size:13px;margin:10px 0;color:#a03d23}
     .honeypot{display:none!important}p{margin:7px 0 13px}small{display:block;margin-top:10px;color:#617070;font-size:11px}
@@ -28,10 +28,9 @@
   <label class="field"><b>Chủ đề anh/chị quan tâm</b>
     <select id="topic" name="topic"><option value="tong-hop">Tổng quan thư viện</option><option value="ca-phe">Cà phê</option><option value="ngo">Ngô</option><option value="lua-mi">Lúa mì</option><option value="phai-sinh">Hàng hóa phái sinh</option></select></label>
   <label class="honeypot">Website <input name="website" type="text" autocomplete="off" tabindex="-1" /></label>
-  <p class="consent-notice">Khi nhấn <b>“Đồng ý và mở thư viện miễn phí”</b>, anh/chị xác nhận đã đọc <a href="https://nmtu1525-art.github.io/nongsan360/chinh-sach-du-lieu.html" target="_blank" rel="noopener noreferrer">Chính sách dữ liệu cá nhân</a> và đồng ý để <b>Nông Sản 360</b> xử lý họ tên, số điện thoại, email (nếu có) và chủ đề quan tâm nhằm ghi nhận đăng ký, cấp quyền đọc thư viện. Việc đăng ký <b>không</b> bao gồm đồng ý nhận bản tin, quảng cáo hoặc thông báo hội thảo.</p>
   <button id="submit" type="submit">Đồng ý và mở thư viện miễn phí</button>
   <div id="notice" role="status" aria-live="polite"></div>
-  <small>Đăng ký một lần trên trình duyệt này. Không cần mở tài khoản giao dịch. Không cung cấp mật khẩu hoặc OTP.</small>
+  <small>Thông tin chỉ dùng để đăng ký đọc thư viện. <a href="https://nmtu1525-art.github.io/nongsan360/chinh-sach-du-lieu.html" target="_blank" rel="noopener noreferrer">Chính sách dữ liệu cá nhân</a>. Không cần mở tài khoản giao dịch hoặc cung cấp OTP.</small>
 </form>
 <script>
 (function(){
@@ -42,7 +41,7 @@ const origin='https://nmtu1525-art.github.io';
 const form=document.getElementById('leadForm');
 const button=document.getElementById('submit');
 const notice=document.getElementById('notice');
-const requestId='v2-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
+const requestId='v3-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
 form.addEventListener('submit',function(event){
   event.preventDefault();
   if(!form.reportValidity())return;
@@ -50,8 +49,8 @@ form.addEventListener('submit',function(event){
   notice.style.color='#526374';
   notice.textContent='Đang ghi nhận đăng ký an toàn…';
   const payload={name:form.elements.name.value,phone:form.elements.phone.value,email:form.elements.email.value,
-    topic:form.elements.topic.value,website:form.elements.website.value,privacyConsent:true,
-    newsConsent:false,source:source,requestId:requestId};
+    topic:form.elements.topic.value,website:form.elements.website.value,
+    privacyConsent:true,source:source,requestId:requestId};
   google.script.run.withSuccessHandler(function(result){
     if(result&&result.ok){
       notice.style.color='#236c42';
