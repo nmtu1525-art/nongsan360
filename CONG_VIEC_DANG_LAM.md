@@ -257,3 +257,8 @@
 - **Metadata Google Drive mới nhất**: `SFVN_02_HUONG_DAN_NAP_TIEN.mp4` đã `shared=true` và có quyền `anyone:reader` (có thể xem bằng liên kết); nhưng `SFVN_01_HUONG_DAN_MO_TAI_KHOAN.mp4` vẫn `shared=false`, chỉ chủ sở hữu xem. Cần người dùng chuyển **riêng video mở tài khoản** sang `Bất kỳ ai có đường liên kết → Người xem`; không chia sẻ cả folder.
 - Chỉ mới xác minh định dạng và metadata, **chưa xem được luồng video** để đánh giá nội dung, số tài khoản/OTP hay chất lượng. Anh phải đảm bảo video công khai không lộ dữ liệu thật và có quyền sử dụng; không tuyên bố 2 video đã phát được trên GitHub Pages cho tới khi đọc được trạng thái quyền và kiểm tra phía khách.
 - Kiểm tra lại sau khi người dùng cấp quyền video 01, không yêu cầu upload lại.
+
+### P.2. Kiểm tra lại sau khi người dùng báo đã cấp quyền (14/11/2026)
+- Sau khi anh nhắn `đã cấp`, gọi `Google_Drive.get_file_metadata` **2 lần** cho video mở tài khoản `1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev`; cả hai kết quả vẫn **shared=false, chỉ có permission type=user role=owner**.
+- Video nạp tiền `1dzdSfBeYAU1oYMF74Otvb7LSzv1Yq-eW` **shared=true, anyone:reader**.
+- Mã website `index.html` vẫn chứa chính xác 2 iframe và link dự phòng. **Không cần tải lại video hoặc sửa mã HTML; chỉ còn quyền công khai video mở tài khoản**. Hướng dẫn người dùng mở đúng file ID `1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev`, vào Chia sẻ → Quản lý quyền truy cập → Bất kỳ ai có liên kết → Người xem → Lưu, và xác nhận lại. Không khẳng định đã phát được ở phía khách khi video còn riêng tư.
