@@ -796,3 +796,18 @@
 - Cần cập nhật **5 bài phải đổi giờ/ngày**, bài cuối đã đúng lịch nên giữ nguyên (tổng vẫn 6); `updateScheduledPost` làm thay ID, uuid giữ; thay đúng ngày/giờ và giữ toàn bộ nội dung, ảnh, mediaAltText, Facebook POST, autoPublish, firstCommentText, metadata quan trọng. Readback `getScheduledPosts` sau mỗi chặng và cuối.
 - Sau khi xác nhận Metricool, đồng bộ lịch GitHub/Drive nếu có quyền và ghi checkpoint cuối. Mã bài `FB-YYYYMMDD-01` là **mã tài sản ban đầu**, ngày trong tên có thể khác lịch đăng mới; tuyệt đối không tạo thêm bài vì đổi tên mã.
 - Giữ nguyên 21 PDF, `tin-tuc.json`, bản ghi khách, website, bài chào mừng, 5 ô SFVN chưa xác minh, automation khác. Không tuyên bố bài PUBLISHED trước giờ hẹn.
+
+
+### Y.35. ĐÃ HOÀN TẤT đổi lịch 6 bài Metricool và đọc lại (14/11/2026, khoảng 20:27 ICT)
+- Chủ dự án yêu cầu sắp xếp lại lịch và giờ đăng sáu bài. Đã đọc trực tiếp Metricool brand `8097037` (Asia/Saigon), 6 pending và khung giờ Facebook đề xuất, quyết định **3 bài/tuần Thứ Hai 10:00, Thứ Tư 12:00, Thứ Sáu 10:00** trong hai tuần 16–27/11.
+- ĐÃ THỰC HIỆN `updateScheduledPost` tại Metricool với toàn bộ text/ảnh/alt text/autoPublish/Facebook POST giữ nguyên, chỉ thay ngày/giờ cho 5 bài và để nguyên bài ký quỹ 27/11 10:00:
+  - **16/11 10:00:** Giới thiệu thư viện 21 giáo trình, UUID `2892558411312677904`, ID mới `427999607`, từ 30/11.
+  - **18/11 12:00:** Hàng thực / hợp đồng tương lai, UUID `3337223766451964816`, ID mới `427999763`, từ 17/11.
+  - **20/11 10:00:** Cà phê & cung cầu, UUID `7078376323180218337`, ID mới `427999835`, từ 24/11.
+  - **23/11 10:00:** Ngô ngoài thời tiết, UUID `-4519204595844625623`, ID mới `427999900`, từ 25/11.
+  - **25/11 12:00:** Lúa mì, UUID `-7607156822577820498`, ID mới `427999964`, từ 26/11.
+  - **27/11 10:00:** Ký quỹ / rủi ro, UUID `6054798094436680609`, ID giữ nguyên `427793151`.
+- **ĐÃ READBACK Metricool** lịch 14/11–02/12: 1 bài chào mừng `PUBLISHED` (14/11 11:15) + đúng 6 bài `PENDING`, 1 media mỗi bài, `autoPublish=true`. Không tạo bài trùng, chưa có bài nào trong 6 mới được đăng trước lịch.
+- Đã đồng bộ GitHub `FACEBOOK_KE_HOACH_THANG_11_2026.md` (commit `f38464b59f7e56d99c9bc6ca9d03b93db635f0d7`). Mã `FB-YYYYMMDD-01` của ảnh và bài gốc vẫn giữ như ban đầu, dù ngày lịch đăng khác; không đổi tên file/ID tài sản hoặc nội dung Google Docs.
+- Còn tồn tại 5 slot SFVN chưa có poster chính thức, **không** tự đăng. Trước lượt đăng 16/11 10:00, nên kiểm tra lại website vào Thư viện và link mở tài khoản; khi đăng xong xác minh trạng thái PUBLISHED/publicURL và tương tác. Automation Facebook không được tự tạo trùng 6 UUID đã có.
+- Bảo toàn website, 21 giáo trình PDF, `tin-tuc.json`, Google Sheet khách, các bài Fanpage cũ và các nguồn Drive.
