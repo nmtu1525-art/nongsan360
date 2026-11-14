@@ -15,7 +15,6 @@
 ## An toàn dữ liệu
 Không ghi sửa/xóa dữ liệu Sheet, không đưa RequestID khách thật lên repo/log công khai, không nới gate để báo thành công giả, không thay 21 PDF/tin tức/Facebook. Tính năng vẫn chỉ lấy thành phố IP, không GPS/Maps.
 
-
 ### Receipt recovery fix after 19:55 screenshot (2026-11-14)
 - Live Sheet read showed 2 V7 ACTIVE rows while user reported confirmation error; no contact details or real request tokens copied to repository. POST can save; receipt transport needed hardening.
 - Native receipt now uses CORS fetch credentials:omit and strict JSON parsing of the existing callback wrapper, with anonymous script fallback. Per-fetch deadline 12s, bounded verification window 40s, no access from opaque POST or timeout.
@@ -25,3 +24,11 @@ Không ghi sửa/xóa dữ liệu Sheet, không đưa RequestID khách thật l�
 - Real Chromium desktop/mobile-emulation read-only probes support anonymous receipt transport; anonymous live GET still returns proper boolean. No diagnostic POST or fake lead created.
 - Only library-native-form.js and index asset versions changed in production. Code.gs, gate flags, 21 PDFs, news JSON and customer Sheet untouched. No Apps Script redeploy needed for this frontend fix.
 - Evidence: RECEIPT_BROWSER_RESULT_20261114.json, RECEIPT_FIX_TESTS_20261114.json, RECEIPT_FIX_RELEASE_20261114.json. Actual owner-phone submission remains unverified; clean browser tests do not prove the precise cause on that device.
+
+## Đã kiểm chứng trước khi phát hành
+- Workflow sửa bản frontend `43597768914` hoàn thành thành công. Đọc lại source native có SHA `4f42068bfac59604d9410694e74895c304f1220e`, đúng fetch ẩn danh, parser JSON nghiêm ngặt và giữ mã xác nhận pending.
+- Tất cả 12 bài test mô phỏng đều PASS. Phép GET thật cuối trả HTTP 200, text/javascript, `Access-Control-Allow-Origin: *`, callback boolean đúng; không POST bất kỳ lead thử nào.
+- Phiên bản asset là `20261114-receipt-fix-2`. Commit bàn giao này dùng để đưa bản source đã kiểm thử vào lượt triển khai GitHub Pages thông thường.
+- Chủ dự án **không cần thay Code.gs hoặc Deploy Apps Script lại** cho bản sửa này. Đây là sửa frontend, không sửa dữ liệu hoặc quyền Google Sheet.
+- Trường hợp đang mở tab mã cũ cần tải trang bản mới. Bản cũ chưa lưu pending token nên không thể tự phục hồi các lượt cũ chỉ từ trình duyệt; sau bản sửa, các lượt mới sẽ giữ mã để kiểm tra lại mà không tự tạo thêm POST.
+- Chưa khẳng định hết lỗi trên chính thiết bị của chủ dự án. Nếu còn lỗi, giao diện mới hiển thị mã RCP cụ thể; không tiếp tục gộp mọi lỗi thành thông báo chung hoặc yêu cầu đổi Apps Script mò.
