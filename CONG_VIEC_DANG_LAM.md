@@ -98,3 +98,9 @@
 - Bắt đầu chặng: biên soạn bài đầu tiên `FB-20261114-01`, thiết kế ảnh minh họa, lưu bản thảo vào Drive `Facebook/02_BAI_VIET` và ảnh vào `Facebook/03_HINH_ANH_BAI_DANG`.
 - Nguyên tắc: xây dựng thương hiệu tin tức & giáo dục thị trường; không dùng CTA mở tài khoản/affiliate trong nội dung khai trương; không hứa lợi nhuận hay tạo số liệu thị trường chưa kiểm chứng. Chưa tạo/đăng Facebook thật.
 - Thư mục đích: bài viết `1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ`, hình ảnh `1RadZa_wCwpC7xPVxZFORuXG9BZeq1opx`. Cần xác minh file thực sự có trên Drive rồi mới đánh dấu hoàn tất.
+
+### Kết quả chặng FB-20261114-01 (14/11/2026)
+- **ĐÃ HOÀN THÀNH SOẠN & LƯU BẢN CHỜ DUYỆT, CHƯA ĐĂNG FACEBOOK.** Bài khai trương `FB-20261114-01_BAI_CHAO_MUNG_CHO_DUYET.md`, Google Drive file ID `1jhQueir0uAHO1Ib5LjRrnJuI9wXkHIHP`, vị trí `Facebook/02_BAI_VIET`, URL: https://drive.google.com/file/d/1jhQueir0uAHO1Ib5LjRrnJuI9wXkHIHP/view
+- Ảnh kèm `FB-20261114-01_ANH_CHAO_MUNG_CHO_DUYET.png`, Drive file ID `1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf`, vị trí `Facebook/03_HINH_ANH_BAI_DANG`, URL: https://drive.google.com/file/d/1GUXWZphbAU6VVNQG6MXqklrpHAh0UUdf/view
+- Đã xác minh hai file bằng `list_folder` sau upload (bài 2406 bytes; ảnh 2460210 bytes). Bản thảo theo hướng thương hiệu tin tức/giáo dục, không có link affiliate hoặc CTA mở tài khoản; sử dụng URL GitHub Pages thực tế.
+- **TRẠNG THÁI:** CHỜ ANH DUYỆT bài và ảnh; không tự đăng. Tiếp theo sau duyệt: tạo Fanpage Facebook thật hoặc đăng bài chào mừng khi người dùng cấp quyền phù hợp; tiếp tục chuẩn bị 3 nội dung kiến thức đầu tiên. Giữ nguyên 21 PDF và website.
