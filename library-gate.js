@@ -98,7 +98,7 @@
   function renderGate(host,route){
     if(activeMessageHandler){window.removeEventListener('message',activeMessageHandler);activeMessageHandler=null;}
     const nonce=randomNonce();
-    let locationRequestHandled=false;
+    let locationLookupPromise=null;
     const url=new URL(WEB_APP_URL);
     url.searchParams.set('nonce',nonce);
     url.searchParams.set('src',sourceName());
@@ -111,11 +111,11 @@
       if(!isTrustedGoogleOrigin(event.origin))return;
       if(!event.data||event.data.version!==1||event.data.nonce!==nonce)return;
       if(event.data.type==='NS360_LIBRARY_LOCATION_REQUEST'){
-        if(locationRequestHandled||!event.source)return;
-        locationRequestHandled=true;
+        if(!event.source)return;
+        if(!locationLookupPromise)locationLookupPromise=lookupGpsArea();
         const replyTarget=event.source;
         const replyOrigin=event.origin;
-        lookupGpsArea().then(area=>{
+        locationLookupPromise.then(area=>{
           // Never send GPS coordinates, IP or any identifying data back to the registration iframe.
           try{replyTarget.postMessage({type:'NS360_LIBRARY_LOCATION_RESULT',nonce,version:1,area:area||null},replyOrigin);}
           catch(_){/* Form falls back to city-level IP lookup. */}
