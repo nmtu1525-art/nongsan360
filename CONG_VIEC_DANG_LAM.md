@@ -353,3 +353,18 @@
 - **ĐANG LÀM**: đọc PDF gốc từ các thư viện Drive, viết trước 6 caption 150–250 từ, lưu Drive vào Facebook/02_BAI_VIET (các mã tương ứng), GitHub vào thư mục bản thảo. Mỗi bài là **NHÁP CHỜ DUYỆT, CHƯA CÓ ẢNH/CHƯA LÊN METRICOOL**; các bài SFVN chờ poster.
 - Cần sửa lịch tự động cũ `20 bài Fanpage Nông Sản 360` đang 16/11–11/12, `COUNT=20` thành lịch **11 buổi T2–T6 đến 30/11 (`COUNT=11`)**, để không ghi đè kế hoạch tháng 12; automation đọc kế hoạch tháng 11 mới, ưu tiên 6 bài đã viết; không đăng SFVN thiếu thông tin, không tự tạo dự báo giá/tin mới. Không ảnh/nguồn/kiểm duyệt = không đăng.
 - Tuyệt đối không xóa/ghi đè lịch 20 bài cũ: chỉ ghi **đã thay thế cho hoạt động tháng 11** và bảo lưu làm thư viện kế hoạch tham khảo cho tháng 12 sau này.
+
+### V.1. ĐÃ SOẠN XONG 6 BÀI, LƯU DRIVE/GITHUB VÀ ĐỔI LỊCH AUTOMATION (14/11/2026)
+- **6 caption Facebook hoàn chỉnh (mỗi bài ~217–230 từ, 3–5 hashtag; là bài nền tảng không phải tin giá hiện hành), đã soát dựa trên giáo trình PDF gốc từ Drive**: PS-01, PS-02, PS-03, CF-02, NG-02, LM-02 và kiểm chứng 21 PDF tồn tại (5 CF + 5 NG + 5 LM + 6 PS).
+- Đã lưu **6 bản gốc Markdown** trên GitHub ở `facebook-drafts/2026-11/FB-20261117-01.md`, `FB-20261124-01.md`, `FB-20261125-01.md`, `FB-20261126-01.md`, `FB-20261127-01.md`, `FB-20261130-01.md`. Không ghi đè file cũ. Từng file có caption, ngày dự kiến, nguồn và đề xuất ảnh.
+- Đã tạo và điền nội dung, xác minh readback **6 Google Docs** trong Drive `Facebook/02_BAI_VIET` (folder `1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ`):
+  - FB-20261117-01 — https://docs.google.com/document/d/1BoSe95szvIxQCkoaN-Ee_A_2mnOz_MmbgAauoFlT_TU/edit — PS-01/PS-02.
+  - FB-20261124-01 — https://docs.google.com/document/d/1GOPJzk_2A2RCWPhT_kWWPF73ki7jvccAezA3p5biX0w/edit — CF-02.
+  - FB-20261125-01 — https://docs.google.com/document/d/1NrmH4HZne6Tckjr9nKrNeVOppR8xHEv_2LgPSFwY5ZA/edit — NG-02.
+  - FB-20261126-01 — https://docs.google.com/document/d/1Umhielo4ZjKVtOUUsqTx0FnOoL1cil645njXJw8zezc/edit — LM-02.
+  - FB-20261127-01 — https://docs.google.com/document/d/1O83rXG0e3KFAxYNhzw_7HVLhBFGwPJU86cVnAQ3Dj00/edit — PS-03.
+  - FB-20261130-01 — https://docs.google.com/document/d/1_HQTN7rJKXJrOZ19dh7rGxl28Q-r4bnG3l0rpg_a6jA/edit — 21 PDF.
+- **Lịch ưu tiên tháng 11** được ghi GitHub `FACEBOOK_KE_HOACH_THANG_11_2026.md`, commit `6d95cf0eebdd6eb053fafbdf65283a07cd8d4854`, đồng thời Drive Google Doc https://docs.google.com/document/d/1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8/edit trong folder Facebook/05_KE_HOACH_LICH_DANG. Lịch cũ 20 bài `FACEBOOK_KE_HOACH_20_BAI_20261116_20261211.md` vẫn nguyên nhưng được ghi là **thay thế cho các ngày thuộc tháng 11**.
+- Automation ID `Automation_7ffdf2af72088191acb4f4dcb23b9e00` đã được **cập nhật thành `Fanpage NS360 — lịch 11 bài tháng 11`**, chạy 08:00 T2–T6 từ 16/11, **COUNT=11**, kết thúc 30/11. Prompt đọc lịch THÁNG 11 mới và draft đã viết, **chỉ đăng khi bài/ảnh đã được người dùng duyệt và thông tin SFVN được xác nhận**, nếu không báo trạng thái NHÁP; không tự động đăng bài chưa duyệt. Kiểm chứng `success=true`, `is_enabled=true`, `next_run=2026-11-16T08:00:00+07:00`.
+- **Hiện chưa có hình cho 6 bài và 5 mục SFVN chưa có poster chính thức. Không có 11 bài mới nào được lịch Metricool xác nhận**. SFVN 21/11 thứ Bảy chỉ là mốc giả định. Cần user duyệt 6 caption, có ảnh và poster/chi tiết hội thảo để tiếp tục.
+- Bài Facebook chào mừng 14/11 status PUBLISHED giữ nguyên. Lịch tin website 07:00, 21 PDF, index.html và tin-tuc.json không động đến.
