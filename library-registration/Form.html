@@ -1,5 +1,5 @@
 <!doctype html>
-<!-- NS360 Form v4.1: GeoJS + ipwho.is fallback for approximate city; no GPS or stored IP. -->
+<!-- NS360 Form v5: optional first-party GPS with approximate ward, IP fallback, never stores coordinates. -->
 <html lang="vi">
 <head>
   <base target="_top" />
@@ -41,7 +41,7 @@ const origin='https://nmtu1525-art.github.io';
 const form=document.getElementById('leadForm');
 const button=document.getElementById('submit');
 const notice=document.getElementById('notice');
-const requestId='v4-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
+const requestId='v5-'+Date.now().toString(36)+'-'+Math.random().toString(36).slice(2,15);
 // Geolocate only after an intentional submit. No GPS, no stored IP and no PII sent.
 async function lookupApproximateCity(url, provider){
   const controller=new AbortController();
@@ -68,17 +68,51 @@ async function estimateCity(){
     || (await lookupApproximateCity('https://ipwho.is/?fields=success,city,region,country','ipwho'))
     || {};
 }
+// The site performs optional GPS and reverse-geocoding on its own first-party page.
+ // If no permission or location is unavailable, this form uses city-level IP lookup.
+function requestOptionalGpsArea(){
+  return new Promise(resolve=>{
+    if(!nonce||window.top===window){resolve(null);return;}
+    let complete=false;
+    let deadline;
+    const finish=value=>{
+      if(complete)return;
+      complete=true;
+      clearTimeout(deadline);
+      window.removeEventListener('message',onMessage);
+      resolve(value);
+    };
+    function onMessage(event){
+      if(event.origin!==origin||!event.data||
+        event.data.type!=='NS360_LIBRARY_LOCATION_RESULT'||
+        event.data.nonce!==nonce||event.data.version!==1)return;
+      const area=event.data.area;
+      if(!area||area.locationSource!=='GPS_CHO_PHEP'||!area.city){finish(null);return;}
+      // Whitelist coarse geographic strings only; never accept coordinates.
+      const clean=value=>typeof value==='string'?value.trim().slice(0,90):'';
+      finish({city:clean(area.city),region:clean(area.region),country:clean(area.country),
+        ward:clean(area.ward),locationSource:'GPS_CHO_PHEP'});
+    }
+    window.addEventListener('message',onMessage);
+    deadline=setTimeout(()=>finish(null),7700);
+    try{window.top.postMessage({type:'NS360_LIBRARY_LOCATION_REQUEST',nonce,version:1},origin);}
+    catch(_){finish(null);}
+  });
+}
 form.addEventListener('submit',async function(event){
   event.preventDefault();
   if(!form.reportValidity())return;
   button.disabled=true;
   notice.style.color='#526374';
   notice.textContent='Đang ghi nhận đăng ký…';
-  const geo=await estimateCity();
+  const gps=await requestOptionalGpsArea();
+  const ip=gps?null:await estimateCity();
+  const geo=gps||Object.assign({},ip||{},{locationSource:(ip&&ip.city)?'IP_UOC_TINH':'KHONG_XAC_DINH'});
   const payload={name:form.elements.name.value,phone:form.elements.phone.value,email:form.elements.email.value,
     topic:form.elements.topic.value,website:form.elements.website.value,
     privacyConsent:true,source:source,requestId:requestId,
-    city:geo.city||'',region:geo.region||'',country:geo.country||''};
+    city:geo.city||'',region:geo.region||'',country:geo.country||'',
+    ward:geo.ward||'',locationSource:geo.locationSource||'KHONG_XAC_DINH'};
   google.script.run.withSuccessHandler(function(result){
     if(result&&result.ok){
       notice.style.color='#236c42';
