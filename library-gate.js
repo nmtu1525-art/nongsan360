@@ -9,6 +9,9 @@
   const isConfigured = /^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec(?:\?.*)?$/.test(WEB_APP_URL);
   // Live gate remains enabled for new readers; city-only lookup occurs inside Form V6.
   const LIVE_ENABLED = true;
+  // Staged first-party form; keep production iframe until Apps Script POST/receipt is deployed and tested.
+  const NATIVE_ENABLED = false;
+  const nativePreviewMode = () => new URLSearchParams(location.search).get('ns360_native_signup_test') === '1';
   const TEST_ROUTE = '/thu-vien/kiem-tra-dang-ky';
   // URL hash-based test route works even when query parameters are stripped by a browser or redirect.
   const ownerTestMode = () => new URLSearchParams(location.search).get('ns360_signup_test') === '1' || location.hash.split('@')[0] === '#'+TEST_ROUTE;
@@ -47,6 +50,18 @@
   }
   function renderGate(host,route){
     if(activeMessageHandler){window.removeEventListener('message',activeMessageHandler);activeMessageHandler=null;}
+    if((NATIVE_ENABLED || nativePreviewMode()) && window.NS360_LIBRARY_NATIVE){
+      window.NS360_LIBRARY_NATIVE.render(host,route,{
+        endpoint:WEB_APP_URL,
+        source:sourceName(),
+        onSuccess:function(){
+          saveAccess();
+          if(route===TEST_ROUTE)location.hash='#/giao-trinh/cf-01.html';
+          else window.dispatchEvent(new Event('hashchange'));
+        }
+      });
+      return;
+    }
     const nonce=randomNonce();
     const url=new URL(WEB_APP_URL);
     url.searchParams.set('nonce',nonce);
