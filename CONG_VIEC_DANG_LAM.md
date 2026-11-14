@@ -127,3 +127,12 @@
 - **Đã xác minh kết nối ChatGPT ↔ Metricool có phản hồi**, nhưng **chưa có Facebook Page** và **không thể lập lịch/đăng Facebook** cho tới khi anh tạo Fanpage thật và kết nối trang đó vào Metricool bằng tài khoản Facebook có quyền quản trị.
 - Giữ nguyên 1 bài chào mừng + ảnh đã duyệt trên Drive, không đăng, không tạo bài trùng; tác vụ tự đăng website 07:00 là riêng và không dùng thay cho Facebook.
 - **Bước tiếp theo:** anh tạo `Nông Sản 360` tại https://www.facebook.com/pages/create rồi kết nối Facebook Page tại địa chỉ Metricool nêu trên; khi hoàn thành, gọi lại `getBrandSettings`, lấy brandId/timezone và thử khởi tạo bài đăng có ảnh từ tài liệu Drive đã duyệt. Chưa hứa chạy toàn bộ chuỗi tự sinh ảnh qua automation cho tới khi được kiểm thử.
+
+## K. FANPAGE — ẢNH BÌA MỚI KHÔNG LOGO ĐÃ DUYỆT (14/11/2026)
+- Người dùng đã xác nhận **DUYỆT** ảnh bìa mới **không có logo tròn** nhằm tránh trùng với avatar Facebook trên giao diện điện thoại.
+- **ĐÃ LƯU VÀ XÁC MINH** ảnh chính thức mới trên Drive tại `Facebook/01_NHAN_DIEN_THUONG_HIEU/NS360_ANH_BIA_FANPAGE_CHINH_THUC_KHONG_LOGO.png`, Drive ID `14lFBixBUqwuHZiKfPb7wDzyJML1wXyY1`: https://drive.google.com/file/d/14lFBixBUqwuHZiKfPb7wDzyJML1wXyY1/view
+- **ĐÃ LƯU TRỮ** ảnh bìa cũ có logo: `Facebook/01_NHAN_DIEN_THUONG_HIEU/99_ANH_BIA_CU_LUU_TRU`, ID folder `1k1P4ppQH26AWGr-FqdIdWKxffRvZqiih`, ảnh ID `1pGGtE8cpY0CHbaG1KBF19cpybhpyXlRm`. Không xóa hoặc ghi đè.
+- Avatar chính thức vẫn là logo NS360 ID `17f1PdxJMK5slfABFvDgeZFxkuRpvbB7h`.
+- Đã dùng Drive `list_folder` xác nhận folder nhận diện chỉ có **logo mới nhất + bìa mới nhất**, và folder lưu trữ có đúng ảnh bìa cũ.
+- Anh đang tạo Fanpage trên Facebook (đã gửi ảnh màn hình tạo trang, tiểu sử và ảnh đại diện); tên người dùng đang cân nhắc `nongsan360vn`, **chưa xác minh chốt thành công**. Anh cần tự tải bìa mới lên Facebook; chưa có quyền thao tác trực tiếp trên Page.
+- Bước tiếp theo: hoàn thiện Page, kết nối Fanpage vào Metricool đang kết nối ChatGPT (trước đây Metricool báo chưa có mạng xã hội), rồi kiểm thử lịch đăng kèm ảnh. Chưa bật công việc đăng Facebook tự động.
