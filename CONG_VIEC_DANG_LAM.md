@@ -243,3 +243,10 @@
 - Đã kiểm tra Drive `01_WEBSITE` và tạo mới thư mục `03_VIDEO_HUONG_DAN_TAI_KHOAN_SFVN` ID `11DwfY6PBvu1fekK_p-1zPTmMFjJKpFu6`; URL https://drive.google.com/drive/folders/11DwfY6PBvu1fekK_p-1zPTmMFjJKpFu6 . Không dùng folder Facebook `04_VIDEO_REELS` vì đây là video hướng dẫn cho website.
 - Quy ước file video: `SFVN_01_HUONG_DAN_MO_TAI_KHOAN.mp4` và `SFVN_02_HUONG_DAN_NAP_TIEN.mp4`. Nếu là định dạng gốc khác thì giữ đúng extension, ưu tiên MP4/H.264 dễ phát trên web.
 - Bước tiếp theo sau khi anh tải 2 video lên: kiểm tra nội dung, chất lượng, che dữ liệu cá nhân/số tài khoản nhạy cảm nếu có, xin quyền phát phù hợp, tích hợp video vào đúng 2 ô video trong trang `#/mo-tai-khoan/index.html`; không tạo video giả hoặc thay đổi tư liệu gốc.
+
+## P. Hai video SFVN đã được tải lên Drive — đang tích hợp website (14/11/2026)
+- Người dùng xác nhận đã upload. Đọc trực tiếp Drive folder `03_VIDEO_HUONG_DAN_TAI_KHOAN_SFVN` ID `11DwfY6PBvu1fekK_p-1zPTmMFjJKpFu6` cho thấy đúng 2 video nguồn:
+  - `SFVN_01_HUONG_DAN_MO_TAI_KHOAN.mp4` — Drive ID `1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev`, `video/mp4`, 11453906 bytes, link https://drive.google.com/file/d/1-IFnUqU3VxvB9Gzwu_Jc1UVSUp7hNWev/view
+  - `SFVN_02_HUONG_DAN_NAP_TIEN.mp4` — Drive ID `1dzdSfBeYAU1oYMF74Otvb7LSzv1Yq-eW`, `video/mp4`, 5800813 bytes, link https://drive.google.com/file/d/1dzdSfBeYAU1oYMF74Otvb7LSzv1Yq-eW/view
+- Drive liệt kê **shared=false cho cả hai**. Chưa có quyền truy cập công khai cho khách; không được tuyên bố phát thành công cho khách hay nội dung video đã được xem/kiểm duyệt chi tiết nếu chưa thực sự truy cập luồng video.
+- Đang tích hợp 2 khung video nguồn `/preview` vào đúng ô trong trang `#/mo-tai-khoan/index.html` và giữ placeholder video thứ 3. Kiểm tra HTML và cập nhật lại trạng thái sau commit. Trước khi hoạt động trên trang công khai, user cần đặt `Bất kỳ ai có đường liên kết - Người xem` cho **từng video**, đồng thời bảo đảm video không lộ dữ liệu cá nhân hoặc tài khoản và có quyền phát hành.
