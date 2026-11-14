@@ -1,8 +1,8 @@
-/** Nông Sản 360 — Registration backend for free library, schema v5 (14 columns, optional GPS ward + IP fallback). */
+/** Nông Sản 360 — Registration backend for free library, schema v6 (14 columns retained for historical compatibility; IP city only). */
 const LIBRARY_CONFIG = Object.freeze({
   allowedParentOrigin: 'https://nmtu1525-art.github.io',
   sheetName: 'Leads',
-  privacyVersion: '2026-11-14-v5',
+  privacyVersion: '2026-11-14-v6',
   maxNameLength: 80,
   maxEmailLength: 160,
   maxCityLength: 70
@@ -39,16 +39,10 @@ function registerLead(payload) {
   const topic = safeText(payload.topic, 25);
   const source = safeText(payload.source, 45);
   const requestId = safeText(payload.requestId, 80);
-  // Only coarse place names are saved; raw IP and GPS coordinates never reach the Sheet.
+  // City only from optional GeoIP lookup. No IP, GPS, ward or Maps URL is stored for new leads.
   const city = safeText(payload.city, LIBRARY_CONFIG.maxCityLength);
   const region = safeText(payload.region, LIBRARY_CONFIG.maxCityLength);
-  const country = safeText(payload.country, LIBRARY_CONFIG.maxCityLength);
-  const methodRaw = safeText(payload.locationSource, 28);
-  const locationSource = ['GPS_CHO_PHEP','IP_UOC_TINH'].includes(methodRaw) ? methodRaw : 'KHONG_XAC_DINH';
-  const ward = locationSource === 'GPS_CHO_PHEP' ? safeText(payload.ward, 90) : '';
   const cityLabel = city ? [city, region !== city ? region : ''].filter(Boolean).join(', ') : '';
-  const mapQuery = city ? [ward, city, region !== city ? region : '', country].filter(Boolean).join(', ') : '';
-  const mapsUrl = mapQuery ? 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(mapQuery) : '';
 
   if (name.length < 2 || name.length > LIBRARY_CONFIG.maxNameLength) throw new Error('Họ tên cần từ 2 đến 80 ký tự.');
   if (!/^(?:0[0-9]{9,10}|\+84[0-9]{9,10})$/.test(phone)) throw new Error('Vui lòng kiểm tra số điện thoại Việt Nam.');
@@ -79,8 +73,7 @@ function registerLead(payload) {
       stamp, safeSheetText(name, 80), safeSheetText(phone, 20), safeSheetText(email, 160),
       safeSheetText(topic, 25), safeSheetText(source, 45),
       LIBRARY_CONFIG.privacyVersion, stamp, safeSheetText(requestId, 80), 'ACTIVE',
-      safeSheetText(cityLabel, 145), mapsUrl,
-      safeSheetText(ward, 90), locationSource
+      safeSheetText(cityLabel, 145), '', '', ''
     ]);
     SpreadsheetApp.flush();
     return { ok: true };
