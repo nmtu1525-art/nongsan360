@@ -867,3 +867,17 @@
 - Tất cả chỉ nêu đúng buổi 20/11 09:00–12:00, SFVN Academy tầng 2 tòa Mekong 92A–94 Bạch Đằng P. Tân Sơn Hòa TP.HCM do người dùng cung cấp; chứng nhận theo điều kiện hoàn thành, tối đa USD 2.000/tháng theo chính sách và xét duyệt SFVN (không tự động); chưa có form ghi danh chính thức buổi này.
 - Đã đọc 2 checkpoint và Metricool 8097037: 1 bài chào mừng PUBLISHED, 8 bài PENDING gồm 6 evergreen + 2 SFVN (17 và 19). Cần restore ngô về 23, tạo đúng 2 SFVN 16 và 18 kèm ảnh upload Drive/Facebook, lưu Github plan và Google Docs rồi readback Metricool **10 PENDING = 6 evergreen + 4 SFVN**, giữ 1 PUBLISHED.
 - **Không tạo trùng 17/19**, không thay 6 caption, ảnh, cài đặt hiện có; giữ 21 PDF, tin tức, dữ liệu khách và website.
+
+
+### Y.44. HOÀN THÀNH sửa lịch theo ý chủ dự án: 6 evergreen giữ nguyên + 4 SFVN (14/11/2026)
+- Đã xác nhận ý cuối: **không chuyển sáu bài kiến thức theo lịch 16,18,20,23,25,27/11**; **đăng thêm bốn bài về buổi tập huấn SFVN một bài/ngày 16–19/11**. Hai ngày trùng bài kiến thức chỉ đổi giờ bài SFVN.
+- Đã **khôi phục bài ngô 23/11 10:00**, giữ nguyên nội dung, ảnh, alt text, autoPublish và UUID `-4519204595844625623`; Metricool ID mới `428033042`.
+- Lịch bài SFVN đã tạo/giữ, tất cả **PENDING, autoPublish=true, 1 ảnh/bài**:
+  - **16/11 18:30** “Vì sao IB nên tìm hiểu hàng hóa phái sinh?”; ID `428039062`, UUID `-5232083627600753537`, caption `SFVN_IB_20261116_LY_DO_THAM_GIA_DA_LEN_LICH.md`, Drive art ID `1POHdGLXENTqklSPyxar19TvaRYpIu23d`.
+  - **17/11 10:00** “Thông báo tập huấn SFVN”; ID `428028880`, UUID `7906905485232523003`, Drive art ID `1K9dCywhaPLNUUdLszjeHSmzC-gFCo252`.
+  - **18/11 18:30** “Ba câu hỏi cần chuẩn bị”; ID `428039173`, UUID `-8895106555576431118`, caption `SFVN_IB_20261118_CAU_HOI_CHUAN_BI_DA_LEN_LICH.md`, Drive art ID `1INX0tpduWoAwZd0XmmiTMMmauS__DugR`.
+  - **19/11 10:00** “Còn 1 ngày – nhắc lịch”; ID `428029358`, UUID `-9108208944996138606`, Drive art ID `1x0gn2DINKSxwygJq1rpOjzlfs9m1HiCn`.
+- Hai artwork ngày 16 và 18 được tạo bản 1080×1350 từ ảnh AI gốc kết hợp bố cục chữ Nông Sản 360 do trợ lý biên tập, đã **kiểm tra trực quan** và upload đúng `Nông Sản 360 - Website HTML/Facebook/03_HINH_ANH_BAI_DANG`; Google Drive metadata readback xác nhận `anyone:reader`, parent chuẩn, Metricool nhập media thành công.
+- Đã cập nhật **GitHub `FACEBOOK_KE_HOACH_THANG_11_2026.md`** commit `1ac3889b66d8d713d81ceb703ea81a80eb0ef6ba` và **Google Docs kế hoạch FB** `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8`. Readback cả ba: **10 dòng đăng sắp tới / 10 PENDING**, đúng các mốc **16 10:00, 16 18:30, 17 10:00, 18 12:00, 18 18:30, 19 10:00, 20 10:00, 23 10:00, 25 12:00, 27 10:00**; 1 bài chào mừng PUBLISHED ngoài 10 này. Không có giờ trùng.
+- Có lưu ý chưa có form ghi danh chính thức ngày 20/11, CTA chỉ liên hệ SFVN Academy, giấy chứng nhận theo điều kiện hoàn thành, hỗ trợ đối tác đến USD 2.000/tháng theo chính sách & xét duyệt SFVN, không cam kết tự động. Nội dung 16/18 không mạo nhận agenda chính thức.
+- Từ đây **đọc đúng checkpoint Y.44**, không dùng chỉ dẫn Y.42 (đã bị chủ dự án bác bỏ). Không chỉnh 21 PDF, tin tức, Google Sheet khách, website hay bản đăng cũ. Sau ngày 16/11 xác minh trạng thái PUBLISHED và publicURL trên Fanpage.
