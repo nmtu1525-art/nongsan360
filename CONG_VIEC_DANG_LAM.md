@@ -811,3 +811,8 @@
 - Đã đồng bộ GitHub `FACEBOOK_KE_HOACH_THANG_11_2026.md` (commit `f38464b59f7e56d99c9bc6ca9d03b93db635f0d7`). Mã `FB-YYYYMMDD-01` của ảnh và bài gốc vẫn giữ như ban đầu, dù ngày lịch đăng khác; không đổi tên file/ID tài sản hoặc nội dung Google Docs.
 - Còn tồn tại 5 slot SFVN chưa có poster chính thức, **không** tự đăng. Trước lượt đăng 16/11 10:00, nên kiểm tra lại website vào Thư viện và link mở tài khoản; khi đăng xong xác minh trạng thái PUBLISHED/publicURL và tương tác. Automation Facebook không được tự tạo trùng 6 UUID đã có.
 - Bảo toàn website, 21 giáo trình PDF, `tin-tuc.json`, Google Sheet khách, các bài Fanpage cũ và các nguồn Drive.
+
+
+### Y.36. Đã đồng bộ lịch mới vào Google Docs Drive (14/11/2026)
+- Đồng bộ tài liệu kế hoạch Google Docs ID `1G-wXcK6Vkp3zSlCl-t4eFJt8VfbMqO3sUv9tB8opQu8`: cập nhật đúng 6 dòng lịch và khung giờ thành 16/11 10:00 thư viện, 18/11 12:00 hàng thực/hợp đồng tương lai, 20/11 10:00 cà phê, 23/11 10:00 ngô, 25/11 12:00 lúa mì, 27/11 10:00 ký quỹ; thay ID Metricool đúng sau update và giữ link nội dung/ảnh. Đã readback 7 dòng gồm bài chào mừng và 6 bài lịch mới, đúng thứ tự; revision mới được Drive xác nhận. Không thay các bản caption hay ảnh, không tạo post trùng.
+- GitHub plan `FACEBOOK_KE_HOACH_THANG_11_2026.md`, Google Docs Drive và Metricool đã đồng bộ. Bước theo dõi tiếp: xác nhận trạng thái bài thư viện sau 10:00 ngày 16/11, không suy đoán bài đã published trước giờ.
