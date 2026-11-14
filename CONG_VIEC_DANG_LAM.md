@@ -978,3 +978,13 @@
 - Người dùng không thấy 4 bài viết trong Google Drive. Kiểm tra folder Facebook/02_BAI_VIET ID `1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ`: hiện mới có 6 Google Docs evergreen và 1 markdown chào mừng, chưa có 4 Docs SFVN. Đây là thiếu sót so với kỳ vọng, vì caption chỉ lưu ở GitHub và Metricool.
 - Đã đối chiếu 4 caption **đang PENDING trên Metricool** (post IDs 428100194, 428100359, 428100588, 428100803), đã duyệt, có 2 CTA Messenger/form, đã bỏ lưu ý dài; sẽ dùng **nguyên văn caption từ Metricool** làm nguồn để đưa lên Drive.
 - Tạo 4 Google Docs riêng trong `Facebook/02_BAI_VIET`, tiêu đề gắn FB-SFVN-20261116/17/18/19, ngày giờ ICT, trạng thái ĐÃ DUYỆT. Bảo đảm không sửa các bài lịch khác, không sao chép ảnh vào thư mục bài viết. Readback từng doc và vị trí trước khi thông báo, rồi cập nhật checkpoint.
+
+
+### Y.56. Đã lưu đủ bốn bài viết SFVN đã duyệt vào Drive Facebook/02_BAI_VIET (14/11/2026)
+- Người dùng không tìm thấy 4 bài viết trên Drive do trước đó chỉ có caption trên GitHub và Metricool, folder `02_BAI_VIET` chưa được bổ sung; đã xác nhận và khắc phục.
+- Tạo 4 **Google Docs native riêng biệt**, định dạng tiêu đề, trạng thái **ĐÃ DUYỆT**, lịch đăng, link ảnh cuối và nguyên văn caption đã đặt trên Metricool, trong `Nông Sản 360 - Website HTML/Facebook/02_BAI_VIET` (folder ID `1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ`):
+- **16/11:** [IB hàng hóa phái sinh](https://docs.google.com/document/d/167Z9-4JkZUlpHvX0rPMlEKvKm44bqtuaWIQ-tiZMhok/edit)
+- **17/11:** [Giới thiệu tập huấn SFVN](https://docs.google.com/document/d/1-erF3kmmg4JDPLBkYaQ_KpVWJ6qMCsBDYEJcqcQyW_U/edit)
+- **18/11:** [Ba câu hỏi IB chuẩn bị](https://docs.google.com/document/d/1XGfq3Ip1CBd66VyOCt-C4NOruenwoGDdLnGDH5OZJg4/edit)
+- **19/11:** [Nhắc lịch tập huấn SFVN](https://docs.google.com/document/d/1GXw6Znrg1uvj5SK8o8UvfYl7kMJUSA6Fs-0pxP5X-dM/edit)
+- Đã xác minh Drive parent đúng, đủ 4 tài liệu, readback 4 Docs đối chiếu **nguyên văn từng caption** với Metricool; có Messenger `https://m.me/1388965107640064` và link form `src=fb16/17/18/19`. Không tạo bài mới trên Metricool, không sửa 6 bài evergreen, ảnh, form, 21 PDF hay dữ liệu khách.
