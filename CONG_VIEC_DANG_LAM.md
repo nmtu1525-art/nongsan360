@@ -237,3 +237,9 @@
 - **ĐÃ XÁC MINH READBACK** sau commit: đúng 1 khối tải app, đúng 1 URL mỗi nền tảng, CSS mới cho cả desktop và mobile, giữ nguyên link đăng ký mã `046C0000554`, QR, video, cảnh báo, tổng số template không thay đổi (31). Chưa thay đổi `tin-tuc.json` hoặc 21 giáo trình PDF.
 - GitHub commit status không báo job checks; công cụ web không đọc được GitHub Pages live nên **chưa xác nhận giao diện đã deploy/cập nhật trên đường dẫn công khai**. Nếu giao diện cũ, cần đợi Pages deploy và tải lại trang.
 - Đường dẫn để người dùng kiểm tra sau deploy: `https://nmtu1525-art.github.io/nongsan360/#/mo-tai-khoan/index.html`.
+
+## O. Thư mục video hướng dẫn tài khoản SFVN (14/11/2026)
+- Người dùng hỏi nơi upload video hướng dẫn mở tài khoản và nạp tiền để đưa vào mục Tìm hiểu & mở tài khoản của website.
+- Đã kiểm tra Drive `01_WEBSITE` và tạo mới thư mục `03_VIDEO_HUONG_DAN_TAI_KHOAN_SFVN` ID `11DwfY6PBvu1fekK_p-1zPTmMFjJKpFu6`; URL https://drive.google.com/drive/folders/11DwfY6PBvu1fekK_p-1zPTmMFjJKpFu6 . Không dùng folder Facebook `04_VIDEO_REELS` vì đây là video hướng dẫn cho website.
+- Quy ước file video: `SFVN_01_HUONG_DAN_MO_TAI_KHOAN.mp4` và `SFVN_02_HUONG_DAN_NAP_TIEN.mp4`. Nếu là định dạng gốc khác thì giữ đúng extension, ưu tiên MP4/H.264 dễ phát trên web.
+- Bước tiếp theo sau khi anh tải 2 video lên: kiểm tra nội dung, chất lượng, che dữ liệu cá nhân/số tài khoản nhạy cảm nếu có, xin quyền phát phù hợp, tích hợp video vào đúng 2 ô video trong trang `#/mo-tai-khoan/index.html`; không tạo video giả hoặc thay đổi tư liệu gốc.
