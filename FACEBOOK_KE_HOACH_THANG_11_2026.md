@@ -98,3 +98,9 @@
 - Metricool đã ingest ảnh mới thành URL tĩnh tương ứng cho đúng bốn UUID cũ, bảo toàn caption ngoài dòng xóa, ngày giờ, alt text, autoPublish, Facebook POST; **không tạo bài mới**.
 - Readback: **1 PUBLISHED chào mừng + 10 PENDING**, 6 evergreen lịch gốc giữ nguyên: 16/11 10:00, 18/11 12:00, 20/11 10:00, 23/11 10:00, 25/11 12:00, 27/11 10:00. Không đụng mã nguồn website, 21 PDF, khách hàng hoặc tin tức.
 - Dùng bảng này làm **mốc tham chiếu mới nhất**, không lấy các ghi chú trung gian về ảnh cũ và Metricool ID cũ làm bản hiện hành.
+
+
+## Dọn ảnh SFVN bản cũ theo yêu cầu chủ dự án (14/11/2026)
+- **Chỉ dùng 4 ảnh SFVN cuối đã duyệt** có tên `NS360_SFVN_20261116/17/18/19_DA_DUYET_KHONG_CTA.png` và Drive IDs `19GZZ7sFTGBh5wgJrzDRlKJjCqR976aLb`, `1yIpvHhPrne492V5QBEdOk7XvXMW2QJFX`, `1RmqlP9jQUtl2-7H41i8OAH56LWN_QYKF`, `1Z3dWmoFzUEmvA169yvYBP1zfR47h3kjG`.
+- Đã xóa **bốn ảnh cũ** khỏi Google Drive theo ảnh chụp/chỉ đạo của chủ dự án: `NS360_SFVN_Bai1_16-11-2026.png`, `NS360_SFVN_Bai1_ThongBao_17-11-2026.png`, `NS360_SFVN_Bai3_18-11-2026.png`, `NS360_SFVN_Bai2_NhacLich_19-11-2026.png`. Delete success x4, list_folder còn 11 tệp, approved 4 vẫn tồn tại.
+- Đừng dùng ID ảnh cũ trong các ghi chú lịch sử; Metricool đã ingest 4 ảnh duyệt, lịch và caption đã chốt giữ nguyên. Không sửa sáu ảnh evergreen.
