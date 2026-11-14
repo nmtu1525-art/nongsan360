@@ -92,3 +92,9 @@
 ## 14. Đổi liên hệ sang Messenger trực tiếp (14/11/2026)
 - Theo phản hồi người dùng, hai cách link Facebook Page trước đó đều dẫn tới thông báo không thể xem; đã thay ba CTA Page thành `https://m.me/1388965107640064`, sử dụng Facebook Page ID trả về từ Metricool, đổi tên nút `Nhắn tin Messenger`. Số `0985 272 776` và tel link vẫn giữ nguyên.
 - Commit mã `e97b633bcf118b86a88cce4285e8848c300e92ea`. GitHub readback OK nhưng **chưa thể xác minh đường dẫn m.me này trong trình duyệt Facebook đăng nhập**, cần chủ dự án test thật và đưa link Messenger chính chủ nếu còn lỗi.
+
+## 15. Vận hành Fanpage 20 bài mỗi 4 tuần (14/11/2026)
+- Đã xác minh qua Metricool rằng bài chào mừng Facebook `FB-20261114-01` đăng thành công `status=PUBLISHED`, URL https://facebook.com/122095198125555913/posts/122095197489555913 (sau lịch 11:15 ngày 14/11). Kết nối Facebook–Metricool brand `8097037` hoạt động.
+- Đã chuẩn bị kế hoạch 20 chủ đề cho 4 tuần 16/11–11/12/2026, 5 bài/tuần T2–T6, Google Drive file ID `1mc4dTIG1Ej3oAOu7Qp7A2GiNLcXbmZAd`; bản GitHub `FACEBOOK_KE_HOACH_20_BAI_20261116_20261211.md` commit `c54765008d742b18f290af3346d4897ae61cfbd2`.
+- Đã tạo automation `20 bài Fanpage Nông Sản 360`: chạy **08:00 T2–T6 (20 lần)**, bắt đầu **16/11/2026**, dự kiến lên lịch bài Facebook 10:00 cùng ngày nếu caption/ảnh/nguồn hợp lệ. Lưu Drive, kiểm chứng Metricool và cập nhật checkpoint từng lượt. Không trùng automation tin website 07:00.
+- **Chưa khẳng định đã sản xuất hoặc đăng 20 bài**. Tác vụ chưa chạy nên khả năng tạo ảnh tự động, lưu Drive và Metricool cần kiểm thử vào lần chạy 16/11. Nếu thiếu công cụ/quyền, giữ nháp, báo lý do, không đăng thiếu ảnh hoặc số liệu chưa xác minh. Kết quả thực tế ghi trong `CONG_VIEC_DANG_LAM.md`.
