@@ -354,3 +354,11 @@
 - Source of truth mới nhất: `facebook-drafts/2026-11/SFVN_4_BAI_SOCIAL_SEO_CHO_DUYET_TRUOC_ANH_20261114.md` commit `5bbda3e4a5605d52a84461b0a474c8567b046603`. Đã thay bốn caption bằng bản rút gọn, câu mở đầu SEO rõ, ít trùng nhau, CTA Messenger https://m.me/1388965107640064, bốn hashtag mỗi bài và lưu ý nguồn/điều kiện SFVN.
 - Đã đối chiếu địa chỉ SFVN Academy trên trang chính thức và tư cách TVKD 046 ở MXV; thông tin buổi 20/11 và hỗ trợ tối đa 2.000 USD/tháng vẫn là nội dung do người dùng cung cấp, chưa có tài liệu sự kiện công khai xác minh độc lập.
 - **Chỉ chỉnh nguồn nội dung trên GitHub, chưa cập nhật bản mới vào Metricool và chưa thiết kế lại ảnh**; bốn bài SFVN trên Metricool vẫn bật autoPublish như lịch đã thống nhất nên cần duyệt, thay trước 16/11. Sáu bài giáo dục và dữ liệu dự án không thay.
+
+
+## 46. Form yêu cầu thông tin SFVN và 4 CTA Facebook đã hoạt động trên site (14/11/2026)
+- Đã thêm trang `sfvn-tap-huan-20-11-2026.html` public: 3 trường bắt buộc (họ tên, điện thoại, email), checkbox cho phép Nông Sản 360 liên hệ chỉ về tập huấn 20/11, link chính sách mục `#sfvn-interest`. Đây là form **để được cung cấp thông tin**, KHÔNG đăng ký/giữ suất tham dự chính thức SFVN.
+- Tận dụng backend Apps Script thư viện đã triển khai, gắn `source=sfvn20261120-*` để tách biệt Leads, xác nhận thành công chỉ sau receipt; không thu GPS/GeoIP, không lưu PII trong browser hoặc GitHub. Trang public và GET receipt được kiểm thử chỉ-đọc (GitHub Actions run 43607805528 SUCCESS); chưa kiểm chứng POST thực trên điện thoại.
+- Sheet Google `NS360 - DATA DANG KY THU VIEN (RIENG TU)` có tab mới `SFVN_TapHuan_20_11` lọc động nguồn sự kiện, không đụng dữ liệu cũ. Google Docs kế hoạch Facebook và kế hoạch GitHub đồng bộ.
+- Bốn bài SFVN đã được duyệt và cập nhật lại toàn bộ caption trên Metricool, gồm hai CTA: Messenger `https://m.me/1388965107640064` và form từ từng bài `?src=fb16/17/18/19`. IDs 428072540, 428072673, 428072813, 428072942; giữ lịch 16–19/11, 1 ảnh/bài, autoPublish=true. Sáu bài evergreen không đổi; tổng 10 PENDING, 1 PUBLISHED.
+- **Chờ nghiệm thu form POST thực tế**; chưa tuyên bố đã có khách/suất được SFVN duyệt. Không upload/sửa 21 giáo trình, tin tức hay Leads cũ.
