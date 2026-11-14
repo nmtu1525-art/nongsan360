@@ -2,7 +2,7 @@
 
 **Trạng thái:** Bản nội dung cho lịch 16/11, ảnh 1080x1350 `NS360_SFVN_Bai1_16-11-2026.png`. Từ khóa: tập huấn hàng hóa phái sinh SFVN, IB hàng hóa phái sinh, quản trị rủi ro, MXV. Ảnh Nông Sản 360 thiết kế, không phải poster chính thức SFVN. Không khẳng định ba điểm là agenda chính thức.
 
-**Metricool (sau đổi CTA):** ID 428072540; bấm link Messenger https://m.me/1388965107640064.
+**Metricool (sau đổi CTA):** ID 428100194; bấm link Messenger https://m.me/1388965107640064.
 
 ## NỘI DUNG FACEBOOK
 
@@ -31,10 +31,10 @@ https://m.me/1388965107640064
 📝 Muốn Nông Sản 360 chủ động liên hệ lại? Anh/chị có thể để lại họ tên, số điện thoại và email tại biểu mẫu:
 https://nmtu1525-art.github.io/nongsan360/sfvn-tap-huan-20-11-2026.html?src=fb16
 
-Lưu ý: Biểu mẫu chỉ tiếp nhận yêu cầu nhận thông tin, không phải đăng ký tham dự chính thức hoặc giữ chỗ. SFVN xác nhận theo điều kiện của đơn vị tổ chức.
-
 Ba nhóm kiến thức trên là gợi ý của Nông Sản 360, không phải lịch giảng dạy chính thức.
 
 #NongSan360 #IBHangHoaPhaiSinh #TapHuanHangHoaPhaiSinh #SFVN
 
 **Bản tổng hợp đã duyệt:** [4 bài Facebook với Messenger + form](SFVN_4_BAI_FB_DA_DUYET_CTA_MESSENGER_FORM_20261114.md).
+
+**Chốt duyệt 14/11/2026:** Ảnh sạch footer 1122×1402 px đã được anh duyệt và thay trên Metricool — [Xem ảnh cuối](https://drive.google.com/file/d/19GZZ7sFTGBh5wgJrzDRlKJjCqR976aLb/view), ID Metricool mới `428100194`, giữ nguyên UUID, ngày giờ và autoPublish. Không dùng ảnh có thanh “Nhắn Fanpage…” và chữ nhỏ phía dưới. Caption đã bỏ dòng lưu ý dài theo yêu cầu.
