@@ -186,3 +186,11 @@
 - **Chưa xác minh GitHub Pages live trên trình duyệt** vì công cụ web báo không truy cập được Pages, và chưa kiểm chứng tự động chuyển về bài học ngay sau submit phiên live. Đề nghị user tự kiểm tra ẩn danh, từ Thư viện chọn giáo trình rồi đăng ký nếu cần.
 - Gate là JavaScript giao diện, không khóa URL tĩnh `/pdf/*.pdf` trực tiếp; không tuyên bố bảo vệ tài liệu tuyệt đối. Đã giữ nguyên toàn bộ 21 PDF, `tin-tuc.json`, dữ liệu khách, các bài Facebook.
 - Checkpoint công việc cập nhật commit `ba715a8eb7dbf03123e82f261c4c30d40991f6df`.
+
+
+## 29. Bật form V3 ngay khi khách vào Thư viện từ menu (14/11/2026)
+- Bổ sung sau mục 28: Người dùng cho biết mở trực tiếp link thử thấy form, nhưng đi từ web không thấy. Vì menu Thư viện dẫn tới `#/thu-vien/index.html`, đã mở rộng gate **chặn ngay danh mục thư viện** với khách chưa có dấu đăng ký, không chỉ chặn trang giáo trình.
+- `library-gate.js` commit `cba714ba60c0087a89d9d14fe40537864bb024e8` với `LIVE_ENABLED=true` và `protectedRoute` gồm cả `/thu-vien/index.html`. `index.html` commit `6d79034157e70ca240192f93ce7843392157b50a` tham chiếu script `library-gate.js?v=20261114-live-v3-library-2`.
+- Đọc lại mã nguồn xác nhận đầy đủ: gate bật, menu link đúng, route chặn đúng, script cache-bust duy nhất, router gọi `shouldBlock`. Backend Apps Script v3 trước đó đã có bản ghi `v3- ACTIVE` trong `Leads`. Bảo toàn bản v2 cũ.
+- **Chưa xác minh bằng trình duyệt thật**: Pages live không mở được bằng công cụ web. Chủ dự án kiểm tra bằng **ẩn danh**: web → Thư viện kiến thức → form → gửi thành công → danh mục thư viện; người đã có localStorage marker cùng browser sẽ bỏ qua form đúng thiết kế.
+- Gate client-side không chặn được URL file PDF tĩnh công khai; không tuyên bố dữ liệu PDF được bảo vệ. Không chạm 21 PDF, `tin-tuc.json`, bài Facebook, file Drive hoặc dữ liệu khách.
