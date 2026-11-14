@@ -559,3 +559,9 @@
 - **Chờ kiểm thử từ người dùng trên web public**: mở cửa sổ ẩn danh → `https://nmtu1525-art.github.io/nongsan360/` → `Thư viện kiến thức` → chọn một giáo trình như CF-01, phải thấy form; gửi đăng ký nếu là chủ sở hữu thử nghiệm và kiểm tra vào bài. Khi đã đăng ký trên cùng browser sẽ **không** xuất hiện form lần nữa theo thiết kế. Chỉ nhấn mục thư viện ở menu sẽ vào danh sách, chưa xuất hiện form cho đến khi nhấn giáo trình.
 - URL trang Pages qua web tool không truy cập được, nên đã xác minh GitHub commits/readback nhưng **chưa xác minh end-to-end trên site live**. URL PDF `/pdf/CF-01.pdf` trực tiếp không được bảo vệ bằng gate frontend; chức năng chỉ yêu cầu đăng ký ở các route giáo trình trong trang, không phải DRM.
 - Không thay đổi thư mục `pdf/`, `tin-tuc.json`, dữ liệu bảng Leads, nội dung Fanpage/Metricool; đã bảo toàn chúng.
+
+
+### Y.14. Điều chỉnh điểm kích hoạt form từ menu Thư viện (14/11/2026)
+- Sau khi bật `LIVE_ENABLED=true`, rà soát `index.html` cho thấy menu chính `Thư viện kiến thức` trỏ đến `#/thu-vien/index.html`. Gate phiên vừa bật chỉ chặn `/giao-trinh/...`, vì vậy khách nhấn menu Thư viện vẫn thấy danh sách chứ chưa hiện form; chưa giải quyết trọn vẹn hiện tượng người dùng mô tả.
+- **Quyết định:** mở rộng `protectedRoute` cho `/thu-vien/index.html` để người chưa đăng ký thấy form ngay khi bấm Thư viện; người đã đăng ký đi thẳng vào thư viện như cũ. Giữ các route giáo trình được bảo vệ. Đổi cache-bust thêm một phiên bản, kiểm GitHub readback.
+- Không sửa backend `Code.gs`, `Form.html`, dữ liệu khách, 21 PDF, tin tức hay Facebook. Kiểm thử live browser sau commit vẫn cần người dùng xác nhận.
