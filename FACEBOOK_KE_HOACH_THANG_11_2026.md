@@ -104,3 +104,12 @@
 - **Chỉ dùng 4 ảnh SFVN cuối đã duyệt** có tên `NS360_SFVN_20261116/17/18/19_DA_DUYET_KHONG_CTA.png` và Drive IDs `19GZZ7sFTGBh5wgJrzDRlKJjCqR976aLb`, `1yIpvHhPrne492V5QBEdOk7XvXMW2QJFX`, `1RmqlP9jQUtl2-7H41i8OAH56LWN_QYKF`, `1Z3dWmoFzUEmvA169yvYBP1zfR47h3kjG`.
 - Đã xóa **bốn ảnh cũ** khỏi Google Drive theo ảnh chụp/chỉ đạo của chủ dự án: `NS360_SFVN_Bai1_16-11-2026.png`, `NS360_SFVN_Bai1_ThongBao_17-11-2026.png`, `NS360_SFVN_Bai3_18-11-2026.png`, `NS360_SFVN_Bai2_NhacLich_19-11-2026.png`. Delete success x4, list_folder còn 11 tệp, approved 4 vẫn tồn tại.
 - Đừng dùng ID ảnh cũ trong các ghi chú lịch sử; Metricool đã ingest 4 ảnh duyệt, lịch và caption đã chốt giữ nguyên. Không sửa sáu ảnh evergreen.
+
+
+## Bốn Google Docs bài SFVN đã duyệt trong Facebook/02_BAI_VIET (14/11/2026)
+- **Thư mục:** https://drive.google.com/drive/folders/1Qpr8jkC6HuIfIErigLzcTDHue40W8uXZ
+- **16/11:** [IB hàng hóa phái sinh](https://docs.google.com/document/d/167Z9-4JkZUlpHvX0rPMlEKvKm44bqtuaWIQ-tiZMhok/edit)
+- **17/11:** [Giới thiệu tập huấn SFVN](https://docs.google.com/document/d/1-erF3kmmg4JDPLBkYaQ_KpVWJ6qMCsBDYEJcqcQyW_U/edit)
+- **18/11:** [Ba câu hỏi IB chuẩn bị](https://docs.google.com/document/d/1XGfq3Ip1CBd66VyOCt-C4NOruenwoGDdLnGDH5OZJg4/edit)
+- **19/11:** [Nhắc lịch tập huấn SFVN](https://docs.google.com/document/d/1GXw6Znrg1uvj5SK8o8UvfYl7kMJUSA6Fs-0pxP5X-dM/edit)
+- Nội dung mỗi Google Docs gồm caption nguyên văn khớp post Metricool đã lên lịch, mốc ngày/giờ và link ảnh cuối đã duyệt. Đã readback đúng 4 tài liệu, 4 caption, không tạo lịch mới hoặc sửa sáu bài evergreen.
