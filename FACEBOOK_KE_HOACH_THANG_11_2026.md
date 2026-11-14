@@ -47,3 +47,14 @@
 - Automation `Fanpage NS360 — lịch 11 bài tháng 11` chạy 08:00 các ngày làm việc từ 16 đến 30/11. Phải **đọc lịch này và readback Metricool theo UUID** (ID đã thay sau khi đổi lịch), không tạo thêm 6 bài đã có; chỉ giám sát trạng thái và xử lý 5 ô SFVN có bằng chứng nếu được phép.
 - Lịch cũ `FACEBOOK_KE_HOACH_20_BAI_20261116_20261211.md` là **tài liệu tham khảo, không phải lịch đăng áp dụng cùng lúc**.
 - Tuyệt đối không sửa/xóa 21 PDF giáo trình, `tin-tuc.json`, website và automation tin website lúc 07:00.
+
+
+## Hai bài SFVN mới 17 và 19/11 — CHỜ DUYỆT
+
+- **Số lượng đề xuất: 2 bài feed** ngoài 6 bài evergreen đã lên lịch. Không bổ sung 4–5 bài dồn dập trước hội thảo và không thêm bài feed vào 20/11; ngày diễn ra sự kiện chỉ cân nhắc Story ảnh thực tế nếu có quyền dùng.
+- **Bài 1:** **Thứ Ba 17/11/2026, 10:00**, chủ đề thông báo tập huấn hàng hóa phái sinh SFVN dành cho IB và đối tác tài chính. Caption SEO tại [SFVN_IB_20261117_THONG_BAO_CHO_DUYET.md](facebook-drafts/2026-11/SFVN_IB_20261117_THONG_BAO_CHO_DUYET.md); ảnh xem trước `NS360_SFVN_Bai1_ThongBao_17-11-2026.png` 1080×1350 (hiện chỉ lưu bản tạo ở cuộc trò chuyện, chưa upload Drive/Metricool).
+- **Bài 2:** **Thứ Năm 19/11/2026, 10:00**, nhắc lịch + ba gợi ý xác nhận tham dự và chuẩn bị câu hỏi. Caption SEO tại [SFVN_IB_20261119_NHAC_LICH_CHO_DUYET.md](facebook-drafts/2026-11/SFVN_IB_20261119_NHAC_LICH_CHO_DUYET.md); ảnh xem trước `NS360_SFVN_Bai2_NhacLich_19-11-2026.png` 1080×1350 (hiện chỉ lưu bản tạo ở cuộc trò chuyện, chưa upload Drive/Metricool).
+- **Đã đối chiếu địa điểm** trên SFVN Academy `https://sfvn-academy.com.vn/contact`, còn lịch cụ thể và khoản hỗ trợ 2.000 USD/tháng **lấy từ chủ dự án**, chưa có văn bản sự kiện/điều kiện công khai để xác minh. Caption ghi rõ giấy chứng nhận cần đạt điều kiện; hỗ trợ marketing & văn phòng **tối đa 2.000 USD/tháng, theo chính sách và xét duyệt SFVN, không mặc định**.
+- **Chưa có form đăng ký riêng cho buổi 20/11.** Không tự đưa đường dẫn các khóa khác của SFVN Academy thành link ghi danh cho sự kiện này. CTA chỉ hướng xác nhận thông tin và điều kiện với SFVN Academy, Fanpage Nông Sản 360 có thể hỗ trợ thông tin đầu mối.
+- **LƯU Ý:** hai hình là thiết kế giới thiệu của Nông Sản 360, có ảnh hội trường minh họa, không phải poster/chụp sự kiện thật hoặc bản thiết kế đã được SFVN chấp thuận; không dùng logo SFVN chưa được cấp quyền.
+- **Chưa đặt lịch** hai bài trong Metricool và **chưa upload Drive** trước khi chủ dự án duyệt hình/nội dung. **Không chỉnh/sao chép 6 bài** đã PENDING. Sau duyệt cần upload ảnh vào thư mục Facebook trong Drive, xác nhận URL media, lên lịch đúng 17 và 19/11, readback status.
