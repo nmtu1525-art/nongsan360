@@ -1,74 +1,15 @@
-name: Nông Sản 360 - Bản tin tự động V9.3
+# Archived V9.3 API-based workflow. Disabled at the user's request.
+# News is now written and published directly by ChatGPT through the
+# connected GitHub account, without an OpenAI API key.
+# This file has no schedule, push trigger, or publishing step.
+name: Nông Sản 360 - API bot disabled
 on:
-  schedule:
-    # 00:00 UTC = 07:00 Asia/Ho_Chi_Minh; GitHub may delay scheduled runs.
-    - cron: '0 0 * * *'
   workflow_dispatch:
-    inputs:
-      dry_run:
-        description: 'Chạy thử, không đăng bài'
-        required: true
-        default: 'true'
-        type: choice
-        options: ['true', 'false']
-  push:
-    paths:
-      - '.github/workflows/daily-news.yml'
-      - 'automation/**'
-      - 'tests/**'
-
 permissions:
-  contents: write
-
-concurrency:
-  group: nong-san-360-daily-news
-  cancel-in-progress: false
-
+  contents: read
 jobs:
-  collect-review-publish:
+  disabled:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
     steps:
-      - name: Checkout main
-        uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - name: Install Python 3.12
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Dependencies
-        run: python -m pip install -r automation/requirements.txt
-      - name: Run offline safeguards
-        run: python -m unittest discover -s tests -v
-      - name: Collect sources, verify, write, and record log
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-4.1-mini' }}
-          NEWS_DRY_RUN: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'true') }}
-        run: |
-          if [ "$NEWS_DRY_RUN" = "true" ]; then
-            python automation/daily_news.py --dry-run
-          else
-            python automation/daily_news.py
-          fi
-      - name: Upload public audit log artifact
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: news-audit-${{ github.run_id }}
-          path: logs/news-bot/*.json
-          if-no-files-found: warn
-          retention-days: 30
-      - name: Commit verified news and audit log
-        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false')
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add tin-tuc.json logs/news-bot/
-          if ! git diff --cached --quiet; then
-            git commit -m "news(bot): verified daily bulletin + audit ${{ github.run_id }}"
-            git push origin HEAD:main
-          else
-            echo "No changes"
-          fi
+      - name: API news bot disabled
+        run: echo "The API-based news publisher is disabled. Use the ChatGPT editorial workflow instead."
