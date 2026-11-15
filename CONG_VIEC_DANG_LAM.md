@@ -1057,3 +1057,10 @@
 - Đã tạo folder `00_QUAN_LY_DU_AN/05_TIN_TUC_WEBSITE` (ID `1_yZs6LwcHS17xQNMLYfWMMQEC9gI_U6w`) với 3 nhánh: `01_BAN_NHAP_CHO_DUYET` ID `1L_OzxDTIoRpm2CJ0W-a5fVdjZLeOW4Mz`; `02_BAI_DA_DUYET` ID `1KSrqtPh2Ecyiq_pwjF4frfiH5Ok96671`; `03_BAI_DA_DANG_LUU_TRU` ID `1a7EF37aqoeRhMI3n3isj9r1ESagv-6rS`. Đã list_folder xác minh cả 3.
 - Automation id `Automation_514b15a5a8bc8191992fece58e5b9618` cập nhật thành công: 07:00 chỉ tìm tin, viết/lưu nháp, chờ chủ dự án duyệt; khi chủ duyệt đúng mã tin + phiên bản phải tạo bản sao Google Docs **ĐÃ DUYỆT** và verify readback trước khi đăng; sau đăng xác nhận GitHub commit + live URL và lưu hồ sơ **ĐÃ ĐĂNG** trên Drive. Không ghi đè phiên bản đã duyệt; sửa nội dung phải duyệt lại. Google Sheet nhật ký cập nhật URL và bằng chứng duyệt.
 - Readback automation: `enabled=true`, lần tiếp theo `2026-11-16 07:00 Asia/Ho_Chi_Minh`, prompt có `02_BAI_DA_DUYET` và cấm tự đăng. Chưa có tin nào mới được duyệt/đăng trong lượt này, không tạo bản ghi giả.
+
+
+### Y.67. Định dạng lưu tin nháp/đã duyệt mới theo chủ dự án (15/11/2026)
+- Chủ dự án chốt: **bản nháp là file Microsoft Word .docx**, còn **bản đã duyệt là PDF chứa toàn bộ bài viết và hình ảnh nhúng trong PDF**, không phải Google Docs/PDF chỉ có chữ hoặc URL ảnh.
+- Automation `Automation_514b15a5a8bc8191992fece58e5b9618` đã update thành công giữ lịch 07:00, enabled=true, next 16/11/2026 07:00 ICT. File Word lưu tại Drive `01_BAN_NHAP_CHO_DUYET` (1L_OzxDTIoRpm2CJ0W-a5fVdjZLeOW4Mz); PDF sau duyệt lưu `02_BAI_DA_DUYET` (1KSrqtPh2Ecyiq_pwjF4frfiH5Ok96671), file lưu trữ sau đăng tại `03_BAI_DA_DANG_LUU_TRU` (1a7EF37aqoeRhMI3n3isj9r1ESagv-6rS).
+- **GATE:** phải render kiểm .docx và .pdf, xác minh nội dung+ảnh hiển thị ngay trên PDF, lưu Drive và kiểm readback thành công trước khi có thể commit `tin-tuc.json`. Phải có phê duyệt rõ mã tin/phiên bản từ chủ dự án; không tự thay đổi chữ đã duyệt để dàn trang. Ghi link Word/PDF vào nhật ký Sheet; giữ nguyên 21 PDF giáo trình.
+- Chưa tạo Word/PDF cho tin cụ thể vì chưa có bản tin mới và quyết định duyệt. Đây là thay đổi quy trình, chưa chứng minh lần chạy lịch có quyền upload .docx/.pdf.
