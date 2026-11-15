@@ -1064,3 +1064,9 @@
 - Automation `Automation_514b15a5a8bc8191992fece58e5b9618` đã update thành công giữ lịch 07:00, enabled=true, next 16/11/2026 07:00 ICT. File Word lưu tại Drive `01_BAN_NHAP_CHO_DUYET` (1L_OzxDTIoRpm2CJ0W-a5fVdjZLeOW4Mz); PDF sau duyệt lưu `02_BAI_DA_DUYET` (1KSrqtPh2Ecyiq_pwjF4frfiH5Ok96671), file lưu trữ sau đăng tại `03_BAI_DA_DANG_LUU_TRU` (1a7EF37aqoeRhMI3n3isj9r1ESagv-6rS).
 - **GATE:** phải render kiểm .docx và .pdf, xác minh nội dung+ảnh hiển thị ngay trên PDF, lưu Drive và kiểm readback thành công trước khi có thể commit `tin-tuc.json`. Phải có phê duyệt rõ mã tin/phiên bản từ chủ dự án; không tự thay đổi chữ đã duyệt để dàn trang. Ghi link Word/PDF vào nhật ký Sheet; giữ nguyên 21 PDF giáo trình.
 - Chưa tạo Word/PDF cho tin cụ thể vì chưa có bản tin mới và quyết định duyệt. Đây là thay đổi quy trình, chưa chứng minh lần chạy lịch có quyền upload .docx/.pdf.
+
+
+### Y.68. Thứ tự: viết xong bài mới tạo ảnh (15/11/2026)
+- Chủ dự án chốt quy tắc: **TÌM NGUỒN → VIẾT ĐẦY ĐỦ VÀ SOÁT LỖI BÀI → LƯU WORD NHÁP → MỚI TẠO ẢNH BÁM NỘI DUNG → TRÌNH DUYỆT BÀI+ẢNH → TẠO PDF ĐÃ DUYỆT CHỨA CHỮ+ẢNH → LƯU DRIVE KIỂM TRA → ĐĂNG WEBSITE**.
+- Automation tin 07:00 ID `Automation_514b15a5a8bc8191992fece58e5b9618` đã cập nhật prompt thành công; readback phản hồi enabled=true và lịch kế tiếp 16/11/2026 07:00 ICT.
+- Không tự tạo ảnh trước khi có bản bài hoàn chỉnh, không tự viết bài dựa theo ảnh; nội dung và ảnh bản cuối phải được chủ dự án duyệt trước khi đăng. Không chỉnh website hay dữ liệu 21 PDF trong bước này.
