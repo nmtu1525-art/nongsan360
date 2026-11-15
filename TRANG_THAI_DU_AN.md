@@ -397,3 +397,8 @@
 - Xác minh GitHub/Drive đọc được mã nguồn, checkpoint, nhật ký Google Sheets. Tạo Drive `00_QUAN_LY_DU_AN/05_TIN_TUC_WEBSITE` https://drive.google.com/drive/folders/1_yZs6LwcHS17xQNMLYfWMMQEC9gI_U6w, ba folder `01_BAN_NHAP_CHO_DUYET` / `02_BAI_DA_DUYET` / `03_BAI_DA_DANG_LUU_TRU` được xác minh.
 - Automation website 07:00 đã cập nhật để sau khi được chủ dự án duyệt mã tin/phiên bản, bắt buộc lưu và kiểm lại bản đã duyệt trên Google Drive **trước khi** commit GitHub; sau đăng lưu bản/URL/commit đối chiếu. Không đăng khi chưa duyệt hoặc khi bản đã duyệt chưa lưu được. Readback enabled=true, next 16/11/2026 07:00 giờ Việt Nam.
 - Nhật ký https://docs.google.com/spreadsheets/d/1uNUYRFZzmdij__2izzdSRlA3afL7YyXhp8dc-Ty4YII/edit là nơi quản lý mã tin, trạng thái, nguồn, bằng chứng duyệt và các liên kết. Không sửa `tin-tuc.json` trong lượt này, không đụng 21 PDF, Metricool, dữ liệu khách.
+
+
+## 53. Quy định định dạng Word nháp và PDF duyệt có hình (15/11/2026)
+- Tác vụ 07:00 đã sửa prompt: tin CHỜ DUYỆT lưu file Word .docx tại Drive 01_BAN_NHAP_CHO_DUYET; sau chủ dự án duyệt đúng mã/phiên bản thì tạo PDF đầy đủ nội dung và hình ảnh nhúng, render QA trước khi lưu Drive 02_BAI_DA_DUYET, đọc lại xác minh rồi mới cho phép đăng web.
+- PDF lưu trữ sau đăng và URL web/commit ghi trong 03_BAI_DA_DANG_LUU_TRU và Google Sheet nhật ký. Không xuất bản nếu chưa duyệt hoặc chưa lưu kiểm chứng PDF được. Chưa có bài mới được xuất bản trong bước thay đổi cấu hình.
