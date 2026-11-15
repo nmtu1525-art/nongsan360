@@ -386,3 +386,8 @@
 - Phân biệt khách chỉ nhắn hỏi với khách tự nguyện điền form, không mặc nhiên dùng consent tập huấn cho tiếp thị/affiliate. Tin về giấy chứng nhận và hỗ trợ SFVN luôn có điều kiện; không tự xác nhận giữ chỗ.
 - Chưa triển khai trực tiếp auto-replies trong Meta hoặc CRM tự động; đây là bộ tài liệu vận hành, cần chủ trang cấu hình và nghiệm thu trên thiết bị thật. Không đổi website, Sheets khách, 21 PDF.
 - Kiểm chứng Metricool 8097037 sau tác vụ: 1 PUBLISHED + 10 PENDING (6 evergreen + 4 SFVN), đúng toàn bộ UUID/ngày/giờ, 1 media mỗi bài, autoPublish=true; không tác động lịch.
+
+## 51. Tin tức web 07:00 chuyển sang quy trình duyệt trước đăng (15/11/2026)
+- Chủ dự án yêu cầu thêm quyền duyệt bài trước khi tin xuất bản và nhật ký Google Drive. Tác vụ sẵn có `Automation_514b15a5a8bc8191992fece58e5b9618` đã đổi prompt thành CHỈ SOẠN NHÁP, KHÔNG tự commit hay đăng; đã bật lại với lịch 07:00 mỗi ngày (Asia/Ho_Chi_Minh), lần kế tiếp 16/11/2026 07:00, readback xác nhận.
+- Sổ bài native Google Sheets tại https://docs.google.com/spreadsheets/d/1uNUYRFZzmdij__2izzdSRlA3afL7YyXhp8dc-Ty4YII/edit ở Drive `00_QUAN_LY_DU_AN`; tabs NHAT_KY_TIN_TUC và HUONG_DAN. Ghi mã bài/nguồn/link nháp/tình trạng/quyết định/bằng chứng duyệt/link website/commit; không tạo row giả.
+- Anh duyệt đúng mã bài và phiên bản qua tương tác rõ ràng trước mỗi lần đăng. Không coi tin đã xuất bản chỉ vì có dữ liệu trong Sheets hoặc status ĐÃ DUYỆT. Mọi bước đăng phải xác minh commit thật, giữ 21 PDF và tin cũ.
