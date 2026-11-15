@@ -1077,3 +1077,10 @@
 - Đã tạo Drive `00_QUAN_LY_DU_AN/05_TIN_TUC_WEBSITE/04_HINH_ANH_DA_DUYET` ID `1AKyB51Tvic9VYYSi5Z8fcNpqj3-So0C_`, URL https://drive.google.com/drive/folders/1AKyB51Tvic9VYYSi5Z8fcNpqj3-So0C_ .
 - Automation 07:00 ID `Automation_514b15a5a8bc8191992fece58e5b9618` đã cập nhật thành công, vẫn enabled=true, next 16/11 07:00 ICT. Sau khi viết xong bài mới làm ảnh; chỉ sau khi anh duyệt cả chữ+ảnh mới lưu ảnh gốc đã duyệt riêng (.png/.jpg/.webp), tạo PDF chứa toàn bộ bài và đúng hình đã duyệt, xác minh readback cả ảnh và PDF trên Drive, điền link vào nhật ký; nếu thiếu bước nào thì không đăng web.
 - Không thay mã nguồn, 21 PDF giáo trình, lịch Facebook hoặc nội dung bài đã duyệt.
+
+
+### Y.70. Tác vụ biên tập tin nháp ngày 16/11/2026 (đang xử lý)
+- Quy định có hiệu lực: chỉ soạn Word .docx chờ duyệt, tạo ảnh SAU nội dung, không đăng web và không cập nhật `tin-tuc.json`/`index.html`.
+- Đã đọc GitHub checkpoint/trạng thái, `tin-tuc.json` (3 bài đã đăng: ICO cà phê 10/2026, USDA WASDE ngô và lúa mì 11/2026); Google Sheet `NHAT_KY_TIN_TUC` chỉ có dòng tiêu đề, thư mục `01_BAN_NHAP_CHO_DUYET` chưa có tệp.
+- Nguồn đã tìm thấy: thông cáo USDA FAS ngày 13/11/2026 `FAS-ESR-106-26` báo 303.300 tấn ngô bán cho Mexico (272.820 tấn niên vụ 2026/27, 30.480 tấn 2027/28); URL https://fas-prod.azureedge.us/newsroom/export-sales-china-mexico-vietnam-and-unknown-destinations-0 . Chỉ là DOANH SỐ BÁN ĐƯỢC BÁO CÁO, chưa phải hàng đã giao.
+- Đang tiếp tục: soát kỹ nguồn & không trùng, tạo Word `NEWS-20261116-01_V1_CHO_DUYET.docx`, render QA, upload Drive, readback, ghi đúng một dòng vào Sheet; sau khi có đủ chữ/Word mới lên ý tưởng ảnh minh họa và trình duyệt cả hai. CẤM đăng web khi chưa có duyệt cụ thể cả bài+ảnh.
