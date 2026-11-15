@@ -1070,3 +1070,10 @@
 - Chủ dự án chốt quy tắc: **TÌM NGUỒN → VIẾT ĐẦY ĐỦ VÀ SOÁT LỖI BÀI → LƯU WORD NHÁP → MỚI TẠO ẢNH BÁM NỘI DUNG → TRÌNH DUYỆT BÀI+ẢNH → TẠO PDF ĐÃ DUYỆT CHỨA CHỮ+ẢNH → LƯU DRIVE KIỂM TRA → ĐĂNG WEBSITE**.
 - Automation tin 07:00 ID `Automation_514b15a5a8bc8191992fece58e5b9618` đã cập nhật prompt thành công; readback phản hồi enabled=true và lịch kế tiếp 16/11/2026 07:00 ICT.
 - Không tự tạo ảnh trước khi có bản bài hoàn chỉnh, không tự viết bài dựa theo ảnh; nội dung và ảnh bản cuối phải được chủ dự án duyệt trước khi đăng. Không chỉnh website hay dữ liệu 21 PDF trong bước này.
+
+
+### Y.69. Lưu ảnh riêng sau khi duyệt tin website (15/11/2026)
+- Chủ dự án yêu cầu hình ảnh sau duyệt phải có file riêng trong thư mục ảnh, ngoài PDF có bài và hình.
+- Đã tạo Drive `00_QUAN_LY_DU_AN/05_TIN_TUC_WEBSITE/04_HINH_ANH_DA_DUYET` ID `1AKyB51Tvic9VYYSi5Z8fcNpqj3-So0C_`, URL https://drive.google.com/drive/folders/1AKyB51Tvic9VYYSi5Z8fcNpqj3-So0C_ .
+- Automation 07:00 ID `Automation_514b15a5a8bc8191992fece58e5b9618` đã cập nhật thành công, vẫn enabled=true, next 16/11 07:00 ICT. Sau khi viết xong bài mới làm ảnh; chỉ sau khi anh duyệt cả chữ+ảnh mới lưu ảnh gốc đã duyệt riêng (.png/.jpg/.webp), tạo PDF chứa toàn bộ bài và đúng hình đã duyệt, xác minh readback cả ảnh và PDF trên Drive, điền link vào nhật ký; nếu thiếu bước nào thì không đăng web.
+- Không thay mã nguồn, 21 PDF giáo trình, lịch Facebook hoặc nội dung bài đã duyệt.
