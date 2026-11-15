@@ -1039,3 +1039,8 @@
 - SOP V2: https://docs.google.com/document/d/19-TphBsO-0m8nzaBA6MFTSk9QHAIT-q8blvOjgR1vIk/edit ; 4.143 ký tự, quy trình 7 bước, 3 tình huống thực tế, 7 trạng thái CRM và quy tắc consent/PII.
 - **Tài liệu là kịch bản cấu hình, KHÔNG chứng minh bot đã tự chạy.** Chưa có quyền Meta Inbox để bật Instant Reply/FAQ, chưa thử điện thoại; không tự tuyên bố chatbot AI. Không chỉnh lịch Metricool, website, 21 PDF hay Leads.
 - Bước tiếp theo: người quản trị kiểm tra giao diện Automations Meta, cấu hình lời chào và thử bằng tài khoản Facebook khác; chỉ sau readback thực tế mới đánh dấu “đã bật”.
+
+### Y.64. Đổi quy trình tin website 07:00 sang CHỜ DUYỆT (15/11/2026)
+- Yêu cầu mới của chủ dự án: mỗi ngày 07:00 chỉ nghiên cứu/biên tập bản nháp, **xin duyệt trước khi đăng**, lưu bảng theo dõi trên Google Drive.
+- Tác vụ `Đăng tin Nông Sản 360` id `Automation_514b15a5a8bc8191992fece58e5b9618` được đọc trực tiếp: lịch `DTSTART:20261115T070000;RRULE:FREQ=DAILY` múi giờ Asia/Ho_Chi_Minh, hiện `is_enabled=false`, prompt cũ **CHO PHÉP tự cập nhật `tin-tuc.json`**, vì vậy không bật lại khi chưa sửa prompt an toàn.
+- Đang thiết kế bảng bài và quy trình phê duyệt. Tuyệt đối không commit `tin-tuc.json` hay xuất bản chưa có chấp thuận cụ thể của chủ dự án. Bảo toàn ba tin cũ và 21 PDF.
