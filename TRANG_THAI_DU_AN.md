@@ -391,3 +391,9 @@
 - Chủ dự án yêu cầu thêm quyền duyệt bài trước khi tin xuất bản và nhật ký Google Drive. Tác vụ sẵn có `Automation_514b15a5a8bc8191992fece58e5b9618` đã đổi prompt thành CHỈ SOẠN NHÁP, KHÔNG tự commit hay đăng; đã bật lại với lịch 07:00 mỗi ngày (Asia/Ho_Chi_Minh), lần kế tiếp 16/11/2026 07:00, readback xác nhận.
 - Sổ bài native Google Sheets tại https://docs.google.com/spreadsheets/d/1uNUYRFZzmdij__2izzdSRlA3afL7YyXhp8dc-Ty4YII/edit ở Drive `00_QUAN_LY_DU_AN`; tabs NHAT_KY_TIN_TUC và HUONG_DAN. Ghi mã bài/nguồn/link nháp/tình trạng/quyết định/bằng chứng duyệt/link website/commit; không tạo row giả.
 - Anh duyệt đúng mã bài và phiên bản qua tương tác rõ ràng trước mỗi lần đăng. Không coi tin đã xuất bản chỉ vì có dữ liệu trong Sheets hoặc status ĐÃ DUYỆT. Mọi bước đăng phải xác minh commit thật, giữ 21 PDF và tin cũ.
+
+
+## 52. Bổ sung lưu cả bản nháp, bản đã duyệt, bản đã đăng trên Drive (15/11/2026)
+- Xác minh GitHub/Drive đọc được mã nguồn, checkpoint, nhật ký Google Sheets. Tạo Drive `00_QUAN_LY_DU_AN/05_TIN_TUC_WEBSITE` https://drive.google.com/drive/folders/1_yZs6LwcHS17xQNMLYfWMMQEC9gI_U6w, ba folder `01_BAN_NHAP_CHO_DUYET` / `02_BAI_DA_DUYET` / `03_BAI_DA_DANG_LUU_TRU` được xác minh.
+- Automation website 07:00 đã cập nhật để sau khi được chủ dự án duyệt mã tin/phiên bản, bắt buộc lưu và kiểm lại bản đã duyệt trên Google Drive **trước khi** commit GitHub; sau đăng lưu bản/URL/commit đối chiếu. Không đăng khi chưa duyệt hoặc khi bản đã duyệt chưa lưu được. Readback enabled=true, next 16/11/2026 07:00 giờ Việt Nam.
+- Nhật ký https://docs.google.com/spreadsheets/d/1uNUYRFZzmdij__2izzdSRlA3afL7YyXhp8dc-Ty4YII/edit là nơi quản lý mã tin, trạng thái, nguồn, bằng chứng duyệt và các liên kết. Không sửa `tin-tuc.json` trong lượt này, không đụng 21 PDF, Metricool, dữ liệu khách.
