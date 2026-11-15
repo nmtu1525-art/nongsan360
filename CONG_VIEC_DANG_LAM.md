@@ -1044,3 +1044,9 @@
 - Yêu cầu mới của chủ dự án: mỗi ngày 07:00 chỉ nghiên cứu/biên tập bản nháp, **xin duyệt trước khi đăng**, lưu bảng theo dõi trên Google Drive.
 - Tác vụ `Đăng tin Nông Sản 360` id `Automation_514b15a5a8bc8191992fece58e5b9618` được đọc trực tiếp: lịch `DTSTART:20261115T070000;RRULE:FREQ=DAILY` múi giờ Asia/Ho_Chi_Minh, hiện `is_enabled=false`, prompt cũ **CHO PHÉP tự cập nhật `tin-tuc.json`**, vì vậy không bật lại khi chưa sửa prompt an toàn.
 - Đang thiết kế bảng bài và quy trình phê duyệt. Tuyệt đối không commit `tin-tuc.json` hay xuất bản chưa có chấp thuận cụ thể của chủ dự án. Bảo toàn ba tin cũ và 21 PDF.
+
+### Y.65. ĐÃ CHUYỂN tác vụ 07:00 sang CHỜ DUYỆT và tạo sổ biên tập Drive (15/11/2026)
+- Automation ID giữ nguyên `Automation_514b15a5a8bc8191992fece58e5b9618`; đổi tên `Nông Sản 360 — Soạn tin chờ duyệt`; update thành công, `is_enabled=true`, lần kế tiếp `2026-11-16 07:00 +07:00`, múi giờ Asia/Ho_Chi_Minh. Readback bằng automation peek xác nhận prompt mở đầu: chỉ soạn nháp, **CẤM commit tin-tuc.json khi chưa duyệt**.
+- Google Sheet native nhật ký biên tập: https://docs.google.com/spreadsheets/d/1uNUYRFZzmdij__2izzdSRlA3afL7YyXhp8dc-Ty4YII/edit ; 2 tabs `NHAT_KY_TIN_TUC` (15 cột, bộ lọc, dropdown trạng thái/duyệt) + `HUONG_DAN`; đã đọc lại metadata và xác nhận đúng folder Drive `00_QUAN_LY_DU_AN` ID `1fr6KNFoxzmIE9acK1vk-VS-QzeUsQH42`. Không nhập bản ghi giả.
+- Luồng chuẩn: 07:00 lấy nguồn, kiểm chứng/soát chính tả 2 vòng, viết tối đa 1–2 nháp SEO khi có tin thật; lưu Google Docs nháp và một dòng nhật ký; gửi chủ dự án mã bài + link + nguồn, **CHỜ DUYỆT**. Chỉ sau lời duyệt cụ thể cho đúng mã/phiên bản mới chạy tác vụ đăng riêng, kiểm GitHub commit và trang live rồi cập nhật ngày đăng/URL/commit trong bảng.
+- Không sửa nội dung website, `tin-tuc.json`, 21 PDF, lịch Metricool hay dữ liệu khách trong lần cấu hình này. Nếu tác vụ không ghi được Drive hoặc thiếu nguồn, phải báo trung thực và tuyệt đối không đăng.
