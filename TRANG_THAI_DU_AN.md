@@ -402,3 +402,8 @@
 ## 53. Quy định định dạng Word nháp và PDF duyệt có hình (15/11/2026)
 - Tác vụ 07:00 đã sửa prompt: tin CHỜ DUYỆT lưu file Word .docx tại Drive 01_BAN_NHAP_CHO_DUYET; sau chủ dự án duyệt đúng mã/phiên bản thì tạo PDF đầy đủ nội dung và hình ảnh nhúng, render QA trước khi lưu Drive 02_BAI_DA_DUYET, đọc lại xác minh rồi mới cho phép đăng web.
 - PDF lưu trữ sau đăng và URL web/commit ghi trong 03_BAI_DA_DANG_LUU_TRU và Google Sheet nhật ký. Không xuất bản nếu chưa duyệt hoặc chưa lưu kiểm chứng PDF được. Chưa có bài mới được xuất bản trong bước thay đổi cấu hình.
+
+
+## 54. Chien luoc ban tin nong san/phai sinh da duoc duyet (16/11/2026)
+- 6 dang bai va ty trong muc tieu: 40% gia/thi truong, 35% cung cau va futures, 25% kien thuc va rui ro. Google Doc chuan: https://docs.google.com/document/d/1Ej-Jm_NAmYo3rR-iriukdvOPp-qh2QoZwcmy9Cb5yhw/edit (Drive 00_QUAN_LY_DU_AN).
+- Prompt task 07:00 da cap nhat; readback enabled=false, last run 16/11 requires_user_action=true. Khong duoc tu nhan task dang chay. Gate duyet bai+anh va luu PDF/anh tren Drive truoc dang khong doi.
