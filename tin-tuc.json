@@ -1,8 +1,53 @@
 {
   "title": "Tin tức thị trường Nông Sản 360",
-  "lastEditorialUpdate": "2026-11-14",
+  "lastEditorialUpdate": "2026-11-16",
   "description": "Tin tức được sắp xếp tự động theo ngày phát hành. Mỗi tin có trang chi tiết và đường dẫn nguồn chính thức.",
   "items": [
+    {
+      "id": "usda-corn-sales-mexico-2026-11-13",
+      "commodity": "Ngô",
+      "source": "USDA",
+      "sourceName": "Bộ Nông nghiệp Hoa Kỳ (USDA FAS)",
+      "published": "2026-11-16",
+      "dataPeriod": "Thông báo 13/11/2026 · niên vụ 2026/27 và 2027/28",
+      "title": "USDA báo doanh số 303.300 tấn ngô Mỹ xuất sang Mexico",
+      "summary": "USDA FAS thông báo doanh số bán 303.300 tấn ngô Mỹ cho Mexico, trong đó 272.820 tấn thuộc niên vụ 2026/27 và 30.480 tấn thuộc niên vụ 2027/28.",
+      "url": "https://fas-prod.azureedge.us/newsroom/export-sales-china-mexico-vietnam-and-unknown-destinations-0",
+      "lead": "USDA thông báo doanh số 303.300 tấn ngô Mỹ sang Mexico ngày 13/11, phân bổ cho hai niên vụ. Đây là hợp đồng bán được báo cáo, chưa phải lượng giao thực tế.",
+      "body": [
+        {
+          "heading": "USDA ghi nhận đơn hàng ngô Mỹ sang Mexico",
+          "paragraphs": [
+            "Ngày 13/11/2026, Cơ quan Nông nghiệp đối ngoại thuộc Bộ Nông nghiệp Hoa Kỳ (USDA FAS) công bố thông báo doanh số xuất khẩu FAS-ESR-106-26. Theo báo cáo của các nhà xuất khẩu tư nhân, khối lượng ngô dành để giao cho Mexico được ghi nhận là 303.300 tấn (metric tons, MT). Điểm đáng chú ý không chỉ là quy mô đơn hàng mà còn ở việc khối lượng này được phân bổ cho hai niên vụ tiếp thị khác nhau.",
+            "Thông cáo nêu rõ 272.820 tấn được dành cho niên vụ 2026/27 và 30.480 tấn cho niên vụ 2027/28. Cộng hai phần bằng đúng 303.300 tấn. Những con số phản ánh doanh số được báo cáo trong kỳ, không đồng nghĩa toàn bộ hàng đã được xếp tàu hoặc thông quan tại Mexico."
+          ]
+        },
+        {
+          "heading": "Vì sao phải tách hai niên vụ?",
+          "paragraphs": [
+            "Niên vụ tiếp thị (marketing year) là khoảng thời gian thống kê riêng cho từng loại nông sản; nó giúp phân biệt nhu cầu giao hàng gần với các cam kết giao trong một kỳ xa hơn. Với thông báo lần này, phần lớn lượng ngô thuộc niên vụ 2026/27, còn phần nhỏ hơn dành cho 2027/28. Do đó, không nên cộng toàn bộ số liệu vào một kỳ xuất khẩu để suy luận tốc độ tiêu thụ của riêng niên vụ 2026/27.",
+            "Việc tách kỳ giao hàng cũng có ý nghĩa khi đọc báo cáo cung cầu: cam kết xuất khẩu, lượng xuất khẩu thực tế và tồn kho cuối kỳ là các thước đo khác nhau. Một thông báo bán hàng riêng lẻ không đủ để xác định tác động ròng lên tồn kho của Mỹ. Muốn đánh giá điều đó cần theo dõi thêm các báo cáo doanh số xuất khẩu hằng tuần, giao hàng thực tế và các lần điều chỉnh dự báo cung cầu của USDA."
+          ]
+        },
+        {
+          "heading": "Tín hiệu thương mại có ý nghĩa gì đối với thị trường ngô?",
+          "paragraphs": [
+            "Dữ kiện đã xác nhận là nhà xuất khẩu tư nhân báo cáo hoạt động bán ngô Mỹ cho điểm đến Mexico. Về mặt phân tích, điều này bổ sung một quan sát mới về nhu cầu xuất khẩu của Mỹ, đặc biệt ở thị trường Mexico. Tuy nhiên, chỉ một thông báo chưa chứng minh nhu cầu cả niên vụ tăng tốc, cũng không cho phép kết luận giá ngô sẽ tăng hoặc giảm.",
+            "Trong ngắn hạn, người theo dõi thị trường có thể đối chiếu thông báo này với tổng cam kết xuất khẩu, tiến độ giao hàng, sản lượng và nhu cầu sử dụng trong nước. Nếu các số liệu tiếp theo cùng cho thấy nhu cầu vượt dự báo, cách nhìn về cân đối cung cầu có thể thay đổi. Ngược lại, nếu giao hàng chậm hoặc các cam kết được điều chỉnh, ý nghĩa của con số doanh số ban đầu sẽ khác đi. Đây là các kịch bản cần kiểm chứng thêm, không phải dự báo đã xảy ra."
+          ]
+        },
+        {
+          "heading": "Những giới hạn cần lưu ý",
+          "paragraphs": [
+            "Thông báo FAS-ESR-106-26 không công bố giá bán, thời điểm giao hàng cụ thể cho từng lô, danh tính người mua hoặc mức tác động lên giá hợp đồng tương lai. Bài viết không quy các biến động giá thị trường cho riêng thông tin này. USDA cũng nêu trong chương trình báo cáo doanh số xuất khẩu rằng số liệu bán hàng và các thay đổi hợp đồng được tổng hợp theo chế độ báo cáo; vì vậy cần phân biệt dữ liệu giao dịch được báo cáo với hàng đã vận chuyển.",
+            "Tóm lại, điểm mới của ngày 13/11 là doanh số ngô Mỹ giao tới Mexico đạt 303.300 tấn theo thông báo chính thức, chia qua hai niên vụ. Giá trị của thông tin nằm ở việc cập nhật bức tranh thương mại; đánh giá tác động lên cân đối cung cầu đòi hỏi theo dõi dữ liệu kế tiếp, không suy diễn hướng giá từ một bản tin đơn lẻ."
+          ]
+        }
+      ],
+      "key_takeaway": "USDA công bố doanh số bán 303.300 tấn ngô Mỹ cho Mexico trong hai niên vụ; đây là doanh số được báo cáo, không phải lượng hàng đã giao.",
+      "status": "published",
+      "editorialNote": "Bản NEWS-20261116-01 V1 đã được chủ dự án duyệt riêng cả nội dung và hình minh họa ngày 16/11/2026. Ảnh lưu cùng PDF phát hành trên Google Drive. Không phải khuyến nghị giao dịch."
+    },
     {
       "id": "ico-coffee-2026-10",
       "commodity": "Cà phê",
