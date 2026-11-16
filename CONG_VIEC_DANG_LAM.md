@@ -1084,3 +1084,11 @@
 - Đã đọc GitHub checkpoint/trạng thái, `tin-tuc.json` (3 bài đã đăng: ICO cà phê 10/2026, USDA WASDE ngô và lúa mì 11/2026); Google Sheet `NHAT_KY_TIN_TUC` chỉ có dòng tiêu đề, thư mục `01_BAN_NHAP_CHO_DUYET` chưa có tệp.
 - Nguồn đã tìm thấy: thông cáo USDA FAS ngày 13/11/2026 `FAS-ESR-106-26` báo 303.300 tấn ngô bán cho Mexico (272.820 tấn niên vụ 2026/27, 30.480 tấn 2027/28); URL https://fas-prod.azureedge.us/newsroom/export-sales-china-mexico-vietnam-and-unknown-destinations-0 . Chỉ là DOANH SỐ BÁN ĐƯỢC BÁO CÁO, chưa phải hàng đã giao.
 - Đang tiếp tục: soát kỹ nguồn & không trùng, tạo Word `NEWS-20261116-01_V1_CHO_DUYET.docx`, render QA, upload Drive, readback, ghi đúng một dòng vào Sheet; sau khi có đủ chữ/Word mới lên ý tưởng ảnh minh họa và trình duyệt cả hai. CẤM đăng web khi chưa có duyệt cụ thể cả bài+ảnh.
+
+
+### Y.71. Chủ dự án duyệt định hướng 6 nhóm bài phái sinh (16/11/2026)
+- Chủ dự án xác nhận `Ok hướng này đi` đối với chiến lược 6 dạng bài: (1) giá nông sản hôm nay, (2) tổng kết phiên hợp đồng tương lai, (3) cung cầu/mùa vụ, (4) giải mã USDA/ICO, (5) giá hàng thực so với giá kỳ hạn, (6) kiến thức phái sinh từ tin thực tế.
+- Tỷ trọng mục tiêu 40% tin giá/diễn biến, 35% phân tích cung cầu+hợp đồng tương lai, 25% kiến thức+rủi ro, đo ở kế hoạch nhiều tuần/tháng thay vì ép từng ngày. Khung lịch trong tuần linh hoạt theo sự kiện, không bịa bài khi thiếu nguồn.
+- Tiêu chuẩn dữ liệu: giá hợp đồng đúng sàn, kỳ hạn tháng/năm, đơn vị, giá thanh toán hay giao dịch, mốc thời gian và độ trễ; phân biệt hàng thực, kỳ hạn, chênh lệch giá; không suy luận quan hệ nhân quả thiếu chứng cứ; không khuyến nghị mua/bán. Phân tích báo cáo đối chiếu số liệu với kỳ trước và nguồn chính thức.
+- Bảo toàn phê duyệt chữ+ảnh, Word nháp, PDF duyệt nhúng hình, ảnh riêng trên Drive, nhật ký và gate không tự đăng.
+- Kiểm tra task 07:00 cho thấy is_enabled=false sau phiên chạy 16/11, run requires_user_action=true. Cần phân biệt đây là trạng thái thực tế, không khẳng định tác vụ đang chạy bình thường khi chưa xác minh/khôi phục.
