@@ -1092,3 +1092,10 @@
 - Tiêu chuẩn dữ liệu: giá hợp đồng đúng sàn, kỳ hạn tháng/năm, đơn vị, giá thanh toán hay giao dịch, mốc thời gian và độ trễ; phân biệt hàng thực, kỳ hạn, chênh lệch giá; không suy luận quan hệ nhân quả thiếu chứng cứ; không khuyến nghị mua/bán. Phân tích báo cáo đối chiếu số liệu với kỳ trước và nguồn chính thức.
 - Bảo toàn phê duyệt chữ+ảnh, Word nháp, PDF duyệt nhúng hình, ảnh riêng trên Drive, nhật ký và gate không tự đăng.
 - Kiểm tra task 07:00 cho thấy is_enabled=false sau phiên chạy 16/11, run requires_user_action=true. Cần phân biệt đây là trạng thái thực tế, không khẳng định tác vụ đang chạy bình thường khi chưa xác minh/khôi phục.
+
+
+### Y.72. Duyet va ap dung chien luoc bien tap phai sinh (16/11/2026)
+- Chu du an dong y 6 dang bai: gia hang ngay; tong ket phien futures; cung cau/mua vu; USDA/ICO; hang thuc vs futures; kien thuc phai sinh. Ty trong muc tieu 40/35/25 theo thang.
+- Google Doc chuan bien tap da tao, doc lai va chuyen vao Drive 00_QUAN_LY_DU_AN: https://docs.google.com/document/d/1Ej-Jm_NAmYo3rR-iriukdvOPp-qh2QoZwcmy9Cb5yhw/edit
+- Da update prompt automation 07:00 theo chuan moi va giu quy trinh Word -> anh -> duyet -> PDF co anh + anh rieng Drive -> dang web. Update success NHUNG task hien enabled=false, run 16/11 requires_user_action=true; khong duoc bao dang chay khi chua xu ly.
+- Bao toan 21 PDF, tin-tuc.json, lich Metricool va du lieu khach.
