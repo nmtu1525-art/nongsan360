@@ -1,8 +1,60 @@
 {
   "title": "Tin tức thị trường Nông Sản 360",
-  "lastEditorialUpdate": "2026-11-16",
+  "lastEditorialUpdate": "2026-11-17",
   "description": "Tin tức được sắp xếp tự động theo ngày phát hành. Mỗi tin có trang chi tiết và đường dẫn nguồn chính thức.",
   "items": [
+    {
+      "id": "usda-crop-progress-corn-winter-wheat-2026-11-16",
+      "commodity": "Ngô / Lúa mì",
+      "source": "USDA",
+      "sourceName": "Bộ Nông nghiệp Hoa Kỳ — USDA NASS",
+      "published": "2026-11-17",
+      "dataPeriod": "Crop Progress 16/11/2026; dữ liệu đến 15/11/2026",
+      "title": "USDA: Thu hoạch ngô Mỹ đạt 88%, lúa mì vụ đông gieo trồng 92%",
+      "summary": "USDA NASS ghi nhận 88% diện tích ngô đã thu hoạch tại 18 bang theo dõi, dưới bình quân 5 năm 92%; lúa mì vụ đông gieo 92%, tỷ lệ cây tốt hoặc xuất sắc đạt 53%.",
+      "url": "https://esmis.nal.usda.gov/sites/default/release-files/796149/prog4626.pdf",
+      "lead": "Báo cáo Crop Progress do USDA công bố ngày 16/11/2026 cho biết, tính đến ngày 15/11, 18 bang theo dõi đã thu hoạch 88% diện tích ngô, thấp hơn mức bình quân 5 năm là 92%. Đồng thời, 18 bang theo dõi đã gieo 92% diện tích lúa mì vụ đông cho vụ 2027; tỷ lệ cây ở tình trạng tốt hoặc xuất sắc đạt 53%.",
+      "body": [
+        {
+          "heading": "Thu hoạch ngô Mỹ đạt 88%, còn thấp hơn bình quân 5 năm",
+          "paragraphs": [
+            "Báo cáo tiến độ mùa vụ Crop Progress phát hành ngày 16/11/2026 của Cơ quan Thống kê Nông nghiệp Quốc gia Hoa Kỳ (USDA NASS) công bố dữ liệu khảo sát tính đến tuần kết thúc ngày 15/11/2026. Tại 18 bang được theo dõi, tỷ lệ diện tích ngô đã thu hoạch đạt 88%, tăng 7 điểm phần trăm so với 81% vào ngày 8/11. Tuy vậy, tiến độ vẫn thấp hơn 4 điểm phần trăm so với mức bình quân giai đoạn 2021–2025 là 92%.",
+            "Trong cùng bảng, mức thu hoạch ngày 15/11/2025 của nhóm 18 bang là 90%. Tất cả các tỷ lệ nói trên là phần trăm diện tích được thu hoạch, không phải sản lượng ngô tính bằng tấn hay giạ. Báo cáo lưu ý 18 bang được khảo sát chiếm 93% diện tích ngô đã thu hoạch của Hoa Kỳ trong năm 2025; do đó không nên tự diễn giải chỉ số này thành số liệu đã kiểm đếm cho toàn bộ mọi bang."
+          ]
+        },
+        {
+          "heading": "Chênh lệch tiến độ giữa các bang vẫn đáng theo dõi",
+          "paragraphs": [
+            "Số liệu chi tiết phản ánh tiến độ không đồng đều. Iowa đạt 84% vào ngày 15/11, so với bình quân 5 năm 95%; South Dakota đạt 78%, so với mức bình quân 92%. Michigan đạt 73%, thấp hơn mức bình quân 78%. Trái lại, Kentucky đạt 99% so với bình quân 95%, còn North Dakota đạt 89% so với 88%. Những chênh lệch này chỉ mô tả tiến độ đến mốc báo cáo, chưa đủ để kết luận nguyên nhân do thời tiết hay khả năng giảm sản lượng ở từng bang.",
+            "Về mặt thị trường, một vụ thu hoạch diễn ra chậm hơn nhịp lịch sử có thể khiến người theo dõi quan tâm hơn tới khâu thu gom, vận chuyển và khả năng giao hàng ngắn hạn. Tuy nhiên, đây chỉ là kịch bản cần kiểm chứng bằng dữ liệu logistics và cung cầu; báo cáo Crop Progress không công bố trực tiếp mức tồn kho cuối kỳ, nhu cầu tiêu thụ hay giá hợp đồng tương lai."
+          ]
+        },
+        {
+          "heading": "Lúa mì vụ đông: gieo trồng 92%, chất lượng cải thiện so với tuần trước",
+          "paragraphs": [
+            "Đối với lúa mì vụ đông phục vụ vụ thu hoạch năm 2027, 18 bang được USDA theo dõi đã gieo trồng 92% diện tích tính đến 15/11, tăng so với 89% một tuần trước nhưng thấp hơn bình quân 5 năm 94%. Tỷ lệ cây đã mọc đạt 82%, tăng từ 76% và nhỉnh hơn bình quân 5 năm là 81%. Hai chỉ số “đã gieo” và “đã mọc” phản ánh các giai đoạn phát triển khác nhau, không thể cộng lại.",
+            "Về tình trạng cây trồng, USDA phân loại 43% diện tích ở mức tốt (good), 10% ở mức xuất sắc (excellent), tổng cộng 53%. Một tuần trước, hai nhóm này lần lượt là 41% và 8%, tổng 49%. Mức tăng 4 điểm phần trăm là thay đổi của tỷ trọng đánh giá tình trạng cây giữa hai tuần, không phải dự báo năng suất tăng 4%.",
+            "Kansas, bang trồng lúa mì lớn, có 96% diện tích được gieo tính đến 15/11, so với bình quân 5 năm 97%. Bang Oklahoma mới đạt 84% so với bình quân 92%; cây mọc ở Oklahoma đạt 66% so với mức bình quân 79%. Các con số địa phương cung cấp thêm bối cảnh cho việc theo dõi mùa vụ nhưng không tự chứng minh ảnh hưởng giá trong một phiên giao dịch cụ thể."
+          ]
+        },
+        {
+          "heading": "Ý nghĩa đối với người theo dõi hợp đồng tương lai",
+          "paragraphs": [
+            "Dữ kiện xác thực hiện tại là tiến độ thu hoạch ngô thấp hơn trung bình nhiều năm tại nhóm bang thống kê, trong khi chất lượng cây lúa mì vụ đông được đánh giá cải thiện theo tuần. Nhận định nghiên cứu: việc cùng xem tiến độ mùa vụ và bảng cân đối cung cầu có thể giúp tránh suy diễn đơn chiều từ một tỷ lệ diện tích. Bất kỳ tác động lên giá kỳ hạn nào còn phụ thuộc kỳ vọng trước công bố, chất lượng hạt, vận tải, thương mại quốc tế và các số liệu cập nhật kế tiếp.",
+            "Người đọc không nên nhầm tỷ lệ phần trăm diện tích với sản lượng thực thu. Tương tự, báo cáo tiến độ không tự cho biết giá hàng thực tại Việt Nam hoặc giá thanh toán của từng hợp đồng ngô/lúa mì trên CBOT. Để phân tích giá hợp đồng cần nêu đúng sàn, tháng đáo hạn, đơn vị niêm yết và mốc so sánh, cùng dữ liệu giao dịch độc lập."
+          ]
+        },
+        {
+          "heading": "Những điểm cần theo dõi tiếp",
+          "paragraphs": [
+            "Các kỳ Crop Progress tiếp theo sẽ cho biết tiến độ ngô có thu hẹp khoảng cách so với mức bình quân hay không; với lúa mì vụ đông, cần theo dõi tỷ lệ cây mọc, trạng thái tốt/xuất sắc và thay đổi theo bang. Để đánh giá triển vọng cung cầu, cần đối chiếu thêm USDA WASDE, tiến độ xuất khẩu và dữ liệu thời tiết chính thức. Chưa đủ cơ sở khẳng định thị trường sẽ tăng hoặc giảm giá từ báo cáo này."
+          ]
+        }
+      ],
+      "key_takeaway": "Tiến độ thu hoạch ngô thấp hơn bình quân 5 năm, trong khi chất lượng lúa mì vụ đông cải thiện theo tuần; báo cáo không tự xác định hướng giá hợp đồng tương lai.",
+      "status": "published",
+      "editorialNote": "NEWS-20261117-01 V1 được chủ dự án duyệt rõ cả nội dung Word và ảnh trong chat ngày 17/11/2026. Bản PDF 3 trang có ảnh nhúng và ảnh gốc lưu riêng tại Drive, minh họa AI không phải ảnh thực. Không có khuyến nghị giao dịch."
+    },
     {
       "id": "usda-corn-sales-mexico-2026-11-13",
       "commodity": "Ngô",
