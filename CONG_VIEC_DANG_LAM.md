@@ -1099,3 +1099,12 @@
 - Google Doc chuan bien tap da tao, doc lai va chuyen vao Drive 00_QUAN_LY_DU_AN: https://docs.google.com/document/d/1Ej-Jm_NAmYo3rR-iriukdvOPp-qh2QoZwcmy9Cb5yhw/edit
 - Da update prompt automation 07:00 theo chuan moi va giu quy trinh Word -> anh -> duyet -> PDF co anh + anh rieng Drive -> dang web. Update success NHUNG task hien enabled=false, run 16/11 requires_user_action=true; khong duoc bao dang chay khi chua xu ly.
 - Bao toan 21 PDF, tin-tuc.json, lich Metricool va du lieu khach.
+
+
+### Y.73. Khởi tạo chiến lược video TikTok / Facebook Reels / YouTube (19/11/2026)
+- Người dùng chọn mở rộng Nông Sản 360 sang video TikTok, Facebook Thước phim (Reels) và YouTube (Shorts + nội dung chuyên sâu).
+- Đã đọc GitHub checkpoint/trạng thái, xác nhận repo `nmtu1525-art/nongsan360` nhánh main có quyền push, cập nhật commit gần nhất ngày 17/11/2026; Drive gốc và Facebook truy cập được; folder `Facebook/04_VIDEO_REELS` ID `1t8_tjV044gu52-lVKCS2CUjDP_v5Hgi6` hiện rỗng.
+- Metricool brand `8097037` chỉ thấy mạng Facebook (`1388965107640064`); chưa có bằng chứng TikTok/YouTube đã kết nối hoặc có quyền đăng. Không được tuyên bố đã tạo kênh hay đăng clip.
+- CHẶNG ĐANG LÀM: xây chiến lược sản xuất 1 master dọc 9:16 cho 3 nền tảng, biên soạn lịch 4 tuần và kịch bản video pilot, đối chiếu 6 nhóm nội dung đã duyệt và 20 đề bài Facebook; soạn chữ trước, duyệt kịch bản trước khi dựng video/ảnh.
+- Không sửa 20 đề bài FB và các bài Meta/Metricool đã đặt lịch; không chạm `tin-tuc.json`, 21 PDF, các tệp website hay dữ liệu khách. Bất kỳ lời mời mở tài khoản nào cần minh bạch liên kết và cảnh báo rủi ro, không hứa lợi nhuận.
+- Bước tiếp theo: lưu `CHIEN_LUOC_VIDEO_TIKTOK_REELS_YOUTUBE_20261119.md` và bản kế hoạch lên Drive, kiểm tra readback, trình chủ dự án duyệt kịch bản đầu tiên. Chưa đặt lịch đăng/video nào trong chặng này.
