@@ -1108,3 +1108,10 @@
 - CHẶNG ĐANG LÀM: xây chiến lược sản xuất 1 master dọc 9:16 cho 3 nền tảng, biên soạn lịch 4 tuần và kịch bản video pilot, đối chiếu 6 nhóm nội dung đã duyệt và 20 đề bài Facebook; soạn chữ trước, duyệt kịch bản trước khi dựng video/ảnh.
 - Không sửa 20 đề bài FB và các bài Meta/Metricool đã đặt lịch; không chạm `tin-tuc.json`, 21 PDF, các tệp website hay dữ liệu khách. Bất kỳ lời mời mở tài khoản nào cần minh bạch liên kết và cảnh báo rủi ro, không hứa lợi nhuận.
 - Bước tiếp theo: lưu `CHIEN_LUOC_VIDEO_TIKTOK_REELS_YOUTUBE_20261119.md` và bản kế hoạch lên Drive, kiểm tra readback, trình chủ dự án duyệt kịch bản đầu tiên. Chưa đặt lịch đăng/video nào trong chặng này.
+
+### Y.74. Ưu tiên TikTok whiteboard — lập kế hoạch series và kịch bản thử nghiệm (19/11/2026)
+- Người dùng làm rõ: **làm TikTok trước**, loại hình video vẽ trên giấy/whiteboard; Facebook Reels và YouTube Shorts để sau. Yêu cầu hiện tại là xác định nội dung, series, lịch và kịch bản (không phải tạo ảnh hay video trước khi duyệt).
+- Đã rà soát checkpoint GitHub, kế hoạch video 3 nền tảng trước đó, và Drive gốc: hiện chưa có thư mục TikTok riêng; Metricool chỉ xác nhận Facebook kết nối.
+- Giai đoạn đang làm: chọn series TikTok chủ lực **Nghịch lý nông sản** và series phụ làm rõ giá, hàng thực/phái sinh; đề xuất 12 tập giai đoạn thử nghiệm và viết lời thoại/storyboard cho tập 01. Phong cách một bàn tay vẽ trên giấy, 3–5 hình vẽ, video dọc 9:16, hook nhanh, phụ đề.
+- **Chưa có duyệt:** không tự tạo media, đăng TikTok, mở/giả định tài khoản, gắn link affiliate, dùng số liệu giá không kiểm chứng. Giữ nguyên toàn bộ website, 21 PDF, tin tức và lịch các nền tảng khác.
+- Tiếp theo: lưu kế hoạch series TikTok có mã và kịch bản vào GitHub; xác minh readback; trình chủ dự án duyệt trước khi xây dựng đồ họa/giọng đọc/video.
