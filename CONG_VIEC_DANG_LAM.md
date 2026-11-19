@@ -1115,3 +1115,10 @@
 - Giai đoạn đang làm: chọn series TikTok chủ lực **Nghịch lý nông sản** và series phụ làm rõ giá, hàng thực/phái sinh; đề xuất 12 tập giai đoạn thử nghiệm và viết lời thoại/storyboard cho tập 01. Phong cách một bàn tay vẽ trên giấy, 3–5 hình vẽ, video dọc 9:16, hook nhanh, phụ đề.
 - **Chưa có duyệt:** không tự tạo media, đăng TikTok, mở/giả định tài khoản, gắn link affiliate, dùng số liệu giá không kiểm chứng. Giữ nguyên toàn bộ website, 21 PDF, tin tức và lịch các nền tảng khác.
 - Tiếp theo: lưu kế hoạch series TikTok có mã và kịch bản vào GitHub; xác minh readback; trình chủ dự án duyệt trước khi xây dựng đồ họa/giọng đọc/video.
+
+### Y.75. TikTok ưu tiên tệp khách có khả năng giao dịch hàng hóa phái sinh (19/11/2026)
+- Người dùng chốt mục tiêu TikTok: **người xem có thể trở thành khách hàng giao dịch hàng hóa phái sinh**, không phải kéo follower nông sản đại trà; nội dung whiteboard AI bàn tay vẽ.
+- Điều chỉnh chân dung: (1) người giao dịch chứng khoán; (2) người có kinh nghiệm giao dịch thị trường tài chính khác; (3) người có nguồn vốn và chủ động học rủi ro; (4) doanh nghiệp nông sản có nhu cầu phòng hộ. Không đồng nghĩa đã đủ điều kiện giao dịch: kiểm tra tuân thủ/onboarding riêng.
+- Đã tạo và readback file GitHub `TIKTOK_SERIES_NHA_DAU_TU_TIEM_NANG_20261119.md` commit `359933d8c3d3389fd9f72e6570c225d69e451590`; gồm 5 series định hướng khách tiềm năng, 15 chủ đề và pilot ký quỹ rủi ro. Đây là đề xuất CHỜ DUYỆT, không tạo media hay đặt lịch.
+- Bản TikTok `TIKTOK_SERIES_WHITEBOARD_20261119_CHO_DUYET.md` là phương án cũ ưu tiên người xem nông sản đại trà, giữ làm lịch sử, **không dùng làm hướng ưu tiên mới**.
+- Tiếp theo: chủ dự án duyệt series, kịch bản thử nghiệm, sau đó mới storyboard, asset, dựng video và trình duyệt lần 2. Bảo toàn website, 21 PDF, tin tức, Facebook và dữ liệu khách.
