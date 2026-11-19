@@ -1167,3 +1167,10 @@
 - Chọn pilot “Trúng mùa lớn nhưng tiền thu về ít hơn?” — câu chuyện mô hình giả định về doanh thu (10 tấn x 10 triệu/tấn = 100 triệu, 15 tấn x 6 triệu/tấn = 90 triệu), **không được mô tả là lỗ ròng hay sự kiện thật**.
 - Yêu cầu sản phẩm: lời thoại chính xác có thể đọc thu âm, timecode từng cảnh và nét vẽ theo AI, hook trên màn hình, chuyển cảnh, caption/CTA và quy chuẩn sản xuất; 5 phong cách câu chào đã duyệt, áp dụng mẫu chuyện ngược đời cho pilot.
 - Đây là công việc soạn chữ/kịch bản CHỜ DUYỆT. **Không tạo ảnh/video hoặc đăng TikTok trước khi anh duyệt**; bảo toàn dữ liệu dự án và 21 PDF.
+
+### Y.83. Đã viết và lưu kịch bản video pilot TK001 bản V1 (19/11/2026)
+- Đã soạn **kịch bản hoàn chỉnh cho TikTok TK001** “TRÚNG MÙA 50%, TIỀN LẠI ÍT ĐI 10 TRIỆU?!” ở `VIDEO_ANH_BA_NONG_TK001_TRUNG_MUA_IT_TIEN_KICH_BAN_V1.md`, commit `7f3f2bf5a49110022ddd083cf84fa23193fe79f2`, readback GitHub chính xác.
+- Bao gồm lời thoại nguyên văn có câu nhận diện Anh Ba Nông, bảng 7 cảnh với thời lượng 00–108s, các hình tay AI cần vẽ, nhịp chuyển cảnh, dòng chữ trên màn hình, caption, bình luận ghim, kiểm duyệt và nhịp giọng/nhịp vẽ dưới 2 phút.
+- Số liệu là **ví dụ giả định**, minh họa doanh thu 100 triệu -> 90 triệu khi sản lượng 10 -> 15 tấn; không được diễn giải là lỗ ròng hoặc giá ngô thị trường thật.
+- **TRẠNG THÁI: CHỜ ANH DUYỆT KỊCH BẢN**; chưa tạo ảnh, giọng đọc, video hoặc đăng TikTok; chưa ghi đè 21 PDF, lịch FB, website hay dữ liệu khách.
+- Bước tiếp theo sau khi duyệt: tạo bảng nét vẽ chi tiết và prompt từng cảnh, thử giọng AI, dựng demo, duyệt video cuối trước đăng.
