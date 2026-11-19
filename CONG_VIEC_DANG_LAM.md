@@ -1156,3 +1156,8 @@
 - Gợi ý tạm: nhân vật **Ba Nông/Anh Ba Nông**, giọng kể thân thiện, hài hước, gần gũi; câu nhận diện ngắn “Lại là Ba Nông đây!”, sau đó lập tức vào mâu thuẫn/câu chuyện để tránh chậm hook. Danh xưng, giọng miền và câu chào cuối cùng vẫn **CHỜ CHỦ DỰ ÁN DUYỆT**, chưa khóa bộ nhận diện.
 - Video tiếp tục định dạng AI mô phỏng bàn tay vẽ trên giấy, lời thoại khớp nhịp vẽ; dưới 2 phút, nội dung đúng dữ liệu, số liệu ví dụ ghi giả định, xây người xem và cộng đồng trước chuyển đổi.
 - Chưa dựng/đăng video hay tạo tập tin hình; không sửa mã website, 21 PDF, tin, lịch Facebook và dữ liệu khách.
+
+### Y.81. Chốt năm cách mở đầu của nhân vật Anh Ba Nông (19/11/2026)
+- Chủ dự án chọn **giữ cả 5 mẫu mở đầu** “Lại là tôi đây, anh Ba Nông! Hôm nay tôi...” từ cuộc thảo luận; luân phiên **theo chủ đề và câu chuyện từng video** (nghịch lý; theo dấu tiền; chuyện lạ giao dịch; chuyện thế giới; hai góc nhìn đối lập), không luân phiên máy móc.
+- Đã lưu và kiểm chứng file `TIKTOK_ANH_BA_NONG_05_MO_DAU_20261119.md` trên GitHub, commit `5118cf4834181c3c1295e6b23f2ae596e35f72bd`. Cụm nhận diện cố định: **“Lại là tôi đây, anh Ba Nông!”**; phần sau tự nhiên hóa theo nội dung, vào chuyện nhanh và đồng bộ nét vẽ AI.
+- Vẫn là video TikTok độc lập dưới 2 phút, ưu tiên kéo người xem và xây cộng đồng trước; chưa tạo video, chưa đăng. Kịch bản và sản phẩm cuối vẫn chờ duyệt. Không đụng website, 21 PDF, tin tức, Facebook, CRM.
