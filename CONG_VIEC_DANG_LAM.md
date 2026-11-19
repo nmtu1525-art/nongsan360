@@ -1122,3 +1122,11 @@
 - Đã tạo và readback file GitHub `TIKTOK_SERIES_NHA_DAU_TU_TIEM_NANG_20261119.md` commit `359933d8c3d3389fd9f72e6570c225d69e451590`; gồm 5 series định hướng khách tiềm năng, 15 chủ đề và pilot ký quỹ rủi ro. Đây là đề xuất CHỜ DUYỆT, không tạo media hay đặt lịch.
 - Bản TikTok `TIKTOK_SERIES_WHITEBOARD_20261119_CHO_DUYET.md` là phương án cũ ưu tiên người xem nông sản đại trà, giữ làm lịch sử, **không dùng làm hướng ưu tiên mới**.
 - Tiếp theo: chủ dự án duyệt series, kịch bản thử nghiệm, sau đó mới storyboard, asset, dựng video và trình duyệt lần 2. Bảo toàn website, 21 PDF, tin tức, Facebook và dữ liệu khách.
+
+### Y.76. TikTok ưu tiên thu hút người xem và xây dựng cộng đồng trước (19/11/2026)
+- Chủ dự án hiệu chỉnh chiến lược: TikTok phải **thu hút người xem, xây cộng đồng, tạo thói quen theo dõi và lòng tin trước**, không chỉ làm clip hướng đến người sắp mở tài khoản hay tập trung quá sớm vào ký quỹ/đòn bẩy/phái sinh.
+- Mục tiêu thương mại dài hạn (khách hàng phù hợp tìm hiểu hàng hóa phái sinh qua SFVN) được giữ nhưng **không đưa CTA mở tài khoản vào giai đoạn mở kênh**; tránh dùng follower đại trà như thước đo đủ để chuyển đổi. Ưu tiên tò mò về kinh tế/giá cả/nông sản, kể chuyện đời sống, whiteboard AI bàn tay vẽ, video ngắn và tương tác bình luận.
+- Hệ thống series đề xuất mở đầu: (1) Nghịch lý thị trường; (2) Chuyện tiền ít ai kể; (3) Một phút hiểu thế giới; (4) Giải mã giá cả; (5) Bạn hỏi – NS360 vẽ. Nhịp biên tập 60% câu chuyện khám phá, 25% giải thích giá/cung cầu, 15% kiến thức phái sinh dễ hiểu là đề xuất thử, không phải tỷ trọng đã duyệt.
+- Ưu tiên đo tỷ lệ xem hết, follow/1.000 lượt xem, lượt chia sẻ/lưu, bình luận, tỷ lệ người quay lại xem, thay vì link click mở tài khoản. Dần đưa phái sinh vào khi cộng đồng sẵn sàng.
+- Tài liệu TikTok nhắm khách tiềm năng `TIKTOK_SERIES_NHA_DAU_TU_TIEM_NANG_20261119.md` chỉ giữ làm phương án lịch sử, **không dùng làm hướng nội dung giai đoạn đầu**. Chưa lên lịch đăng, tạo media hay thay đổi website/21 PDF/Metricool.
+- Tiếp theo: phát triển 15–30 đề tài có hook dễ hiểu, gom thành series, viết kịch bản ngắn rồi chờ chủ dự án duyệt trước khi dựng.
