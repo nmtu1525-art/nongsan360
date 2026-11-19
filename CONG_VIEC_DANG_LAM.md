@@ -1161,3 +1161,9 @@
 - Chủ dự án chọn **giữ cả 5 mẫu mở đầu** “Lại là tôi đây, anh Ba Nông! Hôm nay tôi...” từ cuộc thảo luận; luân phiên **theo chủ đề và câu chuyện từng video** (nghịch lý; theo dấu tiền; chuyện lạ giao dịch; chuyện thế giới; hai góc nhìn đối lập), không luân phiên máy móc.
 - Đã lưu và kiểm chứng file `TIKTOK_ANH_BA_NONG_05_MO_DAU_20261119.md` trên GitHub, commit `5118cf4834181c3c1295e6b23f2ae596e35f72bd`. Cụm nhận diện cố định: **“Lại là tôi đây, anh Ba Nông!”**; phần sau tự nhiên hóa theo nội dung, vào chuyện nhanh và đồng bộ nét vẽ AI.
 - Vẫn là video TikTok độc lập dưới 2 phút, ưu tiên kéo người xem và xây cộng đồng trước; chưa tạo video, chưa đăng. Kịch bản và sản phẩm cuối vẫn chờ duyệt. Không đụng website, 21 PDF, tin tức, Facebook, CRM.
+
+### Y.82. Bắt đầu viết kịch bản video đầu tiên — Anh Ba Nông (19/11/2026)
+- Chủ dự án yêu cầu **viết kịch bản sản xuất video đầu tiên**, cho phép trợ lý tự cân đối thời lượng; ưu tiên dưới 2 phút và đủ nhịp bàn tay AI vẽ + giọng kể.
+- Chọn pilot “Trúng mùa lớn nhưng tiền thu về ít hơn?” — câu chuyện mô hình giả định về doanh thu (10 tấn x 10 triệu/tấn = 100 triệu, 15 tấn x 6 triệu/tấn = 90 triệu), **không được mô tả là lỗ ròng hay sự kiện thật**.
+- Yêu cầu sản phẩm: lời thoại chính xác có thể đọc thu âm, timecode từng cảnh và nét vẽ theo AI, hook trên màn hình, chuyển cảnh, caption/CTA và quy chuẩn sản xuất; 5 phong cách câu chào đã duyệt, áp dụng mẫu chuyện ngược đời cho pilot.
+- Đây là công việc soạn chữ/kịch bản CHỜ DUYỆT. **Không tạo ảnh/video hoặc đăng TikTok trước khi anh duyệt**; bảo toàn dữ liệu dự án và 21 PDF.
