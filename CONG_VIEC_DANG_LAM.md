@@ -1184,3 +1184,9 @@
 ### Y.85. Viết kịch bản TikTok nhập môn hàng hóa phái sinh (19/11/2026)
 - Chủ dự án yêu cầu kịch bản video **giới thiệu/tìm hiểu hàng hóa phái sinh**, phong cách nhân vật Anh Ba Nông và AI mô phỏng tay vẽ trên giấy. Chọn ví dụ giao dịch hợp đồng tương lai cà phê, phân biệt hàng thực với hợp đồng chuẩn hóa; mô tả ký quỹ, giá biến động, rủi ro đúng bản chất. Thời lượng phải dưới 2 phút nhưng đủ vẽ/nói.
 - Chặng này viết bản nháp chữ gồm hook, lời thoại nguyên văn, storyboard timecode, tiêu đề/caption, chỉ tạo video sau khi anh duyệt. Không có CTA mở tài khoản, không cam kết lợi nhuận; bảo toàn website, 21 PDF, tin và lịch Facebook.
+
+### Y.86. Hoàn thành kịch bản nhập môn phái sinh TK003 bản V1 (19/11/2026)
+- Đã viết và kiểm tra readback GitHub tệp **`VIDEO_ANH_BA_NONG_TK003_HIEU_HANG_HOA_PHAI_SINH_KICH_BAN_V1.md`**, commit **`0f17280f01a9a92b91f134261092294e28d7d4e2`**. Chủ đề “KHÔNG CÓ 1 HẠT CÀ PHÊ… VẪN MUA BÁN CÀ PHÊ?!”.
+- Kịch bản gồm lời đọc đầy đủ nhân vật Anh Ba Nông, 6 cảnh whiteboard AI tay vẽ ước tính 0–106 giây, caption và gợi bình luận. Giới thiệu hàng hóa phái sinh qua hợp đồng tương lai chuẩn hóa, đối lập nhu cầu phòng hộ giá, vị thế mua/bán, ký quỹ và cảnh báo rủi ro; không hứa lợi nhuận, không quảng cáo mở tài khoản.
+- **TRẠNG THÁI: BẢN NHÁP CHỜ ANH DUYỆT**; chưa tạo audio/ảnh/video hoặc đăng TikTok. Sau duyệt, đo giọng đọc thực tế, chỉnh nhịp vẽ <120s, dựng thử và xin duyệt lần nữa trước phát hành.
+- Không thay đổi website, 21 giáo trình PDF, tin tức, Facebook hay dữ liệu khách.
