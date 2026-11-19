@@ -1150,3 +1150,9 @@
 - Gợi ý độ dài **45–70s** cho một bất ngờ đơn giản, **70–100s** cho câu chuyện có nhân vật/con số/cú lật, **90–115s** cho giải thích phức tạp; giai đoạn đầu thử 75–100s, không cứng nhắc. Video hoàn chỉnh ngắn hơn 120s, không kéo dài vô ích.
 - Kịch bản phải có cả **lời thoại, hình vẽ từng cảnh, thời gian bàn tay vẽ, điểm chuyển cảnh, khoảng dừng quan sát**; không bắt bàn tay vẽ quá nhanh; có thể thuyết minh trong khi hình xuất hiện, không đợi hoàn tất bức vẽ. Chuyển tình tiết trước khi người xem chán; giữ hook rõ ở đầu và cú lật giữa video.
 - Đính chính checkpoint Y.78 phần 30–60 giây và kịch bản 45–55 giây là dự kiến cũ, **quy tắc mới Y.79 được ưu tiên**. Vẫn chưa tạo media hoặc đăng TikTok; các kịch bản/series cần anh duyệt.
+
+### Y.80. TikTok có nhân vật kể chuyện và câu chào nhận diện (19/11/2026)
+- Người dùng đề xuất câu chào mở đầu cố định kiểu **“Lại là tôi đây, anh Ba Nông...”** (hoặc tương tự), định hướng nhân vật dẫn chuyện quen mặt/quen giọng cho video TikTok whiteboard AI, thay vì mở đầu khô khan bằng câu hỏi.
+- Gợi ý tạm: nhân vật **Ba Nông/Anh Ba Nông**, giọng kể thân thiện, hài hước, gần gũi; câu nhận diện ngắn “Lại là Ba Nông đây!”, sau đó lập tức vào mâu thuẫn/câu chuyện để tránh chậm hook. Danh xưng, giọng miền và câu chào cuối cùng vẫn **CHỜ CHỦ DỰ ÁN DUYỆT**, chưa khóa bộ nhận diện.
+- Video tiếp tục định dạng AI mô phỏng bàn tay vẽ trên giấy, lời thoại khớp nhịp vẽ; dưới 2 phút, nội dung đúng dữ liệu, số liệu ví dụ ghi giả định, xây người xem và cộng đồng trước chuyển đổi.
+- Chưa dựng/đăng video hay tạo tập tin hình; không sửa mã website, 21 PDF, tin, lịch Facebook và dữ liệu khách.
