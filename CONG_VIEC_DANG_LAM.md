@@ -1137,3 +1137,10 @@
 - Lưu ý tính năng Playlist do TikTok mở theo điều kiện/tài khoản/khu vực, không mặc định được bật chính xác khi đạt 1.000 follower; sau này kiểm tra quyền thực tế trong ứng dụng mới tổ chức lại video. Tránh nhầm với TikTok Series trả phí hay điều kiện LIVE.
 - Nội dung giai đoạn mở kênh: tò mò về giá cả/tiền bạc/nông sản/thị trường, giải thích bằng AI mô phỏng bàn tay vẽ giấy, xây cộng đồng trước rồi mới dẫn dần tới kiến thức phái sinh; không kêu gọi mở tài khoản sớm.
 - Không tự đăng video hay thay đổi lịch Facebook, website, tin, 21 PDF hoặc CRM trong lượt này. Phải duyệt kịch bản và video trước khi đăng.
+
+### Y.78. Phản hồi TikTok: tiêu đề và cốt truyện chưa đủ hấp dẫn (19/11/2026)
+- Chủ dự án đánh giá các tiêu đề video TikTok trước **chưa đủ giật tít và nội dung chưa hấp dẫn**. Không coi các bộ 10/15 tiêu đề trước là đã duyệt.
+- Điều chỉnh sáng tạo: mỗi video TikTok độc lập 30–60 giây (chưa dùng Playlist), mở bằng **mâu thuẫn cụ thể về tiền, giá hoặc thời điểm**, bàn tay AI vẽ tình huống có nhân vật/sự đối lập, thêm bước lật mở ở giữa, cuối giải thích có cơ sở và CTA xem tiếp/follow tự nhiên. Không video giống bài học đọc định nghĩa.
+- Ba ý tưởng pilot chờ duyệt: (A) 'Trúng mùa lớn… vẫn mất tiền?!' minh họa doanh thu giảm khi sản lượng tăng nhưng giá giảm mạnh hơn; (B) 'Giá giảm mạnh… sao có người lại mừng?' minh họa lợi ích ngược nhau của người bán và người mua nguyên liệu; (C) 'Chưa trồng một hạt ngô… đã có người mua?!' giải thích hợp đồng giao hàng tương lai và phân biệt với hợp đồng tương lai chuẩn hóa khi cần.
+- Nội dung minh họa phải gắn nhãn giả định; không bịa giá, báo cáo hay sự kiện để giật tít. Hiện chưa có kịch bản nào được chủ dự án duyệt, chưa dựng/đăng video, không chỉnh lịch FB/website/21 PDF/tin tức.
+- Tiếp theo: trình 1 kịch bản có lời thoại + storyboard 45–55 giây, chủ dự án chọn góc kể và duyệt trước khi làm video.
