@@ -1174,3 +1174,9 @@
 - Số liệu là **ví dụ giả định**, minh họa doanh thu 100 triệu -> 90 triệu khi sản lượng 10 -> 15 tấn; không được diễn giải là lỗ ròng hoặc giá ngô thị trường thật.
 - **TRẠNG THÁI: CHỜ ANH DUYỆT KỊCH BẢN**; chưa tạo ảnh, giọng đọc, video hoặc đăng TikTok; chưa ghi đè 21 PDF, lịch FB, website hay dữ liệu khách.
 - Bước tiếp theo sau khi duyệt: tạo bảng nét vẽ chi tiết và prompt từng cảnh, thử giọng AI, dựng demo, duyệt video cuối trước đăng.
+
+### Y.84. Kịch bản viral TikTok TK002 — Chưa hái cà phê đã bán trước? (19/11/2026)
+- Theo yêu cầu viết một kịch bản viral mới có hook giật tít, đã soạn **TK002 “CHƯA HÁI CÀ PHÊ… ĐÃ BÁN SẠCH?!”** theo phong cách Anh Ba Nông kể chuyện, tay AI vẽ giấy và **hai cú lật giá giả định** (chốt 90 triệu/tấn; sau đó so sánh kịch bản 110 hoặc 70 triệu/tấn); phân biệt hợp đồng giao hàng sau với futures chuẩn hóa.
+- Đã tạo và đọc lại file GitHub `VIDEO_ANH_BA_NONG_TK002_CA_PHE_CHUA_HAI_DA_BAN_KICH_BAN_V1.md`, commit `17bcbe726826a1c810a2c6f3b50482dba83b0932`, gồm lời thoại, storyboard, caption và kiểm duyệt. **Dự kiến 100–110 giây, phải thử giọng AI rồi tinh giản nếu vượt 119 giây.**
+- Trạng thái **BẢN NHÁP CHỜ ANH DUYỆT**; chưa tạo hình/âm thanh/video, chưa đăng TikTok, giữ nguyên 21 PDF, website, FB và dữ liệu khách.
+- Bước tiếp theo sau khi anh duyệt: chốt nhịp thoại TTS thực, thiết kế prompt từng nét vẽ, tạo demo, xin duyệt video cuối trước đăng.
