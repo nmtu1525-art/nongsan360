@@ -1130,3 +1130,10 @@
 - Ưu tiên đo tỷ lệ xem hết, follow/1.000 lượt xem, lượt chia sẻ/lưu, bình luận, tỷ lệ người quay lại xem, thay vì link click mở tài khoản. Dần đưa phái sinh vào khi cộng đồng sẵn sàng.
 - Tài liệu TikTok nhắm khách tiềm năng `TIKTOK_SERIES_NHA_DAU_TU_TIEM_NANG_20261119.md` chỉ giữ làm phương án lịch sử, **không dùng làm hướng nội dung giai đoạn đầu**. Chưa lên lịch đăng, tạo media hay thay đổi website/21 PDF/Metricool.
 - Tiếp theo: phát triển 15–30 đề tài có hook dễ hiểu, gom thành series, viết kịch bản ngắn rồi chờ chủ dự án duyệt trước khi dựng.
+
+### Y.77. TikTok chưa dùng Playlist — đăng video độc lập đến khi đủ điều kiện (19/11/2026)
+- Chủ dự án làm rõ: hiện chưa có tính năng tạo folder/Playlist series trên TikTok; giai đoạn đầu chỉ **đăng video độc lập**, mục tiêu trước mắt đạt 1.000 follower. Không xây kế hoạch dựa vào khả năng playlist hiện tại.
+- Có thể **phân loại nhóm nội dung nội bộ** để đảm bảo đa dạng và giữ giọng thương hiệu, nhưng không gắn bắt buộc tập số, không yêu cầu xem tập trước, không gọi là Playlist trên TikTok. Mỗi video phải tự đứng được, hook 1–2 giây, một câu chuyện, một kết luận và CTA Follow tự nhiên.
+- Lưu ý tính năng Playlist do TikTok mở theo điều kiện/tài khoản/khu vực, không mặc định được bật chính xác khi đạt 1.000 follower; sau này kiểm tra quyền thực tế trong ứng dụng mới tổ chức lại video. Tránh nhầm với TikTok Series trả phí hay điều kiện LIVE.
+- Nội dung giai đoạn mở kênh: tò mò về giá cả/tiền bạc/nông sản/thị trường, giải thích bằng AI mô phỏng bàn tay vẽ giấy, xây cộng đồng trước rồi mới dẫn dần tới kiến thức phái sinh; không kêu gọi mở tài khoản sớm.
+- Không tự đăng video hay thay đổi lịch Facebook, website, tin, 21 PDF hoặc CRM trong lượt này. Phải duyệt kịch bản và video trước khi đăng.
