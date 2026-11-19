@@ -1180,3 +1180,7 @@
 - Đã tạo và đọc lại file GitHub `VIDEO_ANH_BA_NONG_TK002_CA_PHE_CHUA_HAI_DA_BAN_KICH_BAN_V1.md`, commit `17bcbe726826a1c810a2c6f3b50482dba83b0932`, gồm lời thoại, storyboard, caption và kiểm duyệt. **Dự kiến 100–110 giây, phải thử giọng AI rồi tinh giản nếu vượt 119 giây.**
 - Trạng thái **BẢN NHÁP CHỜ ANH DUYỆT**; chưa tạo hình/âm thanh/video, chưa đăng TikTok, giữ nguyên 21 PDF, website, FB và dữ liệu khách.
 - Bước tiếp theo sau khi anh duyệt: chốt nhịp thoại TTS thực, thiết kế prompt từng nét vẽ, tạo demo, xin duyệt video cuối trước đăng.
+
+### Y.85. Viết kịch bản TikTok nhập môn hàng hóa phái sinh (19/11/2026)
+- Chủ dự án yêu cầu kịch bản video **giới thiệu/tìm hiểu hàng hóa phái sinh**, phong cách nhân vật Anh Ba Nông và AI mô phỏng tay vẽ trên giấy. Chọn ví dụ giao dịch hợp đồng tương lai cà phê, phân biệt hàng thực với hợp đồng chuẩn hóa; mô tả ký quỹ, giá biến động, rủi ro đúng bản chất. Thời lượng phải dưới 2 phút nhưng đủ vẽ/nói.
+- Chặng này viết bản nháp chữ gồm hook, lời thoại nguyên văn, storyboard timecode, tiêu đề/caption, chỉ tạo video sau khi anh duyệt. Không có CTA mở tài khoản, không cam kết lợi nhuận; bảo toàn website, 21 PDF, tin và lịch Facebook.
