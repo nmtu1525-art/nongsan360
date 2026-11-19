@@ -1144,3 +1144,9 @@
 - Ba ý tưởng pilot chờ duyệt: (A) 'Trúng mùa lớn… vẫn mất tiền?!' minh họa doanh thu giảm khi sản lượng tăng nhưng giá giảm mạnh hơn; (B) 'Giá giảm mạnh… sao có người lại mừng?' minh họa lợi ích ngược nhau của người bán và người mua nguyên liệu; (C) 'Chưa trồng một hạt ngô… đã có người mua?!' giải thích hợp đồng giao hàng tương lai và phân biệt với hợp đồng tương lai chuẩn hóa khi cần.
 - Nội dung minh họa phải gắn nhãn giả định; không bịa giá, báo cáo hay sự kiện để giật tít. Hiện chưa có kịch bản nào được chủ dự án duyệt, chưa dựng/đăng video, không chỉnh lịch FB/website/21 PDF/tin tức.
 - Tiếp theo: trình 1 kịch bản có lời thoại + storyboard 45–55 giây, chủ dự án chọn góc kể và duyệt trước khi làm video.
+
+### Y.79. TikTok whiteboard: nhịp vẽ và lời thoại, video dưới 2 phút (19/11/2026)
+- Chủ dự án chốt: do video TikTok dùng AI mô phỏng bàn tay vẽ trên giấy, **phải tính đủ thời gian để vẽ và thuyết minh rõ ràng; video dưới 2 phút là chấp nhận được**. Không còn ép mọi video vào 30–60 giây theo kế hoạch trước.
+- Gợi ý độ dài **45–70s** cho một bất ngờ đơn giản, **70–100s** cho câu chuyện có nhân vật/con số/cú lật, **90–115s** cho giải thích phức tạp; giai đoạn đầu thử 75–100s, không cứng nhắc. Video hoàn chỉnh ngắn hơn 120s, không kéo dài vô ích.
+- Kịch bản phải có cả **lời thoại, hình vẽ từng cảnh, thời gian bàn tay vẽ, điểm chuyển cảnh, khoảng dừng quan sát**; không bắt bàn tay vẽ quá nhanh; có thể thuyết minh trong khi hình xuất hiện, không đợi hoàn tất bức vẽ. Chuyển tình tiết trước khi người xem chán; giữ hook rõ ở đầu và cú lật giữa video.
+- Đính chính checkpoint Y.78 phần 30–60 giây và kịch bản 45–55 giây là dự kiến cũ, **quy tắc mới Y.79 được ưu tiên**. Vẫn chưa tạo media hoặc đăng TikTok; các kịch bản/series cần anh duyệt.
